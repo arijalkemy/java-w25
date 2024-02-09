@@ -1,7 +1,7 @@
 # wave25-practicas 🚀
 by Alkemy 💗
 
-way to work 🎯
+way of work 🎯
 
 Repositorio de practicas de Bootcamp Meli-Alkemy Java Wave 25
 
