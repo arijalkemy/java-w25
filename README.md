@@ -3,7 +3,7 @@ by Alkemy 💗
 
 way to work 🎯
 
-Repositorio de practicas de Bootcamp DH Java Wave 23
+Repositorio de practicas de Bootcamp Meli-Alkemy Java Wave 25
 
 ## Directrices de creación de ramas
 
@@ -27,7 +27,7 @@ Cada desarrolador cuenta con un branch con la estructura ya creada a su nombre p
 
 1. Clonar el repositorio (branch y estructura)
      
-   `git clone https://github.com/extjotabell/wave21-practicas.git`
+   `git clone https://github.com/arijalkemy/wave25-practicas.git`
    
 2. Entrar a la carpeta del proyecto clonado y crear el branch con su apellido y nombre
 
