@@ -14,6 +14,5 @@
 [user]
 	name = davgarciava
 	email = davgarciava@unal.edu.co
-	password = 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
 [pull]
 	rebase = true
