@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 a745f1eba4bb07977e644f64710cf9665a90ba12 David Mateo Garcia Vallejo <dgarciavalle@CO000QPYXMWGJNM.(none)> 1706646303 -0500	clone: from https://github.com/RamiroGutierrezPaulos/practica-git.git
+a745f1eba4bb07977e644f64710cf9665a90ba12 ad4d82b0bef01dc8291541a38f4e987a031e4e61 davgarciava <davgarciava@unal.edu.co> 1706646420 -0500	commit: Creación archivos David
+ad4d82b0bef01dc8291541a38f4e987a031e4e61 edc9fa100a125ed0e696f54f2f03336a82b191b0 davgarciava <davgarciava@unal.edu.co> 1706647346 -0500	pull origin main (start): checkout edc9fa100a125ed0e696f54f2f03336a82b191b0
+edc9fa100a125ed0e696f54f2f03336a82b191b0 1e8a73b6c6ac221033d8b2e4de15fddf368d5d17 davgarciava <davgarciava@unal.edu.co> 1706647346 -0500	pull origin main (pick): Creación archivos David
+1e8a73b6c6ac221033d8b2e4de15fddf368d5d17 1e8a73b6c6ac221033d8b2e4de15fddf368d5d17 davgarciava <davgarciava@unal.edu.co> 1706647346 -0500	pull origin main (finish): returning to refs/heads/main

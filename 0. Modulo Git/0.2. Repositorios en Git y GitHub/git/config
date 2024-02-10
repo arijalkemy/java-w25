@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[user]
+	name = davgarciava
+	email = davidmgarciav@gmail.com
+	password = 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
