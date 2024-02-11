@@ -1,0 +1,9 @@
+[submodule "0. Modulo Git/GIT/practica-conflictos"]
+	path = 0. Modulo Git/GIT/practica-conflictos
+	url = https://github.com/jugiraldoces/practica-conflictos.git
+[submodule "0. Modulo Git/RepositorioEnGitYGitHub/pruebaRepositorio"]
+	path = 0. Modulo Git/RepositorioEnGitYGitHub/pruebaRepositorio
+	url = https://github.com/cristian230621/pruebaRepositorio.git
+[submodule "0. Modulo Git/TrabajandoConBranches/Consignas"]
+	path = 0. Modulo Git/TrabajandoConBranches/Consignas
+	url = https://github.com/cristian230621/Consignas.git
