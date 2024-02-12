@@ -1,0 +1,6 @@
+Texto de prueba
+Hola equipo
+Prueba de conflicto
+Conflico con esta linea
+Commit de prueba
+
