@@ -1,0 +1,6 @@
+[submodule "0. Modulo Git/3. Git practica integradora/conflict_test"]
+	path = 0. Modulo Git/3. Git practica integradora/conflict_test
+	url = https://github.com/Mjulianperez/conflict_test
+[submodule "0. Modulo Git/4. Trabajando con branches practica integradora/merge_test"]
+	path = 0. Modulo Git/4. Trabajando con branches practica integradora/merge_test
+	url = https://github.com/Mjulianperez/merge_test
