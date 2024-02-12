@@ -1,0 +1,15 @@
+
+]
+java:S1854";Remove this useless assignment to local variable "person3".(àÀĞòûÿÿÿÿ8™«©Ö1
+X
+java:S1854";Remove this useless assignment to local variable "person1".(”Éãõ8›é©©Ö1
+I
+java:S1481",Remove this unused "person1" local variable.(”Éãõ8œé©©Ö1
+N
+java:S1481",Remove this unused "person3" local variable.(àÀĞòûÿÿÿÿ8™«©Ö1
+L	java:S106"+Replace this use of System.out by a logger.(Ñİá÷üÿÿÿÿ8é©©Ö1
+L	java:S106"+Replace this use of System.out by a logger.(î  èşÿÿÿÿ8é©©Ö1
+L	java:S106"+Replace this use of System.out by a logger.(ß±Èˆøÿÿÿÿ8é©©Ö1
+F	java:S106"+Replace this use of System.out by a logger.(¤éR8Ÿé©©Ö1
+L	java:S106"+Replace this use of System.out by a logger.(ª®‘Êøÿÿÿÿ8Ÿé©©Ö1
+F	java:S106"+Replace this use of System.out by a logger.(¯İ¸18Ÿé©©Ö1

@@ -1,0 +1,7 @@
+
+h
+java:S1854"FRemove this useless assignment to local variable "exceptionsPractice".(΄οπÿÿÿÿÿ8Υ›ÿ²Φ1
+Y
+java:S1481"7Remove this unused "exceptionsPractice" local variable.(΄οπÿÿÿÿÿ8Φ›ÿ²Φ1
+X	java:S125"<This block of commented-out lines of code should be removed.(ΰθχ8Φ›ÿ²Φ1
+G	java:S106"+Replace this use of System.out by a logger.(Ώ—Θ8Φ›ÿ²Φ1
