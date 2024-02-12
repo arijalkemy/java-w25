@@ -1,0 +1,3 @@
+dentro.ok
+
+Modificación del archivo para generar un conflicto e la misma linea (------------)
