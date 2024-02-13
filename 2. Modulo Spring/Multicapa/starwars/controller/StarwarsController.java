@@ -1,12 +1,11 @@
-package com.example.controllerW25.starwars.controller;
+package controller;
 
-import com.example.controllerW25.starwars.service.PersonajeService;
+import service.PersonajeService;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import com.example.controllerW25.starwars.dto.PersonajeDTO;
 import java.util.List;
 
 @RestController

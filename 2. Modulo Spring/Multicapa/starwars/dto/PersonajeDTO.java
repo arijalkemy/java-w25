@@ -1,6 +1,6 @@
-package com.example.controllerW25.starwars.dto;
+package dto;
 
-import com.example.controllerW25.starwars.entity.Personaje;
+import entity.Personaje;
 
 public class PersonajeDTO {
     private String name;

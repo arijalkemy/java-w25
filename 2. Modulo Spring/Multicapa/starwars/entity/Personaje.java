@@ -1,4 +1,4 @@
-package com.example.controllerW25.starwars.entity;
+package entity;
 
 public class Personaje {
     private String name;

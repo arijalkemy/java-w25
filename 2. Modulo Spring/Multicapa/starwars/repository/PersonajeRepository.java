@@ -1,8 +1,8 @@
 package repository;
 
-import com.example.controllerW25.starwars.entity.Personaje;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import entity.Personaje;
 import org.springframework.stereotype.Repository;
 
 import java.io.File;

@@ -1,4 +1,4 @@
-package com.example.controllerW25.starwars.service;
+package service;
 
 import com.example.controllerW25.starwars.dto.PersonajeDTO;
 import com.example.controllerW25.starwars.repository.PersonajeRepository;
