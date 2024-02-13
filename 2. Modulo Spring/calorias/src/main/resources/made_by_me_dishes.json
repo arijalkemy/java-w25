@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Costillas a la Papa",
+    "ingredientList": [
+      {
+        "name": "Cordero, costillas",
+        "grams" : 250
+      },
+      {
+        "name": "Papas cocidas",
+        "grams" : 150
+      },
+      {
+        "name": "Lechuga",
+        "grams" : 100
+      }
+    ]
+  },
+  {
+    "name": "Hamburguesa al Roquefort",
+    "ingredientList": [
+      {
+        "name": "Hamburguesa",
+        "grams" : 200
+      },
+      {
+        "name": "Queso roquefort",
+        "grams" : 60
+      },
+      {
+        "name": "Mayonesa",
+        "grams" : 30
+      },
+      {
+        "name": "Perejil",
+        "grams" : 15
+      }
+    ]
+  }
+]
