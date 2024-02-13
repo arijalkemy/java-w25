@@ -1,3 +1,10 @@
+
 [submodule "0. Modulo Git/IntroGit-Part1/testMeli"]
 	path = 0. Modulo Git/IntroGit-Part1/testMeli
 	url = https://github.com/dzambranoboh/testMeli.git
+[submodule "0. Modulo Git/IntroGit-Part2/testBranches"]
+	path = 0. Modulo Git/IntroGit-Part2/testBranches
+	url = https://github.com/dzambranoboh/testBranches.git
+[submodule "0. Modulo Git/IntroGit-Part2/testConflicts"]
+	path = 0. Modulo Git/IntroGit-Part2/testConflicts
+	url = https://github.com/dzambranoboh/testConflicts.git
