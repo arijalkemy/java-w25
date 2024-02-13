@@ -1,3 +1,30 @@
 [submodule "0. Modulo Git/EjercicioLista"]
 	path = 0. Modulo Git/EjercicioLista
 	url = https://github.com/dcardonaniev/EjercicioLista
+[submodule "1. Modulo Java/EjercicioTemperaturasGlobales"]
+	path = 1. Modulo Java/EjercicioTemperaturasGlobales
+	url = https://github.com/dcardonaniev/EjercicioTemperaturasGlobales
+[submodule "1. Modulo Java/EjercicioCarreraSelva"]
+	path = 1. Modulo Java/EjercicioCarreraSelva
+	url = https://github.com/dcardonaniev/EjercicioCarreraSelva
+[submodule "1. Modulo Java/EjercicioCalculadoraIMC"]
+	path = 1. Modulo Java/EjercicioCalculadoraIMC
+	url = https://github.com/dcardonaniev/EjercicioCalculadoraIMC
+[submodule "1. Modulo Java/EjercicioProductos"]
+	path = 1. Modulo Java/EjercicioProductos
+	url = https://github.com/dcardonaniev/EjercicioProductos
+[submodule "0. Modulo Git/EjercicioTerminal"]
+	path = 0. Modulo Git/EjercicioTerminal
+	url = https://github.com/dcardonaniev/EjercicioTerminal
+[submodule "0. Modulo Git/EjercicioRepositorios"]
+	path = 0. Modulo Git/EjercicioRepositorios
+	url = https://github.com/dcardonaniev/EjercicioRepositorios
+[submodule "1. Modulo Java/EjercicioBanco"]
+	path = 1. Modulo Java/EjercicioBanco
+	url = https://github.com/dcardonaniev/EjercicioBanco
+[submodule "1. Modulo Java/EjercicioAnimales"]
+	path = 1. Modulo Java/EjercicioAnimales
+	url = https://github.com/dcardonaniev/EjercicioAnimales
+[submodule "1. Modulo Java/EjercicioDocumentos"]
+	path = 1. Modulo Java/EjercicioDocumentos
+	url = https://github.com/dcardonaniev/EjercicioDocumentos
