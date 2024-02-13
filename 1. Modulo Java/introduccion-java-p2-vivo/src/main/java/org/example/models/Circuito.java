@@ -22,4 +22,13 @@ public class Circuito {
     public String getDescripcion() {
         return descripcion;
     }
+
+    @Override
+    public String toString() {
+        return "Circuito{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                '}';
+    }
 }
