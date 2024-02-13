@@ -25,6 +25,8 @@ public class Inscripcion {
         return this.participante;
     }
 
+    public double getMonto(){ return this.monto; }
+
     @Override
     public String toString() {
         return "Inscripcion{" +

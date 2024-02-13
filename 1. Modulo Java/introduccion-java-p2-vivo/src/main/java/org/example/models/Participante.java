@@ -29,6 +29,8 @@ public class Participante {
         return edad;
     }
 
+    public int getDni() { return dni; }
+
     @Override
     public String toString() {
         return "Participante{" +

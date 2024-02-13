@@ -16,11 +16,18 @@ public class Main {
         //-----------------------------------------------------------------------------------------|PROCESS|
         Participante darwin = new Participante(1,100034344,"Darwin", "Nuñez", 20, "3117283040", "3118389434", Participante.GrupoSanguineo.A);
         Participante natalia = new Participante(2,100024545,"Natalia", "Natalia", 19, "313143440", "3113324344", Participante.GrupoSanguineo.B);
+        Participante laura = new Participante(3,100345664,"Laura", "Tuquerrez", 34, "387273766", "939573755", Participante.GrupoSanguineo.O);
+        Participante john = new Participante(4,102938883,"John", "Espinoza", 16, "39483293", "727482777", Participante.GrupoSanguineo.AB);
 
-        Inscribir(1, chico, darwin);
-        Inscribir(2, chico, natalia);
+        Inscribir(1, chico, darwin);//registro a circuito chico
+        Inscribir(2, chico, darwin);//no registar 2 veces
+        Inscribir(3, medio, natalia);//registro a circuito medio
+        Inscribir(4, avanzado, laura);//registro a circuito avanzado
+        Inscribir(5, avanzado, john);//registro invalido por edad
         //-----------------------------------------------------------------------------------------|OUT|
         MostrarInscritos(Categorias.chico);
         Desinscribir(1);
+        Desinscribir(10);//Desinscribir uno que no existe
+        MostrarRecaudacion();
     }
 }
