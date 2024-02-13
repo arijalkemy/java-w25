@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fc7d7895-f43d-43f0-990c-c254bed4d35b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ejercicio_IMC/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_IMC/src/main/java/model/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_agencia_de_turismo/src/main/java/model/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_agencia_de_turismo/src/main/java/model/Localizador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_agencia_de_turismo/src/main/java/model/Reserva.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_animales/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_animales/src/main/java/interfaces/Carnivoro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_animales/src/main/java/interfaces/Herviboro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_animales/src/main/java/model/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_animales/src/main/java/model/Gato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_animales/src/main/java/model/Perro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_animales/src/main/java/model/Vaca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_banco/src/main/java/Banco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_banco/src/main/java/interfaces/ConsultaDeSaldo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_banco/src/main/java/interfaces/Deposito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_banco/src/main/java/interfaces/PagoDeServicios.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_banco/src/main/java/interfaces/RetiroDeEfectivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_banco/src/main/java/interfaces/Transaccion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_banco/src/main/java/interfaces/Transferencia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_banco/src/main/java/model/Cobrador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/Socorrista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Auto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Carrera.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Moto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/SocorristaAuto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/SocorristaMoto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Vehiculo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_distribuidora/src/main/java/Distribuidora.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_distribuidora/src/main/java/model/NoPerecedero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_distribuidora/src/main/java/model/Perecedero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_distribuidora/src/main/java/model/Producto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_excepciones/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_excepciones/src/main/java/model/PracticaExcepciones.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_impresora/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_impresora/src/main/java/interfaces/Imprimible.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_impresora/src/main/java/model/Curriculum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_impresora/src/main/java/model/Informe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_impresora/src/main/java/model/LibroPDF.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_impresora/src/main/java/model/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_save_the_ropa/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_save_the_ropa/src/main/java/model/GuardaRopa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_save_the_ropa/src/main/java/model/Prenda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_vehiculos/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_vehiculos/src/main/java/model/Garaje.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_vehiculos/src/main/java/model/Vehiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ejercicios_temperaturas_globales/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ejercicios_temperaturas_globales/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ejercicios_temperaturas_globales/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ejercicios_temperaturas_globales/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ejercicios_temperaturas_globales/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ejercicios_temperaturas_globales/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ejercicios_temperaturas_globales/src/main/java/Main.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2cKCCzoMhwBGayJWJWP3rxE40uN" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "gutierrez__ramiro",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-53826d6a" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc7d7895-f43d-43f0-990c-c254bed4d35b" name="Changes" comment="" />
+      <created>1707850760024</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707850760024</updated>
+      <workItem from="1707850761041" duration="1739000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
