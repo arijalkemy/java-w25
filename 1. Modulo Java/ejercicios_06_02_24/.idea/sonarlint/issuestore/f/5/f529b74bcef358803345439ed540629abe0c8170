@@ -1,0 +1,10 @@
+
+Y
+java:S2589&"7Remove this expression which always evaluates to "true"(øÔÓüşÿÿÿÿ8‚Î‡ı×1
+L	java:S106"+Replace this use of System.out by a logger.(“²ç¼ûÿÿÿÿ8á…‚ı×1
+G	java:S106"+Replace this use of System.out by a logger.(ì÷úÀ8á…‚ı×1
+L	java:S106 "+Replace this use of System.out by a logger.(Áü¹¿ùÿÿÿÿ8ã…‚ı×1
+G	java:S106!"+Replace this use of System.out by a logger.(ì÷úÀ8ã…‚ı×1
+L	java:S106'"+Replace this use of System.out by a logger.(˜¹şÿÿÿÿ8ã…‚ı×1
+G	java:S1061"+Replace this use of System.out by a logger.(ùŸõì8å…‚ı×1
+G	java:S1064"+Replace this use of System.out by a logger.(øôŠ8å…‚ı×1

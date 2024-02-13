@@ -1,0 +1,21 @@
+
+j
+java:S1192I"ODefine a constant instead of duplicating this literal "Administration" 3 times.(ÑÒ¶ıÿÿÿÿ
+a
+java:S1192F"KDefine a constant instead of duplicating this literal "Accountant" 3 times.(¼äÛİ
+]
+java:S1192G"HDefine a constant instead of duplicating this literal "Systems" 5 times.(È±èP
+Q	java:S125"<This block of commented-out lines of code should be removed.(ÆæÂÀ
+V	java:S125"<This block of commented-out lines of code should be removed.(‘—Òûÿÿÿÿ
+?	java:S106&"+Replace this use of System.out by a logger.(í©Ñ!
+[
+java:S1612*"@Replace this lambda with method reference 'String::toUpperCase'.(­¡£¦ûÿÿÿÿ
+E	java:S106+"+Replace this use of System.out by a logger.(¹¦…‡úÿÿÿÿ
+h
+java:S62041"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹
+[
+java:S16120"@Replace this lambda with method reference 'String::toUpperCase'.(­¡£¦ûÿÿÿÿ
+E	java:S1063"+Replace this use of System.out by a logger.(¼Óüåøÿÿÿÿ
+E	java:S106;"+Replace this use of System.out by a logger.(¹¦…‡úÿÿÿÿ
+E	java:S106B"+Replace this use of System.out by a logger.(®ıáëûÿÿÿÿ
+E	java:S106U"+Replace this use of System.out by a logger.(¹¦…‡úÿÿÿÿ

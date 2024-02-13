@@ -1,0 +1,15 @@
+
+w
+java:S1192"ZDefine a constant instead of duplicating this literal "-------------------------" 3 times.(ğÔ‘¬8¿¢áşÖ1
+G	java:S106"+Replace this use of System.out by a logger.(ğÔ‘¬8Äã˜şÖ1
+L	java:S106"+Replace this use of System.out by a logger.(¾Îéëøÿÿÿÿ8Åã˜şÖ1
+G	java:S106"+Replace this use of System.out by a logger.(ğÔ‘¬8Åã˜şÖ1
+G	java:S106"+Replace this use of System.out by a logger.(•áØ8Æã˜şÖ1
+G	java:S106 "+Replace this use of System.out by a logger.(³…‡8Çã˜şÖ1
+G	java:S106!"+Replace this use of System.out by a logger.(¸ˆ ­8Èã˜şÖ1
+L	java:S106""+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8Èã˜şÖ1
+G	java:S106#"+Replace this use of System.out by a logger.(³Õı–8Éã˜şÖ1
+G	java:S106%"+Replace this use of System.out by a logger.(ÆıÁæ8Ìã˜şÖ1
+G	java:S106'"+Replace this use of System.out by a logger.(ğÔ‘¬8Íã˜şÖ1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Ø÷ØşÖ1

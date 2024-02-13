@@ -1,0 +1,16 @@
+
+R
+java:S18544"5Remove this useless assignment to local variable "f".(œûÊÓ8ö×øú×1
+]	java:S125"<This block of commented-out lines of code should be removed.(µØòºÿÿÿÿÿ8ş×øú×1
+Q
+java:S1481("/Remove this unused "encontrado" local variable.(°ù´şÿÿÿÿ8ƒØøú×1
+G	java:S106)"+Replace this use of System.out by a logger.(Àô±™8„Øøú×1
+G	java:S1061"+Replace this use of System.out by a logger.(ŠóİÄ8†Øøú×1
+L	java:S1062"+Replace this use of System.out by a logger.(“Âüóúÿÿÿÿ8‡Øøú×1
+C
+java:S14814"&Remove this unused "f" local variable.(œûÊÓ8‰Øøú×1
+L	java:S1066"+Replace this use of System.out by a logger.(Ò«ÿÿÿÿÿ8‰Øøú×1
+L	java:S1068"+Replace this use of System.out by a logger.(·í´ğşÿÿÿÿ8‰Øøú×1
+L	java:S106:"+Replace this use of System.out by a logger.(ÔêÂöùÿÿÿÿ8ŠØøú×1
+L	java:S106<"+Replace this use of System.out by a logger.(îˆß°şÿÿÿÿ8ŠØøú×1
+L	java:S106D"+Replace this use of System.out by a logger.(Ö¯±íøÿÿÿÿ8Š‘úú×1

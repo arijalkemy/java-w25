@@ -1,0 +1,10 @@
+
+Y
+java:S2589&"7Remove this expression which always evaluates to "true"(ÏŞŒ¢øÿÿÿÿ8·€Ûı×1
+L	java:S106"+Replace this use of System.out by a logger.(¥‰øÿÿÿÿ8åÔÂü×1
+L	java:S106"+Replace this use of System.out by a logger.(ø¿âÿÿÿÿÿ8æÔÂü×1
+L	java:S106 "+Replace this use of System.out by a logger.(Ä°œîüÿÿÿÿ8›ìÙı×1
+X	java:S125!"<This block of commented-out lines of code should be removed.(Ÿ‘Äâ8§¼÷ı×1
+L	java:S106'"+Replace this use of System.out by a logger.(íš×°øÿÿÿÿ8½€Ûı×1
+L	java:S1062"+Replace this use of System.out by a logger.(”îØ¹úÿÿÿÿ8¿€Ûı×1
+L	java:S1065"+Replace this use of System.out by a logger.(©¦Æúÿÿÿÿ8À€Ûı×1

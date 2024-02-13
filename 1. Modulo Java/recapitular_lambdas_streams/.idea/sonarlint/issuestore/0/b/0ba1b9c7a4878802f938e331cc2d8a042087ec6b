@@ -1,0 +1,20 @@
+
+g
+java:S11920"JDefine a constant instead of duplicating this literal ", Costo: " 4 times.(İ‰×ã8ƒ¥Ä×Ö1
+g
+java:S11920"JDefine a constant instead of duplicating this literal ", Marca: " 4 times.(İ‰×ã8„¥Ä×Ö1
+f
+java:S11920"IDefine a constant instead of duplicating this literal "Modelo: " 4 times.(İ‰×ã8„¥Ä×Ö1
+G	java:S1060"+Replace this use of System.out by a logger.(İ‰×ã8œ¥Ä×Ö1
+L	java:S106="+Replace this use of System.out by a logger.(³ùÜ³ùÿÿÿÿ8 ¥Ä×Ö1
+G	java:S106?"+Replace this use of System.out by a logger.(İæ‰ª8 ¥Ä×Ö1
+L	java:S106B"+Replace this use of System.out by a logger.(‘£Œ²üÿÿÿÿ8¡¥Ä×Ö1
+G	java:S106D"+Replace this use of System.out by a logger.(İæ‰ª8¡¥Ä×Ö1
+G	java:S106M"+Replace this use of System.out by a logger.(Ê¥÷8£¥Ä×Ö1
+L	java:S106Q"+Replace this use of System.out by a logger.(×ææøÿÿÿÿ8¤¥Ä×Ö1
+G	java:S106T"+Replace this use of System.out by a logger.(İ‰×ã8¥¥Ä×Ö1
+G	java:S106["+Replace this use of System.out by a logger.(¶ìŒÑ8¥¥Ä×Ö1
+L	java:S106b"+Replace this use of System.out by a logger.(Ìà¸Àşÿÿÿÿ8¨¥Ä×Ö1
+L	java:S106g"+Replace this use of System.out by a logger.(˜Û¬‹ÿÿÿÿÿ8©¥Ä×Ö1
+X	java:S125j"<This block of commented-out lines of code should be removed.(àØäÎ8êáÇ×Ö1
+X	java:S125o"<This block of commented-out lines of code should be removed.(ÆÀô8ª¥Ä×Ö1

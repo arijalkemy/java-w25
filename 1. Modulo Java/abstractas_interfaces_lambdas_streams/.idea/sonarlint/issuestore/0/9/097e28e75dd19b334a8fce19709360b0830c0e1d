@@ -1,0 +1,10 @@
+
+{
+java:S1192"YDefine a constant instead of duplicating this literal "************************" 3 times.(Åêµúÿÿÿÿ8éÍåşÖ1
+L	java:S106"+Replace this use of System.out by a logger.(Åêµúÿÿÿÿ8ÌĞâşÖ1
+L	java:S106"+Replace this use of System.out by a logger.(Åêµúÿÿÿÿ8•ÏãşÖ1
+L	java:S106 "+Replace this use of System.out by a logger.(Åêµúÿÿÿÿ8İõãşÖ1
+Q
+java:S1128	"/Remove this unused import 'java.sql.SQLOutput'.(ê¤òÃùÿÿÿÿ8â¾ØşÖ1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8â¾ØşÖ1

@@ -1,0 +1,13 @@
+
+w
+java:S1192+"ZDefine a constant instead of duplicating this literal "-------------------------" 3 times.(ğÔ‘¬8£ÕáşÖ1
+>
+java:S1116"Remove this empty statement.(­ñüéşÿÿÿÿ8­Ó²şÖ1
+G	java:S106+"+Replace this use of System.out by a logger.(ğÔ‘¬8²Ó²şÖ1
+G	java:S106,"+Replace this use of System.out by a logger.(¶àÚš8²Ó²şÖ1
+G	java:S106-"+Replace this use of System.out by a logger.(ğÔ‘¬8³Ó²şÖ1
+L	java:S106."+Replace this use of System.out by a logger.(ˆçí©üÿÿÿÿ8³Ó²şÖ1
+G	java:S106/"+Replace this use of System.out by a logger.(‚Ï€8´Ó²şÖ1
+L	java:S1060"+Replace this use of System.out by a logger.(ê–…«úÿÿÿÿ8´Ó²şÖ1
+G	java:S1061"+Replace this use of System.out by a logger.(¦ËÀ¹8µÓ²şÖ1
+G	java:S1062"+Replace this use of System.out by a logger.(ğÔ‘¬8µÓ²şÖ1
