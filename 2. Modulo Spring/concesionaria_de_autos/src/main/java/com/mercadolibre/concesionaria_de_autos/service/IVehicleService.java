@@ -6,12 +6,11 @@ import com.mercadolibre.concesionaria_de_autos.dto.response.VehicleResponseWitho
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 
 public interface IVehicleService {
     VehicleResponseDto createVehicle(VehiclePostDto vehicle);
     List<VehicleResponseWithoutServicesDto> getAllVehicles();
     List<VehicleResponseDto> getVehiclesByDateRange(LocalDate startDate, LocalDate endDate);
     List<VehicleResponseDto> getVehiclesByPriceRange(int startPrice, int endPrice);
-    Optional<VehicleResponseDto> getVehicle(Long id);
+    VehicleResponseDto getVehicle(Long id);
 }

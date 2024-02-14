@@ -5,7 +5,6 @@ import com.mercadolibre.concesionaria_de_autos.dto.response.VehicleResponseDto;
 import com.mercadolibre.concesionaria_de_autos.dto.response.VehicleResponseWithoutServicesDto;
 import com.mercadolibre.concesionaria_de_autos.service.IVehicleService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,36 +22,24 @@ public class VehicleController {
     }
     @GetMapping
     public ResponseEntity<List<VehicleResponseWithoutServicesDto>> getAllVehicles(){
-        List<VehicleResponseWithoutServicesDto> vehicleResponse = vehicleService.getAllVehicles();
-        if(vehicleResponse.isEmpty()){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        return ResponseEntity.ok(vehicleResponse);
+        return ResponseEntity.ok(vehicleService.getAllVehicles());
     }
     @GetMapping("/dates")
     public ResponseEntity<List<VehicleResponseDto>> getAllVehiclesWithinDateRange(
             @RequestParam(name = "since") LocalDate startDate,
             @RequestParam(name = "to") LocalDate endDate
     ) {
-        List<VehicleResponseDto> vehicleResponse = vehicleService.getVehiclesByDateRange(startDate, endDate);
-        if(vehicleResponse.isEmpty()){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        return ResponseEntity.ok(vehicleResponse);
+        return ResponseEntity.ok(vehicleService.getVehiclesByDateRange(startDate, endDate));
     }
     @GetMapping("/prices")
     public ResponseEntity<List<VehicleResponseDto>> getAllVehiclesWithinPriceRange(
             @RequestParam(name = "since") int startPrice,
             @RequestParam(name = "to") int endPrice
     ) {
-        List<VehicleResponseDto> vehicleResponse = vehicleService.getVehiclesByPriceRange(startPrice, endPrice);
-        if(vehicleResponse.isEmpty()){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        return ResponseEntity.ok(vehicleResponse);
+        return ResponseEntity.ok(vehicleService.getVehiclesByPriceRange(startPrice, endPrice));
     }
     @GetMapping("/{id}")
     public ResponseEntity<VehicleResponseDto> getVehicle(@PathVariable Long id){
-        return ResponseEntity.of(vehicleService.getVehicle(id));
+        return ResponseEntity.ok(vehicleService.getVehicle(id));
     }
 }
