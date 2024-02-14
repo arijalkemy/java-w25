@@ -1,6 +1,7 @@
 package bootcamp.recapitulandospringp2vivo.controller;
 
 import bootcamp.recapitulandospringp2vivo.dto.request.RequestCreateLinkDTO;
+import bootcamp.recapitulandospringp2vivo.dto.response.InvalidateLinkResponseDto;
 import bootcamp.recapitulandospringp2vivo.dto.response.MetricsResponseDTO;
 import bootcamp.recapitulandospringp2vivo.dto.response.ResponseCreateLinkDTO;
 import bootcamp.recapitulandospringp2vivo.service.ILinkService;
@@ -39,8 +40,10 @@ public class LinkController {
     }
 
     @PostMapping("invalidate/{linkId}")
-    public void invalidateLink(@PathVariable Integer linkId) {
+    public ResponseEntity<InvalidateLinkResponseDto> invalidateLink(@PathVariable Integer linkId) {
         linkService.invalidateLink(linkId);
+        InvalidateLinkResponseDto response = InvalidateLinkResponseDto.builder().linkId(linkId).build();
+        return ResponseEntity.ok(response);
     }
 
 }
