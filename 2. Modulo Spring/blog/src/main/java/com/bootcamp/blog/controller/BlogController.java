@@ -12,9 +12,9 @@ import java.util.List;
 
 @RestController
 public class BlogController {
-    IBlogService blogService;
-    public BlogController(){
-        blogService = new BlogServiceImpl();
+    private IBlogService blogService;
+    public BlogController(BlogServiceImpl blogService){
+        this.blogService = blogService;
     }
 
     @PostMapping("/blog")

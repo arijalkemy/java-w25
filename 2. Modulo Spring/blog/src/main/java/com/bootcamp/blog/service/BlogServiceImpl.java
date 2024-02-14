@@ -6,6 +6,7 @@ import com.bootcamp.blog.exceptions.AlreadyBlogExistException;
 import com.bootcamp.blog.exceptions.NotFoundBlogException;
 import com.bootcamp.blog.model.EntradaBlog;
 import com.bootcamp.blog.repository.BlogRepositoryImpl;
+import com.bootcamp.blog.repository.IBlogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,9 +15,9 @@ import java.util.List;
 @Service
 public class BlogServiceImpl implements IBlogService{
 
-    BlogRepositoryImpl blogRepo;
-    public BlogServiceImpl(){
-        this.blogRepo = new BlogRepositoryImpl();
+    private IBlogRepository blogRepo;
+    public BlogServiceImpl(BlogRepositoryImpl blogRepo){
+        this.blogRepo = blogRepo;
     }
 
     @Override
