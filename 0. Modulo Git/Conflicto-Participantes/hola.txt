@@ -1,0 +1,4 @@
+ok esta bien
+hola todoso
+linea conflictiva
+test
