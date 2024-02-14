@@ -10,6 +10,7 @@ import com.bootcamp.calculoEdad.model.*;
 public class Controller {
     @GetMapping(path = "/{day}/{month}/{year}")
     public String calcularEdad(@PathVariable int day, @PathVariable int month, @PathVariable int year) {
+        //Lógica en el modelo
         return CalculadorDeEdad.calcular(day, month, year);
     }
 }
