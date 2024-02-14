@@ -1,0 +1,62 @@
+Ejercicio 1
+
+String apellido = "Gomez";
+int edad = 35;
+boolean bandera = false;
+double sueldo = 45857.90;
+String nombre = "Julián";
+
+Ejercicio 2
+String nombre;
+int edad;
+double sueldo;
+String apellido;
+String direccion;
+boolean licencia_de_conducir;
+double estatura_de_la_persona;
+int cantidad_de_hijos;
+
+Ejercicio 3
+public class Main {
+    public static void main(String[] args) {
+double sueldoBase = 46000; //monto de ejemplo
+String dni = "12345678"; //dni de ejemplo
+double sueldoConAumento;
+
+if (sueldoBase <= 20000) {
+     System.out.println("Corresponde 20% de aumento");
+     sueldoConAumento = sueldoBase * 1.2;
+}
+else {
+  if (sueldoBase > 45000){
+       System.out.println("Corresponde 5% de aumento");
+       sueldoConAumento = sueldoBase * 1.05;
+  }
+  else {
+      System.out.println("Corresponde 10% de aumento");
+      sueldoConAumento = sueldoBase * 1.1;
+  }
+}
+
+System.out.println ("El nuevo sueldo del empleado es de: " + sueldoConAumento);
+}}
+
+Ejercicio 4
+public class Main {
+    public static void main(String[] args) {
+int[] serviciosCli = {1,1,2,2,2,1,2}; //vector de 7 posiciones con tipos de servicios
+double totalFactura;
+
+for (int i=0; i<=serviciosCli.length-1; i++) {
+  if (serviciosCli[i]==1) {
+      totalFactura = 1500;
+     System.out.println ("El tipo de servicio es: " + serviciosCli[i]);
+     System.out.println ("El monto de la factura es de: " + totalFactura);
+  }
+  else {
+      totalFactura =1500 + 700;
+     System.out.println ("El tipo de servicio es: " + serviciosCli[i]);
+     System.out.println ("El monto de la factura es de: " + totalFactura);
+  }
+}
+}}

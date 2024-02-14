@@ -1,0 +1,51 @@
+Ejercicio 1
+public class Main {
+  
+    public class Automovil {
+            
+        String marca;
+        String color;
+        double kilometros;
+
+        public Automovil() {
+
+        }
+
+        public Automovil(String marca,String  color,double kilometros) {
+                this.marca = marca;
+                this.color = color;
+                this.kilometros = kilometros;
+        }
+
+        public String mostrarMarcaYColor() {
+                String marcaYColor = "La marca del auto es: " + this.marca + ". El color del auto es: " + this.color;
+
+        }
+    }
+
+  public static void main(String[] args) {
+        Automovil auto = new Automovil("Chevrolet", "Negro", 20000);
+        auto.mostrarMarcaYColor();
+    }
+}
+
+Ejercicio 2 
+public class Main {
+    public static void main(String[] args) {
+        //Mensaje final
+        String mensajeFinal = "Este es el último mensaje";
+        
+        try{
+            //Código que arroja excepción
+            int[] numeros = new int[5];
+            numeros[5] = 10;
+        }
+        catch(Exception e){
+        
+            System.out.println(e.getMessage());
+        }
+        finally{
+            System.out.println(mensajeFinal);
+        }
+    }
+}
