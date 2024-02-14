@@ -1,0 +1,107 @@
+[
+  {
+    "brand": "Chevrolet",
+    "model": "Corsa",
+    "manufacturingDate": "2000-11-20",
+    "numberOfKilometers": "115000",
+    "doors": "5",
+    "price": "90000",
+    "currency": "AR",
+    "services": [
+      {
+        "date": "2003-05-20",
+        "kilometers": "60000",
+        "description": "Change air filters"
+      }
+    ],
+    "countOfOwners": "2"
+  },
+  {
+    "brand": "Toyota",
+    "model": "Corolla",
+    "manufacturingDate": "2014-01-10",
+    "numberOfKilometers": "80000",
+    "doors": "4",
+    "price": "150000",
+    "currency": "AR",
+    "services": [
+      {
+        "date": "2015-05-03",
+        "kilometers": "50000",
+        "description": "Oil change"
+      },
+      {
+        "date": "2016-08-10",
+        "kilometers": "75000",
+        "description": "Replace brake pads"
+      }
+    ],
+    "countOfOwners": "1"
+  },
+  {
+    "brand": "Ford",
+    "model": "Fiesta",
+    "manufacturingDate": "2012-07-15",
+    "numberOfKilometers": "60000",
+    "doors": "5",
+    "price": "120000",
+    "currency": "AR",
+    "services": [
+      {
+        "date": "2013-11-25",
+        "kilometers": "40000",
+        "description": "Change spark plugs"
+      },
+      {
+        "date": "2015-02-05",
+        "kilometers": "55000",
+        "description": "Replace battery"
+      }
+    ],
+    "countOfOwners": "2"
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Golf",
+    "manufacturingDate": "2015-06-01",
+    "numberOfKilometers": "45000",
+    "doors": "3",
+    "price": "170000",
+    "currency": "AR",
+    "services": [
+      {
+        "date": "2016-09-20",
+        "kilometers": "30000",
+        "description": "Change timing belt"
+      },
+      {
+        "date": "2018-02-12",
+        "kilometers": "40000",
+        "description": "Replace tires"
+      }
+    ],
+    "countOfOwners": "1"
+  },
+  {
+    "brand": "Honda",
+    "model": "Civic",
+    "manufacturingDate": "2017-03-05",
+    "numberOfKilometers": "20000",
+    "doors": "4",
+    "price": "200000",
+    "currency": "AR",
+    "services": [
+      {
+        "date": "2018-08-10",
+        "kilometers": "10000",
+        "description": "Oil change"
+      },
+      {
+        "date": "2019-02-25",
+        "kilometers": "15000",
+        "description": "Replace air filter"
+      }
+    ],
+    "countOfOwners": "1"
+  }
+]
