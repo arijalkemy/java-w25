@@ -1,0 +1,19 @@
+
+0
+java:S1220""Move this file to a named package.
+W
+java:S1854"<Remove this useless assignment to local variable "persona3".(äŸ¨Òùÿÿÿÿ
+W
+java:S1854	"<Remove this useless assignment to local variable "persona1".(çÄåƒøÿÿÿÿ
+H
+java:S1481	"-Remove this unused "persona1" local variable.(çÄåƒøÿÿÿÿ
+H
+java:S1481"-Remove this unused "persona3" local variable.(äŸ¨Òùÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(²Ñªš
+Q	java:S125"<This block of commented-out lines of code should be removed.(ºïÆù
+>	java:S131""Add a default case to this switch.(ş¹„8«øÀ«Ö1
+E	java:S106"+Replace this use of System.out by a logger.(şé–ûÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(ø›ŠÇùÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(ı¤õ³
+Q
+java:S1128"4Remove this unused import 'org.w3c.dom.ls.LSOutput'.(Ò½¾Š8ºøÀ«Ö1
