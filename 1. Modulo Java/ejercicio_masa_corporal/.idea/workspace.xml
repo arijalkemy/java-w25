@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="58adf959-6376-4d25-974f-9ceece80ba26" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ejercicio_carrera_selva/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_carrera_selva/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_carrera_selva/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_carrera_selva/src/main/java/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_carrera_selva/src/main/java/entity/Competitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_carrera_selva/src/main/java/entity/Inscription.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_disenio_clases_metodos/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_disenio_clases_metodos/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_disenio_clases_metodos/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_disenio_clases_metodos/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_disenio_clases_metodos/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_disenio_clases_metodos/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_disenio_clases_metodos/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_disenio_clases_metodos/src/main/java/entity/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_estudiante/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_estudiante/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_estudiante/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_paqueteria/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_paqueteria/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_paqueteria/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_paqueteria/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_paqueteria/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_paqueteria/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_paqueteria/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_poo_p2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_poo_p2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_poo_p2/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_profesor/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_profesor/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_profesor/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_seguridad/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_seguridad/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_seguridad/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_seguridad/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_seguridad/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_seguridad/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_seguridad/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_temperaturas_globales/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_temperaturas_globales/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_temperaturas_globales/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_temperaturas_globales/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_temperaturas_globales/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_temperaturas_globales/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ejercicio_temperaturas_globales/src/main/java/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2cKLviUPyzWyTca6H1X3HFOp65a" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "ferreyra__gustavo",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-3183f394aec4-96c0d24d" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58adf959-6376-4d25-974f-9ceece80ba26" name="Changes" comment="" />
+      <created>1707855556651</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707855556651</updated>
+    </task>
+    <servers />
+  </component>
+</project>
