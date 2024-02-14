@@ -6,6 +6,7 @@ import bootcamp.recapitulandospringp2vivo.dto.response.MetricsResponseDTO;
 import bootcamp.recapitulandospringp2vivo.dto.response.ResponseCreateLinkDTO;
 import bootcamp.recapitulandospringp2vivo.entity.Link;
 import bootcamp.recapitulandospringp2vivo.exception.IncorrectPasswordException;
+import bootcamp.recapitulandospringp2vivo.exception.InvalidLinkException;
 import bootcamp.recapitulandospringp2vivo.exception.LinkNotFoundException;
 import bootcamp.recapitulandospringp2vivo.repository.ILinkRepository;
 import bootcamp.recapitulandospringp2vivo.util.LinkMapper;
@@ -30,6 +31,8 @@ public class LinkServiceImp implements ILinkService {
         Link link = checkIfLinkExistsAndGet(linkId);
         if (!link.getPassword().equals(password))
             throw new IncorrectPasswordException();
+        if (!link.isValid())
+            throw new InvalidLinkException();
         linkRepository.visitedInc(linkId);
         return link.getUrl();
     }

@@ -19,4 +19,9 @@ public class GlobalExceptionsHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
     }
 
+    @ExceptionHandler(value = InvalidLinkException.class)
+    public ResponseEntity<?> InvalidLinkException(InvalidLinkException e){
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+    }
+
 }
