@@ -37,7 +37,7 @@ public class VehicleService implements IVehicleService {
                 return new VehicleDTO(vehicle);
             }
         }
-        return new VehicleDTO();
+        return null;
     }
 
     @Override

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import main.dto.VehicleDTO;
 import main.dto.VehicleWServiceDTO;
+import main.exception.NotFoundException;
 import main.service.VehicleService;
 
 @RestController
@@ -50,9 +51,9 @@ public class VehicleController {
     @ResponseBody
     public ResponseEntity<VehicleDTO> getVehiclesById(@PathVariable Integer id) {
         VehicleDTO vehicleDTO = vehicleService.getVehiclesById(id);
-        if (vehicleDTO.getId() != null) {
-            return new ResponseEntity<>(vehicleDTO, HttpStatusCode.valueOf(200));
+        if (vehicleDTO == null) {
+            throw new NotFoundException("The vehicle was not found");
         }
-        return new ResponseEntity<>(vehicleDTO, HttpStatusCode.valueOf(404));
+        return new ResponseEntity<>(vehicleDTO, HttpStatusCode.valueOf(200));
     }
 }
