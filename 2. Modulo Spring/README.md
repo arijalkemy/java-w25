@@ -1,13 +1,11 @@
 Listados de ejercicios realizados:
 
-| **Nombre**                                | **Link**                                                                                                                       |
-|-------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| Introduccion a Java - P1                  | [Link](https://github.com/arijalkemy/java-w25/blob/luengas__jhon/1.%20Modulo%20Java/01_intro_java_p1/)                         |
-| Introduccion a Java - P2                  | [Link](https://github.com/arijalkemy/java-w25/blob/luengas__jhon/1.%20Modulo%20Java/02_intro_java_p2/)                         |
-| POO - P1                                  | [Link](https://github.com/arijalkemy/java-w25/blob/luengas__jhon/1.%20Modulo%20Java/03_poo_p1/)                                |
-| POO - P2                                  | [Link](https://github.com/arijalkemy/java-w25/blob/luengas__jhon/1.%20Modulo%20Java/04_poo_p2/)                                |
-| Clases abstractas e interfaces            | [Link](https://github.com/arijalkemy/java-w25/blob/luengas__jhon/1.%20Modulo%20Java/05_clases_abstractas_e_interfaces/)        |
-| Repaso Java                               | [Link](https://github.com/arijalkemy/java-w25/blob/luengas__jhon/1.%20Modulo%20Java/06_repaso_java/)                           |
-| Ejercicio integrador - P1                 | [Link](https://github.com/arijalkemy/java-w25/blob/luengas__jhon/1.%20Modulo%20Java/07_ejercicio_integrador_p1/)               |
-| Ejercicio integrador - P2 (Save the Ropa) | [Link](https://github.com/arijalkemy/java-w25/blob/luengas__jhon/1.%20Modulo%20Java/08_ejercicio_integrador_p2_save_the_ropa/) |
-| Ejercicio integrador - P2 (Dakar)         | [Link](https://github.com/arijalkemy/java-w25/blob/luengas__jhon/1.%20Modulo%20Java/09_ejercicio_integrador_p2_dakar/)         |
+| **Nombre**                                            | **Link**                                                                                                                                 |
+|-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| Introducción a Spring - P2 (Código morse)             | [Link](https://github.com/arijalkemy/java-w25/tree/luengas__jhon/2.%20Modulo%20Spring/01_intro_spring_p2-codigo_morse)                   |
+| Ejercicio prácticos - P1 (Edad de una persona)        | [Link](https://github.com/arijalkemy/java-w25/tree/luengas__jhon/2.%20Modulo%20Spring/02_ejercicio_practico_p1-edad_persona)             |
+| Ejercicio prácticos - P2 (Deportistas)                | [Link](https://github.com/arijalkemy/java-w25/tree/luengas__jhon/2.%20Modulo%20Spring/03_ejercicio_practico_p2-deportistas)              |
+| Arquitectura multicapa - P1 (Star Wars)               | [Link](https://github.com/arijalkemy/java-w25/tree/luengas__jhon/2.%20Modulo%20Spring/04_arquitectura_multicapa_p1-starwars)             |
+| Arquitectura multicapa - P2 (Calculadora de calorías) | [Link](https://github.com/arijalkemy/java-w25/tree/luengas__jhon/2.%20Modulo%20Spring/05_arquitectura_multicapa_p2-calculadora_calorias) |
+| Manejo de excepciones (Blog)                          | [Link](https://github.com/arijalkemy/java-w25/tree/luengas__jhon/2.%20Modulo%20Spring/06_manejo_excepciones-blog)                        |
+| Recapitulando Spring (Link tracker)                   | [Link](https://github.com/arijalkemy/java-w25/tree/luengas__jhon/2.%20Modulo%20Spring/07_recapitulando_spring-link_tracker)              |
