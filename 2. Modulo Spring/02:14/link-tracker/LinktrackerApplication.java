@@ -1,13 +1,13 @@
-package com.linktraker.ejercicio2;
+package com.spring.linktracker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Ejercicio2Application {
+public class LinktrackerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ejercicio2Application.class, args);
+		SpringApplication.run(LinktrackerApplication.class, args);
 	}
 
 }

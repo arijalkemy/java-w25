@@ -1,11 +1,11 @@
-package com.linktraker.ejercicio2.exception;
+package com.spring.linktracker.exception;
 
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.linktraker.ejercicio2.dto.ExceptionDto;
+import com.spring.linktracker.dto.ExceptionDto;
 
 @ControllerAdvice
 public class ExceptionController {

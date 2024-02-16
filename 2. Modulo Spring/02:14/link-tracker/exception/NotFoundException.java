@@ -1,4 +1,4 @@
-package com.linktraker.ejercicio2.exception;
+package com.spring.linktracker.exception;
 
 public class NotFoundException extends RuntimeException {
     public NotFoundException(String message) {

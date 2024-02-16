@@ -1,11 +1,11 @@
-package com.linktraker.ejercicio2.repository;
+package com.spring.linktracker.repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.linktraker.ejercicio2.model.Link;
+import com.spring.linktracker.model.Link;
 
 @Repository
 public class LinkRepository implements ILinkRepository {
@@ -33,6 +33,16 @@ public class LinkRepository implements ILinkRepository {
                 this.linkList.set(i, link);
             }
         }
+    }
+
+    @Override
+    public Link getMetrics(Integer id) {
+        for (int i = 0; i < this.linkList.size(); i++) {
+            if (this.linkList.get(i).getId().intValue() == id.intValue()) {
+                this.linkList.get(i);
+            }
+        }
+        return null;
     }
 
 }

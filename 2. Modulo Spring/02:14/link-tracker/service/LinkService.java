@@ -1,4 +1,4 @@
-package com.linktraker.ejercicio2.service;
+package com.spring.linktracker.service;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -6,12 +6,14 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.linktraker.ejercicio2.dto.LinkDto;
-import com.linktraker.ejercicio2.dto.LinkIdDto;
-import com.linktraker.ejercicio2.dto.LinkUrlDto;
-import com.linktraker.ejercicio2.exception.NotFoundException;
-import com.linktraker.ejercicio2.model.Link;
-import com.linktraker.ejercicio2.repository.LinkRepository;
+import com.spring.linktracker.dto.LinkDto;
+import com.spring.linktracker.dto.LinkIdDto;
+import com.spring.linktracker.dto.LinkRedirectsDto;
+import com.spring.linktracker.dto.LinkUrlDto;
+import com.spring.linktracker.dto.req.LinkReqDto;
+import com.spring.linktracker.exception.NotFoundException;
+import com.spring.linktracker.model.Link;
+import com.spring.linktracker.repository.LinkRepository;
 
 @Service
 public class LinkService implements ILinkService {
@@ -53,6 +55,15 @@ public class LinkService implements ILinkService {
             }
         }
         throw new NotFoundException("No se encontró ningun link en el sistema con el id indicado.");
+    }
+
+    @Override
+    public LinkRedirectsDto getMetrics(LinkReqDto id) {
+        Link link = linkRepository.getMetrics(id.getId());
+        if (link == null) {
+            throw new NotFoundException("No se encontró ningun link en el sistema con el id indicado.");
+        }
+        return new LinkRedirectsDto(link);
     }
 
 }

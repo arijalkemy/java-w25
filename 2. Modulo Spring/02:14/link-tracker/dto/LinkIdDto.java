@@ -1,6 +1,6 @@
-package com.linktraker.ejercicio2.dto;
+package com.spring.linktracker.dto;
 
-import com.linktraker.ejercicio2.model.Link;
+import com.spring.linktracker.model.Link;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,4 +15,5 @@ public class LinkIdDto {
     public LinkIdDto(Link link) {
         this.id = link.getId();
     }
+
 }

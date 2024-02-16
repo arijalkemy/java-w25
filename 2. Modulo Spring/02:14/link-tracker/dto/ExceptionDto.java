@@ -1,4 +1,4 @@
-package com.linktraker.ejercicio2.dto;
+package com.spring.linktracker.dto;
 
 public record ExceptionDto(String message) {
 }

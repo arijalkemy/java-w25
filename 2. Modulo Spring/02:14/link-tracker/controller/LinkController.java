@@ -1,4 +1,4 @@
-package com.linktraker.ejercicio2.controller;
+package com.spring.linktracker.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,9 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.linktraker.ejercicio2.dto.LinkIdDto;
-import com.linktraker.ejercicio2.dto.LinkUrlDto;
-import com.linktraker.ejercicio2.service.LinkService;
+import com.spring.linktracker.dto.LinkIdDto;
+import com.spring.linktracker.dto.LinkRedirectsDto;
+import com.spring.linktracker.dto.LinkUrlDto;
+import com.spring.linktracker.dto.req.LinkReqDto;
+import com.spring.linktracker.service.LinkService;
 
 @RestController
 @RequestMapping("/api")
@@ -35,6 +37,11 @@ public class LinkController {
         return new ResponseEntity<>(linkService.putLink(id), HttpStatusCode.valueOf(200));
     }
 
+    @GetMapping("/metrics/{id}")
+    @ResponseBody
+    public ResponseEntity<LinkRedirectsDto> getMetrics(@PathVariable LinkReqDto id) {
+        return new ResponseEntity<>(linkService.getMetrics(id), HttpStatusCode.valueOf(200));
+    }
 
     @GetMapping("/links")
     public ResponseEntity<?> getLinks() {

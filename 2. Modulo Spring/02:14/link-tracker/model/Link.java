@@ -1,4 +1,4 @@
-package com.linktraker.ejercicio2.model;
+package com.spring.linktracker.model;
 
 import lombok.Data;
 
