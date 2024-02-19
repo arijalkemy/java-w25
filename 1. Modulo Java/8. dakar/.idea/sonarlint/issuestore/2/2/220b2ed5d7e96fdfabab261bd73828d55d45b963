@@ -1,0 +1,9 @@
+
+„
+java:S1319"gThe type of "prendas" should be an interface such as "List" rather than the implementation "ArrayList".(›ØÑ†8«¾ª€Ø1
+’
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(î¶ýÞþÿÿÿÿ8«¾ª€Ø1
+G	java:S106 "+Replace this use of System.out by a logger.(×©Éñ8°¾ª€Ø1
+F	java:S106!"+Replace this use of System.out by a logger.(Û€˜#8Ï±Ä€Ø1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ëŽÇ€Ø1

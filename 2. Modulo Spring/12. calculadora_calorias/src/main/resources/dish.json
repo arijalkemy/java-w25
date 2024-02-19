@@ -1,0 +1,58 @@
+[
+  {
+    "nombre": "Hamburguesa de chuleta",
+    "ingredientes": [
+      {
+        "name": "Pan de trigo blanco",
+        "gramos": 50
+      },
+      {
+        "name": "Cerdo, chuleta",
+        "gramos": 100
+      },
+      {
+        "name": "Tomates",
+        "gramos": 50
+      }
+    ]
+  },
+  {
+    "nombre": "Hamburguesa de pollo",
+    "ingredientes": [
+      {
+        "name": "Pan de trigo blanco",
+        "gramos": 50
+      },
+      {
+        "name": "Pollo",
+        "gramos": 100
+      }
+    ]
+  },
+  {
+    "nombre": "Hamburguesa de ternera",
+    "ingredientes": [
+      {
+        "name": "Pan de trigo blanco",
+        "gramos": 50
+      },
+      {
+        "name": "Ternera, chuleta",
+        "gramos": 100
+      }
+    ]
+  },
+  {
+    "nombre": "Hamburguesa de lentejas",
+    "ingredientes": [
+      {
+        "name": "Pan de trigo blanco",
+        "gramos": 75
+      },
+      {
+        "name": "Lentejas",
+        "gramos": 150
+      }
+    ]
+  }
+]
