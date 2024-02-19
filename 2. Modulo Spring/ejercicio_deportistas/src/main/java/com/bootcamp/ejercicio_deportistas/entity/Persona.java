@@ -10,4 +10,5 @@ import lombok.NoArgsConstructor;
 public class Persona {
     private String nombre, apellido;
     private int edad;
+    private Deporte deporte;
 }
