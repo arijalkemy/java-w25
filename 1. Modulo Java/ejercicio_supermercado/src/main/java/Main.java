@@ -36,5 +36,14 @@ public class Main {
             System.out.println(clienteBuscado);
         }
 
+        ArrayList<Item> itemCollection = new ArrayList<>();
+
+        Item item1 = new Item("ahfo236", "Pure", 1,23.56);
+        Item item2 = new Item("al82fg2", "Leche", 3,23.67);
+        Item item3 = new Item("l2h928y", "Cafe", 2,32.56);
+
+ArrayList<Factura> facturaCollection = new ArrayList<>();
+
+Factura factura1 = new Factura(cliente1, itemCollection);
     }
 }
