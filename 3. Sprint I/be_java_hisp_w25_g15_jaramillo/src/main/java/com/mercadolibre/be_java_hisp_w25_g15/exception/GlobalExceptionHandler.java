@@ -40,5 +40,9 @@ public class GlobalExceptionHandler {
         String errorMessage = e.getValue()+ " is not a valid value";
         return new ResponseEntity<>(new MessageResponseDto(errorMessage), HttpStatus.BAD_REQUEST);
     }
-
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<MessageResponseDto> handleIllegalArgumentException(IllegalArgumentException e) {
+        String errorMessage = e.getMessage();
+        return new ResponseEntity<>(new MessageResponseDto(errorMessage), HttpStatus.BAD_REQUEST);
+    }
 }

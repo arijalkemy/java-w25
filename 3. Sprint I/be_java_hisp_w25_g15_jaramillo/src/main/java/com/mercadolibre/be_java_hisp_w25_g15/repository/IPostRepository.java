@@ -9,4 +9,6 @@ public interface IPostRepository {
     List<Post> findAllPostsBySellerIdBetweenDateRange(int sellerId, LocalDate startDate, LocalDate endDate);
     Post addPost(Post post);
     List<Post> findAllPostsBySellerId(int sellerId);
+
+    List<Post> findAllPostsBetweenPriceRange(double startPrice, double endPrice);
 }

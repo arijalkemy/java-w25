@@ -72,4 +72,10 @@ public class PostRepository implements IPostRepository {
                 .toList();
     }
 
+    @Override
+    public List<Post> findAllPostsBetweenPriceRange(double startPrice, double endPrice){
+        return posts.stream()
+                .filter(post -> post.getPrice() >= startPrice && post.getPrice() <= endPrice)
+                .toList();
+    }
 }

@@ -3,6 +3,7 @@ package com.mercadolibre.be_java_hisp_w25_g15.service.impl;
 import com.mercadolibre.be_java_hisp_w25_g15.dto.PostDto;
 import com.mercadolibre.be_java_hisp_w25_g15.dto.PostWithPromoDto;
 import com.mercadolibre.be_java_hisp_w25_g15.dto.request.DateOrderEnumDto;
+import com.mercadolibre.be_java_hisp_w25_g15.dto.request.PriceOrderEnumDto;
 import com.mercadolibre.be_java_hisp_w25_g15.dto.response.PostGetListDto;
 import com.mercadolibre.be_java_hisp_w25_g15.dto.response.PostsWithPromoCountDto;
 import com.mercadolibre.be_java_hisp_w25_g15.exception.ConflictException;
@@ -88,6 +89,28 @@ public class PostService implements IPostService {
             throw new ConflictException("User must be a seller to create a post");
         }
         return mapper.getMapper().convertValue(postRepository.addPost(postWithPromo), PostWithPromoDto.class);
+    }
+
+    @Override
+    public List<PostDto> getPostsBetweenPriceRange(double startPrice, double endPrice, PriceOrderEnumDto priceOrder) {
+        if(endPrice<startPrice){
+            throw new IllegalArgumentException("The start price must be greater than the end price");
+        }
+        List<Post> postFound = postRepository.findAllPostsBetweenPriceRange(startPrice, endPrice);
+        if(postFound.isEmpty()){
+            throw new NotFoundException("There are no posts between the price range.");
+        }
+        List<PostDto> postDtoList = postFound.stream().map(post -> mapper.getMapper().convertValue(post, PostDto.class)).toList();
+        sortPostDtoListByPrice(priceOrder, postDtoList);
+        return postDtoList;
+    }
+    private static void sortPostDtoListByPrice(PriceOrderEnumDto priceOrder, List<PostDto> postDtoList) {
+        if(priceOrder == null) return;
+        Comparator<Double> order = Comparator.reverseOrder();
+        if(priceOrder == PriceOrderEnumDto.PRICE_ASC){
+            order = Comparator.naturalOrder();
+        }
+        postDtoList.sort(Comparator.comparing(PostDto::price, order));
     }
 
     private static void sortPostDtoListByDate(DateOrderEnumDto dateOrder, List<PostDto> postDtoList) {
