@@ -1,4 +1,4 @@
-package com.example.be_java_hisp_w25_g11.dto;
+package com.example.be_java_hisp_w25_g11.dto.response;
 
 import com.example.be_java_hisp_w25_g11.dto.request.ProductDTO;
 import com.fasterxml.jackson.annotation.JsonProperty;

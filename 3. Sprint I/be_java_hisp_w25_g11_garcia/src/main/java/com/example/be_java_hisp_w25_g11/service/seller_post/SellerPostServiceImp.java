@@ -1,14 +1,13 @@
 package com.example.be_java_hisp_w25_g11.service.seller_post;
 
-import com.example.be_java_hisp_w25_g11.dto.SellerPostDTO;
-import com.example.be_java_hisp_w25_g11.dto.commons.enums.EnumDateOrganizer;
+import com.example.be_java_hisp_w25_g11.dto.response.*;
 import com.example.be_java_hisp_w25_g11.dto.request.CreatePostRequestDTO;
-import com.example.be_java_hisp_w25_g11.dto.request.OrganizerByDateDTO;
-import com.example.be_java_hisp_w25_g11.dto.response.SellerPostsListDTO;
+import com.example.be_java_hisp_w25_g11.dto.request.CreatePromoPostRequestDTO;
 import com.example.be_java_hisp_w25_g11.entity.Buyer;
 import com.example.be_java_hisp_w25_g11.entity.Product;
 import com.example.be_java_hisp_w25_g11.entity.Seller;
 import com.example.be_java_hisp_w25_g11.entity.SellerPost;
+import com.example.be_java_hisp_w25_g11.exception.BadRequestException;
 import com.example.be_java_hisp_w25_g11.exception.NotFoundException;
 import com.example.be_java_hisp_w25_g11.repository.buyer.IBuyerRepository;
 import com.example.be_java_hisp_w25_g11.repository.seller.ISellerRepository;
@@ -18,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.*;
 
 @Service
@@ -48,7 +48,6 @@ public class SellerPostServiceImp implements ISellerPostService {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy", Locale.ENGLISH);
         SellerPost sellerPost = new SellerPost(
                 request.getUserId(),
-                null,
                 LocalDate.parse(request.getDate(), dateTimeFormatter),
                 modelMapper.map(request.getProduct(), Product.class),
                 request.getCategory(),
@@ -60,6 +59,38 @@ public class SellerPostServiceImp implements ISellerPostService {
         seller.get().getPosts().add(sellerPost);
 
         return modelMapper.map(sellerPost, SellerPostDTO.class);
+    }
+
+    // US 0010 - Publicación de un nuevo producto en promoción
+    @Override
+    public SellerPromoPostDTO createPromoPost(CreatePromoPostRequestDTO request) {
+        Optional<Seller> seller = sellerRepository.get(request.getUserId());
+        if (seller.isEmpty())
+            throw new NotFoundException("No existe un vendedor con ese ID");
+
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy", Locale.ENGLISH);
+        LocalDate postDate;
+        try {
+            postDate = LocalDate.parse(request.getDate(), dateTimeFormatter);
+        } catch (DateTimeParseException e) {
+            throw new BadRequestException("La fecha ingresada no tiene el formato correcto."
+                    + "El formato correcto es dd-MM-yyyy");
+        }
+        SellerPost sellerPost = new SellerPost(
+                request.getUserId(),
+                postDate,
+                modelMapper.map(request.getProduct(), Product.class),
+                request.getCategory(),
+                request.getPrice(),
+                request.isHasPromo(),
+                request.getDiscount(),
+                seller.get()
+        );
+
+        sellerPost = sellerPostRepository.create(sellerPost);
+        seller.get().getPosts().add(sellerPost);
+
+        return modelMapper.map(sellerPost, SellerPromoPostDTO.class);
     }
 
     @Override
@@ -119,7 +150,37 @@ public class SellerPostServiceImp implements ISellerPostService {
         return posts;
     }
 
-    private boolean compareDate(LocalDate a, LocalDate b) {
-        return a.isAfter(b);
+    // US 0011 - Obtener la cantidad de productos en promoción de un determinado vendedor
+    @Override
+    public PromoPostCountDTO getPromoPostCount(Integer userId) {
+        Optional<Seller> seller = sellerRepository.get(userId);
+        if (seller.isEmpty())
+            throw new NotFoundException("No existe un vendedor con ese ID");
+
+        return new PromoPostCountDTO(
+                userId,
+                seller.get().getName(),
+                seller.get().getPosts().stream()
+                        .filter(p -> p.getHasPromo())
+                        .toList()
+                        .size()
+        );
+    }
+
+    // US 0012 - Obtener un listado de todos los productos en promoción de un determinado vendedor
+    @Override
+    public SellerPromoPostsListDTO getPromoPostList(Integer userId) {
+        Optional<Seller> seller = sellerRepository.get(userId);
+        if (seller.isEmpty())
+            throw new NotFoundException("No existe un vendedor con ese ID");
+
+        return new SellerPromoPostsListDTO(
+                userId,
+                seller.get().getName(),
+                seller.get().getPosts().stream()
+                        .filter(p -> p.getHasPromo())
+                        .map(p -> modelMapper.map(p, SellerPromoPostDTO.class))
+                        .toList()
+        );
     }
 }

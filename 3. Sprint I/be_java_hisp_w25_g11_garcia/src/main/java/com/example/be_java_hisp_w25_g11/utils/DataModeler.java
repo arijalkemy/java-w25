@@ -59,11 +59,11 @@ public class    DataModeler {
         ));
 
         List<SellerPost> posts = new ArrayList<>(List.of(
-                new SellerPost(6, 1, LocalDate.of(2022,2,15), products.get(0), 10, 0.0, sellers.get(0)),
-                new SellerPost(7, 2, LocalDate.of(2021,4,28), products.get(1), 10, 0.0, sellers.get(0)),
-                new SellerPost(8, 3, LocalDate.of(2019,5,18), products.get(2), 10, 0.0, sellers.get(0)),
-                new SellerPost(9, 4, LocalDate.of(2017,6,7), products.get(3), 10, 0.0, sellers.get(0)),
-                new SellerPost(10, 5, LocalDate.of(2022,9,4), products.get(4), 10, 0.0, sellers.get(0))
+                new SellerPost(6, LocalDate.of(2022,2,15), products.get(0), 10, 0.0, sellers.get(0)),
+                new SellerPost(7, LocalDate.of(2021,4,28), products.get(1), 10, 0.0, sellers.get(0)),
+                new SellerPost(8, LocalDate.of(2019,5,18), products.get(2), 10, 0.0, sellers.get(0)),
+                new SellerPost(9, LocalDate.of(2017,6,7), products.get(3), 10, 0.0, sellers.get(0)),
+                new SellerPost(10, LocalDate.of(2022,9,4), products.get(4), 10, 0.0, sellers.get(0))
         ));
 
         // Assign posts to sellers

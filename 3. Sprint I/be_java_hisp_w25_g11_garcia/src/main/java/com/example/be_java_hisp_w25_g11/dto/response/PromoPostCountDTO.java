@@ -5,14 +5,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SellerPostsListDTO {
+public class PromoPostCountDTO {
     @JsonProperty("user_id")
-    private int userId;
-    @JsonProperty("posts")
-    private List<SellerPostDTO> posts;
+    private Integer userId;
+    @JsonProperty("user_name")
+    private String userName;
+    @JsonProperty("promo_products_count")
+    private Integer promoProductsCount;
 }

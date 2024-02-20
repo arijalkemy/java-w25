@@ -27,7 +27,10 @@ public class SellerPostRepositoryImp implements ISellerPostRepository {
 
     @Override
     public List<SellerPost> createAll(List<SellerPost> entities) {
-        entities.forEach(p -> sellerPosts.put(p.getPostId(), p));
+        entities.forEach(p -> {
+            p.setPostId(index++);
+            sellerPosts.put(p.getPostId(), p);
+        });
 
         return entities;
     }

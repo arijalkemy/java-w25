@@ -10,9 +10,11 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SellerPostsListDTO {
+public class SellerPromoPostsListDTO {
     @JsonProperty("user_id")
     private int userId;
+    @JsonProperty("user_name")
+    private String userName;
     @JsonProperty("posts")
-    private List<SellerPostDTO> posts;
+    private List<SellerPromoPostDTO> posts;
 }
