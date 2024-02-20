@@ -15,7 +15,9 @@ public class ProductRepositoryImpl implements IProductRepository {
             new Product(2, "Mouse inalámbrico", "Oficina", "LG", "Black", "Bateria Incluida"),
             new Product(3,"Auriculares Gamer", "Gamer", "Razer", "Black & Red & RGB", "C Microfono"),
             new Product(4, "Notbook Dell 4", "Oficina", "DELL", "Grey", "I7"),
-            new Product(62,"Headset RGB Inalámbrico", "Gamer", "Razer", "Green with RGB", "Sin batería")
+            new Product(62,"Headset RGB Inalámbrico", "Gamer", "Razer", "Green with RGB", "Sin batería"),
+            new Product(5, "Teclado Mecánico", "Gamer", "Razer", "Black & RGB", "Special Edition"), //Con descuento
+            new Product(6, "Monitor 4k", "Oficina", "LG", "Black", "4k") //Con descuento
     );
 
     public List<Product> getAll(){

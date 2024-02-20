@@ -35,7 +35,10 @@ public class PostRepositoryImpl implements IPostRepository {
                 new Post(3,5, LocalDate.of(2024, Month.JANUARY,29),productRepository.findById(1).get(), 100, 1500.00),
                 new Post(4, 5, LocalDate.of(2024, Month.FEBRUARY, 15), productRepository.findById(2).get(),110, 200.41),
                 new Post(5, 4, LocalDate.of(2024, Month.FEBRUARY, 12), productRepository.findById(3).get(), 100, 500.00),
-                new Post(6, 4, LocalDate.of(2023, Month.JANUARY, 01), productRepository.findById(4).get(),110, 200000.00)
+                new Post(6, 4, LocalDate.of(2023, Month.JANUARY, 01), productRepository.findById(4).get(),110, 200000.00),
+                new Post(7, 5, LocalDate.of(2023, Month.JANUARY, 01), productRepository.findById(5).get(),110, 200000.00,true,0.5),
+                new Post(8, 5, LocalDate.of(2023, Month.JANUARY, 01), productRepository.findById(6).get(),110, 200000.00,true,0.3)
+
         ));
     }
 
