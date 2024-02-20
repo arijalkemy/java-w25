@@ -4,23 +4,30 @@ import com.bootcamp.be_java_hisp_w25_g02.dto.response.*;
 
 import com.bootcamp.be_java_hisp_w25_g02.entity.Post;
 import com.bootcamp.be_java_hisp_w25_g02.entity.Product;
+import com.bootcamp.be_java_hisp_w25_g02.entity.User;
 import com.bootcamp.be_java_hisp_w25_g02.repository.IPostRepository;
+import com.bootcamp.be_java_hisp_w25_g02.repository.IUserRepository;
 import com.bootcamp.be_java_hisp_w25_g02.repository.PostRepositoryImpl;
 import com.bootcamp.be_java_hisp_w25_g02.exception.BadRequestException;
 import com.bootcamp.be_java_hisp_w25_g02.exception.NotFoundException;
+import com.bootcamp.be_java_hisp_w25_g02.repository.UserRepositoryImpl;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PostServiceImpl implements IPostService{
 
     IPostRepository postRepository;
     IUserService userService;
-    public PostServiceImpl(PostRepositoryImpl postRepository, UserServiceImpl userService){
+
+    IUserRepository userRepository;
+    public PostServiceImpl(PostRepositoryImpl postRepository, UserServiceImpl userService, UserRepositoryImpl userRepository){
         this.postRepository = postRepository;
-        this.userService =userService;
+        this.userService = userService;
+        this.userRepository = userRepository;
     }
 
     public GenericResponseDTO savePost(PostDTO postDTO){
@@ -82,14 +89,20 @@ public class PostServiceImpl implements IPostService{
 
     @Override
     public PromotionAmountDTO getPromotionsAmount(Integer userId){
+        // Complejo, porque intento reusar código para traer la cantidad todal de promociones si no se especifica userId.
         List<Post> postList = postRepository.findAll();
+        Optional<User> seller;
+        seller = userRepository.findById(userId);
+        if (userId != null && seller.isEmpty()) throw new NotFoundException("No user with such ID was found");
         if (userId != null) {
             postList = postList.stream().filter(p -> p.getUser_id().equals(userId)).toList();
             if (postList.isEmpty()) throw new NotFoundException("El usuario no es vendedor!");
         }
         List<Post> promotionsList = postList.stream().filter(Post::getIsPromoActive).toList();
         if (promotionsList.isEmpty()) throw new NotFoundException("El usuario no posee promociones activas");
-        return new PromotionAmountDTO(promotionsList.size());
+        return seller.map(user -> new PromotionAmountDTO(
+                user.getUser_id(), user.getUser_name(), promotionsList.size()
+        )).orElseGet(() -> new PromotionAmountDTO(null, "N/A", promotionsList.size()));
     }
 
     /*

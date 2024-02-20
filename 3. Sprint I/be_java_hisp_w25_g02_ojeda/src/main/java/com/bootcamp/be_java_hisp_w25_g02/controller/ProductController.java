@@ -45,6 +45,8 @@ public class ProductController {
         return new ResponseEntity<>(amount, HttpStatus.OK);
     }
 
-    //@GetMapping("/products/getAllPosts")
+    // @GetMapping("/products/getAllPosts")
+
+    // @GetMapping("/products/getAllPromotions")
 
 }
