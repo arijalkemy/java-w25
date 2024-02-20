@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "b4a392ec-73d2-43ed-93b9-31ab70785390",
+		"name": "Individuales",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33065244"
+	},
+	"item": [
+		{
+			"name": "11 - Cantidad Productos en promo de un vendedor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/products/promo-post/count?user_id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"products",
+						"promo-post",
+						"count"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10 - Postear producto en promo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 4,\n    \"date\": \"19-02-2024\",\n    \"product\": {\n        \"product_id\": 56212,\n        \"product_name\": \"PRUEBA CARG123123121A\",\n        \"type\": \"TEST1111\",\n        \"brand\": \"TEEEEETSTTS\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50,\n    \"has_promo\": true,\n    \"discount\": 0.25\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/products/promo-post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"products",
+						"promo-post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BONUS -> Contar por año/mes cuantas promo hubieron",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/products/promo-post/2024/02/count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"products",
+						"promo-post",
+						"2024",
+						"02",
+						"count"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
