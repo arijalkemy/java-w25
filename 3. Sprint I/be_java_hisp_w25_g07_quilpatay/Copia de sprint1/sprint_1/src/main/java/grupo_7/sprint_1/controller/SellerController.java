@@ -22,22 +22,7 @@ public class SellerController {
         this.sellerService = sellerService;
     }
 
-    @PostMapping("/products/post")
-    public ResponseEntity<?> postPost(@RequestBody PostPostDto newPost) {
-        return new ResponseEntity<>(sellerService.postPost(newPost.userId(), newPost), HttpStatus.OK);
-    }
-
-    @GetMapping("/users/{userId}/followers/list")
-    public ResponseEntity<SellerFollowersListDto> getFollowersList(@PathVariable Integer userId, boolean orderAsc) {
-
-        return ResponseEntity.ok(sellerService.getListOrderedAlphabetically(userId, orderAsc));
-    }
-
-    @GetMapping("/users/allsellers")
-    public ResponseEntity<?> getAllSellers() {
-        return ResponseEntity.ok(sellerService.getAllSellers());
-    }
-
+    // US 0002: Obtener el resultado de la cantidad de usuarios que siguen a un determinado vendedor
     @GetMapping("/users/{userId}/followers/count")
     public ResponseEntity<SellerDTO> getFollowersCount(@PathVariable int userId) {
         try {
@@ -48,9 +33,32 @@ public class SellerController {
         }
     }
 
+    // US 0003: Obtener un listado de todos los usuarios que siguen a un determinado vendedor (¿Quién me sigue?)
+    // US 0008: Ordenamiento alfabético ascendente y descendente
+    @GetMapping("/users/{userId}/followers/list")
+    public ResponseEntity<SellerFollowersListDto> getFollowersList(@PathVariable Integer userId, boolean orderAsc) {
+
+        return ResponseEntity.ok(sellerService.getListOrderedAlphabetically(userId, orderAsc));
+    }
+
+    // US 0005: Dar de alta una nueva publicación
+    @PostMapping("/products/post")
+    public ResponseEntity<?> postPost(@RequestBody PostPostDto newPost) {
+        return new ResponseEntity<>(sellerService.postPost(newPost.userId(), newPost), HttpStatus.OK);
+    }
+
+    // US 0006: Obtener un listado de las publicaciones realizadas por los vendedores que un usuario sigue en las
+    // últimas dos semanas (para esto tener en cuenta ordenamiento por fecha, publicaciones más recientes primero).
+    // US 0009: Ordenamiento por fecha ascendente y descendente
     @GetMapping("/products/followed/{userId}/list")
     public ResponseEntity<List<PostDto>> getRecentPostsFromFollowedSellers(@PathVariable Integer userId, @RequestParam String order) {
         List<PostDto> posts = sellerService.getRecentPostsFromFollowedSellers(userId, order);
         return new ResponseEntity<>(posts, HttpStatus.OK);
     }
+
+    @GetMapping("/users/allsellers")
+    public ResponseEntity<?> getAllSellers() {
+        return ResponseEntity.ok(sellerService.getAllSellers());
+    }
+
 }
