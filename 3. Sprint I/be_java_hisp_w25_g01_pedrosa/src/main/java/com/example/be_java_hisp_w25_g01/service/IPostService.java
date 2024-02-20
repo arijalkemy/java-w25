@@ -23,7 +23,7 @@ public interface IPostService {
 
     PromoCountDTO getPromoCount(Integer userId);
 
-    List<PromoNewPriceDTO> getPromoNewPrices();
+    List<PromoNewPriceDTO> getPromoNewPrices(Integer userId);
 
 
 }

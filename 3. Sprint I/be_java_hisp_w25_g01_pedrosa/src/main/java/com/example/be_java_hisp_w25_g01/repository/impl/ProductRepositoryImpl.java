@@ -17,7 +17,8 @@ public class ProductRepositoryImpl implements IProductRepository {
             new Product(4, "Notbook Dell 4", "Oficina", "DELL", "Grey", "I7"),
             new Product(62,"Headset RGB Inalámbrico", "Gamer", "Razer", "Green with RGB", "Sin batería"),
             new Product(5, "Teclado Mecánico", "Gamer", "Razer", "Black & RGB", "Special Edition"), //Con descuento
-            new Product(6, "Monitor 4k", "Oficina", "LG", "Black", "4k") //Con descuento
+            new Product(6, "Monitor 4k", "Oficina", "LG", "Black", "4k") ,//Con descuento
+            new Product(7,"Hub USB", "Oficina", "LG", "Black", "4 puertos") //Con descuento
     );
 
     public List<Product> getAll(){

@@ -56,8 +56,14 @@ public class ProductController {
 
     //BONUS - ENDPOINT PARA OBTENER LOS NUEVOS PRECIOS DE LOS PRODUCTOS EN PROMOCION
     @GetMapping("/promo-post/newPrices")
-    public ResponseEntity<List<PromoNewPriceDTO>> getPromoNewPrices(){
-        return new ResponseEntity<>(postService.getPromoNewPrices(), HttpStatus.OK);
+    public ResponseEntity<List<PromoNewPriceDTO>> getPromoNewPrices(@RequestParam(required = false) Integer idUser){
+
+
+        if(idUser != null){
+            return new ResponseEntity<>(postService.getPromoNewPrices(idUser), HttpStatus.OK);
+        }else{
+
+        return new ResponseEntity<>(postService.getPromoNewPrices(0), HttpStatus.OK);}
     }
 
 
