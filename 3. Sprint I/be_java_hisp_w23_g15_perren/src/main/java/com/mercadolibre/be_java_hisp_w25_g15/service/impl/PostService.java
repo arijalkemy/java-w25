@@ -82,6 +82,10 @@ public class PostService implements IPostService {
     public PostGetPromoListDto getPromoPostListByUser(int userId, String order) {
         User user = userRepository.getUserById(userId)
                 .orElseThrow(() -> new NotFoundException("User with id " +userId+ " not found."));
+        // Solo los seller pueden tener posts
+        if(!(user instanceof Seller)){
+            throw new ConflictException("User provided must be a seller");
+        }
         List<PostDto> postDtoList =  this.postRepository.findPromoPostsBySellerId(userId).stream().map(p -> mapper.getMapper().convertValue(p, PostDto.class)).toList();
         postDtoList = sortPostDtoListByName(postDtoList, order);
 
