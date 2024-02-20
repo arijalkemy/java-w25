@@ -1,15 +1,15 @@
 {
   "info": {
-    "_postman_id": "ac327982-264f-484a-8cd6-99d1b8d6c602",
-    "name": "G07 Sprint 1",
+    "_postman_id": "51dbfe47-8737-4e14-a5f9-c64b26b0f310",
+    "name": "G07_Sprint_1",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-    "_exporter_id": "32837829"
+    "_exporter_id": "32838510"
   },
   "item": [
     {
       "name": "buyers/users/11/unfollow/1",
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
         "url": "http://localhost:8080/buyers/users/11/unfollow/1"
       },
@@ -58,7 +58,27 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": "http://localhost:8080/sellers/users/1/followers/list"
+        "url": {
+          "raw": "http://localhost:8080/sellers/users/1/followers/list?order=name_asc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "sellers",
+            "users",
+            "1",
+            "followers",
+            "list"
+          ],
+          "query": [
+            {
+              "key": "order",
+              "value": "name_asc"
+            }
+          ]
+        }
       },
       "response": []
     },
@@ -73,15 +93,6 @@
     },
     {
       "name": "sellers/products/followed/11/list",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": "http://localhost:8080/sellers/products/followed/11/list"
-      },
-      "response": []
-    },
-    {
-      "name": "sellers/products/followed/11/list?order=date_asc",
       "request": {
         "method": "GET",
         "header": [],
