@@ -12,6 +12,7 @@ import com.breakingbytes.be_java_hisp_w25_g04_gutierrez.repository.IProductRepos
 import com.breakingbytes.be_java_hisp_w25_g04_gutierrez.repository.ISellerRepository;
 
 import com.breakingbytes.be_java_hisp_w25_g04_gutierrez.utils.Mapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

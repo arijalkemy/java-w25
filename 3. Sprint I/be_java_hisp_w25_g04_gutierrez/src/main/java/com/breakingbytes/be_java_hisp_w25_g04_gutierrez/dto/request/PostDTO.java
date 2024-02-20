@@ -23,5 +23,7 @@ public class PostDTO {
     LocalDate date;
     Product product;
     int category;
-    double price;
+    double price, discount;
+    @JsonProperty("has_promo")
+    boolean hasPromo;
 }

@@ -2,8 +2,10 @@ package com.breakingbytes.be_java_hisp_w25_g04_gutierrez.controller;
 
 import com.breakingbytes.be_java_hisp_w25_g04_gutierrez.dto.response.LastPostsDto;
 import com.breakingbytes.be_java_hisp_w25_g04_gutierrez.dto.request.PostDTO;
+import com.breakingbytes.be_java_hisp_w25_g04_gutierrez.dto.response.PromoPostCountDTO;
 import com.breakingbytes.be_java_hisp_w25_g04_gutierrez.service.ISellerService;
 import com.breakingbytes.be_java_hisp_w25_g04_gutierrez.service.IUserService;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class UserController {
     IUserService userService;
@@ -23,7 +27,23 @@ public class UserController {
         this.userService = userService;
         this.sellerService = sellerService;
     }
+    @PostMapping("/products/promo-post")
+    public ResponseEntity<?> addPromoPost(@RequestBody PostDTO postDTO){
+        sellerService.addPost(postDTO);
+        return ResponseEntity
+                .ok().build();
+    }
 
+    @GetMapping("/products/promo-post/count")
+    public ResponseEntity<PromoPostCountDTO> getPromoCount(@RequestParam int user_id){
+        return ResponseEntity.ok()
+                .body(userService.getPromoPostCount(user_id));
+    }
+    @GetMapping("/products/promo-post/list")
+    public ResponseEntity<List<PostDTO>> getPromoPosts(@RequestParam int user_id){
+        return ResponseEntity.ok()
+                .body(userService.getPromoPosts(user_id));
+    }
     @PostMapping("/users/{userId}/unfollow/{userIdToUnfollow}")
     public ResponseEntity<?> unfollowUser(@PathVariable("userId") String userId,
                                           @PathVariable("userIdToUnfollow") String userIdToUnfollow) {
