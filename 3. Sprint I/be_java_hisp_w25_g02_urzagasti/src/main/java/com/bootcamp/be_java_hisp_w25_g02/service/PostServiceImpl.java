@@ -45,7 +45,7 @@ public class PostServiceImpl implements IPostService{
 
    
     @Override
-    public FollowingPostDTO getPostsOrderedByDate(Integer userId, String order) {
+    public FollowingPostDTO getPostsOrderedByDate(Integer userId, String order, Boolean filterByPromotion) {
         if (!order.equalsIgnoreCase("date_asc") && !order.equalsIgnoreCase("date_desc") ){
             throw new BadRequestException("Parametro order no reconocido. Debe tener el valor date_asc o date_desc");
         }
@@ -55,7 +55,9 @@ public class PostServiceImpl implements IPostService{
             posts.addAll(this.postRepository.findByUserId(sellerId));
 
         }
-
+        if(filterByPromotion){
+            posts = posts.stream().filter(Post::getHas_promo).toList();
+        }
         if (posts.isEmpty()){
             throw new NotFoundException("No hay post de los usuarios seguidos en las ultimas 2 semanas");
         }
@@ -64,6 +66,7 @@ public class PostServiceImpl implements IPostService{
         }else {
             posts =posts.stream().sorted(Comparator.comparing(Post::getPostDate).reversed()).toList();
         }
+
         return new FollowingPostDTO(userId, posts.stream().map(this::mapPostToDTO).toList());
     }
 
@@ -145,8 +148,8 @@ public class PostServiceImpl implements IPostService{
             throw new BadRequestException("Producto tiene valores vacios");
         }
     }
-    private PostDTO mapPostToDTO(Post post){
-        return new PostDTO(post.getUser_id(), post.getPostDate(), mapToProductDTO(post.getProduct()),post.getCategory(), post.getPrice());
+    private PromotionPostDTO mapPostToDTO(Post post){
+        return new PromotionPostDTO(post.getUser_id(), post.getPostDate(), mapToProductDTO(post.getProduct()),post.getCategory(), post.getPrice(), post.getPrice() - post.getPrice() * post.getDiscount(), post.getDiscount(), post.getHas_promo());
 
     }
     private ProductDTO mapToProductDTO(Product product){

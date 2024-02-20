@@ -4,6 +4,6 @@ import java.util.List;
 
 public record FollowingPostDTO(
     Integer user_id,
-    List<PostDTO> posts
+    List<PromotionPostDTO> posts
 ) {
 }

@@ -4,12 +4,16 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDate;
 
-public record PostDTO(
-
+public record PromotionPostDTO(
         Integer user_id,
-@JsonFormat(pattern = "dd-MM-yyyy")
+        @JsonFormat(pattern = "dd-MM-yyyy")
         LocalDate date,
         ProductDTO product,
         Integer category,
-        Double price
-) { }
+        Double price,
+        Double price_with_discount,
+        Double discount,
+        Boolean has_promo
+
+        ) {
+}

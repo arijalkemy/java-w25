@@ -20,8 +20,8 @@ public class ProductController {
     }
 
     @GetMapping("products/followed/{userId}/list")
-    public ResponseEntity<?> getFollowedPosts(@PathVariable Integer userId, @RequestParam(defaultValue = "date_asc", required = false) String order){
-        return new ResponseEntity<>(this.postService.getPostsOrderedByDate(userId, order), HttpStatus.OK);
+    public ResponseEntity<?> getFollowedPosts(@PathVariable Integer userId, @RequestParam(defaultValue = "date_asc", required = false) String order, @RequestParam(defaultValue = "false", required = false) Boolean promotion){
+        return new ResponseEntity<>(this.postService.getPostsOrderedByDate(userId, order, promotion), HttpStatus.OK);
     }
     @PostMapping("/products/promo-post")
     public ResponseEntity<?> savePromoPost(@RequestBody PromoPostDTO promoPostDTO){

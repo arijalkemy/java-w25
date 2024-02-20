@@ -10,7 +10,7 @@ import com.bootcamp.be_java_hisp_w25_g02.dto.response.PromoPostCountDTO;
 public interface IPostService {
     GenericResponseDTO savePost(PostDTO post);
 
-    FollowingPostDTO getPostsOrderedByDate(Integer userId, String order);
+    FollowingPostDTO getPostsOrderedByDate(Integer userId, String order, Boolean filterByPromotion);
     GenericResponseDTO savePromoPost(PromoPostDTO promoPostDTO);
     PromoPostCountDTO getPromoPostCount(Integer userId);
     GenericResponseDTO updatePromotionDiscount(Integer post_id, double discount);
