@@ -16,9 +16,11 @@ import java.time.LocalDate;
 public class Post {
     Integer post_id;
     Integer user_id;
-    @JsonFormat(pattern = "dd-MM-yyyy") //TODO: corroborar que formatee a dd-MM-yyyy. Es posible agregar "yyyy-MM-dd@HH:mm:ss.SSSZ"
+    @JsonFormat(pattern = "dd-MM-yyyy") //TODO: Es posible agregar "yyyy-MM-dd@HH:mm:ss.SSSZ"
     LocalDate postDate;
     Product product;
     Integer category;
     Double price;
+    Boolean has_promo;
+    Double discount;
 }

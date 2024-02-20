@@ -21,8 +21,8 @@ public class PostServiceImpl  implements IPostService{
     IPostRepository postRepository;
     IUserService userService;
     public PostServiceImpl(PostRepositoryImpl postRepository, UserServiceImpl userService){
-        this.postRepository = (IPostRepository) postRepository;
-        this.userService =userService;
+        this.postRepository = postRepository;
+        this.userService = userService;
     }
 
     public GenericResponseDTO savePost(PostDTO postDTO){
@@ -42,7 +42,17 @@ public class PostServiceImpl  implements IPostService{
     }
 
     private Post mapDtoToPost(PostDTO postDTO){
-        return new Post(0, postDTO.user_id(), postDTO.date(), new Product(postDTO.product().product_id(), postDTO.product().product_name(), postDTO.product().type(), postDTO.product().brand(), postDTO.product().color(), postDTO.product().notes()), postDTO.category(), postDTO.price());
+        return new Post(0, postDTO.user_id(), postDTO.date(),
+                new Product(postDTO.product().product_id(),
+                            postDTO.product().product_name(),
+                            postDTO.product().type(),
+                            postDTO.product().brand(),
+                            postDTO.product().color(),
+                            postDTO.product().notes()),
+                            postDTO.category(),
+                            postDTO.price(),
+                            postDTO.has_promo(),
+                            postDTO.discount());
     }
 
     @Override
@@ -54,7 +64,6 @@ public class PostServiceImpl  implements IPostService{
         List<Post> posts = new ArrayList<>();
         for(Integer sellerId: followedUsers){
             posts.addAll(this.postRepository.findByUserId(sellerId));
-
         }
 
         if (posts.isEmpty()){
@@ -68,11 +77,24 @@ public class PostServiceImpl  implements IPostService{
         return new FollowingPostDTO(userId, posts.stream().map(this::mapPostToDTO).toList());
     }
     private PostDTO mapPostToDTO(Post post){
-        return new PostDTO(post.getUser_id(), post.getPostDate(), mapToProductDTO(post.getProduct()),post.getCategory(), post.getPrice());
-
+        return new PostDTO(post.getUser_id(), post.getPostDate(), mapToProductDTO(post.getProduct()),post.getCategory(), post.getPrice(), post.getHas_promo(), post.getDiscount());
     }
+
     private ProductDTO mapToProductDTO(Product product){
         return new ProductDTO(product.getProduct_id(), product.getProduct_name(), product.getType(), product.getBrand(), product.getColor(), product.getNotes());
     }
 
+    @Override
+    public FollowingPostDTO searchPostsOnSale(Integer userId) {
+        List<Integer> followedUsers = userService.getFollowedUsersId(userId);
+        List<Post> posts = new ArrayList<>();
+        for(Integer sellerId: followedUsers){
+            posts.addAll(this.postRepository.findByUserId(sellerId));
+        }
+        if (posts.isEmpty()){
+            throw new NotFoundException("No hay post en descuento de ese vendedor");
+        }else{
+            return new FollowingPostDTO(userId, posts.stream().map(this::mapPostToDTO).toList());
+        }
+    }
 }

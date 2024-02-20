@@ -19,8 +19,18 @@ public class ProductController {
         return new ResponseEntity<>(this.postService.savePost(post), HttpStatus.OK);
     }
 
+    @PostMapping("products/promo-post")
+    public ResponseEntity<?> savePromoPost(@RequestBody PostDTO post) {
+        return new ResponseEntity<>(this.postService.savePost(post), HttpStatus.OK);
+    }
+
     @GetMapping("products/followed/{userId}/list")
     public ResponseEntity<?> getFollowedPosts(@PathVariable Integer userId, @RequestParam(defaultValue = "date_asc", required = false) String order){
         return new ResponseEntity<>(this.postService.searchPostsOrderedByDate(userId, order), HttpStatus.OK);
+    }
+
+    @GetMapping("products/promo-post/count?{userId}")
+    public ResponseEntity<?> getFollowedPosts(@PathVariable Integer userId){
+        return new ResponseEntity<>(this.postService.searchPostsOnSale(userId), HttpStatus.OK);
     }
 }

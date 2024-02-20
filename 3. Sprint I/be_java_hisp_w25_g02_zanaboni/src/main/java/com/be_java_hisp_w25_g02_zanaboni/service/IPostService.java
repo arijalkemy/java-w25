@@ -8,4 +8,5 @@ public interface IPostService {
     GenericResponseDTO savePost(PostDTO post);
 
     FollowingPostDTO searchPostsOrderedByDate(Integer userId, String order);
+    FollowingPostDTO searchPostsOnSale(Integer userId);
 }
