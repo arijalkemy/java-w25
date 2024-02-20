@@ -100,7 +100,7 @@ public class PostService implements IPostService {
         if(postFound.isEmpty()){
             throw new NotFoundException("There are no posts between the price range.");
         }
-        List<PostDto> postDtoList = postFound.stream().map(post -> mapper.getMapper().convertValue(post, PostDto.class)).toList();
+        List<PostDto> postDtoList = new ArrayList<>(postFound.stream().map(post -> mapper.getMapper().convertValue(post, PostDto.class)).toList());
         sortPostDtoListByPrice(priceOrder, postDtoList);
         return postDtoList;
     }
