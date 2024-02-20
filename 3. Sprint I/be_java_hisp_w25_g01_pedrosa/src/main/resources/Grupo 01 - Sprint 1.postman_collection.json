@@ -343,6 +343,26 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "US 0012 Bonus - Get New Prices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/promo-post/newPrices",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"promo-post",
+						"newPrices"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
