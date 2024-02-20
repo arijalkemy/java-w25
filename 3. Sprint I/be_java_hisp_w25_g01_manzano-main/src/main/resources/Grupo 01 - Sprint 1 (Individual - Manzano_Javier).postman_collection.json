@@ -1,0 +1,578 @@
+{
+	"info": {
+		"_postman_id": "5db8afc3-7056-4f61-b923-415c5871e1c7",
+		"name": "Grupo 01 - Sprint 1 (Individual - Manzano_Javier)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32842731"
+	},
+	"item": [
+		{
+			"name": "US 0001 - Follow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users/1/follow/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"follow",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 0001 - Follow BAD REQUEST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users/2/follow/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"2",
+						"follow",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 0002 - Get Followers count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users/5/followers/count",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"5",
+						"followers",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 0003 - Get Followers List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users/4/followers/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"4",
+						"followers",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 0004 - Get Followed List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users/2/followed/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"2",
+						"followed",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 0005 - Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": 2,\n  \"date\": \"01-06-2024\",\n  \"product\": {\n    \"product_id\": 1,\n    \"product_name\": \"Silla Gamer\",\n    \"type\": \"Gamer\",\n    \"brand\": \"Racer\",\n    \"color\": \"Yellow & Black\",\n    \"notes\": \"Special Edition\"\n  },\n  \"category\": 100,\n  \"price\": 1500.50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products/post",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 0005 - Post BAD REQUEST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": 9,\n  \"date\": \"29-04-2021\",\n  \"product\": {\n    \"product_id\": 1,\n    \"product_name\": \"Silla Gamer\",\n    \"type\": \"Gamer\",\n    \"brand\": \"Racer\",\n    \"color\": \"Red & Black\",\n    \"notes\": \"Special Edition\"\n  },\n  \"category\": 100,\n  \"price\": 1500.50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products/post",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 0006 -  Get Posts followed 2 weeks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 0007 - Unfollow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users/3/unfollow/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"3",
+						"unfollow",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 0008 - Get followed order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users/2/followed/list?ordenamiento=asc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"2",
+						"followed",
+						"list"
+					],
+					"query": [
+						{
+							"key": "ordenamiento",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 0008 - Get followers order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users/4/followers/list?order=name_asc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"4",
+						"followers",
+						"list"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "name_asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 0009 - Get followed Date order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/followed/2/list?order=date_asc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"followed",
+						"2",
+						"list"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "date_asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 00010 - Promo Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": 5,\n  \"date\": \"10-02-2024\",\n  \"product\": {\n    \"product_id\": 1,\n    \"product_name\": \"Silla Gamer XD\",\n    \"type\": \"Gamer\",\n    \"brand\": \"Racer\",\n    \"color\": \"Yellow & Black\",\n    \"notes\": \"Special Edition\"\n  },\n  \"category\": 100,\n  \"price\": 1500.50,\n  \"has_promo\": true,\n  \"discount\": 0.25\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products/promo-post",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"promo-post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 00011 - Promo Post Count",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products/promo-post/count?user_id=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"promo-post",
+						"count"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 00012 - Get Promo Posts followed",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products/followed/2/sale-list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"followed",
+						"2",
+						"sale-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 00013 - Get Promo Posts followed order discount_desc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products/followed/2/sale-list?order=discount_desc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"followed",
+						"2",
+						"sale-list"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "discount_desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 00013 - Get Promo Posts followed order discount_asc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products/followed/2/sale-list?order=discount_desc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"followed",
+						"2",
+						"sale-list"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "discount_desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 00013 - Get Promo Posts followed order price_desc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products/followed/2/sale-list?order=price_desc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"followed",
+						"2",
+						"sale-list"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "price_desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 00013 - Get Promo Posts followed order price_asc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products/followed/2/sale-list?order=price_asc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"followed",
+						"2",
+						"sale-list"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "price_asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 00013 - Get Promo Posts followed order best_oportunity",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products/followed/2/sale-list?order=best_oportunitys",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"followed",
+						"2",
+						"sale-list"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "best_oportunitys"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
