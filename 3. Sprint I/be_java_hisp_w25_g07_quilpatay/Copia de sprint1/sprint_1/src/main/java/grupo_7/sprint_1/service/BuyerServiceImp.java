@@ -1,15 +1,16 @@
 package grupo_7.sprint_1.service;
 
 import grupo_7.sprint_1.dtos.BuyerDto;
-import grupo_7.sprint_1.dtos.GenericResponseDTO;
+import grupo_7.sprint_1.dtos.GenericResponseDto;
 import grupo_7.sprint_1.dtos.MessageDto;
 import grupo_7.sprint_1.entity.Buyer;
 import grupo_7.sprint_1.entity.Seller;
 import grupo_7.sprint_1.entity.User;
 import grupo_7.sprint_1.exception.BadRequestException;
 import grupo_7.sprint_1.exception.NotFoundException;
-import grupo_7.sprint_1.repository.IBuyerRepository;
-import grupo_7.sprint_1.repository.ISellerRepository;
+import grupo_7.sprint_1.repository.inter.IBuyerRepository;
+import grupo_7.sprint_1.repository.inter.ISellerRepository;
+import grupo_7.sprint_1.service.inter.IBuyerService;
 import grupo_7.sprint_1.utils.Mapper;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +30,7 @@ public class BuyerServiceImp implements IBuyerService {
     }
 
     @Override
-    public GenericResponseDTO followSeller(Integer buyerId, Integer sellerId) {
+    public GenericResponseDto followSeller(Integer buyerId, Integer sellerId) {
         Buyer buyer = buyerRepository.findBuyerById(buyerId);
         if (buyer == null) {
             throw new BadRequestException("El comprador no existe");
@@ -45,7 +46,7 @@ public class BuyerServiceImp implements IBuyerService {
         followedList.add(seller.get());
         buyer.setFollowed(followedList);
         buyerRepository.updateBuyer(buyer);
-        return new GenericResponseDTO("El vendedor se ha seguido correctamente");
+        return new GenericResponseDto("El vendedor se ha seguido correctamente");
     }
 
     @Override

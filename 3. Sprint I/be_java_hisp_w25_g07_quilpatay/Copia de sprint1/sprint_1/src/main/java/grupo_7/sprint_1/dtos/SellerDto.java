@@ -1,6 +1,6 @@
 package grupo_7.sprint_1.dtos;
 
-public record SellerDTO(
+public record SellerDto(
         int userId,
         String userName,
         int followerCount

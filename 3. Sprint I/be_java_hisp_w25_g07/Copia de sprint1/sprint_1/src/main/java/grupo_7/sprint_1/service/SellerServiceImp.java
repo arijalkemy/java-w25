@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class SellerServiceImp implements ISellerService {
@@ -29,7 +28,7 @@ public class SellerServiceImp implements ISellerService {
     }
 
     @Override
-    public PostDto postPost(Integer sellerId, PostPostDto newPost) {
+    public PostDto addPost(Integer sellerId, AddPostDto newPost) {
 
         isPostValid(newPost);
 
@@ -56,20 +55,27 @@ public class SellerServiceImp implements ISellerService {
     }
 
     @Override
-    public SellerFollowersListDto getListOrderedAlphabetically(Integer userId, boolean orderAsc) {
+    public SellerFollowersListDto getListOrderedAlphabetically(Integer userId, String order) {
         Optional<Seller> seller = sellerRepository.findById(userId);
         if (seller.isEmpty()) {
             throw new NotFoundException("No se encontro el vendedor con el id: " + userId);
         }
-        List<BuyerDtoRequisito3> listBuyerDto = seller.get().getFollowers().stream()
-                .sorted(orderAsc ? Comparator.comparing(Buyer::getUserName) : Comparator.comparing(Buyer::getUserName).reversed())
-                .map(Mapper::convertListToDto)
-                .toList();
+        List<BuyerDtoRequisito3> listBuyerDto;
+        if ("name_asc".equals(order))
+            listBuyerDto = seller.get().getFollowers().stream()
+                    .sorted(Comparator.comparing(Buyer::getUserName))
+                    .map(Mapper::convertListToDto)
+                    .toList();
+        else
+            listBuyerDto = seller.get().getFollowers().stream()
+                    .sorted(Comparator.comparing(Buyer::getUserName).reversed())
+                    .map(Mapper::convertListToDto)
+                    .toList();
 
         return new SellerFollowersListDto(seller.get().getUserId(), seller.get().getUserName(), listBuyerDto);
     }
 
-    private void isPostValid(PostPostDto newPost) {
+    private void isPostValid(AddPostDto newPost) {
         if (newPost.userId() == null) {
             throw new InvalidArgsException("'user_id' no puede ser null.");
         }
@@ -131,13 +137,12 @@ public class SellerServiceImp implements ISellerService {
             throw new NotFoundException("El comprador con el ID " + buyerId + " no existe");
         }
         List<Integer> followedSellerIds = buyer.getFollowed().stream()
-                .map(Seller::getUserId)
-                .collect(Collectors.toList());
+                .map(Seller::getUserId).toList();
 
         List<Seller> allSellers = sellerRepository.getAllSellers();
         List<Seller> followedSellers = allSellers.stream()
                 .filter(seller -> followedSellerIds.contains(seller.getUserId()))
-                .collect(Collectors.toList());
+                .toList();
 
         List<PostDto> posts = new ArrayList<>();
         LocalDate dosSemanas = LocalDate.now().minusWeeks(2);

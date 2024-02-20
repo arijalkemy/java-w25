@@ -35,7 +35,9 @@ public class Mapper {
                 convertProductDtoToProduct(newPost.product()),
                 newPost.category(),
                 newPost.price(),
-                newPost.date()
+                newPost.date(),
+                false,
+                0.0
         );
     }
 
@@ -65,8 +67,8 @@ public class Mapper {
         );
     }
 
-    public static SellerDTO convertSellerToSellerDTO(Seller seller, int cantidadDeSeguidores) {
-        return new SellerDTO(
+    public static SellerDto convertSellerToSellerDTO(Seller seller, int cantidadDeSeguidores) {
+        return new SellerDto(
                 seller.getUserId(),
                 seller.getUserName(),
                 cantidadDeSeguidores

@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.LocalDate;
 
-public record PostPostDto(
+public record AddPostDto(
         @JsonProperty("user_id") Integer userId,
         @JsonProperty("date") LocalDate date,
         @JsonProperty("product") ProductDto product,

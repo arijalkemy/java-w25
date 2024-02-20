@@ -30,7 +30,7 @@ public class Mapper {
         );
     }
 
-    public static Post convertPostDtoToPost(PostPostDto newPost) {
+    public static Post convertPostDtoToPost(AddPostDto newPost) {
         return new Post(
                 convertProductDtoToProduct(newPost.product()),
                 newPost.category(),
