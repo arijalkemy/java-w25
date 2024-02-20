@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDate;
 
-public record PromotionDTO(
+public record PromotionPostDTO(
         Integer user_id,
 @JsonFormat(pattern = "dd-MM-yyyy")
         LocalDate date,
