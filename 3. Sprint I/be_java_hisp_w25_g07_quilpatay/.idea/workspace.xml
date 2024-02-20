@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="77bde121-38cf-4e6a-9535-1981c5bcfb73" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/controller/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/controller/BuyerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/controller/SellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/controller/SellerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/GenericResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/GenericResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/PostDiscountDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/PostDiscountPostDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/PostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/PostDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/PostPostDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/SellerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/SellerDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/exception/config/ExceptionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/repository/BuyerRepositoryImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/repository/BuyerRepositoryImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/repository/SellerRepositoryImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/repository/SellerRepositoryImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/repository/inter/IBuyerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/repository/inter/ISellerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/service/BuyerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/service/BuyerServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/service/SellerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/service/SellerServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/service/inter/IBuyerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/service/inter/ISellerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/utils/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/utils/Mapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/resources/sellers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/resources/sellers.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2cdZN2d72y1IWyFhehoqC8kUpvF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Sprint1Application.executor": "Run",
+    "git-widget-placeholder": "quilpatay__nahuel",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/nquilpatay/Documents/reposmeli/java-w25/3. Sprint I/be_java_hisp_w25_g07_quilpatay",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Sprint1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="sprint_1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="grupo_7.sprint_1.Sprint1Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-temurin-21.0.2-4caba194b151-767920ab" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77bde121-38cf-4e6a-9535-1981c5bcfb73" name="Changes" comment="" />
+      <created>1708443373187</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708443373187</updated>
+      <workItem from="1708443375190" duration="439000" />
+      <workItem from="1708452110044" duration="4016000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -28,7 +28,9 @@
         },
         "category": 1,
         "price": 10.0,
-        "date": "2024-01-30"
+        "date": "2024-01-30",
+        "hasPromo": false,
+        "discount": 0.0
       },
       {
         "product": {
@@ -41,7 +43,9 @@
         },
         "category": 2,
         "price": 20.0,
-        "date": "2024-01-30"
+        "date": "2024-01-30",
+        "hasPromo": true,
+        "discount": 0.15
       }
     ]
   },
@@ -74,7 +78,9 @@
         },
         "category": 3,
         "price": 30.0,
-        "date": "2024-01-30"
+        "date": "2024-01-30",
+        "hasPromo": false,
+        "discount": 0.0
       },
       {
         "product": {
@@ -87,7 +93,9 @@
         },
         "category": 4,
         "price": 40.0,
-        "date": "2024-01-30"
+        "date": "2024-01-30",
+        "hasPromo": true,
+        "discount": 0.2
       }
     ]
   },
@@ -120,7 +128,9 @@
         },
         "category": 5,
         "price": 50.0,
-        "date": "2024-01-30"
+        "date": "2024-01-30",
+        "hasPromo": false,
+        "discount": 0.0
       },
       {
         "product": {
@@ -133,7 +143,9 @@
         },
         "category": 6,
         "price": 60.0,
-        "date": "2024-01-30"
+        "date": "2024-01-30",
+        "hasPromo": true,
+        "discount": 0.1
       }
     ]
   },
@@ -166,7 +178,9 @@
         },
         "category": 7,
         "price": 70.0,
-        "date": "2024-01-30"
+        "date": "2024-01-30",
+        "hasPromo": false,
+        "discount": 0.0
       },
       {
         "product": {
@@ -179,7 +193,9 @@
         },
         "category": 8,
         "price": 80.0,
-        "date": "2024-01-30"
+        "date": "2024-01-30",
+        "hasPromo": true,
+        "discount": 0.25
       }
     ]
   },
@@ -212,7 +228,9 @@
         },
         "category": 9,
         "price": 90.0,
-        "date": "2024-01-30"
+        "date": "2024-01-30",
+        "hasPromo": false,
+        "discount": 0.0
       },
       {
         "product": {
@@ -225,7 +243,9 @@
         },
         "category": 10,
         "price": 100.0,
-        "date": "2024-01-30"
+        "date": "2024-01-30",
+        "hasPromo": true,
+        "discount": 0.3
       }
     ]
   }

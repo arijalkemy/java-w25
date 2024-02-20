@@ -7,7 +7,9 @@ public record PostDto(
         ProductDto product,
         Integer category,
         Double price,
-        LocalDate date
+        LocalDate date,
+        Boolean hasPromo,
+        Double discount
 ) {
     public LocalDate getDate() {
         return this.date;

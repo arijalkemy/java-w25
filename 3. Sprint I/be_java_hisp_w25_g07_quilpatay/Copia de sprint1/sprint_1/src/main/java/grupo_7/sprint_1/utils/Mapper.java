@@ -15,7 +15,9 @@ public class Mapper {
                 convertProductToProductDto(post.getProduct()),
                 post.getCategory(),
                 post.getPrice(),
-                post.getDate()
+                post.getDate(),
+                post.getHasPromo(),
+                post.getDiscount()
         );
     }
 
@@ -30,14 +32,14 @@ public class Mapper {
         );
     }
 
-    public static Post convertPostDtoToPost(PostPostDto newPost) {
+    public static Post convertPostDtoToPost(AddPostDto newPost) {
         return new Post(
                 convertProductDtoToProduct(newPost.product()),
                 newPost.category(),
                 newPost.price(),
                 newPost.date(),
-                false,
-                0.0
+                newPost.hasPromo(),
+                newPost.discount()
         );
     }
 
@@ -67,8 +69,8 @@ public class Mapper {
         );
     }
 
-    public static SellerDto convertSellerToSellerDTO(Seller seller, int cantidadDeSeguidores) {
-        return new SellerDto(
+    public static SellerDTO convertSellerToSellerDTO(Seller seller, int cantidadDeSeguidores) {
+        return new SellerDTO(
                 seller.getUserId(),
                 seller.getUserName(),
                 cantidadDeSeguidores
@@ -79,5 +81,12 @@ public class Mapper {
         return new BuyerDtoRequisito3(buyerList.getUserId(), buyerList.getUserName());
     }
 
+    public static SellerPromosListDto convertSellerToSellerPromosListDto(Seller seller, Integer promosCount) {
+        return new SellerPromosListDto(
+                seller.getUserId(),
+                seller.getUserName(),
+                promosCount
+        );
+    }
 }
 

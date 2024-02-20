@@ -1,4 +1,4 @@
-package grupo_7.sprint_1.repository.inter;
+package grupo_7.sprint_1.repository;
 
 import grupo_7.sprint_1.entity.Buyer;
 
