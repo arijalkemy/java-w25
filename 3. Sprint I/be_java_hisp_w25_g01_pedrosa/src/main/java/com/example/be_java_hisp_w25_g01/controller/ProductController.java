@@ -4,6 +4,7 @@ import com.example.be_java_hisp_w25_g01.dto.request.PostDTO;
 import com.example.be_java_hisp_w25_g01.dto.request.PromoPostDTO;
 import com.example.be_java_hisp_w25_g01.dto.response.PostsListDTO;
 import com.example.be_java_hisp_w25_g01.dto.response.PromoCountDTO;
+import com.example.be_java_hisp_w25_g01.dto.response.PromoNewPriceDTO;
 import com.example.be_java_hisp_w25_g01.dto.response.UserDTO;
 import com.example.be_java_hisp_w25_g01.entity.Post;
 import com.example.be_java_hisp_w25_g01.entity.Product;
@@ -51,5 +52,13 @@ public class ProductController {
     public ResponseEntity<PromoCountDTO> getPromoCount(@RequestParam int userId){
         return new ResponseEntity<>(postService.getPromoCount(userId), HttpStatus.OK);
     }
+
+
+    //BONUS - ENDPOINT PARA OBTENER LOS NUEVOS PRECIOS DE LOS PRODUCTOS EN PROMOCION
+    @GetMapping("/promo-post/newPrices")
+    public ResponseEntity<List<PromoNewPriceDTO>> getPromoNewPrices(){
+        return new ResponseEntity<>(postService.getPromoNewPrices(), HttpStatus.OK);
+    }
+
 
 }

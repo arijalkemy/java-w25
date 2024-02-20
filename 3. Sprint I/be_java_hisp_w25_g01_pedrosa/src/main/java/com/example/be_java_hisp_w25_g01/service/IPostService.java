@@ -5,7 +5,10 @@ import com.example.be_java_hisp_w25_g01.dto.request.PromoPostDTO;
 import com.example.be_java_hisp_w25_g01.dto.response.MessagesDTO;
 import com.example.be_java_hisp_w25_g01.dto.response.PostsListDTO;
 import com.example.be_java_hisp_w25_g01.dto.response.PromoCountDTO;
+import com.example.be_java_hisp_w25_g01.dto.response.PromoNewPriceDTO;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 public interface IPostService {
 
@@ -19,6 +22,8 @@ public interface IPostService {
     MessagesDTO createPromoPost(PromoPostDTO post);
 
     PromoCountDTO getPromoCount(Integer userId);
+
+    List<PromoNewPriceDTO> getPromoNewPrices();
 
 
 }

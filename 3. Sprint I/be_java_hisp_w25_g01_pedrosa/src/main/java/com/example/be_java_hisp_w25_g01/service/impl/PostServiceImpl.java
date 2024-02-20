@@ -3,10 +3,7 @@ package com.example.be_java_hisp_w25_g01.service.impl;
 import com.example.be_java_hisp_w25_g01.dto.request.PostDTO;
 import com.example.be_java_hisp_w25_g01.dto.request.ProductDTO;
 import com.example.be_java_hisp_w25_g01.dto.request.PromoPostDTO;
-import com.example.be_java_hisp_w25_g01.dto.response.FollowersCountDTO;
-import com.example.be_java_hisp_w25_g01.dto.response.MessagesDTO;
-import com.example.be_java_hisp_w25_g01.dto.response.PostsListDTO;
-import com.example.be_java_hisp_w25_g01.dto.response.PromoCountDTO;
+import com.example.be_java_hisp_w25_g01.dto.response.*;
 import com.example.be_java_hisp_w25_g01.entity.Post;
 import com.example.be_java_hisp_w25_g01.entity.Product;
 import com.example.be_java_hisp_w25_g01.entity.User;
@@ -139,6 +136,28 @@ public class PostServiceImpl implements IPostService {
         }
         catch (Exception e){
             throw new BadRequestException("Error getting promo count - "+e.getMessage());
+        }
+    }
+
+
+    @Override
+    public List<PromoNewPriceDTO> getPromoNewPrices(){
+        try {
+            List<Post> posts = postRepository.getAll();
+            return posts.stream()
+                    .filter(p -> p.getHas_promo())
+                    .map(p -> new PromoNewPriceDTO(
+                            userRepository.findById(p.getUser_id()).get().getUserName(),
+                            p.getProduct().getProductName(),
+                            p.getPrice(),
+                            p.getDiscount(),
+
+                            p.getPrice() - (p.getPrice() * p.getDiscount())
+                    ))
+                    .toList();
+        }
+        catch (Exception e){
+            throw new BadRequestException("Error getting promo new prices - "+e.getMessage());
         }
     }
 
