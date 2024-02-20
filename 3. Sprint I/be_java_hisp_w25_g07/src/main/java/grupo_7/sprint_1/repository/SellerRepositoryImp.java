@@ -4,11 +4,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import grupo_7.sprint_1.dtos.PostPostDto;
-import grupo_7.sprint_1.entity.Post;
 import grupo_7.sprint_1.entity.Seller;
 import grupo_7.sprint_1.utils.Mapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ResourceUtils;
 
@@ -29,15 +26,6 @@ public class SellerRepositoryImp implements ISellerRepository {
     public SellerRepositoryImp(Mapper mapper) throws IOException {
         this.mapper = mapper;
         loadSellers();
-    }
-
-    @Override
-    public Post postPost(Integer sellerId, PostPostDto newPost) {
-        Post post = Mapper.convertPostDtoToPost(newPost);
-        Optional<Seller> foundSeller = findById(sellerId);
-        foundSeller.get().getPosts().add(post);
-        updateSeller(foundSeller.get());
-        return post;
     }
 
     @Override
