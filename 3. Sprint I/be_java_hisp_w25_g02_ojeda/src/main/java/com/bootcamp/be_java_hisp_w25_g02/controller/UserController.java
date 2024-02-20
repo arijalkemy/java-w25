@@ -48,4 +48,10 @@ public class UserController {
     public ResponseEntity<FollowerCountDTO> getUserTotalFollowers (@PathVariable Integer userId){
         return new ResponseEntity<>(userService.getUserTotalFollowers(userId), HttpStatus.OK);
     }
+
+
+    @PostMapping("/products/promo-post")
+    public ResponseEntity<?> getNewPromotion (){
+        return null;
+    }
 }
