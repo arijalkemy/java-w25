@@ -117,7 +117,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"user_id\": 2,\n  \"date\": \"01-06-2024\",\n  \"product\": {\n    \"product_id\": 1,\n    \"product_name\": \"Silla Gamer\",\n    \"type\": \"Gamer\",\n    \"brand\": \"Racer\",\n    \"color\": \"Yellow & Black\",\n    \"notes\": \"Special Edition\"\n  },\n  \"category\": 100,\n  \"price\": 1500.50\n}",
+					"raw": "{\n  \"user_id\": 1,\n  \"date\": \"16-02-2024\",\n  \"product\": {\n    \"product_id\": 1,\n    \"product_name\": \"Silla Ergonomica\",\n    \"type\": \"Gamer\",\n    \"brand\": \"Racer\",\n    \"color\": \"Yellow & Black\",\n    \"notes\": \"Special Edition\"\n  },\n  \"category\": 100,\n  \"price\": 1500.50\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -171,7 +171,20 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://localhost:8080/products/followed/2/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"followed",
+						"2",
+						"list"
+					]
+				}
 			},
 			"response": []
 		},
@@ -271,6 +284,60 @@
 						{
 							"key": "order",
 							"value": "date_asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 0010 - Post Promo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": 1,\n  \"date\": \"13-02-2024\",\n  \"product\": {\n    \"product_id\": 1,\n    \"product_name\": \"Silla Ergonomica con Defectos\",\n    \"type\": \"Gamer\",\n    \"brand\": \"Racer\",\n    \"color\": \"Yellow & Black\",\n    \"notes\": \"Special Edition\"\n  },\n  \"category\": 100,\n  \"price\": 1500.50,\n  \"has_promo\":true,\n  \"discount\":0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products/promo-post",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"promo-post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 0011 - Count Promo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/promo-post/count?userId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"promo-post",
+						"count"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
 						}
 					]
 				}

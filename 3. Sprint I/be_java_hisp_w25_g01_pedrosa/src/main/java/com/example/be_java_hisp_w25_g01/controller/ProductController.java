@@ -1,7 +1,9 @@
 package com.example.be_java_hisp_w25_g01.controller;
 
 import com.example.be_java_hisp_w25_g01.dto.request.PostDTO;
+import com.example.be_java_hisp_w25_g01.dto.request.PromoPostDTO;
 import com.example.be_java_hisp_w25_g01.dto.response.PostsListDTO;
+import com.example.be_java_hisp_w25_g01.dto.response.PromoCountDTO;
 import com.example.be_java_hisp_w25_g01.dto.response.UserDTO;
 import com.example.be_java_hisp_w25_g01.entity.Post;
 import com.example.be_java_hisp_w25_g01.entity.Product;
@@ -27,6 +29,11 @@ public class ProductController {
         return new ResponseEntity<>(postService.createPost(post), HttpStatus.OK);
     }
 
+    @PostMapping("/promo-post")
+    public ResponseEntity<?> postPromoProduct(@RequestBody PromoPostDTO post){
+        return new ResponseEntity<>(postService.createPromoPost(post), HttpStatus.OK);
+    }
+
     //US 0006 & US 0009
     @GetMapping("/followed/{userId}/list")
     public ResponseEntity<PostsListDTO> listPosts(@PathVariable Integer userId,
@@ -38,6 +45,11 @@ public class ProductController {
             posts.setPostsList(posts.getPostsList().stream().sorted(Comparator.comparing(PostDTO::getDate).reversed()).toList());
         }
         return new ResponseEntity<>(posts, HttpStatus.OK);
+    }
+
+    @GetMapping("/promo-post/count")
+    public ResponseEntity<PromoCountDTO> getPromoCount(@RequestParam int userId){
+        return new ResponseEntity<>(postService.getPromoCount(userId), HttpStatus.OK);
     }
 
 }

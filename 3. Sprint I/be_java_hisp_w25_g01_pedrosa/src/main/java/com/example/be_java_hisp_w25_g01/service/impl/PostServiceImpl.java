@@ -2,8 +2,11 @@ package com.example.be_java_hisp_w25_g01.service.impl;
 
 import com.example.be_java_hisp_w25_g01.dto.request.PostDTO;
 import com.example.be_java_hisp_w25_g01.dto.request.ProductDTO;
+import com.example.be_java_hisp_w25_g01.dto.request.PromoPostDTO;
+import com.example.be_java_hisp_w25_g01.dto.response.FollowersCountDTO;
 import com.example.be_java_hisp_w25_g01.dto.response.MessagesDTO;
 import com.example.be_java_hisp_w25_g01.dto.response.PostsListDTO;
+import com.example.be_java_hisp_w25_g01.dto.response.PromoCountDTO;
 import com.example.be_java_hisp_w25_g01.entity.Post;
 import com.example.be_java_hisp_w25_g01.entity.Product;
 import com.example.be_java_hisp_w25_g01.entity.User;
@@ -88,6 +91,59 @@ public class PostServiceImpl implements IPostService {
         }
     }
 
+    @Override
+    public MessagesDTO createPromoPost(PromoPostDTO postDto){
+        try {
+            if(postDto.getDate().isAfter(LocalDate.now())){
+                throw new BadRequestException("Invalid future date");
+            }
+            Optional<User> userOp = userRepository.findById(postDto.getUser_id());
+            if(!userOp.isPresent()){
+                throw new BadRequestException("User Not Found - ID:"+postDto.getUser_id());
+            }
+            //Verificamos que tenga todos los campos necesarios
+            if(Objects.isNull(postDto.getHas_promo()) || Objects.isNull(postDto.getDiscount())){
+                throw new BadRequestException("Invalid promo post");
+            }
+
+            if(postDto.getDiscount() <= 0 || postDto.getDiscount() > 1){
+                throw new BadRequestException("Invalid discount - Min 0.01 Max 1.00");
+            }
+
+
+            if(!postDto.getHas_promo() && postDto.getDiscount() > 0){
+                throw new BadRequestException("Invalid discount - Promo must be active to apply discount");
+            }
+
+            userRepository.createPost(convertPostPromoDtoToPost(postDto));
+            return new MessagesDTO("Post created successfully");
+        }
+        catch (Exception e){
+            throw new BadRequestException("Error creating Post - "+e.getMessage());
+        }
+    }
+
+    @Override
+    public PromoCountDTO getPromoCount(Integer userId){
+        try {
+            Optional<User> userOp = userRepository.findById(userId);
+            if(!userOp.isPresent()){
+                throw new BadRequestException("User Not Found - ID:"+userId);
+            }
+            return new PromoCountDTO(
+                    userOp.get().getUserId(),
+                    userOp.get().getUserName(),
+                    userOp.get().getPosts().stream().filter(p -> p.getHas_promo()).count()
+            );
+
+        }
+        catch (Exception e){
+            throw new BadRequestException("Error getting promo count - "+e.getMessage());
+        }
+    }
+
+
+
     private Post convertPostDtoToPost(PostDTO p){
         return new Post(
                 postRepository.generateId(),
@@ -96,6 +152,19 @@ public class PostServiceImpl implements IPostService {
                 convertProductDtoToProduct(p.getProduct()),
                 p.getCategory(),
                 p.getPrice()
+        );
+    }
+
+    private Post convertPostPromoDtoToPost(PromoPostDTO p){
+        return new Post(
+                postRepository.generateId(),
+                p.getUser_id(),
+                p.getDate(),
+                convertProductDtoToProduct(p.getProduct()),
+                p.getCategory(),
+                p.getPrice(),
+                p.getHas_promo(),
+                p.getDiscount()
         );
     }
 
