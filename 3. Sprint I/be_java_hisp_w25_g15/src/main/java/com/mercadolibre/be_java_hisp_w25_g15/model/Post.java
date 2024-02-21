@@ -17,7 +17,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Post {
     static final AtomicInteger idGenerator = new AtomicInteger();
-    @JsonIgnore
+    @JsonProperty("post_id")
     int id;
     @JsonProperty("user_id")
     int userId;
@@ -33,5 +33,9 @@ public class Post {
         this.product = product;
         this.category = category;
         this.price = price;
+    }
+
+    public void setPostIdAuto(){
+        this.id = idGenerator.incrementAndGet();
     }
 }
