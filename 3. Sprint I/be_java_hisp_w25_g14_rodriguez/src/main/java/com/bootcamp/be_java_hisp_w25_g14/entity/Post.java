@@ -12,7 +12,6 @@ import java.util.Locale;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Post {
     Integer postId;
@@ -21,4 +20,12 @@ public class Post {
     Product product;
     Integer category;
     Double price;
+    Boolean has_promo;
+    Double discount;
+
+    public Post (){
+        this.has_promo=false;
+    }
 }
+
+

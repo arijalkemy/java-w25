@@ -56,6 +56,28 @@ public class ApiMapper {
 
     }
 
+    /**
+     * Este nuevo mètodo del mapper nos permite hacer una conversión
+     * de PromoPostDto a la entity Post, como se podra notar
+     * se hace uso de polimorfismo recibiendo un parámetro distinto
+     * ya que el definido en la linea 46 acepta un PostDto
+     * y aqui un PromoPostDto
+     * */
+    public static Post convertToPostEntity(PromoPostDto promoPostDto){
+
+        Post post = new Post();
+        post.setUserId(promoPostDto.getUser_id());
+        post.setDate(promoPostDto.getDate());
+        post.setProduct(convertToProductEntity(promoPostDto.getProduct()));
+        post.setCategory(promoPostDto.getCategory());
+        post.setPrice(promoPostDto.getPrice());
+        post.setHas_promo(promoPostDto.getHas_promo());
+        post.setDiscount(promoPostDto.getDiscount());
+        System.out.println("Si entro al promo");
+        return post;
+
+    }
+
 
     public static ProductDto convertToProductDto(Product product){
         ProductDto productDto = new ProductDto();
