@@ -26,12 +26,12 @@ public class ProductController {
         return ResponseEntity
                 .ok().build();
     }
-    @GetMapping("/products/promo-post/count")
+    @GetMapping("/promo-post/count")
     public ResponseEntity<PromoPostDTO> getPromoCount(@RequestParam(name = "user_id") int userId){
         return ResponseEntity.ok()
                 .body(sellerService.getPromoPostCount(userId));
     }
-    @GetMapping("/products/promo-post/list")
+    @GetMapping("/promo-post/list")
     public ResponseEntity<List<PostDTO>> getPromoPosts(@RequestParam(name = "user_id") int userId){
         return ResponseEntity.ok()
                 .body(sellerService.getPromoPosts(userId));
