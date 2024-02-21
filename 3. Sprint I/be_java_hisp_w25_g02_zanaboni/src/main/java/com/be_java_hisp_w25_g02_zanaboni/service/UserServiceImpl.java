@@ -17,7 +17,7 @@ import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements IUserService{
-    private IUserRepository userRepository;
+    private final IUserRepository userRepository;
 
     public UserServiceImpl(UserRepositoryImpl userRepository){
         this.userRepository = userRepository;
@@ -33,9 +33,9 @@ public class UserServiceImpl implements IUserService{
         if(user.isPresent()){
             return new FollowerCountDTO(user.get().getUser_id(),
                     user.get().getUser_name(),
-                    user.get().getFollowing().stream().count());
+                    (long) user.get().getFollowing().size()); //mejorado con qodana
         } else {
-            throw new BadRequestException("No encontrado el user con ese ID");
+            throw new NotFoundException("No encontrado el user con ese ID");
         }
     }
 

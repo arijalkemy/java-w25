@@ -16,4 +16,5 @@ public interface IPostRepository {
 
     long savePost(Post post);
     List<Post> findByUserId(Integer userId);
+    List<Post> findOnSalePosts(Integer userId);
 }

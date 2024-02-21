@@ -1,14 +1,12 @@
 package com.be_java_hisp_w25_g02_zanaboni.service;
 
-import com.be_java_hisp_w25_g02_zanaboni.dto.response.FollowingPostDTO;
-import com.be_java_hisp_w25_g02_zanaboni.dto.response.GenericResponseDTO;
-import com.be_java_hisp_w25_g02_zanaboni.dto.response.PostDTO;
-import com.be_java_hisp_w25_g02_zanaboni.dto.response.ProductDTO;
+import com.be_java_hisp_w25_g02_zanaboni.dto.response.*;
 import com.be_java_hisp_w25_g02_zanaboni.entity.Post;
 import com.be_java_hisp_w25_g02_zanaboni.entity.Product;
 import com.be_java_hisp_w25_g02_zanaboni.exception.BadRequestException;
 import com.be_java_hisp_w25_g02_zanaboni.exception.NotFoundException;
 import com.be_java_hisp_w25_g02_zanaboni.repository.IPostRepository;
+import com.be_java_hisp_w25_g02_zanaboni.repository.IUserRepository;
 import com.be_java_hisp_w25_g02_zanaboni.repository.PostRepositoryImpl;
 import org.springframework.stereotype.Service;
 
@@ -17,12 +15,13 @@ import java.util.Comparator;
 import java.util.List;
 @Service
 public class PostServiceImpl  implements IPostService{
-
     IPostRepository postRepository;
+    IUserRepository userRepository;
     IUserService userService;
-    public PostServiceImpl(PostRepositoryImpl postRepository, UserServiceImpl userService){
+    public PostServiceImpl(PostRepositoryImpl postRepository, UserServiceImpl userService, IUserRepository userRepository){
         this.postRepository = postRepository;
         this.userService = userService;
+        this.userRepository = userRepository;
     }
 
     public GenericResponseDTO savePost(PostDTO postDTO){
@@ -85,16 +84,21 @@ public class PostServiceImpl  implements IPostService{
     }
 
     @Override
-    public FollowingPostDTO searchPostsOnSale(Integer userId) {
-        List<Integer> followedUsers = userService.getFollowedUsersId(userId);
-        List<Post> posts = new ArrayList<>();
-        for(Integer sellerId: followedUsers){
-            posts.addAll(this.postRepository.findByUserId(sellerId));
+    public SalePostDTO searchPostsOnSale(Integer userId) {
+        if (!userService.existUser(userId)){
+            throw new NotFoundException("Ese usuario no existe");
         }
+        if (!userService.isSeller(userId)){
+            throw new BadRequestException("Ese usuario no es vendedor");
+        }
+
+        List<Post> posts = new ArrayList<>(this.postRepository.findOnSalePosts(userId));
+
         if (posts.isEmpty()){
             throw new NotFoundException("No hay post en descuento de ese vendedor");
         }else{
-            return new FollowingPostDTO(userId, posts.stream().map(this::mapPostToDTO).toList());
+            String user_name = userRepository.findById(userId).get().getUser_name();
+            return new SalePostDTO(userId, user_name, posts.stream().map(this::mapPostToDTO).count());
         }
     }
 }
