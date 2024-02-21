@@ -16,7 +16,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class PostDTO {
+public class RequestPostDTO {
     @JsonProperty("user_id")
     int userId;
     @JsonDeserialize(using = LocalDateDeserializer.class)
