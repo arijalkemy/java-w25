@@ -1,9 +1,7 @@
 package com.breakingbytes.be_java_hisp_w25_g04.service;
 
 import com.breakingbytes.be_java_hisp_w25_g04.dto.request.RequestPostDTO;
-import com.breakingbytes.be_java_hisp_w25_g04.dto.response.FollowersCountDTO;
-import com.breakingbytes.be_java_hisp_w25_g04.dto.response.LastPostsDTO;
-import com.breakingbytes.be_java_hisp_w25_g04.dto.response.ResponsePostDTO;
+import com.breakingbytes.be_java_hisp_w25_g04.dto.response.*;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Post;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Product;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Seller;
@@ -112,5 +110,27 @@ public class SellerServiceImpl implements ISellerService{
         Optional<Seller> seller = sellerRepository.findById(id);
         if(seller.isEmpty()) throw new NotFoundException("ID de usuario invalido");
         return new FollowersCountDTO(seller.get().getId(), seller.get().getName(), seller.get().getFollowers().size());
+    }
+
+    @Override
+    public PromoProductsCountDTO getCountPromoProductsOfSeller(int userId) {
+        Optional<Seller> seller = sellerRepository.findById(userId);
+        if(seller.isEmpty())
+            throw new NotFoundException("No se encuentra el Id ingresado");
+        int countProducts = sellerRepository.getPromoProducts(seller.get()).size();
+        return new PromoProductsCountDTO(seller.get().getId(), seller.get().getName(), countProducts);
+    }
+
+    @Override
+    public PromoProductsListDTO getPromoProductsList(int userId) {
+        Optional<Seller> seller = sellerRepository.findById(userId);
+        if(seller.isEmpty())
+            throw new NotFoundException("No se encuentra el Id ingresado");
+        List<ResponsePostDTO> posts = sellerRepository.getPromoProducts(seller.get())
+                .stream()
+                .map(p -> mapper.modelMapper().map(p, ResponsePostDTO.class))
+                .toList();
+        if(posts.isEmpty()) throw new NotFoundException("No hay publicaciones con promocion para el vendedor ingresado");
+        return new PromoProductsListDTO(seller.get().getId(), seller.get().getName(), posts);
     }
 }

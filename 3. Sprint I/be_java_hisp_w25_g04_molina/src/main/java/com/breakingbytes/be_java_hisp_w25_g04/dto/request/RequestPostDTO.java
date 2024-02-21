@@ -16,7 +16,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class PostDTO {
+public class RequestPostDTO {
     @JsonProperty("user_id")
     int userId;
     @JsonDeserialize(using = LocalDateDeserializer.class)
@@ -24,4 +24,7 @@ public class PostDTO {
     Product product;
     int category;
     double price;
+    @JsonProperty("has_promo")
+    boolean hasPromo;
+    double discount;
 }

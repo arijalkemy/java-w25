@@ -2,6 +2,7 @@ package com.breakingbytes.be_java_hisp_w25_g04.dto.response;
 
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Product;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.AllArgsConstructor;
@@ -14,7 +15,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class PostDto {
+public class ResponsePostDTO {
     int userId; //Id of Seller
     int postId; //Id of Post
     @JsonFormat(pattern="dd-MM-yyyy")
@@ -22,8 +23,9 @@ public class PostDto {
     Product product;
     int category;
     double price;
-
-
+    @JsonProperty("has_promo")
+    boolean hasPromo;
+    double discount;
 }
 
 

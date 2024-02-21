@@ -1,5 +1,6 @@
 package com.breakingbytes.be_java_hisp_w25_g04.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,6 +20,9 @@ public class Post {
     Product product;
     int category;
     double price;
+    @JsonProperty("has_promo")
+    boolean hasPromo;
+    double discount;
     static int count = 1;
 
     public Post() {
