@@ -41,10 +41,10 @@ public class SellerPostController {
 
     @GetMapping("/promo-post/count?user_id={userId}")
     public ResponseEntity<?> postCountPromoProduct(
-        @PathVariable Integer userId,
-        @PathVariable String userName,
-        @PathVariable Integer promoProductsCount
+        @RequestParam Integer userId
     ) {
-        return new ResponseEntity<>();
+        return new ResponseEntity<>(sellerPostService.countPromoProducts(userId), HttpStatus.OK);
     }
+
+
 }

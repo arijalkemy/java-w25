@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 public class SellerPromoPostListDTO {
     @JsonProperty("user_id")
-    private int userId;
+    private Integer userId;
     @JsonProperty("user_name")
     private String userName;
     @JsonProperty("posts")

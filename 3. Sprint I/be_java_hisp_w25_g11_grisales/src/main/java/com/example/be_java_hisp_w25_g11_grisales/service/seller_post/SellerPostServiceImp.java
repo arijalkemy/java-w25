@@ -5,6 +5,7 @@ import com.example.be_java_hisp_w25_g11_grisales.dto.SellerPromoPostDTO;
 import com.example.be_java_hisp_w25_g11_grisales.dto.request.CreatePostRequestDTO;
 import com.example.be_java_hisp_w25_g11_grisales.dto.request.CreatePromoPostDTO;
 import com.example.be_java_hisp_w25_g11_grisales.dto.response.SellerPostsListDTO;
+import com.example.be_java_hisp_w25_g11_grisales.dto.response.SellerPromoCountDTO;
 import com.example.be_java_hisp_w25_g11_grisales.entity.Buyer;
 import com.example.be_java_hisp_w25_g11_grisales.entity.Product;
 import com.example.be_java_hisp_w25_g11_grisales.entity.Seller;
@@ -119,6 +120,20 @@ public class SellerPostServiceImp implements ISellerPostService {
         seller.get().getPosts().add(sellerPost);
 
         return modelMapper.map(sellerPost, SellerPromoPostDTO.class);
+    }
+
+    @Override
+    public SellerPromoCountDTO countPromoProducts(Integer userId) {
+        Optional<Seller> seller = sellerRepository.get(userId);
+        if (seller.isEmpty()){
+            throw new NotFoundException("El usuario con este id no existe");
+        }
+        int countPromo = (int) seller.get().getPosts()
+                .stream()
+                .filter(SellerPost::isHasPromo)
+                .count();
+
+        return new SellerPromoCountDTO(seller.get().getId(), seller.get().getName(), countPromo);
     }
 
     private List<SellerPost> getMergedPostsList(Set<Integer> followed) {
