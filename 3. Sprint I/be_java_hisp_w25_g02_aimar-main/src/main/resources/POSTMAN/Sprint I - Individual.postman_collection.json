@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "c6689aed-64d9-4e81-89b1-efe6603a2267",
+		"name": "Sprint I - Individual",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22454145"
+	},
+	"item": [
+		{
+			"name": "US012 - Get promo posts by seller",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/promo-post/list?user_id=9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"promo-post",
+						"list"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US015 - Update post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 9,\n    \"date\": \"31-03-2023\",\n    \"product\": {\n        \"product_id\": 5,\n        \"product_name\": \"Silla Gamer - Actualizada\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black - Actualizado\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50,\n    \"has_promo\": true,\n    \"discount\": 0.30\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/products/post/7"
+			},
+			"response": []
+		},
+		{
+			"name": "US013 - Get all posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/products/post"
+			},
+			"response": []
+		},
+		{
+			"name": "US014 - Delete post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/products/post/8"
+			},
+			"response": []
+		}
+	]
+}
