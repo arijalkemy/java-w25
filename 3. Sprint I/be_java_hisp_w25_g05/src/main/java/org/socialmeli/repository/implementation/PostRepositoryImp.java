@@ -1,10 +1,11 @@
-package org.socialmeli.repository;
+package org.socialmeli.repository.implementation;
 
 import lombok.Data;
 import org.socialmeli.entity.Post;
 import org.socialmeli.entity.Product;
 import org.socialmeli.entity.User;
 import org.socialmeli.entity.Vendor;
+import org.socialmeli.repository.IRepository;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;

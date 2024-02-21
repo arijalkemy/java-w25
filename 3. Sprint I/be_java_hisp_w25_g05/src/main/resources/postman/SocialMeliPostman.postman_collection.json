@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "5ddfcf8c-8a26-49a7-8f03-c6c2e3fb87a7",
-		"name": "SocialMeliPostman",
+		"_postman_id": "c41aa8bd-c998-4be8-88a6-f3e90df6cdab",
+		"name": "SocialMeliPostman (snake_case)",
 		"description": "Vendedor del 1-5, cliente del 6-9\n\nCorrer el request SetUp para realizar varios follows",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32843174"
@@ -263,7 +263,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"userId\": {{idVendedorValido}},\n    \"date\": {{fecha_menor_a_dos_semanas}},\n    \"product\": {\n        \"productId\": 32,\n        \"productName\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+							"raw": "{\n    \"user_id\": {{idVendedorValido}},\n    \"date\": {{fecha_menor_a_dos_semanas}},\n    \"product\": {\n        \"product_id\": 32,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -292,7 +292,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"userId\": {{idClienteValido}},\n    \"date\": \"{{$isoTimestamp}}\",\n    \"product\": {\n        \"productId\": 1,\n        \"productName\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+							"raw": "{\n    \"user_id\": {{idClienteValido}},\n    \"date\": \"{{$isoTimestamp}}\",\n    \"product\": {\n        \"product_id\": 1,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -321,7 +321,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"userId\": {{IdVendedorInvalido}},\n    \"date\": \"2021-04-29\",\n    \"product\": {\n        \"productId\": 1,\n        \"productName\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+							"raw": "{\n    \"user_id\": {{IdVendedorInvalido}},\n    \"date\": \"2021-04-29\",\n    \"product\": {\n        \"product_id\": 1,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -401,7 +401,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"userId\": {{idVendedorValido}},\n    \"date\": {{fecha_menor_a_dos_semanas}},\n    \"product\": {\n        \"productId\": 32,\n        \"productName\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+									"raw": "{\n    \"user_id\": {{idVendedorValido}},\n    \"date\": {{fecha_menor_a_dos_semanas}},\n    \"product\": {\n        \"product_id\": 32,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -452,7 +452,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"userId\": {{idVendedorValido}},\n    \"date\": {{fecha_mayor_a_dos_semanas}},\n    \"product\": {\n        \"productId\": 32,\n        \"productName\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+									"raw": "{\n    \"user_id\": {{idVendedorValido}},\n    \"date\": {{fecha_mayor_a_dos_semanas}},\n    \"product\": {\n        \"product_id\": 32,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1056,9 +1056,16 @@
 											"let url = pm.globals.get(\"local\");",
 											"",
 											"for(var i = 1; i <= 9;i++) {",
-											"    if(i!=6) {",
+											"    if(i!=1) {",
 											"        pm.sendRequest({",
 											"            url: url+\"/users/1/follow/\"+i,",
+											"            method: 'POST'",
+											"            }, function (err, response) {",
+											"        });",
+											"    }",
+											"    if(i!=1) {",
+											"        pm.sendRequest({",
+											"            url: url+\"/users/\"+i+\"/follow/1\",",
 											"            method: 'POST'",
 											"            }, function (err, response) {",
 											"        });",
@@ -1330,12 +1337,73 @@
 							"name": "Seguidores de un vendedor",
 							"item": [
 								{
-									"name": "Se listan los seguidores ascendentemente",
+									"name": "Listar seguidores según ordenamiento",
+									"item": [
+										{
+											"name": "Se listan los seguidores ascendentemente",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8080/users/{{idVendedorValido}}/followed/list?order=name_asc",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"users",
+														"{{idVendedorValido}}",
+														"followed",
+														"list"
+													],
+													"query": [
+														{
+															"key": "order",
+															"value": "name_asc"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Se listan los seguidores descendientemente",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8080/users/{{idVendedorValido}}/followed/list?order=name_desc",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"users",
+														"{{idVendedorValido}}",
+														"followed",
+														"list"
+													],
+													"query": [
+														{
+															"key": "order",
+															"value": "name_desc"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "No se reconoce un ordenamiento invalido",
 									"request": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8080/users/{{idVendedorValido}}/followed/list?order=name_asc",
+											"raw": "http://localhost:8080/users/{{idVendedorValido}}/followed/list?order=invalido",
 											"protocol": "http",
 											"host": [
 												"localhost"
@@ -1350,20 +1418,86 @@
 											"query": [
 												{
 													"key": "order",
-													"value": "name_asc"
+													"value": "invalido"
 												}
 											]
 										}
 									},
 									"response": []
+								}
+							]
+						},
+						{
+							"name": "Vendedores seguidos por un usuario",
+							"item": [
+								{
+									"name": "Listar seguidores según ordenamiento",
+									"item": [
+										{
+											"name": "Se listan los vendedores ascendientemente",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8080/users/{{idVendedorValido}}/followers/list?order=name_asc",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"users",
+														"{{idVendedorValido}}",
+														"followers",
+														"list"
+													],
+													"query": [
+														{
+															"key": "order",
+															"value": "name_asc"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Se listan los vendedores descendientemente",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8080/users/{{idVendedorValido}}/followers/list?order=name_desc",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"users",
+														"{{idVendedorValido}}",
+														"followers",
+														"list"
+													],
+													"query": [
+														{
+															"key": "order",
+															"value": "name_desc"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
 								},
 								{
-									"name": "Se listan los seguidores descendientemente",
+									"name": "No se reconoce un ordenamiento invalido",
 									"request": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8080/users/{{idVendedorValido}}/followed/list?order=name_desc",
+											"raw": "http://localhost:8080/users/{{idVendedorValido}}/followers/list?order=invalido",
 											"protocol": "http",
 											"host": [
 												"localhost"
@@ -1372,13 +1506,13 @@
 											"path": [
 												"users",
 												"{{idVendedorValido}}",
-												"followed",
+												"followers",
 												"list"
 											],
 											"query": [
 												{
 													"key": "order",
-													"value": "name_desc"
+													"value": "invalido"
 												}
 											]
 										}
@@ -1393,30 +1527,30 @@
 					"name": "US_0009",
 					"item": [
 						{
-							"name": "Vendedores seguidos por un usuario",
+							"name": "Listar productos según ordenamiento",
 							"item": [
 								{
-									"name": "Se listan los vendedores ascendientemente",
+									"name": "Se listan los posts ascendentemente",
 									"request": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8080/users/{{idVendedorValido}}/followers/list?order=name_asc",
+											"raw": "http://localhost:8080/products/followed/{{idClienteValido}}/list?order=date_asc",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
 											"port": "8080",
 											"path": [
-												"users",
-												"{{idVendedorValido}}",
-												"followers",
+												"products",
+												"followed",
+												"{{idClienteValido}}",
 												"list"
 											],
 											"query": [
 												{
 													"key": "order",
-													"value": "name_asc"
+													"value": "date_asc"
 												}
 											]
 										}
@@ -1424,27 +1558,27 @@
 									"response": []
 								},
 								{
-									"name": "Se listan los vendedores descendientemente",
+									"name": "Se listan los posts descendientemente",
 									"request": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8080/users/{{idVendedorValido}}/followers/list?order=name_desc",
+											"raw": "http://localhost:8080/products/followed/{{idClienteValido}}/list?order=date_desc",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
 											"port": "8080",
 											"path": [
-												"users",
-												"{{idVendedorValido}}",
-												"followers",
+												"products",
+												"followed",
+												"{{idClienteValido}}",
 												"list"
 											],
 											"query": [
 												{
 													"key": "order",
-													"value": "name_desc"
+													"value": "date_desc"
 												}
 											]
 										}
@@ -1452,6 +1586,34 @@
 									"response": []
 								}
 							]
+						},
+						{
+							"name": "No se reconoce un ordenamiento invalido",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/products/followed/{{idClienteValido}}/list?order=invalido",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products",
+										"followed",
+										"{{idClienteValido}}",
+										"list"
+									],
+									"query": [
+										{
+											"key": "order",
+											"value": "invalido"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				}

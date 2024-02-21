@@ -9,6 +9,6 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class FollowingListReqDto {
-    Integer userIdDto;
+    Integer userId;
     String order;
 }

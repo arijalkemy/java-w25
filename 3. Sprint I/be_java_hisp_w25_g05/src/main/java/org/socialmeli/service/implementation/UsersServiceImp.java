@@ -1,4 +1,4 @@
-package org.socialmeli.service;
+package org.socialmeli.service.implementation;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.socialmeli.dto.request.*;
@@ -11,13 +11,12 @@ import org.socialmeli.entity.User;
 import org.socialmeli.entity.Vendor;
 import org.socialmeli.exception.BadRequestException;
 import org.socialmeli.exception.NotFoundException;
-import org.socialmeli.repository.ClientRepositoryImp;
-import org.socialmeli.repository.VendorRepositoryImp;
-import org.socialmeli.utils.DTOMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.socialmeli.repository.implementation.ClientRepositoryImp;
+import org.socialmeli.repository.implementation.VendorRepositoryImp;
+import org.socialmeli.service.IUsersService;
+import org.socialmeli.util.DTOMapper;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
@@ -25,14 +24,15 @@ import static java.util.Comparator.comparing;
 
 @Service
 public class UsersServiceImp implements IUsersService {
-    @Autowired
     ClientRepositoryImp clientRepositoryImp;
-
-    @Autowired
     VendorRepositoryImp vendorRepositoryImp;
 
     ObjectMapper mapper = new ObjectMapper();
 
+    public UsersServiceImp(ClientRepositoryImp clientRepo, VendorRepositoryImp vendorRepo) {
+        this.clientRepositoryImp = clientRepo;
+        this.vendorRepositoryImp = vendorRepo;
+    }
 
     private User getUserById(Integer userId) {
         User user  = clientRepositoryImp.findOne(userId);
@@ -107,7 +107,7 @@ public class UsersServiceImp implements IUsersService {
 
     @Override
     public VendorsFollowingListDto getFollowingList(FollowingListReqDto req) {
-        Integer userId = req.getUserIdDto();
+        Integer userId = req.getUserId();
         String order = req.getOrder();
         Client client = clientRepositoryImp.findOne(userId);
         Vendor vendor = vendorRepositoryImp.findOne(userId);
