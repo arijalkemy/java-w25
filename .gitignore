@@ -133,3 +133,22 @@ gradle-app.setting
 *.hprof
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij+iml,gradle,maven
+/.idea/
+/1. Modulo Java/JavaP1Vivo/.idea/sonarlint/issuestore/
+/1. Modulo Java/JavaP1Vivo/.idea/.gitignore
+/1. Modulo Java/JavaP1Vivo/.idea/misc.xml
+/1. Modulo Java/PooP1Vivo/.idea/sonarlint/issuestore/
+/1. Modulo Java/PooP1Vivo/.idea/sonarlint/issuestore/index.pb
+/1. Modulo Java/PooP1Vivo/.idea/.gitignore
+/1. Modulo Java/PooP1Vivo/.idea/misc.xml
+/1. Modulo Java/PooP1Vivo/.idea/vcs.xml
+/2. Modulo Spring/manejo de Excepciones P1/gradle/wrapper/
+/2. Modulo Spring/manejo de Excepciones P1/gradle/wrapper/gradle-wrapper.jar
+/2. Modulo Spring/manejo de Excepciones P1/gradle/wrapper/gradle-wrapper.properties
+/2. Modulo Spring/manejo de Excepciones P1/src/main/resources/application.properties
+/2. Modulo Spring/manejo de Excepciones P1/.gitignore
+/2. Modulo Spring/manejo de Excepciones P1/build.gradle
+/2. Modulo Spring/manejo de Excepciones P1/gradlew
+/2. Modulo Spring/manejo de Excepciones P1/gradlew.bat
+/2. Modulo Spring/manejo de Excepciones P1/settings.gradle
+/2. Modulo Spring/manejo de Excepciones P1/src/test/java/com/example/exceptions/ExceptionsApplicationTests.java
