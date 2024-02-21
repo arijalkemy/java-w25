@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Repository
 public class PostRepositoryImpl implements IPostRepository
@@ -46,7 +47,10 @@ public class PostRepositoryImpl implements IPostRepository
         LocalDate twoWeeksAgo = LocalDate.now().minusWeeks(2);
         return this.postList.stream().filter(post -> post.getPostDate().isAfter(twoWeeksAgo) && Objects.equals(post.getUser_id(), userId)).toList();
     }
-    public List<Post> findOnSalePosts(Integer userId) {
+    public List<Post> findOnSalePostsBySellerId(Integer userId) {
         return this.postList.stream().filter(post -> post.getHas_promo() && Objects.equals(post.getUser_id(), userId)).toList();
+    }
+    public List<Post> findPostsByInput(String userInput) {
+        return this.postList.stream().filter(post -> post.getProduct().getType().contains(userInput)).collect(Collectors.toList());
     }
 }

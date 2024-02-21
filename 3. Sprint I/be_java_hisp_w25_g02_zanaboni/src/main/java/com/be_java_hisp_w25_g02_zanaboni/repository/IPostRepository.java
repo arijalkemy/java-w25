@@ -10,11 +10,9 @@ public interface IPostRepository {
 
     Optional<Post> findById(Integer id);
     List<Post> findAll();
-
-
     Optional<Product> findProductById(int id);
-
     long savePost(Post post);
     List<Post> findByUserId(Integer userId);
-    List<Post> findOnSalePosts(Integer userId);
+    List<Post> findOnSalePostsBySellerId(Integer userId);
+    List<Post> findPostsByInput(String userInput);
 }

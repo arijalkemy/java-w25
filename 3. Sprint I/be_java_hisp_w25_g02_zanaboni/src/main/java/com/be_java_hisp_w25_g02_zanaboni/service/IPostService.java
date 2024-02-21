@@ -7,4 +7,5 @@ public interface IPostService {
     FollowingPostDTO searchPostsOrderedByDate(Integer userId, String order);
     SalePostDTO countPostsOnSaleById(Integer userId);
     SalePostListDTO getAllPostsOnSaleById(Integer userId);
+    PostListByTypeDTO getPostsByType(String userInput);
 }

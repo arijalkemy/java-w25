@@ -37,4 +37,9 @@ public class ProductController {
     public ResponseEntity<?> getAllPostsOnSaleById(@RequestParam("user_id") Integer userId){
         return new ResponseEntity<>(this.postService.getAllPostsOnSaleById(userId), HttpStatus.OK);
     }
+
+    @GetMapping("/products/type/list")
+    public ResponseEntity<?> getPostsByType(@RequestParam("user_input") String userInput){
+        return new ResponseEntity<>(this.postService.getPostsByType(userInput), HttpStatus.OK);
+    }
 }

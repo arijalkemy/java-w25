@@ -100,7 +100,7 @@ public class PostServiceImpl  implements IPostService{
             throw new BadRequestException("Ese usuario no es vendedor");
         }
 
-        List<Post> posts = new ArrayList<>(this.postRepository.findOnSalePosts(userId));
+        List<Post> posts = new ArrayList<>(this.postRepository.findOnSalePostsBySellerId(userId));
 
         if (posts.isEmpty()){
             throw new NotFoundException("No hay post en descuento de ese vendedor");
@@ -115,12 +115,26 @@ public class PostServiceImpl  implements IPostService{
         checkUserExistence(userId);
         checkIfUserIsSeller(userId);
 
-        List<Post> posts = new ArrayList<>(this.postRepository.findOnSalePosts(userId));
+        List<Post> posts = new ArrayList<>(this.postRepository.findOnSalePostsBySellerId(userId));
         if (posts.isEmpty()){
             throw new NotFoundException("No hay post en descuento de ese vendedor");
         }else{
             String user_name = userRepository.findById(userId).get().getUser_name();
             return new SalePostListDTO (userId, user_name, posts.stream().map(this::mapPostToDTO).toList());
+        }
+    }
+
+    @Override
+    public PostListByTypeDTO getPostsByType(String userInput) {
+        if (userInput.isEmpty()){
+            throw new BadRequestException("Debe ingresar un término para buscar el tipo de producto");
+        }
+
+        List<Post> posts = new ArrayList<>(this.postRepository.findPostsByInput(userInput));
+        if (posts.isEmpty()){
+            throw new NotFoundException("No hay posts en descuento ahora mismo");
+        }else{
+            return new PostListByTypeDTO(posts.stream().map(this::mapPostToDTO).toList());
         }
     }
 }
