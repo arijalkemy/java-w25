@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 @Service
 public class SellerServiceImp implements ISellerService {
@@ -75,7 +76,7 @@ public class SellerServiceImp implements ISellerService {
         foundSeller.get().getPosts().add(post);
         sellerRepository.updateSeller(foundSeller.get());
 
-        return Mapper.convertPromoPostToPostDto(post);
+        return Mapper.convertPromoPostToPromoPostDto(post);
 
     }
 
@@ -202,8 +203,16 @@ public class SellerServiceImp implements ISellerService {
                         .count()
         );
     }
+
     @Override
-    public List<Seller> getAllSellers() {
-        return sellerRepository.getAllSellers();
+    public List<PromoPostDto> getPromoPostList(Integer sellerId){
+        Optional<Seller> foundSeller = sellerRepository.findById(sellerId);
+        if (foundSeller.isEmpty()) {
+            throw new NotFoundException("El vendedor indicado no existe.");
+        }
+        List<PromoPostDto> listPromoPosts = new ArrayList<>();
+        foundSeller.get().getPosts().stream().filter(post -> post.getHas_promo() != null && post.getHas_promo())
+                .forEach(post -> listPromoPosts.add(Mapper.convertPromoPostToPromoPostDto(post)));
+        return listPromoPosts;
     }
 }

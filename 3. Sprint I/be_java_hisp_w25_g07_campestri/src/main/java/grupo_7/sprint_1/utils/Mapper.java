@@ -19,7 +19,7 @@ public class Mapper {
         );
     }
 
-    public static PromoPostDto convertPromoPostToPostDto(Post post) {
+    public static PromoPostDto convertPromoPostToPromoPostDto(Post post) {
         return new PromoPostDto(
                 convertProductToProductDto(post.getProduct()),
                 post.getCategory(),
