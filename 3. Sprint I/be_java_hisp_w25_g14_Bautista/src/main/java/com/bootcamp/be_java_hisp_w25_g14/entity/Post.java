@@ -21,4 +21,5 @@ public class Post {
     Product product;
     Integer category;
     Double price;
+    Boolean isOnSale;
 }

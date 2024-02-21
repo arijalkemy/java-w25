@@ -51,6 +51,7 @@ public class ApiMapper {
         post.setProduct(convertToProductEntity(postDto.getProduct()));
         post.setCategory(postDto.getCategory());
         post.setPrice(postDto.getPrice());
+        post.setIsOnSale(postDto.getIsOnSale());
 
         return post;
 
