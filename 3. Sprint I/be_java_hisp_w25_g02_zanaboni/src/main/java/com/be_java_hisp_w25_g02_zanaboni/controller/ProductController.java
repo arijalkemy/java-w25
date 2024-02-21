@@ -31,6 +31,10 @@ public class ProductController {
 
     @GetMapping("/products/promo-post/count")
     public ResponseEntity<?> searchPostsOnSale(@RequestParam("user_id") Integer userId){
-        return new ResponseEntity<>(this.postService.searchPostsOnSale(userId), HttpStatus.OK);
+        return new ResponseEntity<>(this.postService.searchPostsOnSaleById(userId), HttpStatus.OK);
+    }
+    @GetMapping("/products/promo-post/list")
+    public ResponseEntity<?> getAllPostsOnSaleById(@RequestParam("user_id") Integer userId){
+        return new ResponseEntity<>(this.postService.getAllPostsOnSaleById(userId), HttpStatus.OK);
     }
 }

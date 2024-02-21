@@ -84,7 +84,7 @@ public class PostServiceImpl  implements IPostService{
     }
 
     @Override
-    public SalePostDTO searchPostsOnSale(Integer userId) {
+    public SalePostDTO searchPostsOnSaleById(Integer userId) {
         if (!userService.existUser(userId)){
             throw new NotFoundException("Ese usuario no existe");
         }
@@ -99,6 +99,25 @@ public class PostServiceImpl  implements IPostService{
         }else{
             String user_name = userRepository.findById(userId).get().getUser_name();
             return new SalePostDTO(userId, user_name, posts.stream().map(this::mapPostToDTO).count());
+        }
+    }
+
+    @Override
+    public SalePostListDTO getAllPostsOnSaleById(Integer userId) {
+        if (!userService.existUser(userId)){
+            throw new NotFoundException("Ese usuario no existe");
+        }
+        if (!userService.isSeller(userId)){
+            throw new BadRequestException("Ese usuario no es vendedor");
+        }
+
+        List<Post> posts = new ArrayList<>(this.postRepository.findOnSalePosts(userId));
+
+        if (posts.isEmpty()){
+            throw new NotFoundException("No hay post en descuento de ese vendedor");
+        }else{
+            String user_name = userRepository.findById(userId).get().getUser_name();
+            return new SalePostListDTO (userId, user_name, posts.stream().map(this::mapPostToDTO).toList());
         }
     }
 }
