@@ -40,4 +40,10 @@ public class ProductController {
     public ResponseEntity<?> patchEndPromotion(@PathVariable Integer post_id){
         return new ResponseEntity<>(this.postService.updateEndPromotion(post_id), HttpStatus.OK);
     }
+
+    @GetMapping("/products/today")
+    public ResponseEntity<?> getPostOfToday(@RequestParam(defaultValue = "price_asc", required = false) String order){
+        return new ResponseEntity<>(this.postService.getPostOfToday(order), HttpStatus.OK);
+    }
+
 }

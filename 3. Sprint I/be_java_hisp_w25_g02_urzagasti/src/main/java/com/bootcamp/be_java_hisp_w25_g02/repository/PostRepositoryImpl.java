@@ -47,6 +47,9 @@ public class PostRepositoryImpl implements IPostRepository
     @Override
     public Integer savePost(Post post) {
         post.setPost_id( postList.size());
+        while (this.findProductById(post.getPost_id()).isPresent()){
+            post.setPost_id(post.getPost_id() +1);
+        }
         postList.add(post);
         System.out.println(post);
         return post.getPost_id();

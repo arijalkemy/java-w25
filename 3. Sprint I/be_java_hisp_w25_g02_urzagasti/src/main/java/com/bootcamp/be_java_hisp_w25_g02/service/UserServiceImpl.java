@@ -1,8 +1,7 @@
 package com.bootcamp.be_java_hisp_w25_g02.service;
 
-import com.bootcamp.be_java_hisp_w25_g02.dto.response.FollowerListDTO;
-import com.bootcamp.be_java_hisp_w25_g02.dto.response.UserDTO;
-import com.bootcamp.be_java_hisp_w25_g02.dto.response.UserFollowingDTO;
+import com.bootcamp.be_java_hisp_w25_g02.dto.request.PromoPostDTO;
+import com.bootcamp.be_java_hisp_w25_g02.dto.response.*;
 import com.bootcamp.be_java_hisp_w25_g02.entity.User;
 import com.bootcamp.be_java_hisp_w25_g02.exception.BadRequestException;
 import com.bootcamp.be_java_hisp_w25_g02.exception.NotFoundException;
@@ -10,7 +9,6 @@ import com.bootcamp.be_java_hisp_w25_g02.exception.NotFoundException;
 import com.bootcamp.be_java_hisp_w25_g02.repository.IUserRepository;
 import com.bootcamp.be_java_hisp_w25_g02.repository.UserRepositoryImpl;
 import org.springframework.stereotype.Service;
-import com.bootcamp.be_java_hisp_w25_g02.dto.response.FollowerCountDTO;
 
 import java.util.Comparator;
 import java.util.List;
@@ -159,4 +157,6 @@ public class UserServiceImpl implements IUserService{
 
         return userToUserDto(user.get());
     }
+
+
 }

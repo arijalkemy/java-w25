@@ -120,6 +120,28 @@ public class PostServiceImpl implements IPostService{
         return new GenericResponseDTO("Promocion finalizada con exito");
 
     }
+
+    @Override
+    public List<PromotionPostDTO> getPostOfToday(String order) {
+        List<Post> posts = this.postRepository.findAll();
+
+        List<PromotionPostDTO> promotionPostDTOS = posts.stream().filter(post -> post.getPostDate().isEqual(LocalDate.now()) ).map(this::mapPostToDTO).toList();
+        if (promotionPostDTOS.isEmpty()){
+            throw new NotFoundException("Todavia no se ha publicado nada hoy");
+        }
+        if (order.equalsIgnoreCase("price_asc")){
+            promotionPostDTOS = promotionPostDTOS.stream().sorted(Comparator.comparing(PromotionPostDTO::price_with_discount)).toList();
+        }else{
+            if (order.equalsIgnoreCase("price_desc")){
+                promotionPostDTOS = promotionPostDTOS.stream().sorted(Comparator.comparing(PromotionPostDTO::price_with_discount).reversed()).toList();
+            }
+            else {
+                throw new BadRequestException("Parametro order no identificado, debe tener el valor price_desc o price_asc");
+            }
+        }
+        return promotionPostDTOS;
+    }
+
     private void validatePostDTO(PromoPostDTO postDTO){
 
         if (postDTO == null || postDTO.price() == null || postDTO.has_promo() == null || postDTO.user_id() == null || postDTO.date() == null || postDTO.category() == null || postDTO.discount() == null){
@@ -134,14 +156,14 @@ public class PostServiceImpl implements IPostService{
         if (!postDTO.has_promo() && postDTO.discount() > 0){
             throw new BadRequestException("El articulo no tiene promocion pero si un descuento, verificar campos");
         }
-        if (postDTO.date().isAfter(LocalDate.now())){
-            throw new BadRequestException("La fecha no es valida");
-        }
         if (postDTO.discount() < 0){
-            throw  new BadRequestException("El descuento no puede ser menor o igual a 0");
+            throw  new BadRequestException("El descuento no puede ser menor a 0");
         }
         if (postDTO.discount() > 1){
             throw new BadRequestException("El descuento debe ser un número entre 0 y 1");
+        }
+        if (postDTO.date().isAfter(LocalDate.now())){
+            throw new BadRequestException("La fecha no puede ser una fecha futura");
         }
         validateProductDTO(postDTO.product());
     }
