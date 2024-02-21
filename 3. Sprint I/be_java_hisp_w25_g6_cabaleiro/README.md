@@ -16,6 +16,7 @@
 ## Entities - Class diagram
 ```
   see  social-meli-individual.png
+
 ```
 
 ## API Reference

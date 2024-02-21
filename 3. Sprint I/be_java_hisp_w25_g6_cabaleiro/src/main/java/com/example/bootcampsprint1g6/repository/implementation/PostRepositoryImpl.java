@@ -1,6 +1,7 @@
-package com.example.bootcampsprint1g6.repository;
+package com.example.bootcampsprint1g6.repository.implementation;
 
 import com.example.bootcampsprint1g6.entity.Post;
+import com.example.bootcampsprint1g6.repository.IPostRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

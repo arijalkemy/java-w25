@@ -1,4 +1,4 @@
-package com.example.bootcampsprint1g6.service;
+package com.example.bootcampsprint1g6.service.implementation;
 
 import com.example.bootcampsprint1g6.dto.GenericResponseDTO;
 import com.example.bootcampsprint1g6.dto.PostListDTO;
@@ -8,8 +8,9 @@ import com.example.bootcampsprint1g6.exception.BadRequestException;
 import com.example.bootcampsprint1g6.exception.NotFoundException;
 import com.example.bootcampsprint1g6.repository.IPostRepository;
 import com.example.bootcampsprint1g6.repository.IUserRepository;
-import com.example.bootcampsprint1g6.repository.PostRepositoryImpl;
-import com.example.bootcampsprint1g6.repository.UserRepositoryImpl;
+import com.example.bootcampsprint1g6.repository.implementation.PostRepositoryImpl;
+import com.example.bootcampsprint1g6.repository.implementation.UserRepositoryImpl;
+import com.example.bootcampsprint1g6.service.IPostService;
 import com.example.bootcampsprint1g6.util.mapper.PostMapper;
 import com.example.bootcampsprint1g6.util.validator.PostValidator;
 import org.springframework.http.HttpStatus;
@@ -60,7 +61,6 @@ public class PostServiceImpl implements IPostService {
 
         if (!PostValidator.validateRequestDTO(request))
             throw new BadRequestException("Datos incorrectos en la solicitud");
-
         Seller seller = findSellerById(request.getUserId());
         Post postToCreate = PostMapper.getEntityInstance(request, seller);
         Post postCreated = postRepository.save(postToCreate);

@@ -1,4 +1,4 @@
-package com.example.bootcampsprint1g6.service;
+package com.example.bootcampsprint1g6.service.implementation;
 
 import com.example.bootcampsprint1g6.dto.FollowedDTO;
 import com.example.bootcampsprint1g6.dto.FollowersDTO;
@@ -10,7 +10,8 @@ import com.example.bootcampsprint1g6.entity.User;
 import com.example.bootcampsprint1g6.exception.BadRequestException;
 import com.example.bootcampsprint1g6.exception.NotFoundException;
 import com.example.bootcampsprint1g6.repository.IUserRepository;
-import com.example.bootcampsprint1g6.repository.UserRepositoryImpl;
+import com.example.bootcampsprint1g6.repository.implementation.UserRepositoryImpl;
+import com.example.bootcampsprint1g6.service.IUserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 

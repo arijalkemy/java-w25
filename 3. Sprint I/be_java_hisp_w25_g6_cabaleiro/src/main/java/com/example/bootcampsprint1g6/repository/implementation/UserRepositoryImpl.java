@@ -1,9 +1,10 @@
-package com.example.bootcampsprint1g6.repository;
+package com.example.bootcampsprint1g6.repository.implementation;
 
 import com.example.bootcampsprint1g6.entity.Buyer;
 import com.example.bootcampsprint1g6.entity.Post;
 import com.example.bootcampsprint1g6.entity.Seller;
 import com.example.bootcampsprint1g6.entity.User;
+import com.example.bootcampsprint1g6.repository.IUserRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

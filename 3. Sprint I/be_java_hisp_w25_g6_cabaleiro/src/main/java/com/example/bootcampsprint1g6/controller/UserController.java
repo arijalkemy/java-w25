@@ -5,7 +5,7 @@ import com.example.bootcampsprint1g6.dto.FollowersCountDTO;
 import com.example.bootcampsprint1g6.dto.FollowersDTO;
 import com.example.bootcampsprint1g6.dto.GenericResponseDTO;
 import com.example.bootcampsprint1g6.service.IUserService;
-import com.example.bootcampsprint1g6.service.UserServiceImpl;
+import com.example.bootcampsprint1g6.service.implementation.UserServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
