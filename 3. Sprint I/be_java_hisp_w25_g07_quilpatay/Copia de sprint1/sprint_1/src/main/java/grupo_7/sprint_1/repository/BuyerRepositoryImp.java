@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import grupo_7.sprint_1.entity.Buyer;
-import grupo_7.sprint_1.exception.NotFoundException;
+import grupo_7.sprint_1.repository.inter.IBuyerRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ResourceUtils;
 
@@ -15,41 +15,28 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class BuyerRepositoryImp implements IBuyerRepository {
 
-    private List<Buyer> buyerList = new ArrayList<>();
+    private List<Buyer> buyers = new ArrayList<>();
 
     public BuyerRepositoryImp() throws IOException {
         loadBuyers();
     }
 
     @Override
-    public Buyer findBuyerById(Integer id) {
-        return buyerList.stream()
+    public Optional<Buyer> findById(Integer id) {
+        return buyers.stream()
                 .filter(buyer -> buyer.getUserId().equals(id))
-                .findFirst()
-                .orElse(null);
+                .findFirst();
     }
 
     @Override
-    public void updateBuyer(Buyer buyer) {
-        buyerList.remove(buyer);
-        buyerList.add(buyer);
-    }
-
-    @Override
-    public Buyer getById(int id) {
-        Buyer buyer = buyerList.stream()
-                .filter(buyerFilter -> buyerFilter.getUserId() == id)
-                .findFirst()
-                .orElse(null);
-
-        if (buyer == null) {
-            throw new NotFoundException("No se encuentra el id del comprador");
-        }
-        return buyer;
+    public void update(Buyer buyer) {
+        buyers.remove(buyer);
+        buyers.add(buyer);
     }
 
     private void loadBuyers() throws IOException {
@@ -65,7 +52,7 @@ public class BuyerRepositoryImp implements IBuyerRepository {
             objectMapper.setDateFormat(new SimpleDateFormat("dd-MM-yyyy"));
             mappedBuyers = objectMapper.readValue(file, new TypeReference<List<Buyer>>() {
             });
-            buyerList = mappedBuyers;
+            buyers = mappedBuyers;
         } catch (IOException e) {
             System.out.println(e.getMessage());
             System.out.println(LocalDate.now());

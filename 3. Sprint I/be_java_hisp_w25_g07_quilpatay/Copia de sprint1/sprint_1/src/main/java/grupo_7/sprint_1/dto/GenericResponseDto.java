@@ -1,4 +1,4 @@
-package grupo_7.sprint_1.dtos;
+package grupo_7.sprint_1.dto;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -10,6 +10,6 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class GenericResponseDTO {
+public class GenericResponseDto {
     String message;
 }

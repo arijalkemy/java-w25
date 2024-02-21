@@ -1,7 +1,7 @@
 package grupo_7.sprint_1.controller;
 
 import grupo_7.sprint_1.service.BuyerServiceImp;
-import grupo_7.sprint_1.service.IBuyerService;
+import grupo_7.sprint_1.service.inter.IBuyerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,14 +23,14 @@ public class BuyerController {
 
     // US 0004: Obtener  un listado de todos los vendedores a los cuales sigue un determinado usuario (¿A quién sigo?)
     // US 0008: Ordenamiento alfabético ascendente y descendente
-    @GetMapping("/users/{userid}/followed/list")
-    public ResponseEntity<?> getfollowedlist(@PathVariable Integer userid, @RequestParam String order) {
-        return new ResponseEntity<>(buyerService.getBuyerfollow(userid, order), HttpStatus.OK);
+    @GetMapping("/users/{buyerId}/followed/list")
+    public ResponseEntity<?> getfollowedlist(@PathVariable Integer buyerId, @RequestParam String order) {
+        return new ResponseEntity<>(buyerService.getBuyerfollows(buyerId, order), HttpStatus.OK);
     }
 
     // US 0007: Poder realizar la acción de “Unfollow” (dejar de seguir) a un determinado vendedor.
-    @PostMapping("/users/{userId}/unfollow/{userIdToUnfollow}")
-    public ResponseEntity<?> unfollowSeller(@PathVariable int userId, @PathVariable int userIdToUnfollow) {
-        return new ResponseEntity<>(buyerService.unfollowSeller(userId, userIdToUnfollow), HttpStatus.OK);
+    @PostMapping("/users/{buyerId}/unfollow/{sellerId}")
+    public ResponseEntity<?> unfollowSeller(@PathVariable int buyerId, @PathVariable int sellerId) {
+        return new ResponseEntity<>(buyerService.unfollowSeller(buyerId, sellerId), HttpStatus.OK);
     }
 }

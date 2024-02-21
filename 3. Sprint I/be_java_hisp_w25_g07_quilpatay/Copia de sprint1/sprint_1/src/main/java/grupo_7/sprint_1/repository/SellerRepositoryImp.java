@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import grupo_7.sprint_1.entity.Seller;
-import grupo_7.sprint_1.utils.Mapper;
+import grupo_7.sprint_1.repository.inter.ISellerRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ResourceUtils;
 
@@ -20,44 +20,37 @@ import java.util.Optional;
 @Repository
 public class SellerRepositoryImp implements ISellerRepository {
 
-    Mapper mapper;
     private List<Seller> sellers = new ArrayList<>();
 
-    public SellerRepositoryImp(Mapper mapper) throws IOException {
-        this.mapper = mapper;
+    public SellerRepositoryImp() throws IOException {
         loadSellers();
     }
 
     @Override
-    public void updateSeller(Seller seller) {
+    public void update(Seller seller) {
         sellers.remove(seller);
         sellers.add(seller);
     }
 
     @Override
-    public List<Seller> getAllSellers() {
-        return sellers;
-    }
-
-    @Override
-    public Integer countSellerPromos(Integer userId) {
+    public Integer countSellerPromos(Integer sellerId) {
         return sellers.stream()
-                .filter(seller -> seller.getUserId().equals(userId))
+                .filter(seller -> seller.getUserId().equals(sellerId))
                 .flatMap(seller -> seller.getPosts().stream())
                 .filter(post -> post.getHasPromo().equals(true))
                 .mapToInt(post -> 1)
                 .sum();
     }
 
-    public Optional<Seller> findById(Integer userId) {
+    public Optional<Seller> findById(Integer sellerId) {
         return sellers.stream()
-                .filter(seller -> seller.getUserId().equals(userId))
+                .filter(seller -> seller.getUserId().equals(sellerId))
                 .findFirst();
     }
 
-    public int cantidadDeSeguidores(int userId) {
+    public Integer countFollowers(Integer userId) {
         return sellers.stream()
-                .filter(seller -> seller.getUserId() == userId)
+                .filter(seller -> seller.getUserId().equals(userId))
                 .findFirst()
                 .map(seller -> seller.getFollowers().size())
                 .orElse(0);
@@ -81,6 +74,11 @@ public class SellerRepositoryImp implements ISellerRepository {
             System.out.println(e.getMessage());
             System.out.println(LocalDate.now());
         }
+    }
+
+    @Override
+    public List<Seller> getAll() {
+        return sellers;
     }
 }
 

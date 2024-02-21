@@ -1,13 +1,14 @@
 package grupo_7.sprint_1.service;
 
-import grupo_7.sprint_1.dtos.*;
+import grupo_7.sprint_1.dto.*;
 import grupo_7.sprint_1.entity.Buyer;
 import grupo_7.sprint_1.entity.Post;
 import grupo_7.sprint_1.entity.Seller;
 import grupo_7.sprint_1.exception.InvalidArgsException;
 import grupo_7.sprint_1.exception.NotFoundException;
-import grupo_7.sprint_1.repository.IBuyerRepository;
-import grupo_7.sprint_1.repository.ISellerRepository;
+import grupo_7.sprint_1.repository.inter.IBuyerRepository;
+import grupo_7.sprint_1.repository.inter.ISellerRepository;
+import grupo_7.sprint_1.service.inter.ISellerService;
 import grupo_7.sprint_1.utils.Mapper;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class SellerServiceImp implements ISellerService {
@@ -32,19 +34,19 @@ public class SellerServiceImp implements ISellerService {
 
         isPostValid(newPost);
 
-        List<Seller> sellers = sellerRepository.getAllSellers();
+        List<Seller> sellers = sellerRepository.getAll();
 
         for (Seller seller : sellers) {
             for (Post existingPost : seller.getPosts()) {
                 if (existingPost.getProduct().getProductId().equals(newPost.product().productId())) {
-                    throw new InvalidArgsException("Ya existe un producto con el mismo 'product_id'.");
+                    throw new InvalidArgsException("Ya existe un producto con el product_id '" + existingPost.getProduct().getProductId() + "'.");
                 }
             }
         }
 
         Optional<Seller> foundSeller = sellerRepository.findById(sellerId);
         if (foundSeller.isEmpty()) {
-            throw new NotFoundException("El vendedor indicado no existe.");
+            throw new NotFoundException("No se encontró el vendedor con el id '" + sellerId + "'.");
         }
 
         Post post = Mapper.convertPostDtoToPost(newPost);
@@ -53,18 +55,18 @@ public class SellerServiceImp implements ISellerService {
         }
 
         foundSeller.get().getPosts().add(post);
-        sellerRepository.updateSeller(foundSeller.get());
+        sellerRepository.update(foundSeller.get());
 
         return Mapper.convertPostToPostDto(post);
     }
 
     @Override
-    public SellerFollowersListDto getListOrderedAlphabetically(Integer userId, String order) {
-        Optional<Seller> seller = sellerRepository.findById(userId);
+    public SellerFollowersListDto getListOrderedAlphabetically(Integer sellerId, String order) {
+        Optional<Seller> seller = sellerRepository.findById(sellerId);
         if (seller.isEmpty()) {
-            throw new NotFoundException("No se encontro el vendedor con el id: " + userId);
+            throw new NotFoundException("No se encontró el vendedor con el id '" + sellerId + "'.");
         }
-        List<BuyerDtoRequisito3> listBuyerDto;
+        List<BuyerSimpleDto> listBuyerDto;
         if ("name_asc".equals(order))
             listBuyerDto = seller.get().getFollowers().stream()
                     .sorted(Comparator.comparing(Buyer::getUserName))
@@ -80,27 +82,29 @@ public class SellerServiceImp implements ISellerService {
     }
 
     @Override
-    public SellerDTO cantidadSeguidores(int id) {
-        Optional<Seller> seller = sellerRepository.findById(id);
+    public SellerDto cantidadSeguidores(Integer sellerId) {
+        Optional<Seller> seller = sellerRepository.findById(sellerId);
         if (seller.isEmpty()) {
-            throw new NotFoundException("No se encontro el vendedor con el id: " + id);
+            throw new NotFoundException("No se encontró el vendedor con el id '" + sellerId + "'.");
         }
 
-        int followersCount = sellerRepository.cantidadDeSeguidores(id);
+        int followersCount = sellerRepository.countFollowers(sellerId);
         return Mapper.convertSellerToSellerDTO(seller.get(), followersCount);
     }
 
     @Override
     public List<PostDto> getRecentPostsFromFollowedSellers(Integer buyerId, String order) {
 
-        Buyer buyer = buyerRepository.findBuyerById(buyerId);
-        if (buyer == null) {
-            throw new NotFoundException("El comprador con el ID " + buyerId + " no existe");
+        Optional<Buyer> foundBuyer = buyerRepository.findById(buyerId);
+        if (foundBuyer.isEmpty()) {
+            throw new NotFoundException("No se encontró el comprador con el id '" + buyerId + "'.");
         }
+
+        Buyer buyer = foundBuyer.get();
         List<Integer> followedSellerIds = buyer.getFollowed().stream()
                 .map(Seller::getUserId).toList();
 
-        List<Seller> allSellers = sellerRepository.getAllSellers();
+        List<Seller> allSellers = sellerRepository.getAll();
         List<Seller> followedSellers = allSellers.stream()
                 .filter(seller -> followedSellerIds.contains(seller.getUserId()))
                 .toList();
@@ -126,19 +130,32 @@ public class SellerServiceImp implements ISellerService {
     }
 
     @Override
-    public List<Seller> getAllSellers() {
-        return sellerRepository.getAllSellers();
-    }
-
-    @Override
     public SellerPromosListDto getSellerPromosCount(Integer sellerId) {
         Optional<Seller> seller = sellerRepository.findById(sellerId);
         if (seller.isEmpty()) {
-            throw new NotFoundException("No se encontró el vendedor con el id: " + sellerId);
+            throw new NotFoundException("No se encontró el vendedor con el id '" + sellerId + "'.");
         }
 
         Integer promosCount = sellerRepository.countSellerPromos(sellerId);
         return Mapper.convertSellerToSellerPromosListDto(seller.get(), promosCount);
+    }
+
+    @Override
+    public SellerPromosDto getPromoPostsBySeller(Integer sellerId) {
+        Optional<Seller> foundSeller = sellerRepository.findById(sellerId);
+        if (foundSeller.isEmpty()) {
+            throw new NotFoundException("No se encontró el vendedor con el id '" + sellerId + "'.");
+        }
+
+        List<PostDto> promoPosts = foundSeller
+                .get()
+                .getPosts()
+                .stream()
+                .filter(p -> p.getHasPromo().equals(true))
+                .map(p -> Mapper.convertPostToPostDto(p))
+                .collect(Collectors.toList());
+
+        return new SellerPromosDto(foundSeller.get().getUserId(), foundSeller.get().getUserName(), promoPosts);
     }
 
     private void isPostValid(AddPostDto newPost) {
@@ -194,5 +211,10 @@ public class SellerServiceImp implements ISellerService {
         if (!newPost.hasPromo() && (newPost.discount() != null)) {
             throw new InvalidArgsException("'discount' no debe ser especificado cuando 'has_promo' es false.");
         }
+    }
+
+    @Override
+    public List<Seller> getAllSellers() {
+        return sellerRepository.getAll();
     }
 }

@@ -1,6 +1,6 @@
 package grupo_7.sprint_1.utils;
 
-import grupo_7.sprint_1.dtos.*;
+import grupo_7.sprint_1.dto.*;
 import grupo_7.sprint_1.entity.Buyer;
 import grupo_7.sprint_1.entity.Post;
 import grupo_7.sprint_1.entity.Product;
@@ -62,23 +62,23 @@ public class Mapper {
         );
     }
 
-    public static SellerListDto convertSellerToSellerDTOlist(Seller seller) {
-        return new SellerListDto(
+    public static SellerSimpleDto convertSellerToSellerDTOlist(Seller seller) {
+        return new SellerSimpleDto(
                 seller.getUserId(),
                 seller.getUserName()
         );
     }
 
-    public static SellerDTO convertSellerToSellerDTO(Seller seller, int cantidadDeSeguidores) {
-        return new SellerDTO(
+    public static SellerDto convertSellerToSellerDTO(Seller seller, int cantidadDeSeguidores) {
+        return new SellerDto(
                 seller.getUserId(),
                 seller.getUserName(),
                 cantidadDeSeguidores
         );
     }
 
-    public static BuyerDtoRequisito3 convertListToDto(Buyer buyerList) {
-        return new BuyerDtoRequisito3(buyerList.getUserId(), buyerList.getUserName());
+    public static BuyerSimpleDto convertListToDto(Buyer buyerList) {
+        return new BuyerSimpleDto(buyerList.getUserId(), buyerList.getUserName());
     }
 
     public static SellerPromosListDto convertSellerToSellerPromosListDto(Seller seller, Integer promosCount) {

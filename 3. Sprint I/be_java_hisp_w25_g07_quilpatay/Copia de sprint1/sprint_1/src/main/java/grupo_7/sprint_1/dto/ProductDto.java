@@ -1,4 +1,4 @@
-package grupo_7.sprint_1.dtos;
+package grupo_7.sprint_1.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

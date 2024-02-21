@@ -1,10 +1,10 @@
-package grupo_7.sprint_1.dtos;
+package grupo_7.sprint_1.dto;
 
 import java.util.List;
 
 public record SellerFollowersListDto(
         Integer sellerId,
         String sellerUserName,
-        List<BuyerDtoRequisito3> buyers
+        List<BuyerSimpleDto> buyers
 ) {
 }

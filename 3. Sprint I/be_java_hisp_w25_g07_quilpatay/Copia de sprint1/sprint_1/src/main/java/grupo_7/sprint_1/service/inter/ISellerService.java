@@ -1,6 +1,6 @@
-package grupo_7.sprint_1.service;
+package grupo_7.sprint_1.service.inter;
 
-import grupo_7.sprint_1.dtos.*;
+import grupo_7.sprint_1.dto.*;
 import grupo_7.sprint_1.entity.Seller;
 
 import java.util.List;
@@ -8,13 +8,15 @@ import java.util.List;
 public interface ISellerService {
     PostDto addPost(Integer sellerId, AddPostDto newPost);
 
-    SellerFollowersListDto getListOrderedAlphabetically(Integer userId, String order);
+    SellerFollowersListDto getListOrderedAlphabetically(Integer sellerId, String order);
 
-    SellerDTO cantidadSeguidores(int userID);
+    SellerDto cantidadSeguidores(Integer sellerId);
 
     List<PostDto> getRecentPostsFromFollowedSellers(Integer buyerId, String order);
 
-    List<Seller> getAllSellers();
-
     SellerPromosListDto getSellerPromosCount(Integer sellerId);
+
+    SellerPromosDto getPromoPostsBySeller(Integer sellerId);
+
+    List<Seller> getAllSellers();
 }
