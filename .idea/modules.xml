@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/1. Modulo Java/AgenciaDeTurismo/AgenciaDeTurismo.iml" filepath="$PROJECT_DIR$/1. Modulo Java/AgenciaDeTurismo/AgenciaDeTurismo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1. Modulo Java/Poo_1/IMC.iml" filepath="$PROJECT_DIR$/1. Modulo Java/Poo_1/IMC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1. Modulo Java/Carrera_de_la_selva/InscripcionesCarrera.iml" filepath="$PROJECT_DIR$/1. Modulo Java/Carrera_de_la_selva/InscripcionesCarrera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1. Modulo Java/DAKAR/SaveTheRopa.iml" filepath="$PROJECT_DIR$/1. Modulo Java/DAKAR/SaveTheRopa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g14_Lozano/be_java_hisp_w25_g14_Lozano.iml" filepath="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g14_Lozano/be_java_hisp_w25_g14_Lozano.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java-w25.iml" filepath="$PROJECT_DIR$/.idea/java-w25.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1. Modulo Java/Recapitulando_lambda_streams/recapitular_lambdas_streams.iml" filepath="$PROJECT_DIR$/1. Modulo Java/Recapitulando_lambda_streams/recapitular_lambdas_streams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1. Modulo Java/Clases_abstractas_e_interfaces/untitled1.iml" filepath="$PROJECT_DIR$/1. Modulo Java/Clases_abstractas_e_interfaces/untitled1.iml" />
+    </modules>
+  </component>
+</project>

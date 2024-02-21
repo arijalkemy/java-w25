@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g14_Lozano/pom.xml" />
+        <option value="$PROJECT_DIR$/1. Modulo Java/DAKAR/pom.xml" />
+        <option value="$PROJECT_DIR$/1. Modulo Java/Poo_1/pom.xml" />
+        <option value="$PROJECT_DIR$/1. Modulo Java/AgenciaDeTurismo/pom.xml" />
+        <option value="$PROJECT_DIR$/1. Modulo Java/Carrera_de_la_selva/pom.xml" />
+        <option value="$PROJECT_DIR$/1. Modulo Java/Recapitulando_lambda_streams/pom.xml" />
+        <option value="$PROJECT_DIR$/1. Modulo Java/Clases_abstractas_e_interfaces/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="21" project-jdk-type="JavaSDK" />
+</project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="untitled1" />
+        <module name="AgenciaDeTurismo" />
+        <module name="InscripcionesCarrera" />
+        <module name="SaveTheRopa" />
+        <module name="be_java_hisp_w25_g14_Lozano" />
+        <module name="recapitular_lambdas_streams" />
+        <module name="IMC" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AgenciaDeTurismo" target="17" />
+      <module name="be_java_hisp_w25_g14_Lozano" target="17" />
+      <module name="IMC" target="17" />
+      <module name="InscripcionesCarrera" target="17" />
+      <module name="recapitular_lambdas_streams" target="17" />
+      <module name="SaveTheRopa" target="17" />
+      <module name="untitled1" target="18" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="be_java_hisp_w25_g14_Lozano" options="-parameters" />
+    </option>
+  </component>
+</project>
