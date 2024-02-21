@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "eccd7eec-6608-45f0-bedb-47c982633aaf",
+		"name": "deportes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32637842"
+	},
+	"item": [
+		{
+			"name": "todos los deportes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/deportes/findSports",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deportes",
+						"findSports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deporte por nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/deportes/findSport/natacion",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deportes",
+						"findSport",
+						"natacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deportistas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/personas/findSportPersons",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"personas",
+						"findSportPersons"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
