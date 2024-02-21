@@ -9,15 +9,29 @@ import lombok.experimental.FieldDefaults;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Product {
     @JsonProperty("product_id")
     int id;
+    static int count = 1;
     @JsonProperty("product_name")
     String name;
     String type;
     String brand;
     String color;
     String notes;
+
+    public Product(){
+        this.id = count;
+        count++;
+    }
+
+    public Product(String name, String type, String brand, String color, String notes) {
+        super();
+        this.name = name;
+        this.type = type;
+        this.brand = brand;
+        this.color = color;
+        this.notes = notes;
+    }
 }

@@ -14,19 +14,14 @@ import java.util.List;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class User {
+
     int id;
     String name;
-    @JsonManagedReference
-    List<Seller> following;
     static int count = 1;
+
     public User(){
         this.id = count;
-        this.following = new ArrayList<>();
         count++;
-    }
-
-    public void addFollowing(Seller seller){
-        this.following.add(seller);
     }
 
 }

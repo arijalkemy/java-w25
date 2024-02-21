@@ -15,5 +15,5 @@ import java.util.List;
 public class PostsByUserDTO {
     int user_id;
     String user_name;
-    List<PostDto> posts;
+    List<PostDTO> posts;
 }

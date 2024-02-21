@@ -11,22 +11,9 @@ import java.util.Optional;
 public class UserRepositoryImpl implements IUserRepository{
 
     @Override
-    public void setUserFollowings(Integer userId, List<Seller> userFollowings) {
-        DbMock
-            .getInstance()
-            .getListOfUsers()
-            .stream()
-            .filter(u -> u.getId() == userId)
-            .findFirst()
-            .get()
-            .setFollowing(userFollowings);
-    }
-
-    @Override
     public List<User> findAll() {
         return DbMock.getInstance().getListOfUsers();
     }
-
 
     @Override
     public Optional<User> findById(int userId) {
@@ -36,11 +23,6 @@ public class UserRepositoryImpl implements IUserRepository{
                 .stream()
                 .filter(u -> u.getId() == userId)
                 .findFirst();
-    }
-
-    @Override
-    public void addFollowing(User user, Seller following) {
-        user.addFollowing(following);
     }
 
 }

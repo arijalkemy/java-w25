@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface IPostRepository {
     List<Post> findAll();
+    void addPost(Post post);
+    public List<Post> findPostByUser(int userID);
 }

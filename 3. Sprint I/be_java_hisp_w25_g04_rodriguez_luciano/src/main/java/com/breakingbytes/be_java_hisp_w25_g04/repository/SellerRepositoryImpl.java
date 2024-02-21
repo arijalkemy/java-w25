@@ -2,32 +2,38 @@ package com.breakingbytes.be_java_hisp_w25_g04.repository;
 
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Post;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Seller;
+import com.breakingbytes.be_java_hisp_w25_g04.entity.User;
 import org.springframework.stereotype.Repository;
 import java.util.List;
-import com.breakingbytes.be_java_hisp_w25_g04.entity.User;
 import java.util.Optional;
 
 @Repository
 public class SellerRepositoryImpl implements ISellerRepository{
     @Override
-    public List<Seller> getSellers() {
+    public List<Seller> findAll() {
         return DbMock.getInstance().getListOfSellers();
     }
 
     @Override
-    public void addFollower(Seller seller, User follower) {
-        seller.addFollower(follower);
-    }
-  
     public Optional<Seller> findById(int sellerId) {
-        return DbMock.getInstance().getListOfSellers().stream().filter(s -> s.getId() == sellerId).findFirst();
+        return DbMock.getInstance().getListOfSellers().stream().filter(s -> s.getUser().getId() == sellerId).findFirst();
     }
 
     @Override
-    public void addPost(Post post, Seller seller) {
-        seller.getPosts().add(post);
-        DbMock.getInstance().getListOfPost().add(post);
-        DbMock.getInstance().getListOfProduct().add(post.getProduct());
+    public List<Seller> findFollowedsUser(User user) {
+        return DbMock.getInstance().getListOfSellers().stream().filter(s -> s.isAFollower(user)).toList();
+    }
+
+    @Override
+    public void makeSeller(User user) {
+        Seller s = new Seller();
+        s.setUser(user);
+        DbMock.getInstance().getListOfSellers().add(s);
+    }
+
+    @Override
+    public void addSeller(Seller s){
+       DbMock.getInstance().getListOfSellers().add(s);
     }
 
     @Override
@@ -36,7 +42,7 @@ public class SellerRepositoryImpl implements ISellerRepository{
             .getInstance()
             .getListOfSellers()
             .stream()
-            .filter(s -> s.getId() == sellerId)
+            .filter(s -> s.getUser().getId() == sellerId)
             .findFirst()
             .get()
             .setFollowers(sellerFollowers);

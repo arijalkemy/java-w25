@@ -25,37 +25,39 @@ public class DbMock {
         this.listOfUsers.add(carlos);
 
         this.listOfSellers = new ArrayList<>();
-        Seller juan = new Seller(); // ID: 3
+        User juan = new User();
         juan.setName("Juan");
-        pepe.addFollowing(juan);
-        juan.addFollower(pepe);
-        this.listOfSellers.add(juan);
-        Seller robert = new Seller(); // ID: 4
+        this.listOfUsers.add(juan);
+        Seller juanVendedor = new Seller(); // ID: 3
+        juanVendedor.setUser(juan);
+        juanVendedor.addFollower(pepe);
+        this.listOfSellers.add(juanVendedor);
+        User robert = new User();
+        this.listOfUsers.add(robert);
+        Seller robertVendedor = new Seller(); // ID: 4
         robert.setName("Robert");
-        robert.addFollower(carlos);
-        carlos.addFollowing(robert)
-        ;
-        this.listOfSellers.add(robert);
+        robertVendedor.setUser(robert);
+        robertVendedor.addFollower(carlos);
+        this.listOfSellers.add(robertVendedor);
 
-        Product p1 = new Product(1, "Laptop", "Electronics", "Dell", "Silver", "Thin and lightweight design");
-        Product p2 = new Product(2, "AAAAAAAA", "Electronics", "Samsung", "Black", "5G capable");
-        Product p3 = new Product(3, "Running Shoes", "Apparel", "Nike", "Blue", "Breathable mesh upper");
-        Product p4 = new Product(4, "Headphones", "Electronics", "Sony", "Red", "Noise-canceling feature");
-        Product p5 = new Product(5, "Backpack", "Accessories", "JanSport", "Gray", "Multiple compartments");
+        Product p1 = new Product("Laptop", "Electronics", "Dell", "Silver", "Thin and lightweight design");
+        Product p2 = new Product("AAAAAAAA", "Electronics", "Samsung", "Black", "5G capable");
+        Product p3 = new Product( "Running Shoes", "Apparel", "Nike", "Blue", "Breathable mesh upper");
+        Product p4 = new Product("Headphones", "Electronics", "Sony", "Red", "Noise-canceling feature");
+        Product p5 = new Product("Backpack", "Accessories", "JanSport", "Gray", "Multiple compartments");
         this.listOfProduct = new ArrayList<>(List.of(p1, p2, p3, p4, p5));
 
-        Post post1 = new Post(1, LocalDate.of(2024,02,20), p2, 100, 1500.0);
-        Post post2 = new Post(2, LocalDate.of(2023,02,20), p3, 100, 1000.0);
-        Post post3 = new Post(3, LocalDate.of(2021,10,19), p1, 200, 240.0);
-        Post post4 = new Post(4, LocalDate.of(2019,02,21), p4, 100, 20.0);
-        Post post5 = new Post(5, LocalDate.of(2019,02,26), p5, 300, 30.0);
+        Post post1 = new Post(LocalDate.of(2024,02,20), p2, 100, 1500.0);
+        post1.setSeller(juanVendedor);
+        Post post2 = new Post(LocalDate.of(2023,02,20), p3, 100, 1000.0);
+        post2.setSeller(juanVendedor);
+        Post post3 = new Post( LocalDate.of(2021,10,19), p1, 200, 240.0);
+        post3.setSeller(robertVendedor);
+        Post post4 = new Post(LocalDate.of(2019,02,21), p4, 100, 20.0);
+        post4.setSeller(robertVendedor);
+        Post post5 = new Post(LocalDate.of(2019,02,26), p5, 300, 30.0);
+        post5.setSeller(robertVendedor);
         this.listOfPost = new ArrayList<>(List.of(post1, post2, post3, post4, post5));
-
-        juan.getPosts().add(post1);
-        juan.getPosts().add(post2);
-        robert.getPosts().add(post3);
-        juan.getPosts().add(post4);
-        juan.getPosts().add(post5);
 
     }
 

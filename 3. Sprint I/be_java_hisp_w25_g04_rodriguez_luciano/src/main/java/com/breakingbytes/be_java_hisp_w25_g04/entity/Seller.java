@@ -7,26 +7,24 @@ import lombok.experimental.FieldDefaults;
 import java.util.ArrayList;
 import java.util.List;
 
-@EqualsAndHashCode(callSuper = true)
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Seller extends User{
-
+public class Seller{
+    User user;
     List<User> followers;
-    List<Post> posts;
 
     public Seller() {
         super();
         this.followers = new ArrayList<>();
-        this.posts = new ArrayList<>();
     }
 
-    public Seller(List<User> followers, List<Post> posts) {
-        this.followers = followers;
-        this.posts = posts;
-    }
+    public Seller(List<User> followers) { this.followers = followers; }
 
     public void addFollower(User user){
         this.followers.add(user);
     }
+    public void removeFollower(User user) { this.followers.remove(user); }
+
+    public boolean isAFollower(User user) { return this.getFollowers().contains(user); }
+
 }

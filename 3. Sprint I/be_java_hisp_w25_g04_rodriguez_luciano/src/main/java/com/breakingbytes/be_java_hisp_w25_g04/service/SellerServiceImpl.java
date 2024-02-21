@@ -1,24 +1,22 @@
 package com.breakingbytes.be_java_hisp_w25_g04.service;
 
-import com.breakingbytes.be_java_hisp_w25_g04.dto.request.PostDTO;
-import com.breakingbytes.be_java_hisp_w25_g04.dto.response.PostDto;
-import com.breakingbytes.be_java_hisp_w25_g04.dto.response.PostsByUserDTO;
-import com.breakingbytes.be_java_hisp_w25_g04.dto.response.PromoPostsCountDTO;
+import com.breakingbytes.be_java_hisp_w25_g04.dto.request.UserDTO;
+import com.breakingbytes.be_java_hisp_w25_g04.dto.response.*;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Post;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Product;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Seller;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.User;
 import com.breakingbytes.be_java_hisp_w25_g04.exception.BadRequestException;
 import com.breakingbytes.be_java_hisp_w25_g04.exception.NotFoundException;
-import com.breakingbytes.be_java_hisp_w25_g04.repository.IPostRepository;
-import com.breakingbytes.be_java_hisp_w25_g04.repository.IProductRepository;
-import com.breakingbytes.be_java_hisp_w25_g04.repository.ISellerRepository;
+import com.breakingbytes.be_java_hisp_w25_g04.repository.*;
 
 import com.breakingbytes.be_java_hisp_w25_g04.utils.Mapper;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class SellerServiceImpl implements ISellerService{
@@ -26,32 +24,29 @@ public class SellerServiceImpl implements ISellerService{
     Mapper mapper;
     IPostRepository postRepository;
     IProductRepository productRepository;
+    IUserRepository userRepository;
 
-    public SellerServiceImpl(ISellerRepository sellerRepository, Mapper mapper, IPostRepository postRepository, IProductRepository productRepository) {
+    public SellerServiceImpl(ISellerRepository sellerRepository,
+                             Mapper mapper,
+                             IPostRepository postRepository,
+                             IProductRepository productRepository,
+                             IUserRepository userRepository) {
         this.sellerRepository = sellerRepository;
         this.mapper = mapper;
         this.postRepository = postRepository;
         this.productRepository = productRepository;
+        this.userRepository = userRepository;
     }
 
-    @Override
-    public void addPost(PostDTO postDTO) {
-        Post post = mapper.modelMapper().map(postDTO, Post.class);
-        Optional<Seller> seller = sellerRepository.findById(postDTO.getUserId());
-        if (seller.isEmpty()) throw new NotFoundException("No se ha encontrado un vendedor con ese ID");
-        Optional<Product> product = productRepository.findAll().stream()
-                .filter(p -> p.getId() == postDTO.getProduct().getId())
-                .findFirst();
-        if (product.isPresent()) throw new BadRequestException("Ya existe un producto con ese ID");
-        sellerRepository.addPost(post, seller.get());
-    }
+
 
     @Override
-    public List<PostDTO> findAllPosts() {
+    public List<com.breakingbytes.be_java_hisp_w25_g04.dto.request.PostDTO> findAllPosts() {
         return postRepository.findAll()
-                .stream().map(p -> mapper.modelMapper().map(p, PostDTO.class)).toList();
+                .stream().map(p -> mapper.modelMapper().map(p, com.breakingbytes.be_java_hisp_w25_g04.dto.request.PostDTO.class)).toList();
     }
 
+    @Override
     public Boolean quitFollower(String sellerId, String userId) {
         Integer sellerIdInt = Integer.valueOf(sellerId),
                 userIdInt = Integer.valueOf(userId);
@@ -78,30 +73,40 @@ public class SellerServiceImpl implements ISellerService{
         return true;
     }
 
-    // Ejercicio 10
+    // Ejercicio 0002
     @Override
-    public void addPostWithPromotion(PostDTO postDTO) {
-        postDTO.setHas_promo(true);
-        this.addPost(postDTO);
+    public FollowersCountDTO getCountFollowersOfSeller(int id){
+        Optional<Seller> seller = sellerRepository.findById(id);
+        if(seller.isEmpty()) throw new NotFoundException("ID de usuario invalido");
+        return new FollowersCountDTO(seller.get().getUser().getId(), seller.get().getUser().getName(), seller.get().getFollowers().size());
     }
 
-    // ejercicio 11
+    // Ejercicio 0003
     @Override
-    public PromoPostsCountDTO getAmountPromoPost(int userId) {
-        Optional<Seller> seller = sellerRepository.findById(userId);
-        if(seller.isEmpty()) throw new NotFoundException("No se encontró el usuario solicitado");
-        List<Post> promoPosts =  seller.get().getPosts().stream().filter(Post::isHas_promo).toList();
-        return new PromoPostsCountDTO(seller.get().getId(), seller.get().getName(), promoPosts.size());
+    public UserFollowersDTO getUsersFollowersOf(int userId, String order) {
+        Optional<Seller> user = this.sellerRepository.findById(userId);
+        if(user.isEmpty()) throw new NotFoundException("El ID del vendedor es invalido");
+        List<User> userFollowes = user.get().getFollowers();
+        if(userFollowes.isEmpty()) throw new NotFoundException("El usuario con id: " + user.get().getUser().getId() + " no tiene seguidores");
+        List<UserDTO> followers = userFollowes.stream().map(u -> mapper.modelMapper().map(u, UserDTO.class)).toList();
+        if(order.equals("name_asc")){
+            followers = followers.stream()
+                    .sorted(Comparator.comparing(UserDTO::getName))
+                    .collect(Collectors.toList());
+        }else if(order.equals("name_desc")){
+            followers = followers.stream()
+                    .sorted(Comparator.comparing(UserDTO::getName, Comparator.reverseOrder()))
+                    .collect(Collectors.toList());
+        }
+        return new UserFollowersDTO(user.get().getUser().getId(), user.get().getUser().getName(), followers);
     }
 
-    // ejercicio 12
-
     @Override
-    public PostsByUserDTO getPromoPostsByUser(int userId) {
-        Optional<Seller> seller = sellerRepository.findById(userId);
-        if(seller.isEmpty()) throw new NotFoundException("No se encontró el usuario solicitado");
-        List<Post> promoPosts =  seller.get().getPosts().stream().filter(Post::isHas_promo).toList();
-        List<PostDto> promoPostsDTO = promoPosts.stream().map(p -> mapper.modelMapper().map(p, PostDto.class)).toList();
-        return new PostsByUserDTO(seller.get().getId(), seller.get().getName(), promoPostsDTO);
+    public void makeSeller(int userId) {
+        Optional<User> u = userRepository.findById(userId);
+        if(u.isEmpty()) throw new NotFoundException("El ID del usuario es invalido");
+        Optional<Seller> s = sellerRepository.findById(userId);
+        if(s.isPresent()) throw new BadRequestException("Este usuario ya es un vendedor");
+        sellerRepository.makeSeller(u.get());
     }
 }

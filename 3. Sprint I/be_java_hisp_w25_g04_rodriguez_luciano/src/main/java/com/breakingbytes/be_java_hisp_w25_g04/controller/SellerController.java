@@ -15,35 +15,22 @@ public class SellerController {
         this.sellerService = sellerService;
     }
 
-    @PostMapping("/products/post")
-    public ResponseEntity<?> addPost(@RequestBody PostDTO postDTO){
-        sellerService.addPost(postDTO);
-        return ResponseEntity
-                .ok().build();
+    // Ejercicio 0002
+    @GetMapping("/users/{userId}/followers/count")
+    public ResponseEntity<?> getCountFollowers(@PathVariable int userId){
+        return ResponseEntity.ok().body(sellerService.getCountFollowersOfSeller(userId));
     }
 
-    @GetMapping("/posts")
-    public ResponseEntity<?> getAllPosts(){
-        return ResponseEntity.ok()
-                .body(sellerService.findAllPosts());
+    // Ejercicio 003, 005
+    @GetMapping("/users/{userId}/followers/list")
+    public ResponseEntity<?> getUsersFollowersOf(@PathVariable int userId, @RequestParam(required = false, defaultValue = "") String order){
+        return ResponseEntity.ok().body(sellerService.getUsersFollowersOf(userId, order));
     }
 
-    // Ejercicio 0010
-    @PostMapping("/products/promo-post")
-    public ResponseEntity<?> getPostsWithPromotion(@RequestBody PostDTO postDTO) {
-        sellerService.addPostWithPromotion(postDTO);
+    // Ejercicio Bonus
+    @PostMapping("/users/{userId}/create/seller")
+    public ResponseEntity<?> getUsersFollowersOf(@PathVariable int userId){
+        sellerService.makeSeller(userId);
         return ResponseEntity.ok().build();
-    }
-
-    // Ejercicio 0011
-    @GetMapping("/products/promo-post/count")
-    public ResponseEntity<?> getAmountOfPromoPosts(@RequestParam(required = false) int user_id) {
-        return ResponseEntity.ok(sellerService.getAmountPromoPost(user_id));
-    }
-
-    // Ejercicio 0012
-    @GetMapping("/products/promo-post/list")
-    public ResponseEntity<?> getPromoPostByUser(@RequestParam(required = false) int user_id) {
-        return ResponseEntity.ok(sellerService.getPromoPostsByUser(user_id));
     }
 }

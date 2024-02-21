@@ -1,5 +1,6 @@
 package com.breakingbytes.be_java_hisp_w25_g04.repository;
 
+import com.breakingbytes.be_java_hisp_w25_g04.entity.Post;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Product;
 import org.springframework.stereotype.Repository;
 
@@ -9,5 +10,9 @@ public class ProductRepositoryImpl implements IProductRepository{
     @Override
     public List<Product> findAll() {
         return DbMock.getInstance().getListOfProduct();
+    }
+    @Override
+    public void addProduct(Product product) {
+        DbMock.getInstance().getListOfProduct().add(product);
     }
 }

@@ -6,9 +6,6 @@ import java.util.Optional;
 import java.util.List;
 
 public interface IUserRepository {
-
-    void setUserFollowings(Integer userId, List<Seller> userFollowings);
     List<User> findAll();
     Optional<User> findById(int userId);
-    void addFollowing(User user, Seller following);
 }
