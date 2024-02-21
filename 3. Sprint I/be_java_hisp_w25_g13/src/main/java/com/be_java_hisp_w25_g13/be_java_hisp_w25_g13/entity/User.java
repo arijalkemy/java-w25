@@ -20,5 +20,5 @@ public class User {
 
     private Integer userId;
     private String userName;
-    private List<Seller> Following = new ArrayList<>();
+    private List<Seller> following = new ArrayList<>();
 }

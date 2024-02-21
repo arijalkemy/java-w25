@@ -11,5 +11,5 @@ import java.util.List;
 @Data
 public class SellerPostDTO {
     private Integer userId;
-    private List<Post2DTO> listPost;
+    private List<PostResponseDTO> listPost;
 }

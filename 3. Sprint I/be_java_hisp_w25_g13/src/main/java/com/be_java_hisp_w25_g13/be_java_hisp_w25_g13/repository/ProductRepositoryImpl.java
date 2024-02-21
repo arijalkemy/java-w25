@@ -9,14 +9,12 @@ import java.util.Optional;
 
 @Repository
 public class ProductRepositoryImpl implements IProductRepository{
-    List<Product> products=new ArrayList<>();
+    List<Product> products = new ArrayList<>();
 
     @Override
     public void addProduct(Product product) {
         products.add(product);
-
     }
-
     @Override
     public List<Product> getAll() {
         return this.products;
@@ -24,6 +22,6 @@ public class ProductRepositoryImpl implements IProductRepository{
 
     @Override
     public Optional<Product> getProductById(Integer id) {
-        return products.stream().filter(product -> product.getProduct_id().equals(id)).findFirst();
+        return products.stream().filter(product -> product.getProductId().equals(id)).findFirst();
     }
 }

@@ -2,7 +2,6 @@ package com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.service;
 
 import com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.dto.ProductDTO;
 import com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.entity.Product;
-import com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.exception.NotFoundException;
 import com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.repository.IProductRepository;
 import com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.utils.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +31,6 @@ public class ProductServiceImpl implements IProductService {
 
     @Override
     public Optional<Product> getProductById(Integer id) {
-        Optional<Product> product= productRepository.getProductById(id);
-
-        return product;
+        return productRepository.getProductById(id);
     }
 }

@@ -3,6 +3,7 @@ package com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.exception;
 import com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.dto.ExceptionDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -19,9 +20,9 @@ public class ExceptionHandlers {
         ExceptionDTO exceptionDTO = new ExceptionDTO(e.getMessage());
         return new ResponseEntity<>(exceptionDTO, HttpStatus.NOT_FOUND);
     }
-    @ExceptionHandler(WrongDataException.class)
-    public ResponseEntity<?> wrondData(WrongDataException e){
+    @ExceptionHandler(AlreadyExistException.class)
+    public ResponseEntity<?> alreadyExist(AlreadyExistException e){
         ExceptionDTO exceptionDTO = new ExceptionDTO(e.getMessage());
-        return new ResponseEntity<>(exceptionDTO,HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(exceptionDTO,HttpStatus.CONFLICT);
     }
 }

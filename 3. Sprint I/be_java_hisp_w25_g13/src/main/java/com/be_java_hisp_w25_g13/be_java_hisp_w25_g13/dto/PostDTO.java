@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Data
 public class PostDTO {
-    private Integer user_id;
+    private Integer userId;
     private LocalDate date;
     private ProductDTO product;
     private Integer category;

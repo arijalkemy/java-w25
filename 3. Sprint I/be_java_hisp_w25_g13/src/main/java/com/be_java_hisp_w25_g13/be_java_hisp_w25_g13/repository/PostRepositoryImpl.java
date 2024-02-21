@@ -11,13 +11,14 @@ import java.util.List;
 public class PostRepositoryImpl implements IPostRepository{
 
     List<Post> posts = new ArrayList<>();
+
+    private static Integer idCount = 0;
     @Override
     public Post addPost(Post post) {
+        post.setPostId(idCount++);
         posts.add(post);
-
         return post;
     }
-
     @Override
     public List<Post> filterByDateAndIdUsuario(Integer idUsuario, LocalDate date) {
         return posts.stream().filter(x -> {
@@ -27,11 +28,7 @@ public class PostRepositoryImpl implements IPostRepository{
             int dayIter = x.getDate().getDayOfMonth();
             int monthIter = x.getDate().getMonthValue();
             int yearIter = x.getDate().getYear();
-            if (x.getUser_id().equals(idUsuario) && yearIter <= yearAct && monthIter == monthAct && dayAct-dayIter <= 14) {
-                return true;
-            }
-            return false;
+            return (x.getUserId().equals(idUsuario) && yearIter <= yearAct && monthIter == monthAct && dayAct-dayIter <= 14);
         }).toList();
     }
-
 }

@@ -5,7 +5,6 @@ import com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.dto.NumberDTO;
 import com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.dto.FollowedDTO;
 import com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.dto.UserDTO;
 import com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.service.IUserService;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -39,15 +38,17 @@ public class UserController {
         return ResponseEntity.ok().body(userService.getNumberOfFollowers(userId));
     }
     @GetMapping("/{userID}/followers/list")
-    public ResponseEntity<FollowersDTO> getFollowersList(@PathVariable Integer userID, @RequestParam(defaultValue = "none") String orderBy){
-        return ResponseEntity.ok().body(userService.getFollowers(userID, orderBy));
+    public ResponseEntity<FollowersDTO> getFollowersList(
+            @PathVariable Integer userID, @RequestParam(defaultValue = "none") String order){
+        return ResponseEntity.ok().body(userService.getFollowers(userID, order));
     }
     @GetMapping("")
     public ResponseEntity<List<UserDTO>> getAllUsers(){
         return new ResponseEntity<>(userService.getAllUsers(), HttpStatus.OK);
     }
     @GetMapping("/{userId}/followed/list")
-    public ResponseEntity<FollowedDTO> getFollowed(@PathVariable Integer userId, @RequestParam(defaultValue = "none") String orderBy){
-        return new ResponseEntity<>(userService.getFollowed(userId, orderBy), HttpStatus.OK);
+    public ResponseEntity<FollowedDTO> getFollowed(
+            @PathVariable Integer userId, @RequestParam(defaultValue = "none") String order){
+        return new ResponseEntity<>(userService.getFollowed(userId, order), HttpStatus.OK);
     }
 }

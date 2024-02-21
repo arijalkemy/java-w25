@@ -8,10 +8,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class Product {
-    Integer product_id;
-    String product_name;
+    Integer productId;
+    String productName;
     String type;
     String brand;
-    String Color;
+    String color;
     String notes;
 }

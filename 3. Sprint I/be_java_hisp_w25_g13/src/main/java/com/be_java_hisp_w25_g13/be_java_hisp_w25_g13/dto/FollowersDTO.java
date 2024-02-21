@@ -10,7 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 public class FollowersDTO {
-    private Integer user_id;
-    private String user_name;
+    private Integer userId;
+    private String userName;
     private List<UserDTO> followers;
 }
