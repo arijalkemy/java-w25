@@ -15,6 +15,5 @@ public interface IUserService {
     FollowersDTO getFollowers(Integer userId, String orderBy);
     FollowedDTO getFollowed(Integer userId, String orderBy);
     FollowersNumberDTO getNumberOfFollowers(Integer userId);
-    SellerPostDTO getPostPerSeller(Integer id, String order);
     List<UserDTO> getAllUsers();
 }

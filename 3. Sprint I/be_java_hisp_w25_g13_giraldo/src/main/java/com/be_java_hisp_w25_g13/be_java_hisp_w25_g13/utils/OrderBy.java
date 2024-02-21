@@ -17,6 +17,17 @@ public class OrderBy {
                 .sorted((x,y)->y.getUserName().compareTo(x.getUserName()))
                 .toList();
     }
+    public static List<Post> orderByPostAsc(List<Post> listPosts){
+        return listPosts.stream()
+                .sorted(Comparator.comparing(p -> p.getProduct().getProductName()))
+                .toList();
+    }
+    public static List<Post> orderByPostDes(List<Post> listPosts){
+        return listPosts.stream()
+                .sorted((x,y)->y.getProduct().getProductName()
+                        .compareTo(x.getProduct().getProductName()))
+                .toList();
+    }
     public static List<Post> orderByDateAsc(List<Post> listPosts){
         return listPosts.stream()
                 .sorted(Comparator.comparing(Post::getDate))

@@ -3,7 +3,6 @@ package com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.controller;
 
 import com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.dto.*;
 import com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.service.IPostService;
-import com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.service.IUserService;
 import com.be_java_hisp_w25_g13.be_java_hisp_w25_g13.service.ProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,13 +24,11 @@ public class PostController {
     ProductServiceImpl productService;
     @Autowired
     IPostService postService;
-    @Autowired
-    IUserService userService;
 
     @GetMapping("followed/{userId}/list")
     public ResponseEntity<SellerPostDTO> getPostPerSeller(
         @PathVariable Integer userId, @RequestParam(defaultValue = "none") String order){
-            return new ResponseEntity<>(userService.getPostPerSeller(userId, order), HttpStatus.OK);
+            return new ResponseEntity<>(postService.getPostPerSeller(userId, order), HttpStatus.OK);
     }
     @PostMapping("/post")
     public ResponseEntity<PostResponseDTO> createPost(@RequestBody PostDTO postDTO){
@@ -52,7 +49,8 @@ public class PostController {
     }
 
     @GetMapping("promo-post/list")
-    public ResponseEntity<PromoPostSellerDTO> getSellerPromoPost(@RequestParam Integer userId){
-        return new ResponseEntity<>(postService.getSellerPromoPost(userId), HttpStatus.OK);
+    public ResponseEntity<PromoPostSellerDTO> getSellerPromoPost(@RequestParam Integer userId,
+                                                                 @RequestParam(defaultValue = "none") String order){
+        return new ResponseEntity<>(postService.getSellerPromoPost(userId, order), HttpStatus.OK);
     }
 }

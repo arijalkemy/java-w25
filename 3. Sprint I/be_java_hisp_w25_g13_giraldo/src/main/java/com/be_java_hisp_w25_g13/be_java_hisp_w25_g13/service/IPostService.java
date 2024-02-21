@@ -12,6 +12,8 @@ public interface IPostService {
 
     PromoPostNumberDTO getCountSellerPromoPost(Integer userId);
 
-    PromoPostSellerDTO getSellerPromoPost(Integer userId);
+    PromoPostSellerDTO getSellerPromoPost(Integer userId, String order);
+
+    SellerPostDTO getPostPerSeller(Integer id, String orderBy);
 
 }
