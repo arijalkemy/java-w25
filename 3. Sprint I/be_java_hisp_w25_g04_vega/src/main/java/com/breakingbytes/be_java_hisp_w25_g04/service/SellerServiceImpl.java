@@ -1,9 +1,7 @@
 package com.breakingbytes.be_java_hisp_w25_g04.service;
 
-import com.breakingbytes.be_java_hisp_w25_g04.dto.request.PostDTO;
-import com.breakingbytes.be_java_hisp_w25_g04.dto.response.PostDto;
-import com.breakingbytes.be_java_hisp_w25_g04.dto.response.PromoPostDTO;
-import com.breakingbytes.be_java_hisp_w25_g04.dto.response.PromoPostCountDTO;
+import com.breakingbytes.be_java_hisp_w25_g04.dto.request.RequestPostDTO;
+import com.breakingbytes.be_java_hisp_w25_g04.dto.response.*;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Post;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Product;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Seller;
@@ -14,9 +12,13 @@ import com.breakingbytes.be_java_hisp_w25_g04.repository.IPostRepository;
 import com.breakingbytes.be_java_hisp_w25_g04.repository.IProductRepository;
 import com.breakingbytes.be_java_hisp_w25_g04.repository.ISellerRepository;
 
+import com.breakingbytes.be_java_hisp_w25_g04.repository.IUserRepository;
 import com.breakingbytes.be_java_hisp_w25_g04.utils.Mapper;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,42 +28,41 @@ public class SellerServiceImpl implements ISellerService{
     Mapper mapper;
     IPostRepository postRepository;
     IProductRepository productRepository;
+    IUserRepository userRepository;
 
-    public SellerServiceImpl(ISellerRepository sellerRepository, Mapper mapper, IPostRepository postRepository, IProductRepository productRepository) {
+    public SellerServiceImpl(ISellerRepository sellerRepository, Mapper mapper, IPostRepository postRepository, IProductRepository productRepository, IUserRepository iUserRepository) {
         this.sellerRepository = sellerRepository;
         this.mapper = mapper;
         this.postRepository = postRepository;
         this.productRepository = productRepository;
+        this.userRepository = iUserRepository;
     }
 
-    public void addPost(PostDTO postDTO) {
-        Optional<Seller> seller = sellerRepository.findById(postDTO.getUserId());
+    @Override
+    public void addPost(RequestPostDTO requestPostDTO) {
+        Optional<Seller> seller = sellerRepository.findById(requestPostDTO.getUserId());
         if (seller.isEmpty()) throw new NotFoundException("No se ha encontrado un vendedor con ese ID");
         Optional<Product> product = productRepository.findAll().stream()
-                .filter(p -> p.getId() == postDTO.getProduct().getId())
+                .filter(p -> p.getId() == requestPostDTO.getProduct().getId())
                 .findFirst();
         if (product.isPresent()) throw new BadRequestException("Ya existe un producto con ese ID");
-
-        Post post = new Post(postDTO.getUserId(),
-                postDTO.getDate(),
-                postDTO.getProduct(),
-                postDTO.getCategory(),
-                postDTO.getPrice());
-        if(postDTO.isHasPromo()){
+        //Using constructor because of odd behaviour of Mapper with Id of Post
+        Post post = new Post(requestPostDTO.getUserId(),
+                requestPostDTO.getDate(),
+                requestPostDTO.getProduct(),
+                requestPostDTO.getCategory(),
+                requestPostDTO.getPrice());
+        if(requestPostDTO.isHasPromo()){
             post.setHasPromo(true);
-            post.setDiscount(postDTO.getDiscount());
+            post.setDiscount(requestPostDTO.getDiscount());
         }
         sellerRepository.addPost(post, seller.get());
     }
 
     @Override
-    public List<PostDto> findAllPosts() {
+    public List<RequestPostDTO> findAllPosts() {
         return postRepository.findAll()
-                .stream().map(p -> {
-                    System.out.println("seller" + p.getUserId());
-                    System.out.println("post" + p.getPostId());
-                    return mapper.modelMapper().map(p, PostDto.class);
-                }).toList();
+                .stream().map(p -> mapper.modelMapper().map(p, RequestPostDTO.class)).toList();
     }
 
     public Boolean quitFollower(String sellerId, String userId) {
@@ -88,6 +89,36 @@ public class SellerServiceImpl implements ISellerService{
         sellerRepository.setSellerFollowers(sellerIdInt, sellerFollowers);
 
         return true;
+    }
+    @Override
+    public LastPostsDTO getPostOfVendorsFollowedByUser(int id, String order) {
+        Optional<User> opt = this.userRepository.findById(id);
+        if (opt.isEmpty()) throw new NotFoundException("No se encuentra el id buscado");
+        User user = opt.get();
+        List<ResponsePostDTO> posts = new ArrayList<>();
+        for (Seller s : user.getFollowing()){
+            for (Post p : s.getPosts()){
+                if(!p.getDate().isBefore(LocalDate.now().minusWeeks(2))){
+                    ResponsePostDTO responsePostDTO = mapper.modelMapper().map(p, ResponsePostDTO.class);
+                    responsePostDTO.setUserId(s.getId());
+                    posts.add(responsePostDTO);
+                }
+            }
+        }
+        if(posts.isEmpty()) throw new NotFoundException("No hay publicaciones que cumplan con el requisito");
+
+        switch (order){
+            case "date_asc" -> posts.sort(Comparator.comparing(ResponsePostDTO::getDate));
+            case "date_desc" -> posts.sort(Comparator.comparing(ResponsePostDTO::getDate).reversed());
+            //default case is already satisfied
+        };
+        return new LastPostsDTO(user.getId(), posts);
+    }
+    @Override
+    public FollowersCountDTO getCountFollowersOfSeller(int id){
+        Optional<Seller> seller = sellerRepository.findById(id);
+        if(seller.isEmpty()) throw new NotFoundException("ID de usuario invalido");
+        return new FollowersCountDTO(seller.get().getId(), seller.get().getName(), seller.get().getFollowers().size());
     }
 
     @Override

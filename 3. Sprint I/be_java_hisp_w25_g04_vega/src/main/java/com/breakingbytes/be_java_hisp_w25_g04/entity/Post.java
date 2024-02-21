@@ -1,7 +1,5 @@
 package com.breakingbytes.be_java_hisp_w25_g04.entity;
 
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,20 +7,19 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 @Data
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class Post {
-    public static int count = 1;
-
-    int userId;
     int postId;
+    int userId;
     LocalDate date;
     Product product;
     int category;
     double price;
+    static int count = 1;
     boolean hasPromo;
     double discount; //in decimal like 0.25
 
@@ -32,14 +29,13 @@ public class Post {
     }
 
     public Post(int userId, LocalDate date, Product product, int category, double price) {
-        this.userId = userId;
         this.postId = count;
         count++;
+        this.userId = userId;
         this.date = date;
         this.product = product;
         this.category = category;
         this.price = price;
-        this.hasPromo = false;
-        this.discount = 0;
+
     }
 }

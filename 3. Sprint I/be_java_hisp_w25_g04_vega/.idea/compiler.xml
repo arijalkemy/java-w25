@@ -8,11 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="be_java_hisp_w25_g04_vega" />
+        <module name="be_java_hisp_w25_g04" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="be_java_hisp_w25_g04" options="-parameters" />
       <module name="be_java_hisp_w25_g04_vega" options="-parameters" />
     </option>
   </component>

@@ -3,12 +3,14 @@ import com.breakingbytes.be_java_hisp_w25_g04.entity.Post;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Product;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Seller;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.User;
+import lombok.Getter;
 
 import java.nio.channels.spi.SelectorProvider;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
 public class DbMock {
     private static DbMock dbMock;
     private List<User> listOfUsers;
@@ -62,21 +64,6 @@ public class DbMock {
 
     }
 
-    public List<User> getListOfUsers() {
-        return listOfUsers;
-    }
-
-    public List<Seller> getListOfSellers() {
-        return listOfSellers;
-    }
-
-    public List<Post> getListOfPost() {
-        return listOfPost;
-    }
-
-    public List<Product> getListOfProduct() {
-        return listOfProduct;
-    }
 
     public static DbMock getInstance(){
         if(dbMock == null){

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.breakingbytes</groupId>
-	<artifactId>be_java_hisp_w25_g04_vega</artifactId>
+	<artifactId>be_java_hisp_w25_g04</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>be_java_hisp_w25_g04</name>
 	<description>Proyecto Sprint 1</description>
