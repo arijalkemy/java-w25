@@ -1,3 +1,5 @@
 # Modelo de clases utilizado
+![MeliSocial_Individual drawio](https://github.com/arijalkemy/java-w25/assets/37525046/d155f2c0-4fd5-4ca7-9e12-a3ffb6df95a4)
 
-![MeliSocial drawio](https://github.com/ZiberiaNn/be_java_hisp_w25_g15/assets/157525663/47be1f80-1fd9-45b9-bac9-0906513e836f)
+# Bonus
+![image](https://github.com/arijalkemy/java-w25/assets/37525046/49195fda-a5d9-4c91-ad58-89463ed5886e)
