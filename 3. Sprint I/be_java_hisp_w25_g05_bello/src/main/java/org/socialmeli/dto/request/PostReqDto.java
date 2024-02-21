@@ -5,7 +5,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
-import org.socialmeli.entity.Product;
+import org.socialmeli.dto.response.ProductDto;
 
 import java.time.LocalDate;
 
@@ -16,7 +16,9 @@ public class PostReqDto {
         Integer userId;
         @JsonFormat(pattern = "dd-MM-yyyy")
         LocalDate date;
-        Product product;
+        ProductDto product;
         Integer category;
         Double price;
+        Boolean hasPromo;
+        Double discount;
 }

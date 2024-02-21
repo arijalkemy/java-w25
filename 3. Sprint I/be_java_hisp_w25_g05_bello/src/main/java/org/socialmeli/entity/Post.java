@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDate;
 
 @Data
-@NoArgsConstructor
 public class Post {
     private Integer postId;
     private Integer userId;
@@ -14,7 +13,14 @@ public class Post {
     private Product product;
     private Integer category;
     private Double price;
+    private Boolean hasPromo;
+    private Double discount;
     public static Integer postIdCounter = 0;
+
+    public Post() {
+        this.hasPromo = Boolean.FALSE;
+        this.discount = 0.0;
+    }
 
     public Post(Integer userId, LocalDate date, Product product, Integer category, Double price) {
         this.userId = userId;
@@ -22,5 +28,7 @@ public class Post {
         this.product = product;
         this.category = category;
         this.price = price;
+        this.hasPromo = Boolean.FALSE;
+        this.discount = 0.0;
     }
 }
