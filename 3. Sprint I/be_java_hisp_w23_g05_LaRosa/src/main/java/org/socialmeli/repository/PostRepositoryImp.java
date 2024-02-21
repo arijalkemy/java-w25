@@ -23,15 +23,19 @@ public class PostRepositoryImp implements IRepository<Post> {
         Product product1 = new Product(1, "Camiseta", "Ropa", "Nike", "Blanco", "Con logo");
         Product product2 = new Product(2, "Zapatos", "Calzado", "Adidas", "Negro", "N/A");
         Product product3 = new Product(3, "Bolso", "Accesorio", "Puma", "Rojo", "Cuero");
+        Product product4 = new Product(4, "Cartera", "Accesorio", "ABC", "Negro", "Cuero");
         Post post1 = new Post(vendorRepositoryImp.findAll().get(0).getUserId(), LocalDate.of(2023, 3, 20), product1, 1,
                 35.99);
         Post post2 = new Post(vendorRepositoryImp.findAll().get(0).getUserId(), LocalDate.of(2024, 2, 15), product2, 2,
                 79.99);
-        PostDiscount post3 = new PostDiscount(vendorRepositoryImp.findAll().get(0).getUserId(), LocalDate.now(),
-                product3, 1, 49.99, true, 100.00);
+        Post post3 = new Post(vendorRepositoryImp.findAll().get(0).getUserId(), LocalDate.of(2024, 2, 15), product3, 2,
+                729.99);
+        PostDiscount post4 = new PostDiscount(vendorRepositoryImp.findAll().get(0).getUserId(), LocalDate.now(),
+                product4, 1, 49.99, true, 100.00);
         this.save(post1);
         this.save(post2);
         this.save(post3);
+        this.save(post4);
     }
 
     private Integer autoIncrementId() {

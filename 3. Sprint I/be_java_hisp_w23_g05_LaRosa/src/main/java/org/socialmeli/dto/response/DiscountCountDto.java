@@ -9,5 +9,7 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class DiscountCountDto {
+    Integer user_id;
+    String user_name;
     Integer discount_count;
 }

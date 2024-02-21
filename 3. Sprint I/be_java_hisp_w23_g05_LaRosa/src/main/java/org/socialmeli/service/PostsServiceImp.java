@@ -166,7 +166,7 @@ public class PostsServiceImp implements IPostsService {
                 }
             }
         }
-        return new DiscountCountDto(total);
+        return new DiscountCountDto(vendor.getUserId(), vendor.getUserName(), total);
     }
 
     // US_0012
