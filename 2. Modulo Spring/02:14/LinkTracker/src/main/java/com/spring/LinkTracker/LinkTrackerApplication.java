@@ -1,13 +1,13 @@
-package com.spring.linktracker;
+package com.spring.LinkTracker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LinktrackerApplication {
+public class LinkTrackerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LinktrackerApplication.class, args);
+		SpringApplication.run(LinkTrackerApplication.class, args);
 	}
 
 }
