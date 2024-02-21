@@ -18,6 +18,18 @@ public class PostServiceImpl  implements IPostService{
     IPostRepository postRepository;
     IUserRepository userRepository;
     IUserService userService;
+
+    private void checkUserExistence(Integer user_id){
+        if (!userService.existUser(user_id)){
+            throw new BadRequestException("El usuario no existe");
+        }
+    }
+    private void checkIfUserIsSeller(Integer user_id){
+        if (!userService.isSeller(user_id)){
+            throw new BadRequestException("El usuario no es vendedor");
+        }
+    }
+
     public PostServiceImpl(PostRepositoryImpl postRepository, UserServiceImpl userService, IUserRepository userRepository){
         this.postRepository = postRepository;
         this.userService = userService;
@@ -25,12 +37,8 @@ public class PostServiceImpl  implements IPostService{
     }
 
     public GenericResponseDTO savePost(PostDTO postDTO){
-        if (!userService.existUser(postDTO.user_id())){
-            throw new BadRequestException("El usuario no existe");
-        }
-        if (!userService.isSeller(postDTO.user_id())){
-            throw new BadRequestException("El usuario no es vendedor");
-        }
+        checkUserExistence(postDTO.user_id());
+        checkIfUserIsSeller(postDTO.user_id());
         if (this.postRepository.findProductById(postDTO.product().product_id()).isPresent()){
             throw new BadRequestException("Ya existe un Producto con ese ID");
         }
@@ -84,7 +92,7 @@ public class PostServiceImpl  implements IPostService{
     }
 
     @Override
-    public SalePostDTO searchPostsOnSaleById(Integer userId) {
+    public SalePostDTO countPostsOnSaleById(Integer userId) {
         if (!userService.existUser(userId)){
             throw new NotFoundException("Ese usuario no existe");
         }
@@ -104,15 +112,10 @@ public class PostServiceImpl  implements IPostService{
 
     @Override
     public SalePostListDTO getAllPostsOnSaleById(Integer userId) {
-        if (!userService.existUser(userId)){
-            throw new NotFoundException("Ese usuario no existe");
-        }
-        if (!userService.isSeller(userId)){
-            throw new BadRequestException("Ese usuario no es vendedor");
-        }
+        checkUserExistence(userId);
+        checkIfUserIsSeller(userId);
 
         List<Post> posts = new ArrayList<>(this.postRepository.findOnSalePosts(userId));
-
         if (posts.isEmpty()){
             throw new NotFoundException("No hay post en descuento de ese vendedor");
         }else{
