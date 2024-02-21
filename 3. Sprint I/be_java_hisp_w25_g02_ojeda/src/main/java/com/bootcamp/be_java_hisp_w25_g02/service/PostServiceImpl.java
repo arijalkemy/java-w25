@@ -146,18 +146,6 @@ public class PostServiceImpl implements IPostService{
         return mapPostToPromoDTO(promotion);
     };
 
-    /*
-    @Override
-    public PromotionPostDTO getNewestPromotion(){
-        List<PromotionPost> promotions = this.promotionRepository.getAllPromotions();
-        List<PromotionPost> sortedByDatePromotions = promotions.stream().sorted(Comparator.comparing(PromotionPost::getPostDate)).toList();
-        if (sortedByDatePromotions.isEmpty()) throw new NotFoundException("No hay promociones disponibles en este momento");
-        PromotionPost newestPromotion = sortedByDatePromotions.get(sortedByDatePromotions.size()-1);
-        // PromotionPostDTO newsestPromotionPostDTO =
-        return null;
-    };
-    */
-
     private PostDTO mapPostToDTO(Post post){
         return new PostDTO(post.getUser_id(), post.getPostDate(), mapToProductDTO(post.getProduct()),post.getCategory(), post.getPrice());
     }
@@ -168,7 +156,6 @@ public class PostServiceImpl implements IPostService{
     private ProductDTO mapToProductDTO(Product product){
         return new ProductDTO(product.getProduct_id(), product.getProduct_name(), product.getType(), product.getBrand(), product.getColor(), product.getNotes());
     }
-
 
     private int compareByDate(Post post1, Post post2) {
         return post1.getPostDate().compareTo(post2.getPostDate());

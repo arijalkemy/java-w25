@@ -42,9 +42,11 @@ public class ProductController {
         return new ResponseEntity<>(amount, HttpStatus.OK);
     }
 
-    // US 12 (Opcional) - Obtener todas las promos de un determinado vendedor.
+    // US 12 (Opcional) - Obtener todas las promos de un determinado vendedor. Plus - ordenar por nombre.
     @GetMapping("/products/promo-post/list")
-    public ResponseEntity<?> getAllPromotions(@RequestParam(required = false) Integer user_id) {
+    public ResponseEntity<?> getAllPromotions(
+            @RequestParam(required = false) Integer user_id, @RequestParam(required = false) String order
+    ) {
         PromotionListDTO promotions = postService.getPromotionsList(user_id);
         return new ResponseEntity<>(promotions, HttpStatus.OK);
     }
