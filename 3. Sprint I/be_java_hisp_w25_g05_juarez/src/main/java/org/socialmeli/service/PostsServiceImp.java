@@ -115,15 +115,11 @@ public class PostsServiceImp implements IPostsService {
 
     public PostIdDto savePromo(PostPromoReqDto promoDto){
 
-        Vendor vendor = new Vendor();
-        for (Vendor c : this.vendorRepositoryImp.findAll()) {
-            if (c.getUserId().equals(promoDto.getUserId())) {
-                vendor = c;
-            }
-        }
-        if (vendor.getUserId() == null) {
-            throw new NotFoundException("No se encontró ningun usuario en el sistema con el ID indicado.");
-        }
+        Integer userId = promoDto.getUserId();
+        Vendor vendor = vendorRepositoryImp.findOne(userId);
+
+        if(vendor == null) throw new NotFoundException(String.format("No se encontró un usuario con id %d", userId));
+
 
         Post post = new PostPromo(promoDto.getUserId(),
                              promoDto.getDate(),
@@ -151,7 +147,7 @@ public class PostsServiceImp implements IPostsService {
                 .filter(p-> p instanceof PostPromo)
                 .toList().size();
 
-        //return  new FollowerCountDto(userId,vendor.getUserName(),vendor.getFollowers().size());
+
         return new PromoCountDto(vendor.getUserId(),vendor.getUserName(),promoPostCount);
     }
 }
