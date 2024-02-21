@@ -53,11 +53,6 @@ public class SellerController {
         return new ResponseEntity<>(posts, HttpStatus.OK);
     }
 
-    @GetMapping("/users/allsellers")
-    public ResponseEntity<?> getAllSellers() {
-        return ResponseEntity.ok(sellerService.getAllSellers());
-    }
-
     // US 0010: Dar de alta una nueva publicación con promo
     @PostMapping("/products/promo-post")
     public ResponseEntity<?> addPostPromo(@RequestBody PostPromoDto postPromo) {
@@ -70,7 +65,7 @@ public class SellerController {
         return ResponseEntity.ok(sellerService.countPostPromoByUserId(user_id));
     }
 
-    // US 0012: Obtener la cantidad de productos en promoción de un determinado vendedor
+    // US 0012: Obtener un listado de todos los productos en promoción de un determinado vendedor
     @GetMapping("/products/promo-post/list")
     public ResponseEntity<?> getPromosById(@RequestParam int user_id) {
         return ResponseEntity.ok(sellerService.getAllPromoByIdUser(user_id));
