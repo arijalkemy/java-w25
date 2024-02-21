@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "7a7ade42-193f-4efd-a089-9f9f264ad375",
-		"name": "SocialMeli",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "d5432a83-ca73-4818-b014-80786b2c0210",
+		"name": "SocialMeli Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33088508"
 	},
 	"item": [
 		{
@@ -10,18 +11,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/products/getAllPosts",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"products",
-						"getAllPosts"
-					]
-				}
+				"url": "http://localhost:8080/products/getAllPosts"
 			},
 			"response": []
 		},
@@ -30,18 +20,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/products/getAllPostsDiscount",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"products",
-						"getAllPostsDiscount"
-					]
-				}
+				"url": "http://localhost:8080/products/getAllPostsDiscount"
 			},
 			"response": []
 		},
@@ -50,19 +29,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/products/getAllPostsDiscount/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"products",
-						"getAllPostsDiscount",
-						"1"
-					]
-				}
+				"url": "http://localhost:8080/products/getAllPostsDiscount/1"
 			},
 			"response": []
 		},
@@ -80,18 +47,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/products/post",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"products",
-						"post"
-					]
-				}
+				"url": "http://localhost:8080/products/post"
 			},
 			"response": []
 		},
@@ -109,18 +65,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/products/postDiscount",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"products",
-						"postDiscount"
-					]
-				}
+				"url": "http://localhost:8080/products/postDiscount"
 			},
 			"response": []
 		},
@@ -129,20 +74,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/users/5/followers/list",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"users",
-						"5",
-						"followers",
-						"list"
-					]
-				}
+				"url": "http://localhost:8080/users/5/followers/list"
 			},
 			"response": []
 		},
@@ -179,20 +111,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/users/2/follow/3",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"users",
-						"2",
-						"follow",
-						"3"
-					]
-				}
+				"url": "http://localhost:8080/users/2/follow/3"
 			},
 			"response": []
 		},
@@ -201,20 +120,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/users/2/followers/count",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"users",
-						"2",
-						"followers",
-						"count"
-					]
-				}
+				"url": "http://localhost:8080/users/2/followers/count"
 			},
 			"response": []
 		},
@@ -223,19 +129,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "localhost:8080/users/1/followed/list",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"users",
-						"1",
-						"followed",
-						"list"
-					]
-				}
+				"url": "localhost:8080/users/1/followed/list"
 			},
 			"response": []
 		},
@@ -244,19 +138,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "localhost:8080/products/followed/1/list",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"products",
-						"followed",
-						"1",
-						"list"
-					]
-				}
+				"url": "localhost:8080/products/followed/1/list"
 			},
 			"response": []
 		},
@@ -265,20 +147,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/users/1/unfollow/5",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"users",
-						"1",
-						"unfollow",
-						"5"
-					]
-				}
+				"url": "http://localhost:8080/users/1/unfollow/5"
 			},
 			"response": []
 		},
@@ -303,6 +172,77 @@
 						{
 							"key": "order",
 							"value": "date_asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "us0010 - Dar de alta una nueva publicacion con promocion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 1,\n    \"date\": \"19-02-2024\",\n    \"product\": {\n        \"product_id\": 54,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 15000.50,\n    \"has_promo\": true,\n    \"discount\": 0.25\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/products/promo-post"
+			},
+			"response": []
+		},
+		{
+			"name": "us0011 - Obtener la cantidad de descuentos por vendedor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/promo-post?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"promo-post"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "us0012 - Lista de descuentos por vendedor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/promo-post/list?user_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"promo-post",
+						"list"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
 						}
 					]
 				}
