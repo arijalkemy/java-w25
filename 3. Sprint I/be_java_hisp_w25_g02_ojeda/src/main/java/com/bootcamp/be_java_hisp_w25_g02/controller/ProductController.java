@@ -1,17 +1,14 @@
 package com.bootcamp.be_java_hisp_w25_g02.controller;
+import com.bootcamp.be_java_hisp_w25_g02.dto.request.EndPromotionDTO;
 import com.bootcamp.be_java_hisp_w25_g02.dto.response.PostDTO;
 import com.bootcamp.be_java_hisp_w25_g02.dto.response.PromotionAmountDTO;
+import com.bootcamp.be_java_hisp_w25_g02.dto.response.PromotionListDTO;
 import com.bootcamp.be_java_hisp_w25_g02.dto.response.PromotionPostDTO;
 import com.bootcamp.be_java_hisp_w25_g02.service.IPostService;
 import com.bootcamp.be_java_hisp_w25_g02.service.PostServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -43,6 +40,20 @@ public class ProductController {
     public ResponseEntity<?> getPromotionsAmount(@RequestParam(required = false) Integer user_id) {
         PromotionAmountDTO amount = postService.getPromotionsAmount(user_id);
         return new ResponseEntity<>(amount, HttpStatus.OK);
+    }
+
+    // US 12 (Opcional) - Obtener todas las promos de un determinado vendedor.
+    @GetMapping("/products/promo-post/list")
+    public ResponseEntity<?> getAllPromotions(@RequestParam(required = false) Integer user_id) {
+        PromotionListDTO promotions = postService.getPromotionsList(user_id);
+        return new ResponseEntity<>(promotions, HttpStatus.OK);
+    }
+
+    // US 13 (Opcional) - Finalizar una promoción determinada
+    @PatchMapping("/products/promo-post/end-promo")
+    public ResponseEntity<?> endPromotion(@RequestBody EndPromotionDTO endPromoDTO){
+        PromotionPostDTO ansPost =  postService.endPromotion(endPromoDTO);
+        return new ResponseEntity<>(ansPost, HttpStatus.OK);
     }
 
     // @GetMapping("/products/getAllPosts")

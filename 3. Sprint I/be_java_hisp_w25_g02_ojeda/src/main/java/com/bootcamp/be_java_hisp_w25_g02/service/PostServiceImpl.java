@@ -1,5 +1,6 @@
 package com.bootcamp.be_java_hisp_w25_g02.service;
 
+import com.bootcamp.be_java_hisp_w25_g02.dto.request.EndPromotionDTO;
 import com.bootcamp.be_java_hisp_w25_g02.dto.response.*;
 
 import com.bootcamp.be_java_hisp_w25_g02.entity.Post;
@@ -83,6 +84,12 @@ public class PostServiceImpl implements IPostService{
     @Override
     public PromotionPostDTO createNewPromo(PromotionPostDTO promoPostDTO){
         Post newPromo = mapPromoDtoToPost(promoPostDTO);
+        if (!promoPostDTO.has_promo()) throw new BadRequestException(
+                "Petición incorrecta: el posteo debe ser has_promo: true"
+        );
+        if (promoPostDTO.discount() > 1 || promoPostDTO.discount() <= 0) throw new BadRequestException(
+                "Petición incorrecta: el producto debe tener un descuento mayor a cero y menor o igual a uno"
+        );
         this.postRepository.savePost(newPromo);
         return promoPostDTO;
     }
@@ -90,20 +97,54 @@ public class PostServiceImpl implements IPostService{
     @Override
     public PromotionAmountDTO getPromotionsAmount(Integer userId){
         // Complejo, porque intento reusar código para traer la cantidad todal de promociones si no se especifica userId.
+        // Se conseiguió.
         List<Post> postList = postRepository.findAll();
-        Optional<User> seller;
-        seller = userRepository.findById(userId);
+        Optional<User> seller = userRepository.findById(userId);
         if (userId != null && seller.isEmpty()) throw new NotFoundException("No user with such ID was found");
         if (userId != null) {
             postList = postList.stream().filter(p -> p.getUser_id().equals(userId)).toList();
-            if (postList.isEmpty()) throw new NotFoundException("El usuario no es vendedor!");
+            if (!seller.get().getSeller()) throw new BadRequestException("El usuario no es vendedor!");
         }
         List<Post> promotionsList = postList.stream().filter(Post::getIsPromoActive).toList();
         if (promotionsList.isEmpty()) throw new NotFoundException("El usuario no posee promociones activas");
-        return seller.map(user -> new PromotionAmountDTO(
-                user.getUser_id(), user.getUser_name(), promotionsList.size()
-        )).orElseGet(() -> new PromotionAmountDTO(null, "N/A", promotionsList.size()));
+        return seller
+                .map(user -> new PromotionAmountDTO(user.getUser_id(), user.getUser_name(), promotionsList.size()))
+                .orElseGet(() -> new PromotionAmountDTO(null, "N/A", promotionsList.size()));
     }
+
+    @Override
+    public PromotionListDTO getPromotionsList(Integer userId){
+        // Código similar al anterior:
+        // Complejo, porque intento reusar código para traer
+        // todas las promociones si no se especifica userId.
+        // Se consiguió.
+        List<Post> postList = postRepository.findAll();
+        Optional<User> seller = userRepository.findById(userId);
+        if (userId != null && seller.isEmpty()) throw new NotFoundException("No user with such ID was found");
+        if (userId != null) {
+            postList = postList.stream().filter(p -> p.getUser_id().equals(userId)).toList();
+            if (!seller.get().getSeller()) throw new BadRequestException("El usuario no es vendedor!");
+        }
+        List<Post> promotionsList = postList.stream().filter(Post::getIsPromoActive).toList();
+        List<PromotionPostDTO> promotionListDTO = promotionsList.stream().map( p -> mapPostToPromoDTO(p)).toList();
+        if (promotionsList.isEmpty()) throw new NotFoundException("El usuario no posee promociones activas");
+        return new PromotionListDTO(promotionListDTO);
+    }
+
+    @Override
+    public PromotionPostDTO endPromotion(EndPromotionDTO promoDTO){
+        if (promoDTO.post_id() == null) throw new BadRequestException("No se ha indicado el ID del post en el Body.");
+        Integer promoId = promoDTO.post_id();
+        Optional<Post> promoToEnd = postRepository.findById(promoId);
+        if (promoToEnd.isEmpty()) throw new NotFoundException("No se encontró promoción o post con ese ID.");
+        if (!promoToEnd.get().getIsPromoActive() && promoToEnd.get().getDiscount() == 0) throw new BadRequestException(
+                "El ID de post indicado no es una promoción. No se efectuaron cambios"
+        );
+        Post promotion = promoToEnd.get();
+        promotion.setIsPromoActive(false);
+        promotion.setDiscount(0.0);
+        return mapPostToPromoDTO(promotion);
+    };
 
     /*
     @Override
