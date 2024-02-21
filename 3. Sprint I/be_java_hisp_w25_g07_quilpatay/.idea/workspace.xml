@@ -5,34 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77bde121-38cf-4e6a-9535-1981c5bcfb73" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dto/SellerSimpleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/repository/inter/ISellerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/controller/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/controller/BuyerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/controller/SellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/controller/SellerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/AddPostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dto/AddPostDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/BuyerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dto/BuyerDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/BuyerDtoRequisito3.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dto/BuyerSimpleDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/ExceptionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dto/ExceptionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/GenericResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dto/GenericResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/MessageDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/PostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dto/PostDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dto/ProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/SellerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dto/SellerDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/SellerFollowersListDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dto/SellerFollowersListDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/SellerListDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dtos/SellerPromosListDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/dto/SellerPromosListDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/exception/ExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/exception/config/ExceptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/repository/BuyerRepositoryImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/repository/BuyerRepositoryImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/repository/IBuyerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/repository/inter/IBuyerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/repository/ISellerRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/repository/SellerRepositoryImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/repository/SellerRepositoryImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/service/BuyerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/service/BuyerServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/service/IBuyerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/service/inter/IBuyerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/service/ISellerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/service/inter/ISellerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/service/SellerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/service/SellerServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/utils/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/src/main/java/grupo_7/sprint_1/utils/Mapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,26 +37,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Sprint1Application.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;quilpatay__nahuel&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/nquilpatay/Documents/reposmeli/java-w25/3. Sprint I/be_java_hisp_w25_g07_quilpatay&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Sprint1Application.executor": "Debug",
+    "git-widget-placeholder": "quilpatay__nahuel",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/nquilpatay/Documents/reposmeli/java-w25/3. Sprint I/be_java_hisp_w25_g07_quilpatay",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Sprint1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -112,7 +85,8 @@
       <workItem from="1708443375190" duration="439000" />
       <workItem from="1708452110044" duration="4286000" />
       <workItem from="1708516615925" duration="6661000" />
-      <workItem from="1708525894908" duration="1219000" />
+      <workItem from="1708525894908" duration="1696000" />
+      <workItem from="1708528763915" duration="157000" />
     </task>
     <servers />
   </component>
