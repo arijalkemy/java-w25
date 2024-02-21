@@ -20,6 +20,7 @@ public class ProductController {
 
     @PostMapping("/promo-post")
     public ResponseEntity<?> addPromoPost(@RequestBody PostDTO postDTO){
+        //Agregué esta validación acá porque sino me quedaba igual que el endpoint /post . Debería sacarla?
         if (!postDTO.isHasPromo()) throw new BadRequestException("El post que quieres agregar tiene promo!");
         sellerService.addPost(postDTO);
         return ResponseEntity
