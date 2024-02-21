@@ -167,6 +167,72 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "0008_get Post Promo by UserID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/products/promo-post/count?user_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"products",
+						"promo-post",
+						"count"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0009_insert post promo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 1,\n    \"date\": \"22-02-2022\",\n    \"product\": {\n        \"productId\": 123,\n        \"productName\": \"Silla gamer #2\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Blue & Green\",\n        \"notes\": \"Cheap Edition\"\n    },\n    \"category\": 1,\n    \"price\": 200000,\n    \"has_promo\": true,\n    \"discount\": 0.3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/products/promo-post",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"products",
+						"promo-post"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"variable": [
