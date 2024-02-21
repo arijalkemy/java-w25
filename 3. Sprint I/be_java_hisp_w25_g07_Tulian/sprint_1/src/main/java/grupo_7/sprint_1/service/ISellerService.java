@@ -15,6 +15,7 @@ public interface ISellerService {
     List<PostDto> getRecentPostsFromFollowedSellers(Integer buyerId, String order);
 
 
+
     SellerPromDto cantidadProductosPromocion(int userId);
 
     ListPostSellerDto listaPostsPromocion(int userId);
