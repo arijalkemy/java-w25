@@ -12,8 +12,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class LastPostsDto {
+public class LastPostsDTO {
     int userId; //Id of User
-    List<PostDto> posts; //Posts of Sellers that user follows
+    List<ResponsePostDTO> posts; //Posts of Sellers that user follows
 }
 
