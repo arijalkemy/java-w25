@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Ensalada Mediterránea",
+    "ingredients": [
+      { "name": "Aceitunas negras", "calories": 349 },
+      { "name": "Aceitunas verdes", "calories": 132 },
+      { "name": "Tomates", "calories": 22 },
+      { "name": "Cebolla", "calories": 47 }
+    ],
+    "weight": 300,
+    "total_calories": 550
+  },
+  {
+    "name": "Bowl de Frutas",
+    "ingredients": [
+      { "name": "Fresas", "calories": 36 },
+      { "name": "Manzana", "calories": 52 },
+      { "name": "Arándanos", "calories": 41 },
+      { "name": "Naranja", "calories": 44 }
+    ],
+    "weight": 250,
+    "total_calories": 173
+  },
+  {
+    "name": "Pan de Ajo con Aceituna",
+    "ingredients": [
+      { "name": "Pan de trigo blanco", "calories": 255 },
+      { "name": "Ajos", "calories": 169 },
+      { "name": "Aceitunas negras", "calories": 349 }
+    ],
+    "weight": 100,
+    "total_calories": 773
+  },
+  {
+    "name": "Ensalada de Espinacas y Almendras",
+    "ingredients": [
+      { "name": "Espinaca", "calories": 32 },
+      { "name": "Almendras", "calories": 620 },
+      { "name": "Aceite de oliva", "calories": 900 }
+    ],
+    "weight": 200,
+    "total_calories": 1552
+  }
+]
