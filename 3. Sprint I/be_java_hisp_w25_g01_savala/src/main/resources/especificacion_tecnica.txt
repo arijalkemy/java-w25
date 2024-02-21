@@ -1,0 +1,21 @@
+BONUS:
+- US 0012: Obtener el top de vendedores con mas seguidores
+
+- METHOD: GET
+- SIGN:  /users/top-followers
+
+- RESPONSE:
+  {
+    sellers: [
+      {
+        "user_id": 123,
+        "user_name": "vendedor1",
+        "followers_count": 12
+      },
+      {
+        "user_id": 12,
+        "user_name": "vendedor2",
+        "followers_count": 2
+      }
+    ]
+  }
