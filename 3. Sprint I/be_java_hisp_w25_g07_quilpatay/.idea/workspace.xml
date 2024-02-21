@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="77bde121-38cf-4e6a-9535-1981c5bcfb73" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +46,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Sprint1Application.executor": "Debug",
+    "Spring Boot.Sprint1Application.executor": "Run",
     "git-widget-placeholder": "quilpatay__nahuel",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/nquilpatay/Documents/reposmeli/java-w25/3. Sprint I/be_java_hisp_w25_g07_quilpatay",
@@ -87,6 +88,7 @@
       <workItem from="1708516615925" duration="6661000" />
       <workItem from="1708525894908" duration="1696000" />
       <workItem from="1708528763915" duration="157000" />
+      <workItem from="1708529621032" duration="291000" />
     </task>
     <servers />
   </component>
