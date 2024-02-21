@@ -44,6 +44,10 @@ public class SellerServiceImpl implements ISellerService{
     @Override
     public void addPost(PostDTO postDTO) {
         Post post = mapper.modelMapper().map(postDTO, Post.class);
+
+        if (post.isHasPromo() && post.getDiscount() <= 0) throw new BadRequestException("No puedes agregar una promo sin descuento!");
+        if (post.getPrice() <= 0) throw new BadRequestException("No puedes agregar un post sin precio!");
+
         Optional<Seller> seller = sellerRepository.findById(postDTO.getUserId());
         if (seller.isEmpty()) throw new NotFoundException("No se ha encontrado un vendedor con ese ID");
         Optional<Product> product = productRepository.findAll().stream()
