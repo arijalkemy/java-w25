@@ -75,7 +75,7 @@ public class PostServiceImp implements IPostService {
 
         Optional<Post> getPostbyProduct = postRepository.getPostByProductId(postDto.getProduct().getProductId());
 
-        if (!getPostbyProduct.isPresent())
+        if (getPostbyProduct.isPresent())
             throw new AlreadyExistException("Ya existe un producto");
     }
     

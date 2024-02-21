@@ -11,22 +11,7 @@ import com.grupo08.socialmeli.entity.Product;
 
 @Repository
 public class PostRepositoryImp implements IPostRepository {
-    List<Post> listPosts = new ArrayList<>() {{
-        add(new Post(
-            123, 
-            "19-02-2024", 
-            new Product(
-                123, 
-                "Silla Gamer", 
-                "Gamer", 
-                "Racer", 
-                "Red & Black", 
-                "Special Edition"
-            ),
-            1, 
-            50000
-        ));
-    }};
+    List<Post> listPosts = new ArrayList<>();
 
     @Override
     public void insertPost(Post post){
