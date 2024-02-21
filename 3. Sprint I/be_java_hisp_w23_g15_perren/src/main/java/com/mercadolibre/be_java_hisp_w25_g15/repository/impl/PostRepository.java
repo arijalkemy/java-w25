@@ -68,6 +68,7 @@ public class PostRepository implements IPostRepository {
     
     @Override
     public Post addPost(Post post){
+        post.setPostIdAuto();
         posts.add(post);
         return post;
     }

@@ -56,6 +56,10 @@ public class Post {
         this.discount = discount;
     }
 
+    public void setPostIdAuto(){
+        this.id = idGenerator.incrementAndGet();
+    }
+
     public void setHasPromo(Boolean hasPromo) {
         if (hasPromo != null) {
             this.hasPromo = hasPromo;
