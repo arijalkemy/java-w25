@@ -74,12 +74,6 @@ public class PostServiceImpl implements IPostService{
     public GenericResponseDTO savePromoPost(PromoPostDTO promoPostDTO) {
         this.userService.verifyUserAsSeller(promoPostDTO.user_id());
         validatePostDTO(promoPostDTO);
-        if (promoPostDTO.date().isAfter(LocalDate.now())){
-            throw new BadRequestException("La fecha no es valida");
-        }
-        if (promoPostDTO.discount() < 0){
-            throw  new BadRequestException("El descuento no puede ser menor o igual a 0");
-        }
         Integer id = this.postRepository.savePost(mapDTOToPromoPost(promoPostDTO));
         return new GenericResponseDTO("El post fue publicado con exito con id: " + id);
     }
@@ -98,6 +92,9 @@ public class PostServiceImpl implements IPostService{
     public GenericResponseDTO updatePromotionDiscount(Integer post_id, double discount) {
         if (discount <= 0){
             throw new BadRequestException("El descuento no puede ser menor o igual a 0");
+        }
+        if (discount > 1){
+            throw new BadRequestException("El descuento debe ser un número entre 0 y 1");
         }
         Optional<Post> post = postRepository.findById(post_id);
         if (post.isEmpty()){
@@ -136,6 +133,15 @@ public class PostServiceImpl implements IPostService{
         }
         if (!postDTO.has_promo() && postDTO.discount() > 0){
             throw new BadRequestException("El articulo no tiene promocion pero si un descuento, verificar campos");
+        }
+        if (postDTO.date().isAfter(LocalDate.now())){
+            throw new BadRequestException("La fecha no es valida");
+        }
+        if (postDTO.discount() < 0){
+            throw  new BadRequestException("El descuento no puede ser menor o igual a 0");
+        }
+        if (postDTO.discount() > 1){
+            throw new BadRequestException("El descuento debe ser un número entre 0 y 1");
         }
         validateProductDTO(postDTO.product());
     }
