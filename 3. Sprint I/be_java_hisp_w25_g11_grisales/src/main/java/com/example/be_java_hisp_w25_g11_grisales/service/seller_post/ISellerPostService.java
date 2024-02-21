@@ -6,6 +6,7 @@ import com.example.be_java_hisp_w25_g11_grisales.dto.request.CreatePostRequestDT
 import com.example.be_java_hisp_w25_g11_grisales.dto.request.CreatePromoPostDTO;
 import com.example.be_java_hisp_w25_g11_grisales.dto.response.SellerPostsListDTO;
 import com.example.be_java_hisp_w25_g11_grisales.dto.response.SellerPromoCountDTO;
+import com.example.be_java_hisp_w25_g11_grisales.dto.response.SellerPromoPostListDTO;
 
 public interface ISellerPostService {
     SellerPostDTO createPost(CreatePostRequestDTO request);
@@ -13,4 +14,5 @@ public interface ISellerPostService {
     //SellerPostsListDTO getFollowedSellersLatestPostsOrdered(OrganizerByDateDTO organizer);
     SellerPromoPostDTO createNewPromoProduct(CreatePromoPostDTO promoRequest);
     SellerPromoCountDTO countPromoProducts(Integer userId);
+    SellerPromoPostListDTO getSellerPromoProductList(Integer userId);
 }

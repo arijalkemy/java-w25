@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreatePromoPostDTO {
-    @JsonProperty("product_id")
+    @JsonProperty("user_id")
     private int id;
     @JsonProperty("date")
     private String date;

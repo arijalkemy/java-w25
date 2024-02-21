@@ -1,5 +1,6 @@
 package com.example.be_java_hisp_w25_g11_grisales.controller;
 
+import com.example.be_java_hisp_w25_g11_grisales.dto.SellerPromoPostDTO;
 import com.example.be_java_hisp_w25_g11_grisales.dto.request.CreatePostRequestDTO;
 import com.example.be_java_hisp_w25_g11_grisales.dto.request.CreatePromoPostDTO;
 import com.example.be_java_hisp_w25_g11_grisales.service.seller_post.ISellerPostService;
@@ -39,12 +40,16 @@ public class SellerPostController {
         return new ResponseEntity<>(sellerPostService.createNewPromoProduct(request), HttpStatus.OK);
     }
 
-    @GetMapping("/promo-post/count?user_id={userId}")
+    @GetMapping("/promo-post/count")
     public ResponseEntity<?> postCountPromoProduct(
-        @RequestParam Integer userId
+        @RequestParam Integer user_id
     ) {
-        return new ResponseEntity<>(sellerPostService.countPromoProducts(userId), HttpStatus.OK);
+        return new ResponseEntity<>(sellerPostService.countPromoProducts(user_id), HttpStatus.OK);
     }
 
-
+    //public ResponseEntity<?> getPromoProductsList(
+            //@RequestBody SellerPromoPostDTO request
+            //) {
+        //return
+    //}
 }
