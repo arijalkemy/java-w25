@@ -1,14 +1,9 @@
 package com.bootcamp.be_java_hisp_w25_g14.service;
 
-import com.bootcamp.be_java_hisp_w25_g14.dto.MessageDto;
-import com.bootcamp.be_java_hisp_w25_g14.dto.PostDto;
-import com.bootcamp.be_java_hisp_w25_g14.dto.UserDataDto;
+import com.bootcamp.be_java_hisp_w25_g14.dto.*;
 import com.bootcamp.be_java_hisp_w25_g14.entity.Post;
 import com.bootcamp.be_java_hisp_w25_g14.entity.User;
-import com.bootcamp.be_java_hisp_w25_g14.dto.UserFollowedPostDto;
-import com.bootcamp.be_java_hisp_w25_g14.exceptions.NotFoundException;
-import com.bootcamp.be_java_hisp_w25_g14.exceptions.NotSellerException;
-import com.bootcamp.be_java_hisp_w25_g14.exceptions.NotValidDateException;
+import com.bootcamp.be_java_hisp_w25_g14.exceptions.*;
 import com.bootcamp.be_java_hisp_w25_g14.repository.IPostRepo;
 import com.bootcamp.be_java_hisp_w25_g14.repository.IUserRepo;
 import com.bootcamp.be_java_hisp_w25_g14.utils.ApiMapper;
@@ -54,12 +49,86 @@ public class PostServiceImp implements IPostService{
     }
 
     @Override
+    public MessageDto savePostDiscount(PostFullDto postFullDto) {
+
+        Optional<User> isUserExists = userRepository.findUserById(postFullDto.getUser_id());
+
+        if (isUserExists.isEmpty()) throw new NotFoundException("The user does not exist");
+
+        if(!isUserExists.get().getIsSeller()) throw new NotSellerException("The user is not a seller");
+
+        try{
+            LocalDate.parse(postFullDto.getDate(), DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+        }catch (DateTimeParseException e) {
+            throw new NotValidDateException("the date is not valid");
+        }
+
+
+        if (postFullDto.getIsOnDiscount().equals(true)){
+
+            try{
+                LocalDate.parse(postFullDto.getDiscountUntil(), DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+            }catch (DateTimeParseException e) {
+                throw new NotValidDateException("the end date of discount is not valid");
+            }
+
+            if (LocalDate.parse(postFullDto.getDiscountUntil(), DateTimeFormatter.ofPattern("dd-MM-yyyy"))
+                    .isBefore(LocalDate.parse(postFullDto.getDate(), DateTimeFormatter.ofPattern("dd-MM-yyyy")))) throw new NotValidDateException("the end date of discount before than the publication date");
+
+        }
+
+
+
+        Post postToSave = ApiMapper.convertToPostEntity(postFullDto);
+
+
+
+        postRepository.savePost(postToSave);
+
+        return new MessageDto("Post added","The post was added succesfully");
+
+
+    }
+
+    @Override
     public List<PostDto> getAllPosts() {
         List<PostDto> postDtoList = postRepository.getAllPosts().stream().map(post -> ApiMapper.convertToPostDto(post)).collect(Collectors.toList());
 
         if (postDtoList.isEmpty()) throw new NotFoundException("There is no posts");
 
         return postDtoList;
+    }
+
+    @Override
+    public List<PostFullDto> getAllPostsFull() {
+        List<PostFullDto> postFullDtoList = postRepository.getAllPosts().stream().map(post -> ApiMapper.convertToPostFullDto(post)).collect(Collectors.toList());
+        if (postFullDtoList.isEmpty()) throw new NotFoundException("There is no posts");
+
+        return postFullDtoList;
+    }
+
+    @Override
+    public List<PostFullDto> getPostOnDiscountBySeller(Integer id) {
+        List<PostFullDto> postFullDtoList = postRepository.getPostsOnDiscountByVendor(id).stream().map(post -> ApiMapper.convertToPostFullDto(post)).collect(Collectors.toList());
+
+        if (postFullDtoList.isEmpty()) throw new NotFoundException("There is no posts for this user");
+
+        return postFullDtoList;
+    }
+
+    @Override
+    public PostOnDiscountCountDto postOnDiscountCountBySeller(Integer id) {
+        Optional<User> optionalUser = userRepository.findUserById(id);
+
+        if (optionalUser.isPresent()) {
+            User user = optionalUser.get();
+            if (!user.getIsSeller())
+                throw new FollowException("The user is not a seller");
+            int postsOnDiscount = postRepository.getPostsOnDiscountByVendor(id).size();
+            return new PostOnDiscountCountDto (id, user.getUserName(), postsOnDiscount);
+        } else {
+            throw new NotFoundException("User not found");
+        }
     }
 
     @Override
