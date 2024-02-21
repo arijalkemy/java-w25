@@ -1,0 +1,3271 @@
+{
+	"info": {
+		"_postman_id": "c0af9f4b-b202-46e5-80f5-41a0aa2ba7f9",
+		"name": "Social MELI - Sprint 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32843082"
+	},
+	"item": [
+		{
+			"name": "01 - Seguir a vendedor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/:userId/follow/:userIdToFollow",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						":userId",
+						"follow",
+						":userIdToFollow"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "userIdToFollow",
+							"value": "29"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "01 - Seguir a vendedor",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:userId/follow/:userIdToFollow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":userId",
+								"follow",
+								":userIdToFollow"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": "userIdToFollow",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:14:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El usuario no puede seguirse a sí mismo\"\n}"
+				},
+				{
+					"name": "01 - Seguir a vendedor",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/follow/:userIdToFollow",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"follow",
+								":userIdToFollow"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": "userIdToFollow",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:14:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Solo puede seguir vendedores\"\n}"
+				},
+				{
+					"name": "01 - Seguir a vendedor",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/follow/:userIdToFollow",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"follow",
+								":userIdToFollow"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": "userIdToFollow",
+									"value": "27"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:15:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"No se puede seguir a un vendedor que ya se esta siguiendo\"\n}"
+				},
+				{
+					"name": "01 - Seguir a vendedor",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/follow/:userIdToFollow",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"follow",
+								":userIdToFollow"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": "userIdToFollow",
+									"value": "27"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:15:20 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Vendedor seguido con exito\"\n}"
+				},
+				{
+					"name": "01 - Seguir a vendedor",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/follow/:userIdToFollow",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"follow",
+								":userIdToFollow"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "3"
+								},
+								{
+									"key": "userIdToFollow",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 15:11:00 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Vendedor seguido con exito\"\n}"
+				}
+			]
+		},
+		{
+			"name": "02 - Contar seguidores de un vendedor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/:userId/followers/count",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						":userId",
+						"followers",
+						"count"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "02 - Contar seguidores de un vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:userId/followers/count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":userId",
+								"followers",
+								"count"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:15:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Vendedor no encontrado\"\n}"
+				},
+				{
+					"name": "02 - Contar seguidores de un vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/followers/count",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"followers",
+								"count"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:16:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 26,\n    \"user_name\": \"Chase Sanchez\",\n    \"followers_count\": 1\n}"
+				},
+				{
+					"name": "02 - Contar seguidores de un vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/followers/count",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"followers",
+								"count"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:16:41 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 26,\n    \"user_name\": \"Chase Sanchez\",\n    \"followers_count\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "03 - Ver  seguidores de un vendedor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/:userId/followers/list",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						":userId",
+						"followers",
+						"list"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "26"
+						}
+					]
+				},
+				"description": "Este endpoint devuelve la lista de los seguidores que el usuario tiene, se valida que el usuario sea un vendedor ya que solo estos pueden ser seguidos."
+			},
+			"response": [
+				{
+					"name": "03 - Ver  seguidores de un vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:userId/followers/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":userId",
+								"followers",
+								"list"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:17:33 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The seller does not have followers\"\n}"
+				},
+				{
+					"name": "03 - Ver  seguidores de un vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/followers/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"followers",
+								"list"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:17:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 26,\n    \"user_name\": \"Chase Sanchez\",\n    \"followed\": [\n        {\n            \"user_id\": 1,\n            \"user_name\": \"Quynn Nunez\"\n        },\n        {\n            \"user_id\": 2,\n            \"user_name\": \"Zena Pastor\"\n        },\n        {\n            \"user_id\": 3,\n            \"user_name\": \"Sylvia Catalina\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "03 - Ver  seguidores de un vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/followers/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"followers",
+								"list"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "27"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:18:32 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 27,\n    \"user_name\": \"Gregory Bravo\",\n    \"followed\": [\n        {\n            \"user_id\": 1,\n            \"user_name\": \"Quynn Nunez\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "04 - Ver los vendedores seguidos de un cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/:userId/followed/list",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						":userId",
+						"followed",
+						"list"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "4"
+						}
+					]
+				},
+				"description": "En este caso se devuelve la lista de los vendedores seguidos por un cliente, se muestra el id del vendedor y su nombre"
+			},
+			"response": [
+				{
+					"name": "04 - Ver los vendedores seguidos de un cliente",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:userId/followed/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":userId",
+								"followed",
+								"list"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:19:37 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 1,\n    \"user_name\": \"Quynn Nunez\",\n    \"followed\": [\n        {\n            \"user_id\": 26,\n            \"user_name\": \"Chase Sanchez\"\n        },\n        {\n            \"user_id\": 27,\n            \"user_name\": \"Gregory Bravo\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "04 - Ver los vendedores seguidos de un cliente",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/followed/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"followed",
+								"list"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:20:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 3,\n    \"user_name\": \"Sylvia Catalina\",\n    \"followed\": [\n        {\n            \"user_id\": 26,\n            \"user_name\": \"Chase Sanchez\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "04 - Ver los vendedores seguidos de un cliente",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/followed/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"followed",
+								"list"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:20:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The user does not follow any seller\"\n}"
+				}
+			]
+		},
+		{
+			"name": "05 - Dar de alta nueva publicación",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 26,\n    \"date\": \"15-02-2024\",\n    \"product\": {\n        \"product_id\": 19,\n        \"product_name\": \"Silla Gamer 2\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/products/post",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products",
+						"post"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "Este endpoint permite dar de alta una nueva publicación por parte de un vendedor, en la cual se especifíquen las características del producto relacionado a esta publicación.\n\nDentro del cuerpo esperado para la creación de la publicación se debe encontrar el identificador del vendedor, la fecha de publicación, las especificaciones del producto, la categoría a la que pertenece y el precio.\n\nEste retorna un mensaje en forma de un objeto indicando la respuesta obtenida del proceso, que puede ser fallida o exitosa."
+			},
+			"response": [
+				{
+					"name": "05 - Dar de alta nueva publicación",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 26,\n    \"date\": \"29-04-2021\",\n    \"product\": {\n        \"product_id\": 16,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"post"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:24:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Publicación creada con éxito\"\n}"
+				},
+				{
+					"name": "05 - Dar de alta nueva publicación",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 26,\n    \"date\": \"29-04-2021\",\n    \"product\": {\n        \"product_id\": 1,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products/post",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"post"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:24:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El identificador del producto no corresponde con el registrado\"\n}"
+				},
+				{
+					"name": "05 - Dar de alta nueva publicación",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 1,\n    \"date\": \"29-04-2021\",\n    \"product\": {\n        \"product_id\": 17,\n        \"product_name\": \"Silla Gamer 2\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products/post",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"post"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:24:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El usuario no se encuentra o no es vendedor\"\n}"
+				},
+				{
+					"name": "05 - Dar de alta nueva publicación",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 100,\n    \"date\": \"29-04-2021\",\n    \"product\": {\n        \"product_id\": 17,\n        \"product_name\": \"Silla Gamer 2\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products/post",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"post"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:25:05 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El usuario no se encuentra o no es vendedor\"\n}"
+				},
+				{
+					"name": "05 - Dar de alta nueva publicación",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 30,\n    \"date\": \"29-04-2021\",\n    \"product\": {\n        \"product_id\": 17,\n        \"product_name\": \"Silla Gamer 2\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products/post",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"post"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:25:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Publicación creada con éxito\"\n}"
+				}
+			]
+		},
+		{
+			"name": "06 - Listado de publicaciones de vendedores que sigue un usuario (2 últimas semanas)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/products/followed/:userId/list",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products",
+						"followed",
+						":userId",
+						"list"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "06 - Listado de publicaciones de vendedores que sigue un usuario (2 últimas semanas)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/followed/:userId/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"followed",
+								":userId",
+								"list"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:32:01 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 1,\n    \"posts\": [\n        {\n            \"post_id\": 0,\n            \"user_id\": 26,\n            \"date\": \"15-02-2024\",\n            \"product\": {\n                \"product_id\": 19,\n                \"product_name\": \"Silla Gamer 2\",\n                \"type\": \"Gamer\",\n                \"brand\": \"Racer\",\n                \"color\": \"Red & Black\",\n                \"notes\": \"Special Edition\"\n            },\n            \"category\": 100,\n            \"price\": 1500.5\n        },\n        {\n            \"post_id\": 4,\n            \"user_id\": 27,\n            \"date\": \"20-02-2024\",\n            \"product\": {\n                \"product_id\": 4,\n                \"product_name\": \"Gorra\",\n                \"type\": \"Accesorio\",\n                \"brand\": \"Marca D\",\n                \"color\": \"Rojo\",\n                \"notes\": \"Algodón\"\n            },\n            \"category\": 28,\n            \"price\": 48.851525450202665\n        },\n        {\n            \"post_id\": 0,\n            \"user_id\": 27,\n            \"date\": \"15-02-2024\",\n            \"product\": {\n                \"product_id\": 18,\n                \"product_name\": \"Silla Gamer 2\",\n                \"type\": \"Gamer\",\n                \"brand\": \"Racer\",\n                \"color\": \"Red & Black\",\n                \"notes\": \"Special Edition\"\n            },\n            \"category\": 100,\n            \"price\": 1500.5\n        }\n    ]\n}"
+				},
+				{
+					"name": "06 - Listado de publicaciones de vendedores que sigue un usuario (2 últimas semanas)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/followed/:userId/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"followed",
+								":userId",
+								"list"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:35:41 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 3,\n    \"posts\": [\n        {\n            \"post_id\": 0,\n            \"user_id\": 26,\n            \"date\": \"15-02-2024\",\n            \"product\": {\n                \"product_id\": 19,\n                \"product_name\": \"Silla Gamer 2\",\n                \"type\": \"Gamer\",\n                \"brand\": \"Racer\",\n                \"color\": \"Red & Black\",\n                \"notes\": \"Special Edition\"\n            },\n            \"category\": 100,\n            \"price\": 1500.5\n        }\n    ]\n}"
+				},
+				{
+					"name": "06 - Listado de publicaciones de vendedores que sigue un usuario (2 últimas semanas)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/followed/:userId/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"followed",
+								":userId",
+								"list"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:37:17 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El usuario 1 no tiene vendedores seguidos\"\n}"
+				}
+			]
+		},
+		{
+			"name": "07 - Dejar de seguir a vendedor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/:userId/unfollow/:userIdToUnfollow",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						":userId",
+						"unfollow",
+						":userIdToUnfollow"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "userIdToUnfollow",
+							"value": "27"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "07 - Seguir a vendedor",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:userId/unfollow/:userIdToUnfollow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":userId",
+								"unfollow",
+								":userIdToUnfollow"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": "userIdToUnfollow",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:36:38 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El vendedor ha sido quitado de la lista de seguidos del cliente\"\n}"
+				},
+				{
+					"name": "07 - Seguir a vendedor",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/unfollow/:userIdToUnfollow",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"unfollow",
+								":userIdToUnfollow"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": "userIdToUnfollow",
+									"value": "27"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:36:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El vendedor ha sido quitado de la lista de seguidos del cliente\"\n}"
+				}
+			]
+		},
+		{
+			"name": "08 - Ordenar alfabéticamente los seguidores de un vendedor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/:userId/followers/list?order=name_asc",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						":userId",
+						"followers",
+						"list"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "name_asc",
+							"description": "name_asc, name_desc"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "En adicion al punto 03 se tiene la posibilidad de ordenar la lista de seguidores por orden alfabético, se tienen las mismas reglas y se agrega la regla de que el orden debe ser name_asc o name_desc"
+			},
+			"response": [
+				{
+					"name": "08 - Ordenar alfabéticamente",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:userId/followers/list?order=name_asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":userId",
+								"followers",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "name_asc",
+									"description": "name_asc, name_desc"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:38:20 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The seller does not have followers\"\n}"
+				},
+				{
+					"name": "08 - Ordenar alfabéticamente",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/followers/list?order=name_asc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"followers",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "name_asc",
+									"description": "name_asc, name_desc"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:38:51 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 26,\n    \"user_name\": \"Chase Sanchez\",\n    \"followed\": [\n        {\n            \"user_id\": 1,\n            \"user_name\": \"Quynn Nunez\"\n        },\n        {\n            \"user_id\": 3,\n            \"user_name\": \"Sylvia Catalina\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "08 - Ordenar alfabéticamente los seguidores de un vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/followers/list?order=name_asc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"followers",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "name_asc",
+									"description": "name_asc, name_desc"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 15:13:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El usuario no es un vendedor\"\n}"
+				},
+				{
+					"name": "08 - Ordenar alfabéticamente los seguidores de un vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/followers/list?order=name_asc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"followers",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "name_asc",
+									"description": "name_asc, name_desc"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 15:13:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El vendedor no fue encontrado\"\n}"
+				}
+			]
+		},
+		{
+			"name": "08 - Ordenar alfabéticamente vendedores seguidos por un usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/:userId/followed/list?order=name_asc",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						":userId",
+						"followed",
+						"list"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "name_asc",
+							"description": "name_asc, name_desc"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Se extiende el punto 04 agregando la posibilidad de ordenar por nombre, se valida que la variable order sea name_asc o name_desc"
+			},
+			"response": [
+				{
+					"name": "08 - Ordenar alfabéticamente",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:userId/followers/list?order=name_asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":userId",
+								"followers",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "name_asc",
+									"description": "name_asc, name_desc"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:38:20 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The seller does not have followers\"\n}"
+				},
+				{
+					"name": "08 - Ordenar alfabéticamente",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/followers/list?order=name_asc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"followers",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "name_asc",
+									"description": "name_asc, name_desc"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:38:51 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 26,\n    \"user_name\": \"Chase Sanchez\",\n    \"followed\": [\n        {\n            \"user_id\": 1,\n            \"user_name\": \"Quynn Nunez\"\n        },\n        {\n            \"user_id\": 3,\n            \"user_name\": \"Sylvia Catalina\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "08 - Ordenar alfabéticamente los seguidores de un vendedor Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/followed/list?order=name_desc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"followed",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "name_desc",
+									"description": "name_asc, name_desc"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 15:12:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 1,\n    \"user_name\": \"Quynn Nunez\",\n    \"followed\": [\n        {\n            \"user_id\": 27,\n            \"user_name\": \"Gregory Bravo\"\n        },\n        {\n            \"user_id\": 26,\n            \"user_name\": \"Chase Sanchez\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "08 - Ordenar alfabéticamente los seguidores de un vendedor Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/followed/list?order=name_asc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"followed",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "name_asc",
+									"description": "name_asc, name_desc"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 15:12:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 1,\n    \"user_name\": \"Quynn Nunez\",\n    \"followed\": [\n        {\n            \"user_id\": 26,\n            \"user_name\": \"Chase Sanchez\"\n        },\n        {\n            \"user_id\": 27,\n            \"user_name\": \"Gregory Bravo\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "08 - Ordenar alfabéticamente los seguidores de un vendedor Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId/followed/list?order=name_as",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId",
+								"followed",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "name_as",
+									"description": "name_asc, name_desc"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 15:16:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El orden ingresado name_as no es válido\"\n}"
+				}
+			]
+		},
+		{
+			"name": "09 - Ver los vendedores seguidos de un cliente (orden de fechas)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/products/followed/:userId/list?order=date_desc",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products",
+						"followed",
+						":userId",
+						"list"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "date_desc",
+							"description": "date_asc, date_desc"
+						}
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "09 - Ver los vendedores seguidos de un cliente (orden de fechas)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/followed/:userId/list?order=date_asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"followed",
+								":userId",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "date_asc",
+									"description": "date_asc, date_desc"
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:41:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 1,\n    \"posts\": [\n        {\n            \"post_id\": 0,\n            \"user_id\": 26,\n            \"date\": \"15-02-2024\",\n            \"product\": {\n                \"product_id\": 19,\n                \"product_name\": \"Silla Gamer 2\",\n                \"type\": \"Gamer\",\n                \"brand\": \"Racer\",\n                \"color\": \"Red & Black\",\n                \"notes\": \"Special Edition\"\n            },\n            \"category\": 100,\n            \"price\": 1500.5\n        },\n        {\n            \"post_id\": 0,\n            \"user_id\": 27,\n            \"date\": \"15-02-2024\",\n            \"product\": {\n                \"product_id\": 18,\n                \"product_name\": \"Silla Gamer 2\",\n                \"type\": \"Gamer\",\n                \"brand\": \"Racer\",\n                \"color\": \"Red & Black\",\n                \"notes\": \"Special Edition\"\n            },\n            \"category\": 100,\n            \"price\": 1500.5\n        },\n        {\n            \"post_id\": 4,\n            \"user_id\": 27,\n            \"date\": \"20-02-2024\",\n            \"product\": {\n                \"product_id\": 4,\n                \"product_name\": \"Gorra\",\n                \"type\": \"Accesorio\",\n                \"brand\": \"Marca D\",\n                \"color\": \"Rojo\",\n                \"notes\": \"Algodón\"\n            },\n            \"category\": 28,\n            \"price\": 48.851525450202665\n        }\n    ]\n}"
+				},
+				{
+					"name": "09 - Ver los vendedores seguidos de un cliente (orden de fechas)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/followed/:userId/list?order=date_asc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"followed",
+								":userId",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "date_asc",
+									"description": "date_asc, date_desc"
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 15:14:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 1,\n    \"posts\": [\n        {\n            \"post_id\": 16,\n            \"user_id\": 29,\n            \"date\": \"10-02-2024\",\n            \"product\": {\n                \"product_id\": 2,\n                \"product_name\": \"Pantalón\",\n                \"type\": \"Ropa\",\n                \"brand\": \"Marca B\",\n                \"color\": \"Negro\",\n                \"notes\": \"Poliéster\"\n            },\n            \"category\": 25,\n            \"price\": 78\n        },\n        {\n            \"post_id\": 18,\n            \"user_id\": 29,\n            \"date\": \"14-02-2024\",\n            \"product\": {\n                \"product_id\": 2,\n                \"product_name\": \"Pantalón\",\n                \"type\": \"Ropa\",\n                \"brand\": \"Marca B\",\n                \"color\": \"Negro\",\n                \"notes\": \"Poliéster\"\n            },\n            \"category\": 25,\n            \"price\": 78\n        },\n        {\n            \"post_id\": 1,\n            \"user_id\": 26,\n            \"date\": \"20-02-2024\",\n            \"product\": {\n                \"product_id\": 1,\n                \"product_name\": \"Camisa\",\n                \"type\": \"Ropa\",\n                \"brand\": \"Marca A\",\n                \"color\": \"Azul\",\n                \"notes\": \"Algodón\"\n            },\n            \"category\": 15,\n            \"price\": 35.04819565380144\n        },\n        {\n            \"post_id\": 15,\n            \"user_id\": 26,\n            \"date\": \"20-02-2024\",\n            \"product\": {\n                \"product_id\": 15,\n                \"product_name\": \"Collar\",\n                \"type\": \"Accesorio\",\n                \"brand\": \"Marca O\",\n                \"color\": \"Dorado\",\n                \"notes\": \"Metal\"\n            },\n            \"category\": 19,\n            \"price\": 21.822924907514768\n        },\n        {\n            \"post_id\": 6,\n            \"user_id\": 27,\n            \"date\": \"20-02-2024\",\n            \"product\": {\n                \"product_id\": 6,\n                \"product_name\": \"Vestido\",\n                \"type\": \"Ropa\",\n                \"brand\": \"Marca F\",\n                \"color\": \"Blanco\",\n                \"notes\": \"Seda\"\n            },\n            \"category\": 9,\n            \"price\": 40.89649970320145\n        },\n        {\n            \"post_id\": 12,\n            \"user_id\": 27,\n            \"date\": \"20-02-2024\",\n            \"product\": {\n                \"product_id\": 12,\n                \"product_name\": \"Falda\",\n                \"type\": \"Ropa\",\n                \"brand\": \"Marca L\",\n                \"color\": \"Rojo\",\n                \"notes\": \"Poliéster\"\n            },\n            \"category\": 12,\n            \"price\": 4.893983277490232\n        },\n        {\n            \"post_id\": 13,\n            \"user_id\": 29,\n            \"date\": \"20-02-2024\",\n            \"product\": {\n                \"product_id\": 13,\n                \"product_name\": \"Sandalias\",\n                \"type\": \"Calzado\",\n                \"brand\": \"Marca M\",\n                \"color\": \"Blanco\",\n                \"notes\": \"Cuero\"\n            },\n            \"category\": 34,\n            \"price\": 21.595520389374702\n        },\n        {\n            \"post_id\": 17,\n            \"user_id\": 29,\n            \"date\": \"20-02-2024\",\n            \"product\": {\n                \"product_id\": 2,\n                \"product_name\": \"Pantalón\",\n                \"type\": \"Ropa\",\n                \"brand\": \"Marca B\",\n                \"color\": \"Negro\",\n                \"notes\": \"Poliéster\"\n            },\n            \"category\": 25,\n            \"price\": 78\n        }\n    ]\n}"
+				},
+				{
+					"name": "09 - Ver los vendedores seguidos de un cliente (orden de fechas)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/followed/:userId/list?order=date_desc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"followed",
+								":userId",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "date_desc",
+									"description": "date_asc, date_desc"
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 15:16:05 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 1,\n    \"posts\": [\n        {\n            \"post_id\": 1,\n            \"user_id\": 26,\n            \"date\": \"20-02-2024\",\n            \"product\": {\n                \"product_id\": 1,\n                \"product_name\": \"Camisa\",\n                \"type\": \"Ropa\",\n                \"brand\": \"Marca A\",\n                \"color\": \"Azul\",\n                \"notes\": \"Algodón\"\n            },\n            \"category\": 15,\n            \"price\": 35.04819565380144\n        },\n        {\n            \"post_id\": 15,\n            \"user_id\": 26,\n            \"date\": \"20-02-2024\",\n            \"product\": {\n                \"product_id\": 15,\n                \"product_name\": \"Collar\",\n                \"type\": \"Accesorio\",\n                \"brand\": \"Marca O\",\n                \"color\": \"Dorado\",\n                \"notes\": \"Metal\"\n            },\n            \"category\": 19,\n            \"price\": 21.822924907514768\n        },\n        {\n            \"post_id\": 6,\n            \"user_id\": 27,\n            \"date\": \"20-02-2024\",\n            \"product\": {\n                \"product_id\": 6,\n                \"product_name\": \"Vestido\",\n                \"type\": \"Ropa\",\n                \"brand\": \"Marca F\",\n                \"color\": \"Blanco\",\n                \"notes\": \"Seda\"\n            },\n            \"category\": 9,\n            \"price\": 40.89649970320145\n        },\n        {\n            \"post_id\": 12,\n            \"user_id\": 27,\n            \"date\": \"20-02-2024\",\n            \"product\": {\n                \"product_id\": 12,\n                \"product_name\": \"Falda\",\n                \"type\": \"Ropa\",\n                \"brand\": \"Marca L\",\n                \"color\": \"Rojo\",\n                \"notes\": \"Poliéster\"\n            },\n            \"category\": 12,\n            \"price\": 4.893983277490232\n        },\n        {\n            \"post_id\": 13,\n            \"user_id\": 29,\n            \"date\": \"20-02-2024\",\n            \"product\": {\n                \"product_id\": 13,\n                \"product_name\": \"Sandalias\",\n                \"type\": \"Calzado\",\n                \"brand\": \"Marca M\",\n                \"color\": \"Blanco\",\n                \"notes\": \"Cuero\"\n            },\n            \"category\": 34,\n            \"price\": 21.595520389374702\n        },\n        {\n            \"post_id\": 17,\n            \"user_id\": 29,\n            \"date\": \"20-02-2024\",\n            \"product\": {\n                \"product_id\": 2,\n                \"product_name\": \"Pantalón\",\n                \"type\": \"Ropa\",\n                \"brand\": \"Marca B\",\n                \"color\": \"Negro\",\n                \"notes\": \"Poliéster\"\n            },\n            \"category\": 25,\n            \"price\": 78\n        },\n        {\n            \"post_id\": 18,\n            \"user_id\": 29,\n            \"date\": \"14-02-2024\",\n            \"product\": {\n                \"product_id\": 2,\n                \"product_name\": \"Pantalón\",\n                \"type\": \"Ropa\",\n                \"brand\": \"Marca B\",\n                \"color\": \"Negro\",\n                \"notes\": \"Poliéster\"\n            },\n            \"category\": 25,\n            \"price\": 78\n        },\n        {\n            \"post_id\": 16,\n            \"user_id\": 29,\n            \"date\": \"10-02-2024\",\n            \"product\": {\n                \"product_id\": 2,\n                \"product_name\": \"Pantalón\",\n                \"type\": \"Ropa\",\n                \"brand\": \"Marca B\",\n                \"color\": \"Negro\",\n                \"notes\": \"Poliéster\"\n            },\n            \"category\": 25,\n            \"price\": 78\n        }\n    ]\n}"
+				},
+				{
+					"name": "09 - Ver los vendedores seguidos de un cliente (orden de fechas)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/followed/:userId/list?order=date_de",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"followed",
+								":userId",
+								"list"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "date_de",
+									"description": "date_asc, date_desc"
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 15:16:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"date_de no es valido, recuerde que debe ingresar date_asc o date_desc\"\n}"
+				}
+			]
+		},
+		{
+			"name": "10 - Dar de alta nueva publicación con promo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 26,\n    \"date\": \"29-04-2021\",\n    \"product\": {\n        \"product_id\": 16,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50,\n    \"has_promo\": true,\n    \"discount\": 0.25\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products/promo-post",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"promo-post"
+					]
+				},
+				"description": "Este endpoint permite dar de alta una nueva publicación con promoción por parte de un vendedor, en la cual se especifiquen las características del producto relacionado a esta publicación.\n\nDentro del cuerpo esperado para la creación de la publicación se debe encontrar el identificador del vendedor, la fecha de publicación, las especificaciones del producto, la categoría a la que pertenece, el precio, si se encuentra o no en promoción y el descuento aplicado.\n\nEste retorna un mensaje en forma de un objeto indicando la respuesta obtenida del proceso, que puede ser fallida o exitosa."
+			},
+			"response": [
+				{
+					"name": "10 - Dar de alta nueva publicación con promo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 26,\n    \"date\": \"29-04-2021\",\n    \"product\": {\n        \"product_id\": 16,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50,\n    \"has_promo\": true,\n    \"discount\": 0.25\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/products/promo-post",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"promo-post"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Feb 2024 21:01:10 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Publicación creada con éxito\"\n}"
+				},
+				{
+					"name": "10 - Dar de alta nueva publicación con promo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 25,\n    \"date\": \"29-04-2021\",\n    \"product\": {\n        \"product_id\": 16,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50,\n    \"has_promo\": true,\n    \"discount\": 0.25\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/products/promo-post",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"promo-post"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Feb 2024 21:01:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El usuario no se encuentra o no es vendedor\"\n}"
+				},
+				{
+					"name": "10 - Dar de alta nueva publicación con promo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 26,\n    \"date\": \"29-04-2021\",\n    \"product\": {\n        \"product_id\": 11,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50,\n    \"has_promo\": true,\n    \"discount\": 0.25\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/products/promo-post",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"promo-post"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Feb 2024 21:02:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El identificador del producto no corresponde con el registrado\"\n}"
+				},
+				{
+					"name": "10 - Dar de alta nueva publicación con promo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 26,\n    \"date\": \"29-04-2021\",\n    \"product\": {\n        \"product_id\": 17,\n        \"product_name\": \"Silla Gamer 1\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50,\n    \"has_promo\": true,\n    \"discount\": 0.25\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/products/promo-post",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"promo-post"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Feb 2024 21:02:52 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Publicación creada con éxito\"\n}"
+				}
+			]
+		},
+		{
+			"name": "11 - Mostrar la cantidad de publicaciones con promo de un vendedor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/promo-post/count?user_id=26",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"promo-post",
+						"count"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "26"
+						}
+					]
+				},
+				"description": "Este endpoint recupera el recuento de publicaciones promocionales de un usuario específico. Realiza una solicitud HTTP GET a localhost:8080/products/promo-post/count con el user_id como parámetro de consulta. La respuesta incluye user_id, user_name y el recuento de productos promocionales del usuario."
+			},
+			"response": [
+				{
+					"name": "11 - Mostrar la cantidad de publicaciones con promo de un vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/products/promo-post/count?user_id=26",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"promo-post",
+								"count"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Feb 2024 21:03:19 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 26,\n    \"user_name\": \"Chase Sanchez\",\n    \"promo_products_account\": 2\n}"
+				},
+				{
+					"name": "11 - Mostrar la cantidad de publicaciones con promo de un vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/products/promo-post/count?user_id=27",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"promo-post",
+								"count"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "27"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Feb 2024 21:03:28 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"No hay publicaciones con productos en descuento para ese vendedor\"\n}"
+				},
+				{
+					"name": "11 - Mostrar la cantidad de publicaciones con promo de un vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/products/promo-post/count?user_id=25",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"promo-post",
+								"count"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Feb 2024 21:03:36 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El usuario no se encuentra o no es vendedor\"\n}"
+				}
+			]
+		},
+		{
+			"name": "12 - Mostrar la lista de publicaciones con promo de un vendedor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/promo-post/list?user_id=50",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"promo-post",
+						"list"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "50"
+						}
+					]
+				},
+				"description": "Este endpoint recupera una lista de publicaciones promocionales de productos asociados a un usuario específico que se recibe a partir del ID del usuario para el que se están recuperando los mensajes promocionales.\n\nSe retorna el id del vendedor, su nombre de usuario y la lista de los post con promoción asociados a su id."
+			},
+			"response": [
+				{
+					"name": "12 - Mostrar la lista de publicaciones con promo de un vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/products/promo-post/list?user_id=26",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"promo-post",
+								"list"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Feb 2024 21:03:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"user_id\": 26,\n        \"date\": \"29-04-2021\",\n        \"product\": {\n            \"product_id\": 16,\n            \"product_name\": \"Silla Gamer\",\n            \"type\": \"Gamer\",\n            \"brand\": \"Racer\",\n            \"color\": \"Red & Black\",\n            \"notes\": \"Special Edition\"\n        },\n        \"category\": 100,\n        \"price\": 1500.5,\n        \"has_promo\": true,\n        \"discount\": 0.25\n    },\n    {\n        \"user_id\": 26,\n        \"date\": \"29-04-2021\",\n        \"product\": {\n            \"product_id\": 17,\n            \"product_name\": \"Silla Gamer 1\",\n            \"type\": \"Gamer\",\n            \"brand\": \"Racer\",\n            \"color\": \"Red & Black\",\n            \"notes\": \"Special Edition\"\n        },\n        \"category\": 100,\n        \"price\": 1500.5,\n        \"has_promo\": true,\n        \"discount\": 0.25\n    }\n]"
+				},
+				{
+					"name": "12 - Mostrar la lista de publicaciones con promo de un vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/products/promo-post/list?user_id=27",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"promo-post",
+								"list"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "27"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Feb 2024 21:05:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"No hay publicaciones con productos en descuento para ese vendedor\"\n}"
+				},
+				{
+					"name": "12 - Mostrar la lista de publicaciones con promo de un vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/products/promo-post/list?user_id=25",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"promo-post",
+								"list"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Feb 2024 21:05:38 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El usuario no se encuentra o no es vendedor\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		},
+		{
+			"key": "userId",
+			"value": "1"
+		},
+		{
+			"key": "userIdToFollow",
+			"value": "2"
+		}
+	]
+}
