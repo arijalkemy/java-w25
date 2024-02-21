@@ -631,7 +631,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/post",
+							"raw": "{{base_url}}/api/products/post",
 							"host": [
 								"{{base_url}}"
 							],
@@ -661,7 +661,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/post",
+							"raw": "{{base_url}}/api/products/post",
 							"host": [
 								"{{base_url}}"
 							],
@@ -691,7 +691,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/post",
+							"raw": "{{base_url}}/api/products/post",
 							"host": [
 								"{{base_url}}"
 							],
