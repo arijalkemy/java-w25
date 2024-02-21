@@ -8,6 +8,8 @@ import com.breakingbytes.be_java_hisp_w25_g04.service.ISellerService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/products")
 public class ProductController {
@@ -52,5 +54,10 @@ public class ProductController {
     @GetMapping("/promo-post/list")
     public ResponseEntity<PromoPostDTO> getPostsWithDiscount(@RequestParam("user_id") int userId){
         return ResponseEntity.ok().body(sellerService.findPostsWithDiscountByIdSeller(userId));
+    }
+
+    @GetMapping("/promo-post/list/{discount}")
+    public ResponseEntity<List<PromoPostDTO>> getPostsWithDiscountAtLeastOf(@PathVariable("discount") int discount){
+        return ResponseEntity.ok().body(sellerService.findPostWithDiscountOf(discount));
     }
 }

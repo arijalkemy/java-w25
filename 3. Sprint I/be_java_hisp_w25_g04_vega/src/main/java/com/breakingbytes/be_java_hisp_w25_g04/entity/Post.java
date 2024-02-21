@@ -38,4 +38,16 @@ public class Post {
         this.price = price;
 
     }
+
+    public Post(int userId, LocalDate date, Product product, int category, double price, boolean hasPromo, double discount) {
+        this.postId = count;
+        count++;
+        this.userId = userId;
+        this.date = date;
+        this.product = product;
+        this.category = category;
+        this.price = price;
+        this.hasPromo = hasPromo;
+        this.discount = discount;
+    }
 }

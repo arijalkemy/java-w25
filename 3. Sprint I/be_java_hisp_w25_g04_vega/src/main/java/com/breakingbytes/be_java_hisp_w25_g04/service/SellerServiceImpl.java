@@ -143,4 +143,32 @@ public class SellerServiceImpl implements ISellerService{
 
         return new PromoPostDTO(seller.getId(), seller.getName(), postsWithDiscount);
     }
+
+    @Override
+    public List<PromoPostDTO> findPostWithDiscountOf(int discount) {
+        if(discount < 0 || discount > 100) throw new BadRequestException("El descuento debe ser entre 0 y 100 ");
+        List<Seller> sellers = this.sellerRepository.getSellers()
+                .stream().filter(seller -> !seller.getPosts().isEmpty()).toList(); // Get All sellers with Posts
+        List<PromoPostDTO> list = new ArrayList<>();
+        for (Seller seller : sellers){
+            PromoPostDTO promo = new PromoPostDTO();
+            promo.setUserId(seller.getId());
+            promo.setUserName(seller.getName());
+
+            List<Post> postWithDiscount = new ArrayList<>();
+
+            for (Post post : seller.getPosts()){
+                if(post.isHasPromo() && discount >= post.getDiscount()*100 ){
+                    postWithDiscount.add(post);
+                }
+            }
+
+            promo.setPosts(postWithDiscount);
+            if(!postWithDiscount.isEmpty()) list.add(promo);
+
+        }
+        if(list.isEmpty()) throw new NotFoundException("No se encontraron publicaciones con al menos " + discount + "% de descuento");
+
+        return list;
+    }
 }

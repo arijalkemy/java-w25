@@ -16,4 +16,6 @@ public interface ISellerService {
     FollowersCountDTO getCountFollowersOfSeller(int id);
     PromoPostCountDTO countProducsInDiscount(int sellerId);
     PromoPostDTO findPostsWithDiscountByIdSeller(int sellerId);
+
+    List<PromoPostDTO> findPostWithDiscountOf(int discount);
 }

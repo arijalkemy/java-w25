@@ -53,7 +53,7 @@ public class DbMock {
         Post post2 = new Post(3, LocalDate.of(2023,02,20), p3, 100, 1000.0);
         Post post3 = new Post(4, LocalDate.of(2021,10,19), p1, 200, 240.0);
         Post post4 = new Post(3, LocalDate.of(2019,02,21), p4, 100, 20.0);
-        Post post5 = new Post(3, LocalDate.of(2019,02,26), p5, 300, 30.0);
+        Post post5 = new Post(3, LocalDate.of(2019,02,26), p5, 300, 30.0, true, 0.15);
         this.listOfPost = new ArrayList<>(List.of(post1, post2, post3, post4, post5));
 
         juan.getPosts().add(post1);
