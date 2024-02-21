@@ -1,0 +1,26 @@
+package ejercicio.caloriascalcu;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CaloriasCalcuApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(CaloriasCalcuApplication.class, args);
+    }
+        /*
+        Un restaurante desea poder ofrecer a sus potenciales comensales la posibilidad de conocer
+         los ingredientes y calorías de cada uno de los platos que se encuentran en su menú.
+         Para esto, necesita el desarrollo de una API que a partir de la recepción de un plato del menú (brindando nombre y peso en gramos)
+          sea capaz de retornar:
+
+        Cantidad total de calorías del plato
+        Lista de ingredientes que lo conforman y cantidad de calorías de cada uno de ellos
+        El ingrediente con mayor cantidad de calorías
+
+        Bonus: Por otra parte, el dueño del restaurante está interesado en la posibilidad de que sus clientes,
+        además de enviar plato por plato, puedan enviar una lista de platos
+        y obtener estos mismos puntos diferenciados por cada uno de los platos brindados.
+         */
+}
