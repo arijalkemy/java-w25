@@ -1,0 +1,91 @@
+[
+  {
+    "postId": 1,
+    "userId": 1,
+    "date": "05-02-2024",
+    "product": {
+      "productId": 1,
+      "productName":"Nintendo 3Ds",
+      "type": "Gamer",
+      "brand": "Nintendo",
+      "color": "Azul",
+      "notes": "refurbished"
+      },
+    "category": "25",
+    "price": 5000
+
+  },
+  {
+    "postId": 2,
+    "userId": 2,
+    "date": "15-02-2024",
+    "product": {
+      "productId": 2,
+      "productName":"Asus ROG",
+      "type": "Gamer",
+      "brand": "Asus",
+      "color": "Negro",
+      "notes": "NUEVA"
+    },
+    "category": "10",
+    "price": 15000
+  },{
+    "postId": 3,
+    "userId": 3,
+    "date": "11-02-2024",
+    "product": {
+      "productId": 3,
+      "productName":"Silla gamer",
+      "type": "Gamer",
+      "brand": "Racer",
+      "color": "Negro y azul",
+      "notes": "special edition"
+    },
+    "category": "100",
+    "price": 1500
+  },{
+  "postId": 4,
+  "userId": 2,
+  "date": "01-02-2024",
+  "product": {
+    "productId": 4,
+    "productName":"Teclado Gamer",
+    "type": "Gamer",
+    "brand": "HyperX",
+    "color": "Negro",
+    "notes": "Elite Alloy"
+  },
+  "category": "10",
+  "price": 2300
+},{
+  "postId": 5,
+  "userId": 3,
+  "date": "01-01-2024",
+  "product": {
+    "productId": 56,
+    "productName":"Mouse",
+    "type": "Office",
+    "brand": "Logitech",
+    "color": "Negro",
+    "notes": "G203"
+  },
+  "category": "40",
+  "price": 200
+},{
+  "postId": 6,
+  "userId": 3,
+  "date": "18-02-2024",
+  "product": {
+    "productId": 12,
+    "productName":"Termo",
+    "type": "Office",
+    "brand": "Yeti",
+    "color": "Gris",
+    "notes": "Large"
+  },
+  "category": "40",
+  "price": 1200
+}
+
+
+]
