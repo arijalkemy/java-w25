@@ -1,0 +1,13 @@
+package com.sfritz.calculadoracalorias.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class IngredientDto {
+    private String name;
+    private Integer calories;
+}
