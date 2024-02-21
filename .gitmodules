@@ -28,3 +28,12 @@
 [submodule "1. Modulo Java/EjercicioDocumentos"]
 	path = 1. Modulo Java/EjercicioDocumentos
 	url = https://github.com/dcardonaniev/EjercicioDocumentos
+[submodule "1. Modulo Java/EjercicioVehiculos"]
+	path = 1. Modulo Java/EjercicioVehiculos
+	url = https://github.com/dcardonaniev/EjercicioVehiculos
+[submodule "3. Sprint I/be_java_hisp_w25_g11"]
+	path = 3. Sprint I/be_java_hisp_w25_g11
+	url = https://github.com/jcalderondom/be_java_hisp_w25_g11
+[submodule "3. Sprint I/be_java_hisp_w25_g11_cardona"]
+	path = 3. Sprint I/be_java_hisp_w25_g11_cardona
+	url = https://github.com/dcardonaniev/be_java_hisp_w25_g11_cardona
