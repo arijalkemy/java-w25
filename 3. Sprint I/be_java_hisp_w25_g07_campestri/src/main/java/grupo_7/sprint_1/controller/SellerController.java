@@ -59,8 +59,14 @@ public class SellerController {
     }
 
     // US 0010: Llevar a cabo la publicación de un nuevo producto en promoción
-    @PostMapping("/products/promo")
+    @PostMapping("/products/promo-post")
     public ResponseEntity<?> addPromoPost(@RequestBody AddPromoPostDto newPost) {
         return new ResponseEntity<>(sellerService.addPromoPost(newPost.userId(), newPost), HttpStatus.OK);
     }
+
+    @GetMapping("/products/promo-post/count")
+    public ResponseEntity<?> getPromoPostCount(@RequestParam Integer userId) {
+        return ResponseEntity.ok(sellerService.getPromoPostCount(userId));
+    }
+
 }

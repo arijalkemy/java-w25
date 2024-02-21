@@ -190,6 +190,19 @@ public class SellerServiceImp implements ISellerService {
     }
 
     @Override
+    public CountPromoPostDto getPromoPostCount(Integer sellerId) {
+        Optional<Seller> foundSeller = sellerRepository.findById(sellerId);
+        if (foundSeller.isEmpty()) {
+            throw new NotFoundException("El vendedor indicado no existe.");
+        }
+        return new CountPromoPostDto(
+                foundSeller.get().getUserId(),
+                foundSeller.get().getUserName(),
+                (int) foundSeller.get().getPosts().stream().filter(post -> post.getHas_promo() != null && post.getHas_promo())
+                        .count()
+        );
+    }
+    @Override
     public List<Seller> getAllSellers() {
         return sellerRepository.getAllSellers();
     }

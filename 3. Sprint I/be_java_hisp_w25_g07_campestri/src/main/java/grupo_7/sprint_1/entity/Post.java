@@ -16,7 +16,6 @@ public class Post {
     Integer category;
     Double price;
     LocalDate date;
-
     Boolean has_promo;
     Double discount;
 

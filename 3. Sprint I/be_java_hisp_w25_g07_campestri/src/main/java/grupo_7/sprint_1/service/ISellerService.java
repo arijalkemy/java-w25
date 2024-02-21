@@ -14,6 +14,7 @@ public interface ISellerService {
     SellerDTO cantidadSeguidores(int userID);
 
     List<PostDto> getRecentPostsFromFollowedSellers(Integer buyerId, String order);
+    CountPromoPostDto getPromoPostCount(Integer sellerId);
 
     List<Seller> getAllSellers();
 }
