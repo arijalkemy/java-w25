@@ -9,9 +9,12 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Positive;
 
-@JsonPropertyOrder({"user_id", "date", "product", "category", "price", "has_promo", "discount"})
+@JsonPropertyOrder({"user_id", "post_id" ,"date", "product", "category", "price", "has_promo", "discount"})
 public record PostDto (
         @Positive(message = "The user_id must be a positive integer") int user_id,
+
+        @Nullable
+        Integer post_id,
         @NotNull(message = "The date cannot be null")
 
         @Pattern(regexp = "^(0[1-9]|[1-2][0-9]|3[0-1])-(0[1-9]|1[0-2])-(19|20)\\d{2}|\\d{4}$", message = "The date format must be dd-MM-yyyy")

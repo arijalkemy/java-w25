@@ -71,6 +71,7 @@ public class PostService implements IPostService {
         );
     }
 
+    //Count promo posts from a given user
     @Override
     public PromoPostCountDto countPromoPost(int userId) {
         User user = userRepository.getUserById(userId).orElseThrow(() -> new NotFoundException("User with id " +userId+ "not found."));
@@ -78,11 +79,14 @@ public class PostService implements IPostService {
         return new PromoPostCountDto(userId, user.getUsername(), promoPostCount);
     }
 
+
+    //List all promo posts from a given user
     @Override
     public PostGetPromoListDto getPromoPostListByUser(int userId, String order) {
+        // check if user exists
         User user = userRepository.getUserById(userId)
                 .orElseThrow(() -> new NotFoundException("User with id " +userId+ " not found."));
-        // Solo los seller pueden tener posts
+        // check if user is a seller
         if(!(user instanceof Seller)){
             throw new ConflictException("User provided must be a seller");
         }
@@ -96,6 +100,7 @@ public class PostService implements IPostService {
         );
     }
 
+    //Sort post list by date
     private static void sortPostDtoListByDate(DateOrderEnumDto dateOrder, List<PostDto> postDtoList) {
         if(dateOrder == null) return;
         Comparator<String> order = Comparator.reverseOrder();
@@ -106,10 +111,11 @@ public class PostService implements IPostService {
     }
 
 
+    //Sort post list by name
     private List<PostDto> sortPostDtoListByName(List<PostDto> postListDtos, String order) {
-
+        //create a mutable copy of the list
         List<PostDto> mutablePostListDtos = new ArrayList<>(postListDtos);
-
+        //check if order is not null and if the list has more than one element
         if (order != null && mutablePostListDtos.size() > 1) {
             if (order.equals("name_asc")) {
                 // Ascending order by product name

@@ -19,7 +19,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Post {
     static final AtomicInteger idGenerator = new AtomicInteger();
-    @JsonIgnore
+    @JsonProperty("post_id")
     int id;
     @JsonProperty("user_id")
     int userId;
