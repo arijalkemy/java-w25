@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="978aec95-531b-4dc0-b2db-30a1e2653397" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g12" beforeDir="false" afterPath="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g12" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g12_gutierrez" beforeDir="false" afterPath="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g12_gutierrez" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g12_gutierrez/src/main/resources/be_java_hisp_w25_g12.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g12_gutierrez/src/main/resources/be_java_hisp_w25_g12.postman_collection.json" afterDir="false" />
-    </list>
+    <list default="true" id="978aec95-531b-4dc0-b2db-30a1e2653397" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,6 +87,7 @@
       <workItem from="1708541347714" duration="48000" />
       <workItem from="1708541429816" duration="19000" />
       <workItem from="1708541470657" duration="46000" />
+      <workItem from="1708541532748" duration="285000" />
     </task>
     <servers />
   </component>
