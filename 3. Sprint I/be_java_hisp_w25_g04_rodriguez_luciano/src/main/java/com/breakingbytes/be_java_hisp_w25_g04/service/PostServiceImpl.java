@@ -1,7 +1,7 @@
 package com.breakingbytes.be_java_hisp_w25_g04.service;
 
+import com.breakingbytes.be_java_hisp_w25_g04.dto.request.PostDTO;
 import com.breakingbytes.be_java_hisp_w25_g04.dto.response.LastPostsDTO;
-import com.breakingbytes.be_java_hisp_w25_g04.dto.response.PostDTO;
 import com.breakingbytes.be_java_hisp_w25_g04.dto.response.PostsByUserDTO;
 import com.breakingbytes.be_java_hisp_w25_g04.dto.response.PromoPostsCountDTO;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Post;
@@ -98,11 +98,17 @@ public class PostServiceImpl implements  IPostService{
     // ejercicio 0012
 
     @Override
-    public PostsByUserDTO getPromoPostsByUser(int userId) {
+    public PostsByUserDTO getPromoPostsByUser(int userId, String order) {
+        if(userId == -1) throw new BadRequestException("Debe ingresar un user ID");
         Optional<Seller> seller = sellerRepository.findById(userId);
         if(seller.isEmpty()) throw new NotFoundException("No se encontró el usuario solicitado");
         List<Post> promoPosts =  postRepository.findPostByUser(userId).stream().filter((Post::isHas_promo)).toList();
         List<PostDTO> promoPostsDTO = promoPosts.stream().map(p -> mapper.modelMapper().map(p, PostDTO.class)).toList();
+        switch (order){
+            case "prod_name_asc" -> promoPostsDTO = promoPostsDTO.stream().sorted(Comparator.comparing(PostDTO::getCategory)).collect(Collectors.toList());
+            case "prod_name_desc" -> promoPostsDTO = promoPostsDTO.stream().sorted(Comparator.comparing(PostDTO::getCategory).reversed()).collect(Collectors.toList());
+            //default case is already satisfied
+        };
         return new PostsByUserDTO(seller.get().getUser().getId(), seller.get().getUser().getName(), promoPostsDTO);
     }
 }

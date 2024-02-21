@@ -45,8 +45,9 @@ public class PostController {
 
     // Ejercicio 0012
     @GetMapping("/products/promo-post/list")
-    public ResponseEntity<?> getPromoPostByUser(@RequestParam(required = false) int user_id) {
-        return ResponseEntity.ok(postService.getPromoPostsByUser(user_id));
+    public ResponseEntity<?> getPromoPostByUser(@RequestParam(required = false, defaultValue = "-1") int user_id,
+                                                @RequestParam(required = false, defaultValue = "") String order) {
+        return ResponseEntity.ok(postService.getPromoPostsByUser(user_id, order));
     }
 
     /*

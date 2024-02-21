@@ -10,5 +10,5 @@ public interface IPostService {
     public LastPostsDTO getPostOfVendorsFollowedByUser(int id, String order);
     public void addPostWithPromotion(PostDTO postDTO);
     public PromoPostsCountDTO getAmountPromoPost(int userId);
-    public PostsByUserDTO getPromoPostsByUser(int userId);
+    public PostsByUserDTO getPromoPostsByUser(int userId, String order);
 }
