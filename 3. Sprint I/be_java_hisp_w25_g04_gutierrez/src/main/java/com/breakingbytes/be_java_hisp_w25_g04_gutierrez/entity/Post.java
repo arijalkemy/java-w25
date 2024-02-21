@@ -7,27 +7,34 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Post {
+    int postId;
     int userId;
     LocalDate date;
     Product product;
     int category;
-    double price;
-    double discount;
+    double price, discount;
     boolean hasPromo;
 
+    static int count = 1;
+
+    public Post() {
+        this.postId = count;
+        count++;
+    }
+
     public Post(int userId, LocalDate date, Product product, int category, double price) {
+        this.postId = count;
         this.userId = userId;
         this.date = date;
         this.product = product;
         this.category = category;
         this.price = price;
-        this.discount = 0.0;
-        this.hasPromo = false;
+        count++;
     }
 }

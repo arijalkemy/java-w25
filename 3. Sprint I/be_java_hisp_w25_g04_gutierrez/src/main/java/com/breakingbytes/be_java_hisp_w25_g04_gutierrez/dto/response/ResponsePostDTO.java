@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class PostDto {
+public class ResponsePostDTO {
     int userId; //Id of Seller
     int postId; //Id of Post
     @JsonFormat(pattern="dd-MM-yyyy")
@@ -22,8 +22,6 @@ public class PostDto {
     Product product;
     int category;
     double price;
-
-
 }
 
 

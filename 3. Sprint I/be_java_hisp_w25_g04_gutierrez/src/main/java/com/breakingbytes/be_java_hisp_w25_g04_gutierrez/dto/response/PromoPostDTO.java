@@ -7,11 +7,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class PromoPostCountDTO {
+public class PromoPostDTO {
     @JsonProperty("user_id")
     int userId;
     @JsonProperty("user_name")
