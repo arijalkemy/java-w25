@@ -167,10 +167,7 @@ public class SellerServiceImp implements ISellerService {
         return posts;
     }
 
-    @Override
-    public List<Seller> getAllSellers() {
-        return sellerRepository.getAllSellers();
-    }
+
     public SellerPromDto cantidadProductosPromocion(int id) {
         Optional<Seller> seller = sellerRepository.findById(id);
         if (seller.isEmpty()) {

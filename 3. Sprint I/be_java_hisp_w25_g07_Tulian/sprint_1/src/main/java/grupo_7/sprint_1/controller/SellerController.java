@@ -60,12 +60,6 @@ public class SellerController {
         return new ResponseEntity<>(posts, HttpStatus.OK);
     }
 
-    @GetMapping("/users/allsellers")
-    public ResponseEntity<?> getAllSellers() {
-        return ResponseEntity.ok(sellerService.getAllSellers());
-    }
-
-
     @GetMapping("/products/promo-post/list")
     public ResponseEntity<?> getPromoPostList(@RequestParam int userId){
         return new ResponseEntity<>(sellerService.listaPostsPromocion(userId),HttpStatus.OK);

@@ -56,9 +56,5 @@ public class SellerController {
         return new ResponseEntity<>(posts, HttpStatus.OK);
     }
 
-    @GetMapping("/users/allsellers")
-    public ResponseEntity<?> getAllSellers() {
-        return ResponseEntity.ok(sellerService.getAllSellers());
-    }
 
 }

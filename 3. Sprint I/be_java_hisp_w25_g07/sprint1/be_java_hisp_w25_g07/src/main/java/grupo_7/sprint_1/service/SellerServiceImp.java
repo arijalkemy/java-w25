@@ -164,8 +164,4 @@ public class SellerServiceImp implements ISellerService {
         return posts;
     }
 
-    @Override
-    public List<Seller> getAllSellers() {
-        return sellerRepository.getAllSellers();
-    }
 }
