@@ -1,0 +1,232 @@
+[
+  {
+    "userId": 1,
+    "userName": "Seller_1",
+    "followers": [
+      {
+        "userId": 11,
+        "userName": "Buyer_1"
+      },
+      {
+        "userId": 12,
+        "userName": "Buyer_2"
+      },
+      {
+        "userId": 13,
+        "userName": "Buyer_3"
+      }
+    ],
+    "posts": [
+      {
+        "product": {
+          "productId": 1,
+          "productName": "Product_1",
+          "type": "Type_1",
+          "brand": "Brand_1",
+          "color": "Color_1",
+          "notes": "Notes_1"
+        },
+        "category": 1,
+        "price": 10.0,
+        "date": "2024-01-30"
+      },
+      {
+        "product": {
+          "productId": 2,
+          "productName": "Product_2",
+          "type": "Type_2",
+          "brand": "Brand_2",
+          "color": "Color_2",
+          "notes": "Notes_2"
+        },
+        "category": 2,
+        "price": 20.0,
+        "date": "2024-01-30"
+      }
+    ]
+  },
+  {
+    "userId": 2,
+    "userName": "Seller_2",
+    "followers": [
+      {
+        "userId": 21,
+        "userName": "Buyer_4"
+      },
+      {
+        "userId": 22,
+        "userName": "Buyer_5"
+      },
+      {
+        "userId": 23,
+        "userName": "Buyer_6"
+      }
+    ],
+    "posts": [
+      {
+        "product": {
+          "productId": 3,
+          "productName": "Product_3",
+          "type": "Type_3",
+          "brand": "Brand_3",
+          "color": "Color_3",
+          "notes": "Notes_3"
+        },
+        "category": 3,
+        "price": 30.0,
+        "date": "2024-01-30"
+      },
+      {
+        "product": {
+          "productId": 4,
+          "productName": "Product_4",
+          "type": "Type_4",
+          "brand": "Brand_4",
+          "color": "Color_4",
+          "notes": "Notes_4"
+        },
+        "category": 4,
+        "price": 40.0,
+        "date": "2024-01-30"
+      }
+    ]
+  },
+  {
+    "userId": 3,
+    "userName": "Seller_3",
+    "followers": [
+      {
+        "userId": 31,
+        "userName": "Buyer_7"
+      },
+      {
+        "userId": 32,
+        "userName": "Buyer_8"
+      },
+      {
+        "userId": 33,
+        "userName": "Buyer_9"
+      }
+    ],
+    "posts": [
+      {
+        "product": {
+          "productId": 5,
+          "productName": "Product_5",
+          "type": "Type_5",
+          "brand": "Brand_5",
+          "color": "Color_5",
+          "notes": "Notes_5"
+        },
+        "category": 5,
+        "price": 50.0,
+        "date": "2024-01-30"
+      },
+      {
+        "product": {
+          "productId": 6,
+          "productName": "Product_6",
+          "type": "Type_6",
+          "brand": "Brand_6",
+          "color": "Color_6",
+          "notes": "Notes_6"
+        },
+        "category": 6,
+        "price": 60.0,
+        "date": "2024-01-30"
+      }
+    ]
+  },
+  {
+    "userId": 4,
+    "userName": "Seller_4",
+    "followers": [
+      {
+        "userId": 41,
+        "userName": "Buyer_10"
+      },
+      {
+        "userId": 42,
+        "userName": "Buyer_11"
+      },
+      {
+        "userId": 43,
+        "userName": "Buyer_12"
+      }
+    ],
+    "posts": [
+      {
+        "product": {
+          "productId": 7,
+          "productName": "Product_7",
+          "type": "Type_7",
+          "brand": "Brand_7",
+          "color": "Color_7",
+          "notes": "Notes_7"
+        },
+        "category": 7,
+        "price": 70.0,
+        "date": "2024-01-30"
+      },
+      {
+        "product": {
+          "productId": 8,
+          "productName": "Product_8",
+          "type": "Type_8",
+          "brand": "Brand_8",
+          "color": "Color_8",
+          "notes": "Notes_8"
+        },
+        "category": 8,
+        "price": 80.0,
+        "date": "2024-01-30"
+      }
+    ]
+  },
+  {
+    "userId": 5,
+    "userName": "Seller_5",
+    "followers": [
+      {
+        "userId": 51,
+        "userName": "Buyer_13"
+      },
+      {
+        "userId": 52,
+        "userName": "Buyer_14"
+      },
+      {
+        "userId": 53,
+        "userName": "Buyer_15"
+      }
+    ],
+    "posts": [
+      {
+        "product": {
+          "productId": 9,
+          "productName": "Product_9",
+          "type": "Type_9",
+          "brand": "Brand_9",
+          "color": "Color_9",
+          "notes": "Notes_9"
+        },
+        "category": 9,
+        "price": 90.0,
+        "date": "2024-01-30"
+      },
+      {
+        "product": {
+          "productId": 10,
+          "productName": "Product_10",
+          "type": "Type_10",
+          "brand": "Brand_10",
+          "color": "Color_10",
+          "notes": "Notes_10"
+        },
+        "category": 10,
+        "price": 100.0,
+        "date": "2024-01-30"
+      }
+    ]
+  }
+]
