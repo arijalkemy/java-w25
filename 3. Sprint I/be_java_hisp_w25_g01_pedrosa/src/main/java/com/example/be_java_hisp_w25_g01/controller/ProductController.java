@@ -58,12 +58,8 @@ public class ProductController {
     @GetMapping("/promo-post/newPrices")
     public ResponseEntity<List<PromoNewPriceDTO>> getPromoNewPrices(@RequestParam(required = false) Integer idUser){
 
-
-        if(idUser != null){
             return new ResponseEntity<>(postService.getPromoNewPrices(idUser), HttpStatus.OK);
-        }else{
 
-        return new ResponseEntity<>(postService.getPromoNewPrices(0), HttpStatus.OK);}
     }
 
 

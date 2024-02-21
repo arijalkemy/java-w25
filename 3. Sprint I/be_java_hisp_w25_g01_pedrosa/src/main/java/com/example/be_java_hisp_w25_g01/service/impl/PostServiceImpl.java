@@ -141,43 +141,31 @@ public class PostServiceImpl implements IPostService {
 
 
     @Override
-    public List<PromoNewPriceDTO> getPromoNewPrices(Integer userId){
-        try {
-            if(userId != 0){
-                Optional<User> userOp = userRepository.findById(userId);
-                if(!userOp.isPresent()){
-                    throw new BadRequestException("User Not Found - ID:"+userId);
-                }
-                List<Post> posts = postRepository.getAll();
-                return posts.stream()
-                        .filter(p -> p.getHas_promo() && p.getUser_id().equals(userId))
-                        .map(p -> new PromoNewPriceDTO(
-                                userRepository.findById(p.getUser_id()).get().getUserName(),
-                                p.getProduct().getProductName(),
-                                p.getPrice(),
-                                p.getDiscount(),
-
-                                p.getPrice() - (p.getPrice() * p.getDiscount())
-                        ))
-                        .toList();
-            }else {
-            List<Post> posts = postRepository.getAll();
-            return posts.stream()
-                    .filter(p -> p.getHas_promo())
-                    .map(p -> new PromoNewPriceDTO(
-                            userRepository.findById(p.getUser_id()).get().getUserName(),
-                            p.getProduct().getProductName(),
-                            p.getPrice(),
-                            p.getDiscount(),
-
-                            p.getPrice() - (p.getPrice() * p.getDiscount())
-                    ))
-                    .toList();
+    public List<PromoNewPriceDTO> getPromoNewPrices(Integer userId) {
+        List<Post> posts;
+        if (userId != null) {
+            Optional<User> userOp = userRepository.findById(userId);
+            if (!userOp.isPresent()) {
+                throw new BadRequestException("User Not Found - ID:" + userId);
             }
+            posts = postRepository.getAll().stream()
+                    .filter(p -> p.getHas_promo() && p.getUser_id().equals(userId))
+                    .toList();
+        } else {
+            posts = postRepository.getAll().stream()
+                    .filter(Post::getHas_promo)
+                    .toList();
         }
-        catch (Exception e){
-            throw new BadRequestException("Error getting promo new prices - "+e.getMessage());
-        }
+
+        return posts.stream()
+                .map(p -> new PromoNewPriceDTO(
+                        userRepository.findById(p.getUser_id()).get().getUserName(),
+                        p.getProduct().getProductName(),
+                        p.getPrice(),
+                        p.getDiscount(),
+                        p.getPrice() - (p.getPrice() * p.getDiscount())
+                ))
+                .toList();
     }
 
 
