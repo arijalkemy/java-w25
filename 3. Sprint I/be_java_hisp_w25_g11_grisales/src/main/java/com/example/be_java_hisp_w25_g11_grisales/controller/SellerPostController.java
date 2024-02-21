@@ -47,9 +47,10 @@ public class SellerPostController {
         return new ResponseEntity<>(sellerPostService.countPromoProducts(user_id), HttpStatus.OK);
     }
 
-    //public ResponseEntity<?> getPromoProductsList(
-            //@RequestBody SellerPromoPostDTO request
-            //) {
-        //return
-    //}
+    @GetMapping("/promo-post/list")
+    public ResponseEntity<?> getPromoProductsList(
+            @RequestParam Integer user_id
+            ) {
+        return new ResponseEntity<>(sellerPostService.getSellerPromoProductList(user_id), HttpStatus.OK);
+    }
 }
