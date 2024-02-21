@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "74984c5e-5791-42a0-9e69-fbf293429aaf",
+		"name": "Social meli individual",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Publish a discounted product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 2,\n    \"date\": \"02-02-2023\",\n    \"product\": {\n        \"id\": 122229,\n        \"category\": 1,\n        \"price\": 200000,\n        \"name\": \"Silla gamer #2\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Green\",\n        \"notes\": \"Special Edition\",\n        \"discount\": 10\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"post"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Publish a discounted product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 2,\n    \"date\": \"02-02-2023\",\n    \"product\": {\n        \"id\": 122229,\n        \"category\": 1,\n        \"price\": 200000,\n        \"name\": \"Silla gamer #2\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Green\",\n        \"notes\": \"Special Edition\",\n        \"discount\": 10\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"post"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Feb 2024 16:47:43 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 2,\n    \"date\": \"2023-02-02\",\n    \"product\": {\n        \"id\": 122229,\n        \"category\": 1,\n        \"price\": 200000,\n        \"name\": \"Silla gamer #2\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Green\",\n        \"notes\": \"Special Edition\",\n        \"discount\": 10\n    },\n    \"category\": 1,\n    \"price\": 200000\n}"
+				}
+			]
+		},
+		{
+			"name": "Get seller discounted products quantity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/1/products/discounts/quantity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"products",
+						"discounts",
+						"quantity"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get seller discounted products quantity",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/1/products/discounts/quantity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1",
+								"products",
+								"discounts",
+								"quantity"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Feb 2024 17:05:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"seller_name\": \"user1 lastName\",\n    \"DiscountedProducts\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Get seller discounted products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/seller/1/discounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"seller",
+						"1",
+						"discounts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get seller discounted products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/seller/1/discounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"seller",
+								"1",
+								"discounts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Feb 2024 17:09:50 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"products\": [\n        {\n            \"productId\": 1,\n            \"productName\": \"Producto1\",\n            \"type\": \"Electrónico\",\n            \"brand\": \"MarcaA\",\n            \"color\": \"Rojo\",\n            \"notes\": \"Notas sobre el producto\",\n            \"category\": 123,\n            \"price\": 29.99,\n            \"discount\": 10\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
