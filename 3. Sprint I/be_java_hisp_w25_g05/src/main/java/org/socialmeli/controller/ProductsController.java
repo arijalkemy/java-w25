@@ -5,7 +5,7 @@ import org.socialmeli.dto.request.PostReqDto;
 import org.socialmeli.dto.response.FollowedListDto;
 import org.socialmeli.dto.response.PostIdDto;
 import org.socialmeli.service.IPostsService;
-import org.socialmeli.service.PostsServiceImp;
+import org.socialmeli.service.implementation.PostsServiceImp;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

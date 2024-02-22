@@ -2,16 +2,13 @@ package org.socialmeli.controller;
 
 import org.socialmeli.dto.request.*;
 import org.socialmeli.dto.response.*;
-import org.socialmeli.entity.Vendor;
 import org.socialmeli.service.IPostsService;
 import org.socialmeli.service.IUsersService;
-import org.socialmeli.service.PostsServiceImp;
-import org.socialmeli.service.UsersServiceImp;
+import org.socialmeli.service.implementation.PostsServiceImp;
+import org.socialmeli.service.implementation.UsersServiceImp;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 
 @RestController

@@ -1,4 +1,4 @@
-package org.socialmeli.utils;
+package org.socialmeli.util;
 
 import org.socialmeli.dto.response.UserDTO;
 import org.socialmeli.dto.response.VendorFollowersListDTO;

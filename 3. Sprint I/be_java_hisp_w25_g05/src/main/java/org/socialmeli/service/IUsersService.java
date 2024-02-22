@@ -5,9 +5,6 @@ import org.socialmeli.dto.response.FollowerCountDto;
 import org.socialmeli.dto.response.MessageDto;
 import org.socialmeli.dto.response.VendorFollowersListDTO;
 import org.socialmeli.dto.response.VendorsFollowingListDto;
-import org.socialmeli.entity.Vendor;
-
-import java.util.List;
 
 
 public interface IUsersService {

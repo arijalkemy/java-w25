@@ -1,4 +1,4 @@
-package org.socialmeli.service;
+package org.socialmeli.service.implementation;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.socialmeli.dto.request.FollowedListReqDto;
@@ -9,13 +9,14 @@ import org.socialmeli.dto.response.PostIdDto;
 import org.socialmeli.dto.response.ProductDto;
 import org.socialmeli.entity.Client;
 import org.socialmeli.entity.Post;
+import org.socialmeli.entity.Product;
 import org.socialmeli.entity.Vendor;
 import org.socialmeli.exception.BadRequestException;
 import org.socialmeli.exception.NotFoundException;
-import org.socialmeli.repository.ClientRepositoryImp;
-import org.socialmeli.repository.PostRepositoryImp;
-import org.socialmeli.repository.VendorRepositoryImp;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.socialmeli.repository.implementation.ClientRepositoryImp;
+import org.socialmeli.repository.implementation.PostRepositoryImp;
+import org.socialmeli.repository.implementation.VendorRepositoryImp;
+import org.socialmeli.service.IPostsService;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -26,15 +27,17 @@ import java.util.List;
 
 @Service
 public class PostsServiceImp implements IPostsService {
-    @Autowired
     PostRepositoryImp postRepositoryImp;
-
-    @Autowired
     VendorRepositoryImp vendorRepositoryImp;
-
-    @Autowired
     ClientRepositoryImp clientRepositoryImp;
+
     ObjectMapper mapper = new ObjectMapper();
+
+    public PostsServiceImp(PostRepositoryImp postRepo, VendorRepositoryImp vendorRepo, ClientRepositoryImp clientRepo) {
+        this.postRepositoryImp = postRepo;
+        this.vendorRepositoryImp = vendorRepo;
+        this.clientRepositoryImp = clientRepo;
+    }
 
     @Override
     public FollowedListDto getFollowedList(FollowedListReqDto req) {
@@ -108,7 +111,12 @@ public class PostsServiceImp implements IPostsService {
         if (vendor.getUserId() == null) {
             throw new NotFoundException("No se encontró ningun usuario en el sistema con el ID indicado.");
         }
-        Post post = new Post(postReqDto.getUserId(), postReqDto.getDate(), postReqDto.getProduct(), postReqDto.getCategory(), postReqDto.getPrice());
+        Post post = new Post(
+                postReqDto.getUserId(),
+                postReqDto.getDate(),
+                mapper.convertValue(postReqDto.getProduct(), Product.class),
+                postReqDto.getCategory(),
+                postReqDto.getPrice());
         Integer response =  postRepositoryImp.save(post);
         return new PostIdDto(response);
     }
