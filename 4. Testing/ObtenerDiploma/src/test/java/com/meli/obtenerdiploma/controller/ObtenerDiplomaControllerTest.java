@@ -2,29 +2,36 @@ package com.meli.obtenerdiploma.controller;
 
 import com.meli.obtenerdiploma.model.StudentDTO;
 import com.meli.obtenerdiploma.service.IObtenerDiplomaService;
-import org.apache.http.util.Asserts;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 @ExtendWith(MockitoExtension.class)
+@SpringBootTest
 class ObtenerDiplomaControllerTest {
+
     @Mock
-    IObtenerDiplomaService service;
+    IObtenerDiplomaService iObtenerDiplomaService;
+
+    @InjectMocks
+    ObtenerDiplomaController obtenerDiplomaController;
+
     @Test
-    void testAnalyzeScores() {
-        StudentDTO testRq = new StudentDTO();
-        StudentDTO expectedRq = new StudentDTO();
-        Mockito.when(service.analyzeScores(testRq)).thenReturn(expectedRq);
-        ObtenerDiplomaController controller = new ObtenerDiplomaController();
-        controller.service = service;
+    void analyzeScores() {
+        StudentDTO testStudent = new StudentDTO();
+        testStudent.setId(1L);
+        Mockito.when(iObtenerDiplomaService.analyzeScores(testStudent.getId())).thenReturn(testStudent);
+        StudentDTO expectedStudent = new StudentDTO();
+        expectedStudent.setId(1L);
 
-        StudentDTO result = controller.analyzeScores(testRq);
+        StudentDTO actual = obtenerDiplomaController.analyzeScores(testStudent.getId());
 
-        Assertions.assertEquals(result, expectedRq);
+        assertEquals(actual.getId(), expectedStudent.getId());
     }
 }
