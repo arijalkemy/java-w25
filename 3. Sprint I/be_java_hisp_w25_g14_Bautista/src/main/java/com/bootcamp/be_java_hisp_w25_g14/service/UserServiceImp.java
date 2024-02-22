@@ -43,18 +43,16 @@ public class UserServiceImp implements IUserService {
     @Override
     public ProductOnSaleCountDto getProductsOnSaleCount(int userId) {
         Optional<User> optionalUser = userRepo.findUserById(userId);
-
-        if (optionalUser.isPresent()) {
-            User user = optionalUser.get();
-            if (!user.getIsSeller())
-                throw new FollowException("The user is not a seller");
-            int productsCount = (int) postRepo.getPostsById(userId).stream()
-                    .filter(post -> post.getIsOnSale() != null)
-                    .filter(Post::getIsOnSale).count();
-            return new ProductOnSaleCountDto(userId, user.getUserName(), productsCount);
-        } else {
+        if(optionalUser.isEmpty()){
             throw new NotFoundException("User not found");
         }
+        User user = optionalUser.get();
+        if (!user.getIsSeller())
+            throw new FollowException("The user is not a seller");
+        int productsCount = (int) postRepo.getPostsById(userId).stream()
+                .filter(post -> post.getIsOnSale() != null)
+                .filter(Post::getIsOnSale).count();
+        return new ProductOnSaleCountDto(userId, user.getUserName(), productsCount);
     }
 
     @Override
