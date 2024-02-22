@@ -18,9 +18,7 @@ public class StudentService implements IStudentService {
     IStudentRepository studentRepository;
 
     @Override
-    public void create(StudentDTO stu) {
-        studentDAO.save(stu);
-    }
+    public void create(StudentDTO stu) {studentDAO.save(stu);}
 
     @Override
     public StudentDTO read(Long id) {

@@ -1,13 +1,62 @@
 package com.meli.obtenerdiploma;
 
+import com.meli.obtenerdiploma.model.StudentDTO;
+import com.meli.obtenerdiploma.model.SubjectDTO;
+import com.meli.obtenerdiploma.repository.IStudentDAO;
+import com.meli.obtenerdiploma.service.ObtenerDiplomaService;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.when;
+
+@ExtendWith(MockitoExtension.class)
 @SpringBootTest
 class ObetenerDiplomaApplicationTests {
+	@Mock
+	IStudentDAO studentDAO;
+	@InjectMocks
+	ObtenerDiplomaService obtenerDiplomaService;
 
+	@DisplayName("Ejercicio 2 - caso avg < 9")
 	@Test
-	public void contextLoads() {
+	public void analyzeScoresLowAverageTest() {
+		//Arrange
+		Double expectAverage = 8.0;
 
+		StudentDTO student = new StudentDTO(100L,"name", "", 0.0, List.of(new SubjectDTO("Math", 6.0), new SubjectDTO("Gym", 10.0)));
+
+		when(studentDAO.findById(anyLong())).thenReturn(student);
+
+		//Act
+		StudentDTO currentStudent = obtenerDiplomaService.analyzeScores(anyLong());
+
+		//Assert
+		assertThat(currentStudent.getAverageScore()).isEqualTo(expectAverage);
+		assertThat(currentStudent.getMessage()).contains("Puedes mejorar.");
 	}
+
+	@DisplayName("Ejercicio 2 - caso avg > 9")
+	@Test
+	public void analyzeScoresHighAverageTest() {
+		//Arrange
+		Double expectAverage = 9.5;
+		StudentDTO student = new StudentDTO(100L,"name", "", 0.0, List.of(new SubjectDTO("Math", 9.0), new SubjectDTO("Gym", 10.0)));
+		when(studentDAO.findById(anyLong())).thenReturn(student);
+		//Act
+		StudentDTO currentStudent = obtenerDiplomaService.analyzeScores(anyLong());
+		//Assert
+		assertThat(currentStudent.getAverageScore()).isEqualTo(expectAverage);
+		assertThat(currentStudent.getMessage()).contains("Felicitaciones!");
+	}
+
+
 }
