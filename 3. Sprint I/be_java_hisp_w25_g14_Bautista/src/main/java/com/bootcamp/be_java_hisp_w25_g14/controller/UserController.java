@@ -45,4 +45,10 @@ public class UserController {
     public ResponseEntity<?> getUserFollowersCount(@PathVariable Integer userId) {
         return new ResponseEntity<>(this.userService.getUserFollowersCount(userId),HttpStatus.OK);
     }
+
+    @GetMapping("/{userId}/products-on-sale/count")
+    public ResponseEntity<?> getProductsOnSaleCount(@PathVariable Integer userId) {
+        return new ResponseEntity<>(this.userService.getProductsOnSaleCount(userId),HttpStatus.OK);
+    }
+
 }

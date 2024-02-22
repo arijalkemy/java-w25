@@ -1,14 +1,15 @@
 package com.bootcamp.be_java_hisp_w25_g14.service;
 
+import com.bootcamp.be_java_hisp_w25_g14.dto.ProductOnSaleCountDto;
 import com.bootcamp.be_java_hisp_w25_g14.dto.UserFollowersCountDto;
+import com.bootcamp.be_java_hisp_w25_g14.entity.Post;
 import com.bootcamp.be_java_hisp_w25_g14.entity.User;
 import com.bootcamp.be_java_hisp_w25_g14.exceptions.FollowException;
 import com.bootcamp.be_java_hisp_w25_g14.exceptions.NotFoundException;
 import com.bootcamp.be_java_hisp_w25_g14.dto.FollowedListResponseDto;
 import com.bootcamp.be_java_hisp_w25_g14.dto.UserDataDto;
-import com.bootcamp.be_java_hisp_w25_g14.entity.User;
-import com.bootcamp.be_java_hisp_w25_g14.exceptions.NotFoundException;
 import com.bootcamp.be_java_hisp_w25_g14.exceptions.NotSellerException;
+import com.bootcamp.be_java_hisp_w25_g14.repository.IPostRepo;
 import com.bootcamp.be_java_hisp_w25_g14.repository.IUserRepo;
 import com.bootcamp.be_java_hisp_w25_g14.utils.ApiMapper;
 import org.springframework.stereotype.Service;
@@ -22,19 +23,38 @@ import java.util.List;
 public class UserServiceImp implements IUserService {
 
     private IUserRepo userRepo;
+    private IPostRepo postRepo;
 
-    public UserServiceImp(IUserRepo userRepo) {
+    public UserServiceImp(IUserRepo userRepo, IPostRepo postRepo) {
+        this.postRepo = postRepo;
         this.userRepo = userRepo;
     }
 
-    public FollowedListResponseDto listSellersFollowers(int id,String order){
+    public FollowedListResponseDto listSellersFollowers(int id, String order) {
         Optional<User> userFollower = userRepo.findUserById(id);
 
         if (userFollower.isEmpty()) throw new NotFoundException("The user does not exists");
 
-        if(!userFollower.get().getIsSeller()) throw new NotSellerException("the user is not a seller");
+        if (!userFollower.get().getIsSeller()) throw new NotSellerException("the user is not a seller");
 
-        return ApiMapper.listSellersFollowers(userFollower.get(),userRepo.listSellersFollowers(id,order));
+        return ApiMapper.listSellersFollowers(userFollower.get(), userRepo.listSellersFollowers(id, order));
+    }
+
+    @Override
+    public ProductOnSaleCountDto getProductsOnSaleCount(int userId) {
+        Optional<User> optionalUser = userRepo.findUserById(userId);
+
+        if (optionalUser.isPresent()) {
+            User user = optionalUser.get();
+            if (!user.getIsSeller())
+                throw new FollowException("The user is not a seller");
+            int productsCount = (int) postRepo.getPostsById(userId).stream()
+                    .filter(post -> post.getIsOnSale() != null)
+                    .filter(Post::getIsOnSale).count();
+            return new ProductOnSaleCountDto(userId, user.getUserName(), productsCount);
+        } else {
+            throw new NotFoundException("User not found");
+        }
     }
 
     @Override
@@ -42,7 +62,8 @@ public class UserServiceImp implements IUserService {
         this.userRepo.addFollower(userId, userIdToFollow);
     }
 
-    @Override    public void removeFollow(Integer userId, Integer userIdToUnfollow) {
+    @Override
+    public void removeFollow(Integer userId, Integer userIdToUnfollow) {
         this.userRepo.removeFollow(userId, userIdToUnfollow);
     }
 
@@ -62,9 +83,8 @@ public class UserServiceImp implements IUserService {
     }
 
 
-
     @Override
-    public FollowedListResponseDto getFollowedByUser(Integer userId){
+    public FollowedListResponseDto getFollowedByUser(Integer userId) {
         List<UserDataDto> userFollowed = this.userRepo.getFollowed(userId);
         Optional<User> user = this.userRepo.findUserById(userId);
         return user.map(value -> new FollowedListResponseDto(

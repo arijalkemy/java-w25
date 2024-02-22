@@ -12,7 +12,8 @@
       "notes": "refurbished"
       },
     "category": "25",
-    "price": 5000
+    "price": 5000,
+    "isOnSale": true
 
   },
   {
@@ -28,7 +29,8 @@
       "notes": "NUEVA"
     },
     "category": "10",
-    "price": 15000
+    "price": 15000,
+    "isOnSale": true
   },{
     "postId": 3,
     "userId": 3,
@@ -42,7 +44,8 @@
       "notes": "special edition"
     },
     "category": "100",
-    "price": 1500
+    "price": 1500,
+    "isOnSale": false
   },{
   "postId": 4,
   "userId": 2,
@@ -56,7 +59,8 @@
     "notes": "Elite Alloy"
   },
   "category": "10",
-  "price": 2300
+  "price": 2300,
+  "isOnSale": true
 },{
   "postId": 5,
   "userId": 3,

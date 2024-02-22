@@ -1,11 +1,8 @@
 package com.bootcamp.be_java_hisp_w25_g14.service;
 
-import com.bootcamp.be_java_hisp_w25_g14.dto.MessageDto;
-import com.bootcamp.be_java_hisp_w25_g14.dto.PostDto;
-import com.bootcamp.be_java_hisp_w25_g14.dto.UserDataDto;
+import com.bootcamp.be_java_hisp_w25_g14.dto.*;
 import com.bootcamp.be_java_hisp_w25_g14.entity.Post;
 import com.bootcamp.be_java_hisp_w25_g14.entity.User;
-import com.bootcamp.be_java_hisp_w25_g14.dto.UserFollowedPostDto;
 import com.bootcamp.be_java_hisp_w25_g14.exceptions.NotFoundException;
 import com.bootcamp.be_java_hisp_w25_g14.exceptions.NotSellerException;
 import com.bootcamp.be_java_hisp_w25_g14.exceptions.NotValidDateException;

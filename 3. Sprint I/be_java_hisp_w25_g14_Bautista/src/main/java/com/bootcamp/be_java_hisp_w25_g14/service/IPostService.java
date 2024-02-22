@@ -11,5 +11,4 @@ public interface IPostService {
     MessageDto savePost(PostDto postDto);
     List<PostDto> getAllPosts();
     UserFollowedPostDto getFollowedPostsByUserLastTwoWeeks(Integer id, String sorted);
-
 }
