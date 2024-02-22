@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d75b3f77-2b5a-4820-8c7f-fa11d911ca9a" name="Default Changelist" comment="Spring 2 - Practica TT - Obetener Diploma" />
+    <list default="true" id="d75b3f77-2b5a-4820-8c7f-fa11d911ca9a" name="Default Changelist" comment="Spring 2 - Practica TT - Obetener Diploma">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/meli/obtenerdiploma/model/StudentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meli/obtenerdiploma/model/StudentDTO.java" afterDir="false" />
+    </list>
+    <list id="9956694a-3f33-4805-bb3d-6ce1b97a3305" name="Changes by jzapataechev" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/meli/obtenerdiploma/ObtenerDiplomaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/meli/obtenerdiploma/ObtenerDiplomaApplicationTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,7 +202,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1619721005383</updated>
-      <workItem from="1708610882408" duration="4484000" />
+      <workItem from="1708610882408" duration="5692000" />
     </task>
     <task id="LOCAL-00001" summary="Spring 2 - Practica TT - Obetener Diploma">
       <created>1619721212242</created>

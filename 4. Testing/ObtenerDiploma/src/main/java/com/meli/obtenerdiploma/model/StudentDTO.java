@@ -9,12 +9,8 @@ import java.util.List;
 
 @Getter @Setter
 public class StudentDTO {
-    @NotBlank
     String studentName;
-    @NotBlank
     String message;
-    @Min(30) @Max(115) @Positive
     Double averageScore;
-    @NotNull
     List<SubjectDTO> subjects;
 }
