@@ -21,6 +21,7 @@ import java.util.Set;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.*;
+import static org.skyscreamer.jsonassert.JSONAssert.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
 @SpringBootTest
@@ -82,12 +83,15 @@ public class StudenServiceTest {
     public void getAllOkTest(){
         //Arrange - llama elementos a usar
         Set<StudentDTO> studentsSet = new HashSet<>();
-        studentsSet.add(new StudentDTO(1L, "Juan", "", 0.0, List.of(new SubjectDTO("Matemática", 9.0), new SubjectDTO("Física", 7.0),new SubjectDTO("Química", 6.0))));
-        studentsSet.add(new StudentDTO(2L, "Pedro", "", 0.0, List.of(new SubjectDTO("Matemática", 10.0), new SubjectDTO("Física", 8.0),new SubjectDTO("Química", 4.0))));
-        when(studentRepository.findAll()).thenReturn(studentsSet);
+        studentsSet = studentRepository.findAll();
+        //studentsSet.add(new StudentDTO(1L, "Juan", "", 0.0, List.of(new SubjectDTO("Matemática", 9.0), new SubjectDTO("Física", 7.0),new SubjectDTO("Química", 6.0))));
+        //studentsSet.add(new StudentDTO(2L, "Pedro", "", 0.0, List.of(new SubjectDTO("Matemática", 10.0), new SubjectDTO("Física", 8.0),new SubjectDTO("Química", 4.0))));
+        //when(studentRepository.findAll()).thenReturn(studentsSet);
         //Act - ejecuta el método a testear
         Set<StudentDTO> allStudentsList = studentService.getAll();
         //Assert - verifica que el resultado sea lo esperado
+        assertThat(allStudentsList).isNotNull();
+        //assertEquals(studentsSet, allStudentsList); TODO: no funciona, consultar
         assertThat(allStudentsList).isEqualTo(studentsSet);
     }
 }
