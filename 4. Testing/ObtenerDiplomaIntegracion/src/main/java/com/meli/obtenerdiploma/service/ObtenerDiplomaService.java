@@ -27,7 +27,7 @@ public class ObtenerDiplomaService implements IObtenerDiplomaService {
     }
 
     private String getGreetingMessage(String studentName, Double average) {
-        return "El alumno " + studentName + " ha obtenido un promedio de " + ((average == null) ? "null" : new DecimalFormat("#0.00").format(average))
+        return "El alumno " + studentName + " ha obtenido un promedio de " + ((average == null) ? "null" : new DecimalFormat("#0.00").format(average) )
                 + ((average == null) ? "" : ((average >= 9) ? ". Felicitaciones!" : ". Puedes mejorar."));
     }
 
