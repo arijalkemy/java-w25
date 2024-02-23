@@ -1,5 +1,6 @@
 package com.meli.obtenerdiploma;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -22,17 +23,19 @@ de la capa de los controladores ObtenerDiplomaController y StudentController.
     @Autowired
     MockMvc mockMvc;
 
+    @DisplayName("analyzeScore - HAPPY PATH")
     @Test
     void analyzeScoreTestHappyPath() throws Exception{
-        MvcResult mvcResult = mockMvc.perform(get("/analyzeScores/{studentId}",2L))
+        MvcResult mvcResult = mockMvc.perform(get("/analyzeScores/{studentId}",3L))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().contentType("application/json"))
-                .andExpect(jsonPath("$.message").value("El alumno Pedro ha obtenido un promedio de 7.33. Puedes mejorar."))
+                .andExpect(jsonPath("$.message").value("El alumno Edgar ha obtenido un promedio de 8. Puedes mejorar."))
                 .andReturn();
     }
 
     @Test
+    @DisplayName("analyzeScore NotFound Path")
     void analyzeScoreTestNotFoundPath() throws Exception{
         MvcResult mvcResult = mockMvc.perform(get("/analyzeScores/{studentId}",-3L))
                 .andDo(print())
@@ -43,8 +46,9 @@ de la capa de los controladores ObtenerDiplomaController y StudentController.
     }
 
     @Test
+    @DisplayName("Analyze Score - MissMatch type" )
     void analyzeScoreTestPath() throws Exception{
-        MvcResult mvcResult = mockMvc.perform(get("/analyzeScores/{studentId}",3))
+        MvcResult mvcResult = mockMvc.perform(get("/analyzeScores/{studentId}",3.0))
                 .andDo(print())
                 .andExpect(status().is4xxClientError())
                 .andReturn();
