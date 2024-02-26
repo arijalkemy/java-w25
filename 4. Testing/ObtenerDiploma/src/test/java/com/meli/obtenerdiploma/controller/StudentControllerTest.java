@@ -1,9 +1,8 @@
-package com.meli.obtenerdiploma.unitTest.controller;
+package com.meli.obtenerdiploma.controller;
 
-import com.meli.obtenerdiploma.controller.StudentController;
 import com.meli.obtenerdiploma.model.StudentDTO;
 import com.meli.obtenerdiploma.service.IStudentService;
-import com.meli.obtenerdiploma.unitTest.util.ObjectFactory;
+import com.meli.obtenerdiploma.util.ObjectFactory;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

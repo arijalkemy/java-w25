@@ -1,4 +1,4 @@
-package com.meli.obtenerdiploma.unitTest.util;
+package com.meli.obtenerdiploma.util;
 
 import com.meli.obtenerdiploma.model.StudentDTO;
 import com.meli.obtenerdiploma.model.SubjectDTO;
@@ -21,7 +21,7 @@ public class ObjectFactory {
 
     public static StudentDTO createStudentDTOWithAverageAboveNine() {
         StudentDTO studentDTO = new StudentDTO();
-        studentDTO.setId(0L);
+        studentDTO.setId(99L);
         studentDTO.setStudentName("Juan Pérez");
         studentDTO.setSubjects(List.of(
                 new SubjectDTO("Matemáticas", 10.0),
