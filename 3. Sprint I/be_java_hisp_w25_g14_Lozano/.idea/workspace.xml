@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91b00435-feb1-456d-b934-69a186d5fd4e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../0. Modulo Git/Trabajo con branches" beforeDir="false" afterPath="$PROJECT_DIR$/../../0. Modulo Git/Trabajo con branches" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +29,6 @@
         <entry key="$PROJECT_DIR$" value="us0308" />
       </map>
     </option>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -64,7 +64,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.rmicompiler",
-    "spring.configuration.checksum": "c9ec7e4d7fa3224959efd54522e1a349"
+    "spring.configuration.checksum": "e99df6a150bbaa8105c49cdfcab01dc0"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -119,6 +119,7 @@
       <workItem from="1708453095029" duration="536000" />
       <workItem from="1708454072936" duration="433000" />
       <workItem from="1708454522147" duration="36362000" />
+      <workItem from="1708611217295" duration="8339000" />
     </task>
     <servers />
   </component>

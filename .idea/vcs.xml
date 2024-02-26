@@ -5,5 +5,6 @@
     <mapping directory="$PROJECT_DIR$/0. Modulo Git/Repositorios en Git y GitHub/lorem" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/0. Modulo Git/Trabajo con branches" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g14_Lozano" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/4. Testing/ejercicio_diplomas 2" vcs="Git" />
   </component>
 </project>
