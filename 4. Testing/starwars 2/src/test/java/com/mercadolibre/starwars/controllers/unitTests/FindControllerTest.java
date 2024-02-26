@@ -1,4 +1,4 @@
-package com.mercadolibre.starwars.controllers;
+package com.mercadolibre.starwars.controllers.unitTests;
 
 import com.mercadolibre.starwars.controller.FindController;
 import com.mercadolibre.starwars.dto.CharacterDTO;
