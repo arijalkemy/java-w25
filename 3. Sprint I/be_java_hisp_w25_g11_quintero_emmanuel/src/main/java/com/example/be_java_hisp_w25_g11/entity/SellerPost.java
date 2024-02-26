@@ -13,7 +13,27 @@ public class SellerPost {
     private Integer postId;
     private LocalDate date;
     private Product product;
-    private Integer Category;
+    private Integer category;
     private Double price;
     private Seller seller;
+    private Boolean hasPromo = false;
+    private Double discount = 0.0;
+
+    public SellerPost(
+            Integer userId,
+            Integer postId,
+            LocalDate date,
+            Product product,
+            Integer category,
+            Double price,
+            Seller seller
+    ) {
+        this.userId = userId;
+        this.postId = postId;
+        this.date = date;
+        this.product = product;
+        this.category = category;
+        this.price = price;
+        this.seller = seller;
+    }
 }
