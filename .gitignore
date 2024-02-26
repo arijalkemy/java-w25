@@ -163,3 +163,5 @@ $RECYCLE.BIN/
 
 *.DS_STORE
 node_modules/
+
+*.idea
