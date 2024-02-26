@@ -1,0 +1,92 @@
+[
+  {
+    "id": 10,
+    "studentName": "Juan",
+    "subjects": [
+      {
+        "name": "Matemática",
+        "score": 9
+      },
+      {
+        "name": "Física",
+        "score": 7
+      },
+      {
+        "name": "Química",
+        "score": 6
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "studentName": "Pedro",
+    "subjects": [
+      {
+        "name": "Matemática",
+        "score": 10
+      },
+      {
+        "name": "Física",
+        "score": 8
+      },
+      {
+        "name": "Química",
+        "score": 4
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "studentName": "Carlangas",
+    "subjects": [
+      {
+        "name": "Matemática",
+        "score": 10
+      },
+      {
+        "name": "Física",
+        "score": 8
+      },
+      {
+        "name": "Química",
+        "score": 4
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "studentName": "Luis",
+    "subjects": [
+      {
+        "name": "Matemática",
+        "score": 10
+      },
+      {
+        "name": "Física",
+        "score": 8
+      },
+      {
+        "name": "Química",
+        "score": 4
+      }
+    ]
+  },
+  {
+    "id": 250,
+    "studentName": "Pepe",
+    "subjects": [
+      {
+        "name": "Matemática",
+        "score": 10
+      },
+      {
+        "name": "Física",
+        "score": 8
+      },
+      {
+        "name": "Química",
+        "score": 4
+      }
+    ]
+  }
+]
