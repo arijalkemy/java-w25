@@ -22,7 +22,7 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 @SpringBootTest
-class ObtenerDiplomaApplicationTests {
+class ObtnerDiplomaApplicationTests {
 	@Mock
 	IStudentDAO studentDAO;
 	@InjectMocks
