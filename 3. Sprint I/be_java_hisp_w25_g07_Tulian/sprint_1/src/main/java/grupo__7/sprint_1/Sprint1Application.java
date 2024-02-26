@@ -1,4 +1,5 @@
-package grupo_7.sprint_1;
+package grupo__7.sprint_1;
+
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
