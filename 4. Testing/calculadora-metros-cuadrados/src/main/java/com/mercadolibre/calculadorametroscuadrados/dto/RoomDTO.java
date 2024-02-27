@@ -5,6 +5,12 @@ public class RoomDTO {
   private Integer width;
   private Integer length;
 
+  public RoomDTO(String name, Integer width, Integer length) {
+    this.name = name;
+    this.width = width;
+    this.length = length;
+  }
+
   public RoomDTO() {
   }
 

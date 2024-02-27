@@ -12,6 +12,19 @@ public class CharacterDTO {
   private Integer height;
   private Integer mass;
 
+  public CharacterDTO(String name, String hair_color, String skin_color, String eye_color, String birth_year, String gender, String homeworld, String species, Integer height, Integer mass) {
+    this.name = name;
+    this.hair_color = hair_color;
+    this.skin_color = skin_color;
+    this.eye_color = eye_color;
+    this.birth_year = birth_year;
+    this.gender = gender;
+    this.homeworld = homeworld;
+    this.species = species;
+    this.height = height;
+    this.mass = mass;
+  }
+
   public CharacterDTO() {
   }
 

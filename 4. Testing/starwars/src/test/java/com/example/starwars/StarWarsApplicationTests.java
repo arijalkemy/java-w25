@@ -20,6 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 class StarWarsApplicationTests {
+  //Resolución final propuesta
   @Autowired
   private MockMvc mockMvc;
 
