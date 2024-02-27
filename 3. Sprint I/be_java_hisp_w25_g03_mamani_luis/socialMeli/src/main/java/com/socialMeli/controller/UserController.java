@@ -17,7 +17,7 @@ public class UserController {
 
     @GetMapping("/users/{userId}/followers/list")
     public ResponseEntity<FollowedListDto> getVendorFollowers(@PathVariable Integer userId,
-                                                                    @RequestParam(required = false) String order) {
+                                                              @RequestParam(required = false) String order) {
         return new ResponseEntity<>(userService.getVendorFollowers(userId, order), HttpStatus.OK);
     }
 
@@ -35,7 +35,6 @@ public class UserController {
     public ResponseEntity<MessageDto> follow(@PathVariable Integer userId, @PathVariable Integer userIdToFollow) {
         return new ResponseEntity<>(userService.newFollow(userId, userIdToFollow), HttpStatus.OK);
     }
-
     @PostMapping("/users/{userId}/unfollow/{userIdToUnfollow}")
     public ResponseEntity<UserUnfollowedDto> unfollowUser(@PathVariable Integer userId, @PathVariable Integer userIdToUnfollow) {
         return ResponseEntity.ok().body(userService.unfollowUser(userId, userIdToUnfollow));

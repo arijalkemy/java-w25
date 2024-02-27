@@ -117,14 +117,14 @@ public class PostService implements IPostService {
     }
 
 
-    // Método para agregar un nuevo post en promoción
+
     @Override
     public void addPromoPost(PostDTO postDto) {
         validatePost(postDto);
-        if (postDto.isHasPromo()) { // Verifica si el post tiene promoción
+        if (postDto.isHasPromo()) {
             double discountedPrice = postDto.getPrice() - (postDto.getPrice() * postDto.getDiscount());
-            postDto.setPrice(discountedPrice); // Aplica el descuento al precio del producto
-            addPost(postDto); // Llama al método existente para agregar el post
+            postDto.setPrice(discountedPrice);
+            addPost(postDto);
         } else {
             throw new InvalidDataException("El producto no está marcado como en promoción");
         }
