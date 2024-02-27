@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.mercadolibre.calculadorametroscuadrados.dto.HouseDTO;
 import com.mercadolibre.calculadorametroscuadrados.dto.RoomDTO;
+import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -15,12 +16,12 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -31,7 +32,8 @@ class CalculateRestControllerTest {
     MockMvc mockMvc;
 
     @Test
-    void testCalculateOK() throws Exception {
+    @SneakyThrows
+    void testCalculateOK() {
         HouseDTO house = new HouseDTO(
                 "Casita MeLi",
                 "En algun lugar",
@@ -53,6 +55,8 @@ class CalculateRestControllerTest {
                 .content(requestBody))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect()
+                .andExpect(content().contentType("application/json"))
+                .andExpect(jsonPath("$.name").value("Casita MeLi"))
+                .andReturn();
     }
 }
