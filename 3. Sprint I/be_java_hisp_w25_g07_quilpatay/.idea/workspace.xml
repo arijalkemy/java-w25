@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="77bde121-38cf-4e6a-9535-1981c5bcfb73" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de sprint1/sprint_1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Copia de sprint1/sprint_1/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +89,8 @@
       <workItem from="1708528763915" duration="157000" />
       <workItem from="1708529621032" duration="291000" />
       <workItem from="1708605947612" duration="349000" />
+      <workItem from="1708970919954" duration="406000" />
+      <workItem from="1709037075126" duration="478000" />
     </task>
     <servers />
   </component>
