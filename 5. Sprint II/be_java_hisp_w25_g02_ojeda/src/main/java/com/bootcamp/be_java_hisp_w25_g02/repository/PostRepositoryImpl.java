@@ -14,9 +14,19 @@ public class PostRepositoryImpl implements IPostRepository
 
             new Post(0, 1, LocalDate.of(2000, 01, 01),
                     new Product(0, "Pelopincho", "Piletas", "XXX", "Azul", "2000 litros"), 2, 52000.0),
-            new Post(1,
-                   2, LocalDate.of(2005, 02, 10),
-                    new Product(1, "Lentes de sol", "Lentes", "Ray Ban", "Gris", "Lorem ipsum"), 3, 13500.0),
+            new Post(
+                    1,
+                   2,
+                    LocalDate.of(2005, 02, 10),
+                    new Product(
+                            1,
+                            "Lentes de sol",
+                            "Lentes",
+                            "Ray Ban",
+                            "Gris",
+                            "Lorem ipsum"),
+                    3,
+                    13500.0),
 
             new Post(3, 7, LocalDate.of(2024, 02, 17),
                     new Product(2, "Pelopincho", "Piletas", "XXX", "Azul", "2000 litros"), 2, 52000.0),
