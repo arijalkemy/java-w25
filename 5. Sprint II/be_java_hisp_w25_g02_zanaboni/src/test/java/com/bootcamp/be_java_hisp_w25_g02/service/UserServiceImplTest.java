@@ -7,6 +7,9 @@ import com.bootcamp.be_java_hisp_w25_g02.repository.IUserRepository;
 import com.bootcamp.be_java_hisp_w25_g02.util.TestUtilGenerator;
 import com.bootcamp.be_java_hisp_w25_g02.dto.response.FollowerListDTO;
 import com.bootcamp.be_java_hisp_w25_g02.dto.response.UserDTO;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -15,13 +18,20 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.web.servlet.MvcResult;
+
 import java.util.Optional;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(MockitoExtension.class)
 @SpringBootTest
@@ -318,5 +328,4 @@ class UserServiceImplTest {
         Assertions.assertThrows(BadRequestException.class,
                 ()-> userServiceImpl.getFollowersList(1, incorrectOrderString));
     }
-
 }
