@@ -10,6 +10,6 @@ import java.util.Optional;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PostPromoResponseDTO extends PostResponseDTO{
-    private Optional<Boolean> hasPromo;
-    private Optional<Double> discount;
+    private Boolean hasPromo;
+    private Double discount;
 }

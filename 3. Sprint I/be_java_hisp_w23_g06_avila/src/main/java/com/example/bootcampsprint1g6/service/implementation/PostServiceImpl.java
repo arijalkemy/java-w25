@@ -91,7 +91,7 @@ public class PostServiceImpl implements IPostService {
 
         Seller seller = (Seller) user;
         int count = seller.getPosts().stream()
-                .filter(post -> Optional.ofNullable(post.getHasPromo()).isPresent() && post.getHasPromo().map(Boolean.TRUE::equals).orElse(false))
+                .filter(Post::getHasPromo)
                 .toList().size();
         return new PostCountResponseDTO(userId, seller.getUserName(), count);
     }
@@ -110,7 +110,7 @@ public class PostServiceImpl implements IPostService {
         Seller seller = (Seller) user;
 
         List<Post> posts = seller.getPosts().stream()
-                .filter(post -> Optional.ofNullable(post.getHasPromo()).isPresent() && post.getHasPromo().map(Boolean.TRUE::equals).orElse(false))
+                .filter(Post::getHasPromo)
                 .toList();
         return new PostPromoListResponseDTO(userId, seller.getUserName(), PostMapper.getResponseInstancesPromo(posts));
     }

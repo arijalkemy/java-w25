@@ -19,6 +19,6 @@ public class Post {
     Product product;
     Integer category;
     Double price;
-    Optional<Boolean> hasPromo;
-    Optional<Double> discount;
+    Boolean hasPromo = false;
+    Double discount = 0.0;
 }

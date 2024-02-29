@@ -40,7 +40,7 @@ public class PostMapper {
         post.setPrice(request.getPrice());
         post.setProduct(ProductMapper.getEntityInstance(request.getProduct()));
         post.setCategory(request.getCategory());
-
+        post.setHasPromo(request.getHasPromo());
         Optional.ofNullable(request.getHasPromo()).ifPresent(post::setHasPromo);
         Optional.ofNullable(request.getDiscount()).ifPresent(post::setDiscount);
 //        Optional.ofNullable(request.getDiscount()).ifPresent(discount -> {
