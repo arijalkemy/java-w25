@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g01/pom.xml" />
+        <option value="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g01_Beninca/pom.xml" />
+        <option value="$PROJECT_DIR$/5. Sprint II/be_java_hisp_w25_g01/pom.xml" />
+        <option value="$PROJECT_DIR$/1. Modulo Java/imc/pom.xml" />
+        <option value="$PROJECT_DIR$/1. Modulo Java/autos/pom.xml" />
+        <option value="$PROJECT_DIR$/1. Modulo Java/dakar/pom.xml" />
+        <option value="$PROJECT_DIR$/1. Modulo Java/carreraDeLaSelva/pom.xml" />
+        <option value="$PROJECT_DIR$/1. Modulo Java/temperaturasGlobales/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="corretto-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
