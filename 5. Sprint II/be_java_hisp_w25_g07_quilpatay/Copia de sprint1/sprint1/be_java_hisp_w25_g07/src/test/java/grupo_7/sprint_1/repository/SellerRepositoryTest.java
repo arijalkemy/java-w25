@@ -2,6 +2,7 @@ package grupo_7.sprint_1.repository;
 
 import grupo_7.sprint_1.entity.Seller;
 import grupo_7.sprint_1.exception.NotFoundException;
+import grupo_7.sprint_1.utils.MockBuilder;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -86,8 +87,7 @@ public class SellerRepositoryTest {
 
     @Test
     public void updateSellerTest() {
-        Seller sellerToUpdate = new Seller();
-        sellerToUpdate.setUserId(1);
+        Seller sellerToUpdate = MockBuilder.mockSeller();
 
         doNothing().when(sellerRepository).updateSeller(sellerToUpdate);
         sellerRepository.updateSeller(sellerToUpdate);

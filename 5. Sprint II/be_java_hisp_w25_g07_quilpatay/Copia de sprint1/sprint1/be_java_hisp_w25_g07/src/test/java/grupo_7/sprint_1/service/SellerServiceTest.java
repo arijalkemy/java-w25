@@ -154,7 +154,6 @@ public class SellerServiceTest {
     }
 
     @Test
-    @DisplayName("T-0009: Agregar una publicación - Éxito")
     public void addPostSuccess() {
         Seller seller = MockBuilder.mockSeller();
         AddPostDto paramPost = MockBuilder.mockPostDto();
@@ -172,7 +171,6 @@ public class SellerServiceTest {
     }
 
     @Test
-    @DisplayName("T-0009: Agregar una publicación - Excepción")
     public void addPostException() {
         Integer sellerId = 1;
         AddPostDto newPost = MockBuilder.mockPostDto();
@@ -184,7 +182,6 @@ public class SellerServiceTest {
     }
 
     @Test
-    @DisplayName("T-0010: Obtener lista de seguidores ordenada alfabéticamente - Éxito")
     public void getListOrderedAlphabeticallySuccess() {
         Integer userId = 1;
         String order = "name_asc";
@@ -201,7 +198,6 @@ public class SellerServiceTest {
     }
 
     @Test
-    @DisplayName("T-0010: Obtener lista de seguidores ordenada alfabéticamente - Excepción")
     public void getListOrderedAlphabeticallyException() {
         Integer userId = 1;
         String order = "name_asc";

@@ -44,7 +44,6 @@ public class BuyerRepositoryTest {
     @Test
     public void updateBuyerTest() {
         Buyer buyerToUpdate = MockBuilder.mockBuyer();
-        buyerToUpdate.setUserId(1);
 
         doNothing().when(buyerRepository).updateBuyer(buyerToUpdate);
         buyerRepository.updateBuyer(buyerToUpdate);
