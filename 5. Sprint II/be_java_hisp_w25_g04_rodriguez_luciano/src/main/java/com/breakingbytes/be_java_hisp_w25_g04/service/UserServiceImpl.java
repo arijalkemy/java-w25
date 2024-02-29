@@ -91,7 +91,6 @@ public class UserServiceImpl implements IUserService {
     public UserFollowersDTO getUsersFollowersOf(Integer userId, String order) {
         Optional<Seller> user = this.sellerRepository.findById(userId);
         if(user.isEmpty()) throw new NotFoundException("El ID del vendedor es invalido");
-
         List<User> userFollowes = user.get().getFollowers();
         if(userFollowes.isEmpty()) throw new NotFoundException("El usuario con id: " + user.get().getId() + " no tiene seguidores");
         List<UserDTO> followers = userFollowes.stream().map(u -> mapper.map(u, UserDTO.class)).toList();
