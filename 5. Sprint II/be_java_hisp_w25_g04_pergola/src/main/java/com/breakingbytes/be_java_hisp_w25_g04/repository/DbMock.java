@@ -48,11 +48,11 @@ public class DbMock {
         Product p5 = new Product(5, "Backpack", "Accessories", "JanSport", "Gray", "Multiple compartments");
         this.listOfProduct = new ArrayList<>(List.of(p1, p2, p3, p4, p5));
 
-        Post post1 = new Post(3, LocalDate.of(2024,2,20), p2, 100, 1500.0);
-        Post post2 = new Post(3, LocalDate.of(2023, 2,20), p3, 100, 1000.0);
-        Post post3 = new Post(4, LocalDate.of(2021,10,19), p1, 200, 240.0);
-        Post post4 = new Post(3, LocalDate.of(2019,2,21), p4, 100, 20.0);
-        Post post5 = new Post(3, LocalDate.of(2019,2,26), p5, 300, 30.0);
+        Post post1 = new Post(3, LocalDate.now(), p2, 100, 1500.0);
+        Post post2 = new Post(3, LocalDate.now().minusDays(1), p3, 100, 1000.0);
+        Post post3 = new Post(4, LocalDate.now().minusWeeks(1), p1, 200, 240.0);
+        Post post4 = new Post(3, LocalDate.now().minusWeeks(5), p4, 100, 20.0);
+        Post post5 = new Post(3, LocalDate.now().minusDays(10), p5, 300, 30.0);
         this.listOfPost = new ArrayList<>(List.of(post1, post2, post3, post4, post5));
 
         juan.getPosts().add(post1);
