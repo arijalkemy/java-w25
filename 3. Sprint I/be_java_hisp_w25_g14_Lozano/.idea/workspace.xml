@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91b00435-feb1-456d-b934-69a186d5fd4e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../0. Modulo Git/Trabajo con branches" beforeDir="false" afterPath="$PROJECT_DIR$/../../0. Modulo Git/Trabajo con branches" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -58,7 +56,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/ylozanorivas/Documents/bootcamp/AlkemysGit/java-w25/3. Sprint I/be_java_hisp_w25_g14_Lozano/src/main/resources",
+    "last_opened_file_path": "/Users/ylozanorivas/Documents/bootcamp/AlkemysGit/java-w25/3. Sprint I/be_java_hisp_w25_g14_Lozano/src/test/resources",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
@@ -69,6 +67,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -82,7 +81,39 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BeJavaHispW25G14Application">
+  <component name="RunManager" selected="JUnit.PostControllerTest.promoListTest">
+    <configuration name="PostControllerTest.promoListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14_Lozano.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14_Lozano.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14_Lozano.controller.PostControllerTest" />
+      <option name="METHOD_NAME" value="promoListTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostController.promoListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14_Lozano.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14_Lozano.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14_Lozano.controller.PostController" />
+      <option name="METHOD_NAME" value="promoListTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BeJavaHispW25G14Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="be_java_hisp_w25_g14_Lozano" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.bootcamp.be_java_hisp_w25_g14.BeJavaHispW25G14Application" />
@@ -97,6 +128,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PostControllerTest.promoListTest" />
+        <item itemvalue="JUnit.PostController.promoListTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -120,6 +157,7 @@
       <workItem from="1708454072936" duration="433000" />
       <workItem from="1708454522147" duration="36362000" />
       <workItem from="1708611217295" duration="8339000" />
+      <workItem from="1709037420914" duration="6090000" />
     </task>
     <servers />
   </component>
