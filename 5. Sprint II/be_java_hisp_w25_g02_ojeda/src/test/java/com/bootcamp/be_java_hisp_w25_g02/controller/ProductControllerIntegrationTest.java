@@ -1,12 +1,10 @@
 package com.bootcamp.be_java_hisp_w25_g02.controller;
 
 import com.bootcamp.be_java_hisp_w25_g02.dto.request.PostDTO;
-import com.bootcamp.be_java_hisp_w25_g02.dto.response.FollowerListDTO;
-import com.bootcamp.be_java_hisp_w25_g02.dto.response.GenericResponseDTO;
-import com.bootcamp.be_java_hisp_w25_g02.dto.response.ProductDTO;
-import com.bootcamp.be_java_hisp_w25_g02.dto.response.UserDTO;
+import com.bootcamp.be_java_hisp_w25_g02.dto.response.*;
 import com.bootcamp.be_java_hisp_w25_g02.entity.Post;
 import com.bootcamp.be_java_hisp_w25_g02.entity.Product;
+import com.bootcamp.be_java_hisp_w25_g02.util.TestUtilGenerator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -23,6 +21,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -82,6 +81,42 @@ public class ProductControllerIntegrationTest {
 
         // Assert
         Assertions.assertEquals(expectedResult, myResult.getResponse().getContentAsString());
+    }
+
+    @Test
+    public void getFollowedPostsNotFound() throws Exception {
+
+        // Assert
+
+        Integer userId = 7;
+        String order = "date_asc";
+
+        ObjectWriter objectWriter = new ObjectMapper()
+                .registerModule(new JavaTimeModule())
+                .configure(SerializationFeature.WRAP_ROOT_VALUE, false).writer();
+
+        String jsonPayload = objectWriter.writeValueAsString(new GenericResponseDTO(order));
+
+        GenericResponseDTO myResponseDTO = new GenericResponseDTO("No hay post de los usuarios seguidos en las ultimas 2 semanas");
+
+        String expectedResult = objectWriter.writeValueAsString(myResponseDTO);
+
+        // Act
+
+        MvcResult myResult = mockMvc.perform(get("/products/followed/{userId}/list", userId)
+                        .param("order", order)
+                        .contentType(MediaType.APPLICATION_JSON )
+                        .content(jsonPayload))
+
+                .andDo(print())
+                .andExpect(status().isNotFound())
+                .andExpect(content().contentType("application/json"))
+                .andReturn();
+
+        // Assert
+        Assertions.assertEquals(expectedResult, myResult.getResponse().getContentAsString());
+
+
     }
 
 }
