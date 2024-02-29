@@ -1,0 +1,61 @@
+[{
+  "user_id": 21,
+  "post_id": 1,
+  "date": "2024-01-01",
+  "product": {
+    "product_id": 1,
+    "product_name": "Silla Gamer",
+    "type": "Gamer",
+    "brand": "Racer",
+    "color": "Red & Black",
+    "notes": "Special Edition"
+  },
+  "category": 100,
+  "price": 1500.50
+},
+{
+  "user_id": 22,
+  "post_id": 2,
+  "date": "2024-01-02",
+  "product": {
+    "product_id": 1,
+    "product_name": "Silla Gamer",
+    "type": "Gamer",
+    "brand": "Racer",
+    "color": "Red & Black",
+    "notes": "Special Edition"
+  },
+  "category": 100,
+  "price": 1500.50
+},
+  {
+    "user_id": 22,
+    "post_id": 3,
+    "date": "2024-02-12",
+    "product": {
+      "product_id": 1,
+      "product_name": "Silla Gamer",
+      "type": "Gamer",
+      "brand": "Racer",
+      "color": "Red & Black",
+      "notes": "Special Edition"
+    },
+    "category": 100,
+    "price": 1500.50
+  },
+  {
+  "user_id": 21,
+  "post_id": 10,
+  "date": "2024-02-10",
+  "product": {
+    "product_id": 1,
+    "product_name": "Silla Gamer",
+    "type": "Gamer",
+    "brand": "Racer",
+    "color": "Red & Black",
+    "notes": "Special Edition"
+  },
+  "category": 100,
+  "price": 1500.50
+}
+]
