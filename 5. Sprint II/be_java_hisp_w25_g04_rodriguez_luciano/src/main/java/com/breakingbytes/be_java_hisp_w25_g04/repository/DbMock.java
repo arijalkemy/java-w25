@@ -18,7 +18,9 @@ public class DbMock {
     private DbMock(){
         this.listOfUsers = new ArrayList<>();
         User pepe = new User(); // ID: 1
+        pepe.setId(1);
         User carlos = new User(); // ID: 2
+        carlos.setId(2);
         pepe.setName("Pepe");
         this.listOfUsers.add(pepe);
         carlos.setName("Carlos");
@@ -27,10 +29,12 @@ public class DbMock {
         this.listOfSellers = new ArrayList<>();
         Seller juan = new Seller(); // ID: 3
         juan.setName("Juan");
+        juan.setId(3);
         pepe.addFollowing(juan);
         juan.addFollower(pepe);
         this.listOfSellers.add(juan);
         Seller robert = new Seller(); // ID: 4
+        robert.setId(4);
         robert.setName("Robert");
         robert.addFollower(carlos);
         carlos.addFollowing(robert)

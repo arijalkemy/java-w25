@@ -25,49 +25,42 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-public class FactoryUsers { // No es la base de dato
+public class FactoryUsers { // llamar a los metodos estaticos
 
-    private static FactoryUsers factoryUsers;
-    private List<User> listOfUsers;
-    private List<Seller> listOfSellers;
-    private List<Post> listOfPost;
-    private List<Product> listOfProduct;
-    private ModelMapper mapper;
-    private FactoryUsers(){
-        this.listOfUsers = new ArrayList<>();
-        User pepe = new User(); // ID: 1
-        User carlos = new User(); // ID: 2
+    public static ModelMapper mapper = new ModelMapper();
+
+    public static List<User> getUsers() {
+        User pepe = new User();
+        pepe.setId(1);
+        User carlos = new User();
+        carlos.setId(2);
         pepe.setName("Pepe");
-        this.listOfUsers.add(pepe);
         carlos.setName("Carlos");
-        this.listOfUsers.add(carlos);
 
-        this.listOfSellers = new ArrayList<>();
-        Seller juan = new Seller(); // ID: 3
+        Seller juan = new Seller();
+        juan.setId(3);
         juan.setName("Juan");
         pepe.addFollowing(juan);
         juan.addFollower(pepe);
-        this.listOfSellers.add(juan);
+
         Seller robert = new Seller(); // ID: 4
+        robert.setId(4);
         robert.setName("Robert");
         robert.addFollower(carlos);
-        carlos.addFollowing(robert)
-        ;
-        this.listOfSellers.add(robert);
+        carlos.addFollowing(robert);
+
 
         Product p1 = new Product(1, "Laptop", "Electronics", "Dell", "Silver", "Thin and lightweight design");
         Product p2 = new Product(2, "AAAAAAAA", "Electronics", "Samsung", "Black", "5G capable");
         Product p3 = new Product(3, "Running Shoes", "Apparel", "Nike", "Blue", "Breathable mesh upper");
         Product p4 = new Product(4, "Headphones", "Electronics", "Sony", "Red", "Noise-canceling feature");
         Product p5 = new Product(5, "Backpack", "Accessories", "JanSport", "Gray", "Multiple compartments");
-        this.listOfProduct = new ArrayList<>(List.of(p1, p2, p3, p4, p5));
 
         Post post1 = new Post(3, LocalDate.of(2024,2,20), p2, 100, 1500.0);
         Post post2 = new Post(3, LocalDate.of(2023, 2,20), p3, 100, 1000.0);
         Post post3 = new Post(4, LocalDate.of(2021,10,19), p1, 200, 240.0);
         Post post4 = new Post(3, LocalDate.of(2019,2,21), p4, 100, 20.0);
         Post post5 = new Post(3, LocalDate.of(2019,2,26), p5, 300, 30.0);
-        this.listOfPost = new ArrayList<>(List.of(post1, post2, post3, post4, post5));
 
         juan.getPosts().add(post1);
         juan.getPosts().add(post2);
@@ -75,72 +68,108 @@ public class FactoryUsers { // No es la base de dato
         juan.getPosts().add(post4);
         juan.getPosts().add(post5);
 
-        mapper = new ModelMapper();
+        return new ArrayList<>(List.of(pepe, carlos, juan, robert));
     }
 
-    public List<User> getListOfUsers() { return listOfUsers; }
+    public static User createUserComplete(Integer id){
+        User pepe = new User(); // ID: 1
+        pepe.setName("Pepe");
+        pepe.setId(id);
 
-    public User getUserByName(String name) {
-        Optional<User> user = this.listOfUsers.stream().filter(u -> u.getName().equals(name)).findFirst();
-        if(user.isEmpty()) throw new NotFoundException("No se encontró el usuario");
-        return user.get();
+        Seller juan = new Seller();
+        juan.setId(3);
+        juan.setName("Juan");
+        pepe.addFollowing(juan);
+
+        Product p1 = new Product(1, "Laptop", "Electronics", "Dell", "Silver", "Thin and lightweight design");
+        Product p2 = new Product(2, "AAAAAAAA", "Electronics", "Samsung", "Black", "5G capable");
+
+        Post post1 = new Post(3, LocalDate.now().minusDays(10), p1, 100, 1500.0);
+        Post post2 = new Post(3, LocalDate.now().minusDays(4), p2, 100, 1000.0);
+
+        juan.getPosts().add(post1);
+        juan.getPosts().add(post2);
+        return pepe;
     }
 
-    public Seller getSellerByName(String name) {
-        Optional<Seller> user = this.listOfSellers.stream().filter(u -> u.getName().equals(name)).findFirst();
-        if(user.isEmpty()) throw new NotFoundException("No se encontró el usuario");
-        return user.get();
+    public static List<Seller> getSellers(){
+        User pepe = new User(); // ID: 1
+        User carlos = new User(); // ID: 2
+        pepe.setName("Pepe");
+        carlos.setName("Carlos");
+
+        Seller juan = new Seller(); // ID: 3
+        juan.setName("Juan");
+        pepe.addFollowing(juan);
+        juan.addFollower(pepe);
+
+        Seller robert = new Seller(); // ID: 4
+        robert.setName("Robert");
+        robert.addFollower(carlos);
+        carlos.addFollowing(robert);
+
+
+        Product p1 = new Product(1, "Laptop", "Electronics", "Dell", "Silver", "Thin and lightweight design");
+        Product p2 = new Product(2, "AAAAAAAA", "Electronics", "Samsung", "Black", "5G capable");
+        Product p3 = new Product(3, "Running Shoes", "Apparel", "Nike", "Blue", "Breathable mesh upper");
+        Product p4 = new Product(4, "Headphones", "Electronics", "Sony", "Red", "Noise-canceling feature");
+        Product p5 = new Product(5, "Backpack", "Accessories", "JanSport", "Gray", "Multiple compartments");
+
+        Post post1 = new Post(3, LocalDate.of(2024,2,20), p2, 100, 1500.0);
+        Post post2 = new Post(3, LocalDate.of(2023, 2,20), p3, 100, 1000.0);
+        Post post3 = new Post(4, LocalDate.of(2021,10,19), p1, 200, 240.0);
+        Post post4 = new Post(3, LocalDate.of(2019,2,21), p4, 100, 20.0);
+        Post post5 = new Post(3, LocalDate.of(2019,2,26), p5, 300, 30.0);
+
+        juan.getPosts().add(post1);
+        juan.getPosts().add(post2);
+        robert.getPosts().add(post3);
+        juan.getPosts().add(post4);
+        juan.getPosts().add(post5);
+
+        return new ArrayList<>(List.of(juan, robert));
     }
 
-    public Seller createSeller(Integer id){
+
+
+    public static Seller createSeller(Integer id){
         Seller seller = new Seller();
         seller.setId(id);
         seller.setName("Matias");
         return seller;
     }
-    public User createUser(Integer id){
+    public static User createUser(Integer id){
         User user = new User();
         user.setId(id);
         user.setName("Gabriel");
         return user;
     }
 
-    public User getUserById(Integer id) {
-        Optional<User> user = this.listOfUsers.stream().filter(u -> u.getId().equals(id)).findFirst();
-        if(user.isEmpty()) throw new NotFoundException("No se encontró el usuario");
-        return user.get();
+    public static List<Post> getPostsDateDesc(){
+        return getPostsWithoutOrder().stream().sorted(Comparator.comparing(Post::getDate).reversed()).toList();
     }
 
-    public User getSellerById(Integer id) {
-        Optional<Seller> seller = this.listOfSellers.stream().filter(u -> u.getId().equals(id)).findFirst();
-        if(seller.isEmpty()) throw new NotFoundException("No se encontró al vendedor");
-        return seller.get();
-    }
-
-    public static FactoryUsers getInstance(){
-        if(factoryUsers == null) factoryUsers = new FactoryUsers();
-        return factoryUsers;
-    }
-
-    public List<Post> getPostsDateDesc(){
-        return this.getPostsWithoutOrder().stream().sorted(Comparator.comparing(Post::getDate).reversed()).toList();
-    }
-
-    public List<Post> getPostsWithoutOrder(){
-        Post p1 = new Post(3, LocalDate.now().minusWeeks(1), new Product(), 100, 1500.0);
+    public static List<Post> getPostsWithoutOrder(){
+        Post p1 = new Post(3, LocalDate.now().minusWeeks(1),
+                new Product(1, "Laptop", "Electronics", "Dell", "Silver", "Thin and lightweight design"),
+                100, 1500.0);
         p1.setPostId(2);
-        Post p2 = new Post(3, LocalDate.now(), new Product(), 100, 1500.0);
+        Post p2 = new Post(3, LocalDate.now(),
+                new Product(2, "Camera", "Electronics", "Samsung", "Black", "5G capable"),
+                100, 1500.0);
         p2.setPostId(3);
-        Post p3 = new Post(3, LocalDate.now().minusDays(5), new Product(), 100, 1500.0);
+        Post p3 = new Post(3, LocalDate.now().minusDays(5),
+                new Product(3, "Running Shoes", "Apparel", "Nike", "Blue", "Breathable mesh upper"),
+                100, 1500.0);
         p3.setPostId(1);
         return new ArrayList<>(List.of(p1,p2,p3));
     }
 
-    public List<Post> getPostsDateAsc(){
-        return this.getPostsWithoutOrder().stream().sorted(Comparator.comparing(Post::getDate)).toList();
+    public static List<Post> getPostsDateAsc(){
+        return getPostsWithoutOrder().stream().sorted(Comparator.comparing(Post::getDate)).toList();
     }
 
-    public List<ResponsePostDTO> convertPostToResponsePostDTO(List<Post> posts){
+    public static List<ResponsePostDTO> convertPostToResponsePostDTO(List<Post> posts){
         return posts.stream().map(p ->
                 new ResponsePostDTO(p.getUserId(),
                         p.getPostId(),
@@ -150,8 +179,8 @@ public class FactoryUsers { // No es la base de dato
                         p.getPrice())).toList();
     }
 
-    public LastPostsDTO generateLastPostDto() {
-        User pepe = listOfUsers.get(0);
+    public static LastPostsDTO generateLastPostDto(User user) {
+        User pepe = user;
         List<ResponsePostDTO> postsDto = new ArrayList<>();
         for (Seller s : pepe.getFollowing()) {
             for (Post p : s.getPosts()) {
@@ -193,6 +222,16 @@ public class FactoryUsers { // No es la base de dato
         );
     }
 
+    public static User getUserOne() {
+        User user = new User();
+        user.setId(1);
+        user.setName("Pepe");
+        user.setFollowing(List.of(
+                new Seller(3, "Juan", null,null, null)
+        ));
+        return user;
+    }
+
     public static User getUserTwo(){
         User user = new User();
         user.setId(2);
@@ -205,6 +244,15 @@ public class FactoryUsers { // No es la base de dato
         return user;
     }
 
+    public static Seller getSellerFour(){
+        Seller seller = new Seller();
+        seller.setId(4);
+        seller.setName("Robert");
+        seller.setFollowers(List.of(
+                new User(1,"Pepe",null)
+        ));
+        return seller;
+    }
         
 
 }

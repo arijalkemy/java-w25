@@ -2,8 +2,10 @@ package com.breakingbytes.be_java_hisp_w25_g04.dto.request;
 
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Product;
 import com.breakingbytes.be_java_hisp_w25_g04.utils.LocalDateDeserializer;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,10 +28,11 @@ public class RequestPostDTO {
     @Positive(message = "El id debe ser mayor a cero.")
     Integer userId;
     @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonFormat(pattern="dd-MM-yyyy")
     @NotNull(message = "La fecha no puede estar vacía.")
     LocalDate date;
     @Valid
-    ProductDTO product; // TODO: Agregar validaciones
+    ProductDTO product;
     @NotNull(message = "El campo no puede estar vacío.")
     Integer category;
     @NotNull(message = "El campo no puede estar vacío.")

@@ -18,11 +18,8 @@ public class User {
     String name;
     @JsonManagedReference
     List<Seller> following;
-    static int count = 1;
     public User(){
-        this.id = count;
         this.following = new ArrayList<>();
-        count++;
     }
 
     public void addFollowing(Seller seller){

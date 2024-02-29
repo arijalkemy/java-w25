@@ -2,6 +2,7 @@ package com.breakingbytes.be_java_hisp_w25_g04.service;
 
 
 import com.breakingbytes.be_java_hisp_w25_g04.dto.response.LastPostsDTO;
+import com.breakingbytes.be_java_hisp_w25_g04.dto.response.ResponsePostDTO;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Post;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Product;
 import com.breakingbytes.be_java_hisp_w25_g04.entity.Seller;
@@ -20,6 +21,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -46,14 +48,14 @@ public class SellerServiceTests {
         user.setId(1);
         user.setFollowing(List.of(new Seller()));
         user.getFollowing().get(0).setId(3);
-        user.getFollowing().get(0).setPosts(FactoryUsers.getInstance().getPostsWithoutOrder());
+        user.getFollowing().get(0).setPosts(FactoryUsers.getPostsWithoutOrder());
         //Se agrega Post con fecha vieja mayor a 2 semanas
         Post p1 = new Post(3, LocalDate.now().minusWeeks(6), new Product(), 100, 2000.0);
         p1.setPostId(5);
         user.getFollowing().get(0).getPosts().add(p1);
         LastPostsDTO expected = new LastPostsDTO(user.getId(),
-                FactoryUsers.getInstance().convertPostToResponsePostDTO(
-                        FactoryUsers.getInstance().getPostsWithoutOrder()));
+                FactoryUsers.convertPostToResponsePostDTO(
+                        FactoryUsers.getPostsWithoutOrder()));
         //ACT
         when(userRepository.findById(user.getId())).thenReturn(Optional.of(user));
         LastPostsDTO result = sellerService.getPostOfVendorsFollowedByUser(user.getId(),"");
@@ -70,9 +72,9 @@ public class SellerServiceTests {
         user.setId(1);
         user.setFollowing(List.of(new Seller()));
         user.getFollowing().get(0).setId(3);
-        user.getFollowing().get(0).setPosts(FactoryUsers.getInstance().getPostsWithoutOrder());
+        user.getFollowing().get(0).setPosts(FactoryUsers.getPostsWithoutOrder());
         LastPostsDTO expected = new LastPostsDTO(user.getId(),
-                FactoryUsers.getInstance().convertPostToResponsePostDTO(FactoryUsers.getInstance().getPostsDateAsc()));
+                FactoryUsers.convertPostToResponsePostDTO(FactoryUsers.getPostsDateAsc()));
         //ACT
         when(userRepository.findById(user.getId())).thenReturn(Optional.of(user));
         LastPostsDTO result = sellerService.getPostOfVendorsFollowedByUser(user.getId(), orderParam);
@@ -90,10 +92,10 @@ public class SellerServiceTests {
         user.setId(1);
         user.setFollowing(List.of(new Seller()));
         user.getFollowing().get(0).setId(3);
-        user.getFollowing().get(0).setPosts(FactoryUsers.getInstance().getPostsWithoutOrder());
+        user.getFollowing().get(0).setPosts(FactoryUsers.getPostsWithoutOrder());
         when(userRepository.findById(user.getId())).thenReturn(Optional.of(user));
         LastPostsDTO expected = new LastPostsDTO(user.getId(),
-        FactoryUsers.getInstance().convertPostToResponsePostDTO(FactoryUsers.getInstance().getPostsDateDesc()));
+        FactoryUsers.convertPostToResponsePostDTO(FactoryUsers.getPostsDateDesc()));
         //ACT
         LastPostsDTO result = sellerService.getPostOfVendorsFollowedByUser(user.getId(), orderParam);
         //ASSERT
@@ -117,7 +119,7 @@ public class SellerServiceTests {
     public void orderByDateExceptionTest() {
         Integer userId = 1;
         String  order = "date_";
-        User userExpected = FactoryUsers.getInstance().getUserById(userId);
+        User userExpected = FactoryUsers.getUsers().get(0);
         when(userRepository.findById(userId)).thenReturn(Optional.of(userExpected));
         assertThrows(BadRequestException.class, () -> sellerService.getPostOfVendorsFollowedByUser(userId, order));
     }
@@ -127,9 +129,10 @@ public class SellerServiceTests {
     public void orderByDateDescOkTest() {
         Integer userId = 1;
         String order = "date_desc";
-        User userExpected = FactoryUsers.getInstance().getUserById(userId);
+        User userExpected = FactoryUsers.createUserComplete(userId);
 
-        LastPostsDTO expectedLastPostsDTO = FactoryUsers.getInstance().generateLastPostDto();
+        LastPostsDTO expectedLastPostsDTO = FactoryUsers.generateLastPostDto(userExpected);
+        expectedLastPostsDTO.getPosts().sort(Comparator.comparing(ResponsePostDTO::getDate).reversed());
 
         when(userRepository.findById(userId)).thenReturn(Optional.of(userExpected));
 
@@ -143,11 +146,11 @@ public class SellerServiceTests {
     @Test
     @DisplayName("T-0005: Correcto ordenamiento ascendente")
     public void orderByDateAscOkTest() {
+
         Integer userId = 1;
         String order = "date_asc";
-        User userExpected = FactoryUsers.getInstance().getUserById(userId);
-
-        LastPostsDTO expectedLastPostsDTO = FactoryUsers.getInstance().generateLastPostDto();
+        User userExpected = FactoryUsers.createUserComplete(userId);
+        LastPostsDTO expectedLastPostsDTO = FactoryUsers.generateLastPostDto(userExpected);
 
         when(userRepository.findById(userId)).thenReturn(Optional.of(userExpected));
 
@@ -165,8 +168,8 @@ public class SellerServiceTests {
         //Arrange
         Integer sellerID = 1;
         Integer userID = 2;
-        Seller seller = FactoryUsers.getInstance().createSeller(sellerID);
-        User user = FactoryUsers.getInstance().createUser(userID);
+        Seller seller = FactoryUsers.createSeller(sellerID);
+        User user = FactoryUsers.createUser(userID);
         seller.addFollower(user);
 
         when(sellerRepository.findById(sellerID)).thenReturn(Optional.of(seller));
@@ -205,7 +208,7 @@ public class SellerServiceTests {
         //Arrange
         Integer sellerID = 1;
         Integer userID = 2;
-        Seller seller = FactoryUsers.getInstance().createSeller(sellerID);
+        Seller seller = FactoryUsers.createSeller(sellerID);
 
         when(sellerRepository.findById(sellerID)).thenReturn(Optional.of(seller));
 
@@ -215,7 +218,7 @@ public class SellerServiceTests {
                 () -> sellerService.quitFollower(sellerID, userID)
         );
 
-        assertEquals("El usuario no se encuentra entre los seguidores.", exception.getMessage());
+       assertEquals("El usuario no se encuentra entre los seguidores.", exception.getMessage());
     }
 
 }

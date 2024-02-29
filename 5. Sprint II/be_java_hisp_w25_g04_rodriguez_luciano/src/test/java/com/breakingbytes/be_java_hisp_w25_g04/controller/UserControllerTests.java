@@ -40,7 +40,7 @@ public class UserControllerTests {
         // Arrange
         Integer idParam = 4;
         String orderParam = "";
-        User user = FactoryUsers.getInstance().getSellerByName("Robert");
+        User user = FactoryUsers.getUsers().get(0);
         ModelMapper mapper = new ModelMapper();
         mapper.getConfiguration()
                 .setFieldMatchingEnabled(true)
@@ -62,7 +62,7 @@ public class UserControllerTests {
         // Arrange
         Integer idParam = 1;
         String orderParam = "";
-        User user = FactoryUsers.getInstance().getUserByName("Pepe");
+        User user = FactoryUsers.getUserOne();
         ModelMapper mapper = new ModelMapper();
         mapper.getConfiguration()
                 .setFieldMatchingEnabled(true)
@@ -85,12 +85,12 @@ public class UserControllerTests {
         Integer userID = 2;
 
         //Act
-        userController.unfollowUser(userID, userToUnfollowID);
+        ResponseEntity<?> response = userController.unfollowUser(userID, userToUnfollowID);
 
         //Assert
         verify(sellerService, atLeastOnce()).quitFollower(userToUnfollowID, userID);
         verify(userService, atLeastOnce()).unfollowUser(userID, userToUnfollowID);
-        // TODO: Corregir y agregar response entity assert.equals
+        assertEquals(response.getStatusCode(), HttpStatus.OK);
     }
   
     @Test

@@ -43,7 +43,7 @@ public class UserServiceTests {
         // Arrange
         String orderParam = "name_asc";
         Integer idUserParam = 4;
-        Seller userExpected = FactoryUsers.getInstance().getSellerByName("Robert");
+        Seller userExpected = FactoryUsers.getSellers().get(1);
         // Act
         when(sellerRepository.findById(idUserParam)).thenReturn(Optional.of(userExpected));
         UserFollowersDTO response = userService.getUsersFollowersOf(idUserParam, orderParam);
@@ -57,7 +57,7 @@ public class UserServiceTests {
         // Arrange
         String orderParam = "name_desc";
         Integer idUserParam = 4;
-        Seller userExpected = FactoryUsers.getInstance().getSellerByName("Robert");
+        Seller userExpected = FactoryUsers.getSellers().get(1);
         // Act
         when(sellerRepository.findById(idUserParam)).thenReturn(Optional.of(userExpected));
         UserFollowersDTO response = userService.getUsersFollowersOf(idUserParam, orderParam);
@@ -71,7 +71,7 @@ public class UserServiceTests {
         // Arrange
         String orderParam = "";
         Integer idUserParam = 4;
-        Seller userExpected = FactoryUsers.getInstance().getSellerByName("Robert");
+        Seller userExpected = FactoryUsers.getSellers().get(1);
         // Act
         when(sellerRepository.findById(idUserParam)).thenReturn(Optional.of(userExpected));
         UserFollowersDTO response = userService.getUsersFollowersOf(idUserParam, orderParam);
@@ -85,7 +85,7 @@ public class UserServiceTests {
         // Arrange
         String orderParam = "ascendente";
         Integer idUserParam = 4;
-        Seller userExpected = FactoryUsers.getInstance().getSellerByName("Robert");
+        Seller userExpected = FactoryUsers.getSellers().get(1);
         // Act
         when(sellerRepository.findById(idUserParam)).thenReturn(Optional.of(userExpected));
         // Assert
@@ -100,7 +100,7 @@ public class UserServiceTests {
         // Arrange
         String orderParam = "name_asc";
         Integer idUserParam = 1;
-        User userExpected = FactoryUsers.getInstance().getUserByName("Pepe");
+        User userExpected = FactoryUsers.getUsers().get(0);
         // Act
         when(userRepository.findById(idUserParam)).thenReturn(Optional.of(userExpected));
         when(sellerRepository.findById(idUserParam)).thenReturn(Optional.empty());
@@ -115,7 +115,7 @@ public class UserServiceTests {
         // Arrange
         String orderParam = "name_desc";
         Integer idUserParam = 1;
-        User userExpected = FactoryUsers.getInstance().getUserByName("Pepe");
+        User userExpected = FactoryUsers.getUsers().get(0);
         // Act
         when(userRepository.findById(idUserParam)).thenReturn(Optional.of(userExpected));
         when(sellerRepository.findById(idUserParam)).thenReturn(Optional.empty());
@@ -130,7 +130,7 @@ public class UserServiceTests {
         // Arrange
         String orderParam = "";
         Integer idUserParam = 1;
-        User userExpected = FactoryUsers.getInstance().getUserByName("Pepe");
+        User userExpected = FactoryUsers.getUsers().get(0);
         // Act
         when(userRepository.findById(idUserParam)).thenReturn(Optional.of(userExpected));
         when(sellerRepository.findById(idUserParam)).thenReturn(Optional.empty());
@@ -145,7 +145,7 @@ public class UserServiceTests {
         // Arrange
         String orderParam = "cualquier_cosa";
         Integer idUserParam = 1;
-        User userExpected = FactoryUsers.getInstance().getUserByName("Pepe");
+        User userExpected = FactoryUsers.getUsers().get(0);
         // Act
         when(userRepository.findById(idUserParam)).thenReturn(Optional.of(userExpected));
         when(sellerRepository.findById(idUserParam)).thenReturn(Optional.empty());
@@ -160,8 +160,8 @@ public class UserServiceTests {
         //Arrange
         Integer userID = 1;
         Integer userToUnfollow = 2;
-        User user = FactoryUsers.getInstance().createUser(userID);
-        Seller sellerToUnfollow = FactoryUsers.getInstance().createSeller(userToUnfollow);
+        User user = FactoryUsers.createUser(userID);
+        Seller sellerToUnfollow = FactoryUsers.createSeller(userToUnfollow);
         user.addFollowing(sellerToUnfollow);
         ResponseDTO expected = new ResponseDTO("El usuario " + user.getName() + " ha dejado de seguir a: " + sellerToUnfollow.getName());
 
@@ -185,7 +185,6 @@ public class UserServiceTests {
         //Arrange
         Integer userID = 1;
         Integer userToUnfollowID = 2;
-
         when(userRepository.findById(userID)).thenReturn(Optional.empty());
 
         //Act & Assert
@@ -204,7 +203,7 @@ public class UserServiceTests {
         //Arrange
         Integer userID = 1;
         Integer userToUnfollowID = 2;
-        User user = FactoryUsers.getInstance().createUser(userID);
+        User user = FactoryUsers.createUser(userID);
 
         when(userRepository.findById(userID)).thenReturn(Optional.of(user));
 
@@ -222,11 +221,11 @@ public class UserServiceTests {
     public void followTestOk() {
         // arrange
         Integer userId = 1;
-        User user = FactoryUsers.getInstance().getUserById(userId);
+        User user = FactoryUsers.getUsers().get(1);
         Optional<User> expectedUser = Optional.of(user);
 
         Integer userIdToFollow = 4;
-        Seller seller = (Seller) FactoryUsers.getInstance().getSellerById(userIdToFollow);
+        Seller seller = FactoryUsers.getSellerFour();
         Optional<Seller> expectedSeller = Optional.of(seller);
 
         when(userRepository.findById(userId)).thenReturn(expectedUser);
@@ -248,7 +247,7 @@ public class UserServiceTests {
     public void followTestUserNotFound() {
         // arrange
         Integer userId = 1;
-        User user = FactoryUsers.getInstance().getUserById(userId);
+        User user = FactoryUsers.getUserOne();
         Optional<User> expectedUser = Optional.of(user);
 
         when(userRepository.findById(userId)).thenReturn(expectedUser);
@@ -284,11 +283,12 @@ public class UserServiceTests {
     public void followTestSellerBAdRequest() {
         // arrange
         Integer userId = 1;
-        User user = FactoryUsers.getInstance().getUserById(userId);
+        User user = FactoryUsers.getUserOne();
         Optional<User> expectedUser = Optional.of(user);
 
         Integer userIdToFollow = 3;
-        Seller seller = (Seller) FactoryUsers.getInstance().getSellerById(userIdToFollow);
+        Seller seller = FactoryUsers.getSellerThree();
+        seller.setFollowers(List.of(user));
         Optional<Seller> expectedSeller = Optional.of(seller);
 
         when(userRepository.findById(userId)).thenReturn(expectedUser);

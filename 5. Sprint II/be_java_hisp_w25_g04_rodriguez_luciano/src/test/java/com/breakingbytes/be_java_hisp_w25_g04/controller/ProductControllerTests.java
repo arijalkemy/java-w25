@@ -1,6 +1,7 @@
 package com.breakingbytes.be_java_hisp_w25_g04.controller;
 
 import com.breakingbytes.be_java_hisp_w25_g04.dto.response.LastPostsDTO;
+import com.breakingbytes.be_java_hisp_w25_g04.entity.User;
 import com.breakingbytes.be_java_hisp_w25_g04.service.ISellerService;
 import com.breakingbytes.be_java_hisp_w25_g04.utils.FactoryUsers;
 import org.junit.jupiter.api.DisplayName;
@@ -30,7 +31,8 @@ public class ProductControllerTests {
     public void orderByDateAscOkTest() {
         Integer userId = 1;
         String order = "date_asc";
-        LastPostsDTO lastPostsDTO = FactoryUsers.getInstance().generateLastPostDto();
+        User user = FactoryUsers.createUserComplete(userId);
+        LastPostsDTO lastPostsDTO = FactoryUsers.generateLastPostDto(user);
 
         ResponseEntity<LastPostsDTO> expectedResponse = new ResponseEntity<>(lastPostsDTO, HttpStatus.OK);
 
@@ -48,7 +50,9 @@ public class ProductControllerTests {
     public void orderByDateDescOkTest() {
         Integer userId = 1;
         String order = "date_desc";
-        LastPostsDTO lastPostsDTO = FactoryUsers.getInstance().generateLastPostDto();
+        User user = FactoryUsers.createUserComplete(userId);
+
+        LastPostsDTO lastPostsDTO = FactoryUsers.generateLastPostDto(user);
 
         ResponseEntity<LastPostsDTO> expectedResponse = new ResponseEntity<>(lastPostsDTO, HttpStatus.OK);
 
