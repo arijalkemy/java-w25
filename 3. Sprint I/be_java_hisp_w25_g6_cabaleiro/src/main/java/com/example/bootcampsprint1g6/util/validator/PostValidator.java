@@ -1,6 +1,7 @@
 package com.example.bootcampsprint1g6.util.validator;
 
 import com.example.bootcampsprint1g6.dto.request.PostRequestDTO;
+import com.example.bootcampsprint1g6.dto.request.PromoPostRequestDTO;
 import com.example.bootcampsprint1g6.util.DateFormatter;
 
 import java.time.LocalDate;
@@ -14,14 +15,14 @@ public class PostValidator {
                 request.getPrice() != null &&
                 ProductValidator.validateProductDTO(request.getProduct());
     }
-    public static boolean validatePromoRequestDTO (PostRequestDTO request){
+    public static boolean validatePromoRequestDTO (PromoPostRequestDTO request){
         return request.getUserId() != null &&
                 request.getCategory() != null &&
                 (DateFormatter.parseDateString(request.getDate()).isBefore(LocalDate.now()) ||
                         DateFormatter.parseDateString(request.getDate()).isEqual(LocalDate.now()) ) &&
                 request.getPrice() != null &&
                 ProductValidator.validateProductDTO(request.getProduct()) &&
-                request.getDiscount().isPresent() &&
-                ( request.getHasPromo().isPresent() )? request.getHasPromo().get() == true : false;
+                request.getDiscount() > 0 &&
+                request.getHasPromo() == true;
     }
 }

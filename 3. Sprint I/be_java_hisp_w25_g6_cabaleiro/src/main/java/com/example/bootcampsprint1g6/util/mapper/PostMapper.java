@@ -1,6 +1,7 @@
 package com.example.bootcampsprint1g6.util.mapper;
 
 import com.example.bootcampsprint1g6.dto.request.PostRequestDTO;
+import com.example.bootcampsprint1g6.dto.request.PromoPostRequestDTO;
 import com.example.bootcampsprint1g6.dto.response.PostResponseDTO;
 import com.example.bootcampsprint1g6.entity.Post;
 import com.example.bootcampsprint1g6.entity.Promo;
@@ -42,6 +43,18 @@ public class PostMapper {
 
     public static Post getEntityInstance(PostRequestDTO request, Seller seller) {
         LocalDate localDate = DateFormatter.parseDateString(request.getDate());
+        return Post.builder()
+                .seller(seller)
+                .price(request.getPrice())
+                .product(ProductMapper.getEntityInstance(request.getProduct()))
+                .date(localDate)
+                .category(request.getCategory())
+                .promo(Optional.empty())
+                .build();
+    }
+
+    public static Post getEntityInstanceWithPromo(PromoPostRequestDTO request, Seller seller) {
+        LocalDate localDate = DateFormatter.parseDateString(request.getDate());
         Post post = Post.builder()
                 .seller(seller)
                 .price(request.getPrice())
@@ -50,7 +63,7 @@ public class PostMapper {
                 .category(request.getCategory())
                 .build();
         Optional.ofNullable(request.getDiscount()).ifPresent(discount -> {
-            post.setPromo(Optional.of(new Promo(discount.get())));
+            post.setPromo(Optional.of(new Promo(discount)));
         });
         return post;
     }

@@ -5,17 +5,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.Optional;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class PostRequestDTO {
-
+public class PromoPostRequestDTO {
     @JsonProperty("user_id")
     Integer userId;
     String date;
     ProductDTO product;
     Integer category;
     Double price;
+    @JsonProperty("has_promo")
+    Boolean hasPromo;
+    Double discount;
 }

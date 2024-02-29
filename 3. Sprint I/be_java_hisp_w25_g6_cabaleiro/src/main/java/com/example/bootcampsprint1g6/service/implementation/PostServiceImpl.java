@@ -3,6 +3,7 @@ package com.example.bootcampsprint1g6.service.implementation;
 import com.example.bootcampsprint1g6.dto.GenericResponseDTO;
 import com.example.bootcampsprint1g6.dto.PostListDTO;
 import com.example.bootcampsprint1g6.dto.request.PostRequestDTO;
+import com.example.bootcampsprint1g6.dto.request.PromoPostRequestDTO;
 import com.example.bootcampsprint1g6.dto.response.PostResponseDTO;
 import com.example.bootcampsprint1g6.exception.BadRequestException;
 import com.example.bootcampsprint1g6.exception.NotFoundException;
@@ -45,20 +46,19 @@ public class PostServiceImpl implements IPostService {
     }
 
     @Override
-    public PostResponseDTO createPromoPost(PostRequestDTO request){
+    public PostResponseDTO createPromoPost(PromoPostRequestDTO request){
 
        if (!PostValidator.validatePromoRequestDTO(request))
             throw new BadRequestException("Datos incorrectos en la solicitud de un post con promo");
 
         Seller seller = findSellerById(request.getUserId());
-        Post postToCreate = PostMapper.getEntityInstance(request, seller);
+        Post postToCreate = PostMapper.getEntityInstanceWithPromo(request, seller);
         Post postCreated = postRepository.save(postToCreate);
         userRepository.addPostToUser(postCreated);
         return PostMapper.getResponseInstance(postCreated);
     }
     @Override
     public PostResponseDTO createPost(PostRequestDTO request){
-
         if (!PostValidator.validateRequestDTO(request))
             throw new BadRequestException("Datos incorrectos en la solicitud");
         Seller seller = findSellerById(request.getUserId());

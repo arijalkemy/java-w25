@@ -3,6 +3,7 @@ package com.example.bootcampsprint1g6.controller;
 import com.example.bootcampsprint1g6.dto.GenericResponseDTO;
 import com.example.bootcampsprint1g6.dto.PostListDTO;
 import com.example.bootcampsprint1g6.dto.request.PostRequestDTO;
+import com.example.bootcampsprint1g6.dto.request.PromoPostRequestDTO;
 import com.example.bootcampsprint1g6.dto.response.PostResponseDTO;
 import com.example.bootcampsprint1g6.service.IPostService;
 import com.example.bootcampsprint1g6.service.implementation.PostServiceImpl;
@@ -27,7 +28,7 @@ public class PostController {
     }
 
     @PostMapping("/promo-post")
-    public ResponseEntity<PostResponseDTO> createPromoPost(@RequestBody PostRequestDTO request){
+    public ResponseEntity<PostResponseDTO> createPromoPost(@RequestBody PromoPostRequestDTO request){
         return ResponseEntity.ok(postService.createPromoPost(request));
     }
 
