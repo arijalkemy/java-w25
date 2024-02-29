@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Homero Simpson",
+    "followed": [6, 7, 8]
+  },
+  {
+    "id": 2,
+    "name": "Jack Sparrow",
+    "followed": [6, 9, 8]
+  },
+  {
+    "id": 3,
+    "name": "Mario Bross",
+    "followed": [6, 8]
+  },
+  {
+    "id": 4,
+    "name": "Bender Rodriguez",
+    "followed": [6, 9]
+  },
+  {
+    "id": 5,
+    "name": "Sheldon Cooper",
+    "followed": []
+  }
+]
