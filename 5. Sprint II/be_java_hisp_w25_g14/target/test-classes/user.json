@@ -1,0 +1,46 @@
+[
+  {
+    "userId": 1,
+    "userName": "edgar",
+    "isSeller": true,
+    "followed": [2,3],
+    "followers": [2,4]
+  },
+  {
+  "userId": 2,
+  "userName": "jac",
+  "isSeller": true,
+  "followed": [1],
+  "followers": [1,5]
+  },
+  {
+    "userId": 3,
+    "userName": "hector",
+    "isSeller": true,
+    "followed": [],
+    "followers": [1,4,5]
+  },
+  {
+    "userId": 4,
+    "userName": "rosa",
+    "isSeller": false,
+    "followed": [1,3],
+    "followers": []
+  },
+  {
+    "userId": 5,
+    "userName": "cristina",
+    "isSeller": false,
+    "followed": [2,3],
+    "followers": []
+  },
+  {
+    "userId": 6,
+    "userName": "alex",
+    "isSeller": false,
+    "followed": [],
+    "followers": []
+  }
+
+]
+

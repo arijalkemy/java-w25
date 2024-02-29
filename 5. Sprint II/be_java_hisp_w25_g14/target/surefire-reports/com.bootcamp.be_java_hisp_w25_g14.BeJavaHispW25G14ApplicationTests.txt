@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.bootcamp.be_java_hisp_w25_g14.BeJavaHispW25G14ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.915 s -- in com.bootcamp.be_java_hisp_w25_g14.BeJavaHispW25G14ApplicationTests
