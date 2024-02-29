@@ -11,20 +11,15 @@ import java.util.*;
 public class PostRepositoryImpl implements IPostRepository
 {
     List<Post> postList = new ArrayList<>(List.of(
-
             new Post(0, 1, LocalDate.of(2000, 01, 01),
                     new Product(0, "Pelopincho", "Piletas", "XXX", "Azul", "2000 litros"), 2, 52000.0),
-            new Post(1,
-                   2, LocalDate.of(2005, 02, 10),
+            new Post(1, 2, LocalDate.of(2005, 02, 10),
                     new Product(1, "Lentes de sol", "Lentes", "Ray Ban", "Gris", "Lorem ipsum"), 3, 13500.0),
-
             new Post(3, 7, LocalDate.of(2024, 02, 17),
                     new Product(2, "Pelopincho", "Piletas", "XXX", "Azul", "2000 litros"), 2, 52000.0),
-            new Post(4,
-                   7, LocalDate.of(2024, 02, 19),
+            new Post(4, 7, LocalDate.of(2024, 02, 19),
                     new Product(3, "Lentes de sol", "Lentes", "Ray Ban", "Gris", "Lorem ipsum"), 3, 13500.0),
             new Post(5, 9, LocalDate.of(2024, 02, 18),
-
                     new Product(4, "Mouse gamer", "Informática", "Logitech", "Gris", "Lorem ipsum"), 4, 7500.0)
             ));
 
