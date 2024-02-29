@@ -96,7 +96,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.sprint_1 in be_java_hisp_w25_g07">
+  <component name="RunManager" selected="JUnit.grupo_7.sprint_1 in be_java_hisp_w25_g07">
     <configuration name="All in be_java_hisp_w25_g07" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="be_java_hisp_w25_g07" />
       <option name="PACKAGE_NAME" value="" />
@@ -174,10 +174,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.grupo_7.sprint_1 in be_java_hisp_w25_g07" />
         <item itemvalue="JUnit.sprint_1 in be_java_hisp_w25_g07" />
         <item itemvalue="JUnit.java in be_java_hisp_w25_g07" />
         <item itemvalue="JUnit.All in be_java_hisp_w25_g07" />
-        <item itemvalue="JUnit.grupo_7.sprint_1 in be_java_hisp_w25_g07" />
         <item itemvalue="JUnit.SellerControllerTest.addPostCorrectIT" />
       </list>
     </recent_temporary>
