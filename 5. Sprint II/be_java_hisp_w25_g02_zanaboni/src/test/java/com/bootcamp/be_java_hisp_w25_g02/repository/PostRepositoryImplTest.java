@@ -1,5 +1,6 @@
 package com.bootcamp.be_java_hisp_w25_g02.repository;
 import com.bootcamp.be_java_hisp_w25_g02.entity.Post;
+import com.bootcamp.be_java_hisp_w25_g02.entity.Product;
 import com.bootcamp.be_java_hisp_w25_g02.util.TestUtilGenerator;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,7 +9,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.CollectionUtils;
-import java.util.List;
+
+import java.time.LocalDate;
+import java.util.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class PostRepositoryImplTest {
@@ -37,5 +42,4 @@ class PostRepositoryImplTest {
         assertTrue(CollectionUtils.containsInstance( posts, postOfThirteendaysAgo));
         assertFalse(CollectionUtils.containsInstance( posts, postOfFifteenDaysAgo));
     }
-
 }
