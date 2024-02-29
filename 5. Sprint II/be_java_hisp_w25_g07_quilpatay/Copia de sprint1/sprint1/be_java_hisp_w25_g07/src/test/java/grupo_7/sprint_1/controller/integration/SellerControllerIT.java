@@ -13,9 +13,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+import static org.hamcrest.Matchers.hasSize;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -41,11 +46,18 @@ public class SellerControllerIT {
         AddPostDto addPostDto = MockBuilder.mockPostDto();
         String payloadJson = writer.writeValueAsString(addPostDto);
 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        String expectedDate = LocalDate.now().minusDays(2).format(formatter);
+
         mockMvc.perform(post("/sellers/products/post")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(payloadJson))
                 .andDo(print())
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.date").value(expectedDate))
+                .andExpect(jsonPath("$.product.product_id").value(addPostDto.product().productId()))
+                .andExpect(jsonPath("$.category").value(1))
+                .andExpect(jsonPath("$.price").value(100.0));
     }
 
     @Test
@@ -56,7 +68,10 @@ public class SellerControllerIT {
         mockMvc.perform(get("/sellers/users/" + userId + "/followers/count")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.userId").value(1))
+                .andExpect(jsonPath("$.userName").value("Seller_1"))
+                .andExpect(jsonPath("$.followerCount").value(3));
     }
 
     @Test
@@ -68,7 +83,10 @@ public class SellerControllerIT {
         mockMvc.perform(get("/sellers/users/" + userId + "/followers/list?order=" + order)
                         .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.sellerId").value(1))
+                .andExpect(jsonPath("$.sellerUserName").value("Seller_1"))
+                .andExpect(jsonPath("$.buyers.length()").value(3));
     }
 
     @Test
@@ -80,7 +98,8 @@ public class SellerControllerIT {
         mockMvc.perform(get("/sellers/products/followed/" + userId + "/list?order=" + order)
                         .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(0)));
     }
 
 }
