@@ -2,6 +2,7 @@ package com.bootcamp.be_java_hisp_w25_g02.controller;
 
 import com.bootcamp.be_java_hisp_w25_g02.dto.request.PostDTO;
 import com.bootcamp.be_java_hisp_w25_g02.dto.response.FollowerListDTO;
+import com.bootcamp.be_java_hisp_w25_g02.dto.response.GenericResponseDTO;
 import com.bootcamp.be_java_hisp_w25_g02.dto.response.ProductDTO;
 import com.bootcamp.be_java_hisp_w25_g02.dto.response.UserDTO;
 import com.bootcamp.be_java_hisp_w25_g02.entity.Post;
@@ -65,7 +66,9 @@ public class ProductControllerIntegrationTest {
 
         String jsonPayload = objectWriter.writeValueAsString(post);
 
-        String expectedResult = objectWriter.writeValueAsString("Post creado con exito con el id 56");
+        GenericResponseDTO myResponse = new GenericResponseDTO("Post creado con exito con el id: 5");
+
+        String expectedResult = objectWriter.writeValueAsString(myResponse);
 
         // Act
 
@@ -74,11 +77,11 @@ public class ProductControllerIntegrationTest {
                         .content(jsonPayload))
                 .andDo(print())
                 .andExpect(status().isOk())
-                // .andExpect(content().contentType("application/json"))
+                .andExpect(content().contentType("application/json"))
                 .andReturn();
 
         // Assert
-        // Assertions.assertEquals(expectedResult, myResult.getResponse().getContentAsString(StandardCharsets.UTF_8));
+        Assertions.assertEquals(expectedResult, myResult.getResponse().getContentAsString());
     }
 
 }
