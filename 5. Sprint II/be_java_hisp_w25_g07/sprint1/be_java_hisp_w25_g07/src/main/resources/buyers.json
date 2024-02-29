@@ -1,0 +1,152 @@
+[
+  {
+    "userId": 11,
+    "userName": "Buyer_1",
+    "followed": [
+      {
+        "userId": 1,
+        "userName": "Seller_1"
+      }
+    ]
+  },
+  {
+    "userId": 12,
+    "userName": "Buyer_2",
+    "followed": [
+      {
+        "userId": 1,
+        "userName": "Seller_1"
+      }
+    ]
+  },
+  {
+    "userId": 13,
+    "userName": "Buyer_3",
+    "followed": [
+      {
+        "userId": 1,
+        "userName": "Seller_1"
+      }
+    ]
+  },
+  {
+    "userId": 21,
+    "userName": "Buyer_4",
+    "followed": [
+      {
+        "userId": 2,
+        "userName": "Seller_2"
+      }
+    ]
+  },
+  {
+    "userId": 22,
+    "userName": "Buyer_5",
+    "followed": [
+      {
+        "userId": 2,
+        "userName": "Seller_2"
+      }
+    ]
+  },
+  {
+    "userId": 23,
+    "userName": "Buyer_6",
+    "followed": [
+      {
+        "userId": 2,
+        "userName": "Seller_2"
+      }
+    ]
+  },
+  {
+    "userId": 31,
+    "userName": "Buyer_7",
+    "followed": [
+      {
+        "userId": 3,
+        "userName": "Seller_3"
+      }
+    ]
+  },
+  {
+    "userId": 32,
+    "userName": "Buyer_8",
+    "followed": [
+      {
+        "userId": 3,
+        "userName": "Seller_3"
+      }
+    ]
+  },
+  {
+    "userId": 33,
+    "userName": "Buyer_9",
+    "followed": [
+      {
+        "userId": 3,
+        "userName": "Seller_3"
+      }
+    ]
+  },
+  {
+    "userId": 41,
+    "userName": "Buyer_10",
+    "followed": [
+      {
+        "userId": 4,
+        "userName": "Seller_4"
+      }
+    ]
+  },
+  {
+    "userId": 42,
+    "userName": "Buyer_11",
+    "followed": [
+      {
+        "userId": 4,
+        "userName": "Seller_4"
+      }
+    ]
+  },
+  {
+    "userId": 43,
+    "userName": "Buyer_12",
+    "followed": [
+      {
+        "userId": 4,
+        "userName": "Seller_4"
+      }
+    ]
+  },
+  {
+    "userId": 51,
+    "userName": "Buyer_13",
+    "followed": [
+      {
+        "userId": 5,
+        "userName": "Seller_5"
+      }
+    ]
+  },
+  {
+    "userId": 52,
+    "userName": "Buyer_14",
+    "followed": [
+      {
+        "userId": 5,
+        "userName": "Seller_5"
+      }
+    ]
+  },
+  {
+    "userId": 53,
+    "userName": "Buyer_15",
+    "followed": [
+      {
+        "userId": 5,
+        "userName": "Seller_5"
+      }
+    ]
+  }
+]
