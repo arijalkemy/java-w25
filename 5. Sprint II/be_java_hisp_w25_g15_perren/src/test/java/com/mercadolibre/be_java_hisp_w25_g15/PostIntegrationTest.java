@@ -37,12 +37,13 @@ public class PostIntegrationTest {
     void createPostOK() throws Exception{
 
         ProductDto productDto = new ProductDto(1, "Leche","Lacteo", "Milkaut", "Blanco", "");
-        PostDto postDto = new PostDto(1,5,"15-02-2024", productDto, 1,15.0);
-        String expected = writer.writeValueAsString(postDto);
-        mockMvc.perform(post("/products/post").contentType(MediaType.APPLICATION_JSON).content(expected))
+        PostDto postDto = new PostDto(1,19,"15-02-2024", productDto, 1,15.0);
+        String postDtoJson = writer.writeValueAsString(postDto);
+        mockMvc.perform(post("/products/post").contentType(MediaType.APPLICATION_JSON).content(postDtoJson))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().contentType("application/json"))
+                //.andExpect(content().json(postDtoJson)) al correr todos los test puede tomar un id diferente y fallar, por eso omito este chequeo
                 .andReturn();
 
     }
