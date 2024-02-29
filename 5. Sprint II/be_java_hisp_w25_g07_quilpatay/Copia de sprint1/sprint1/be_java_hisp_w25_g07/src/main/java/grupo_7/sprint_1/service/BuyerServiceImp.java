@@ -54,7 +54,7 @@ public class BuyerServiceImp implements IBuyerService {
         if (buyer == null) {
             throw new NotFoundException("el id ingresado no corresponde a ningun comprador");
         }
-        if (order != "name_asc" && order != "name_desc"){
+        if (order != "name_asc" && order != "name_desc") {
             throw new BadRequestException("No se ha ingresado una opción de ordenamiento válida");
         }
         if (order.equals("name_asc")) {
@@ -72,7 +72,7 @@ public class BuyerServiceImp implements IBuyerService {
     public MessageDto unfollowSeller(int idUser, int userIdToUnfollow) {
         Buyer buyerFolloweds = buyerRepository.findBuyerById(idUser);
 
-        if(buyerFolloweds == null) {
+        if (buyerFolloweds == null) {
             throw new NotFoundException("No se encuentra el id del comprador");
         }
 

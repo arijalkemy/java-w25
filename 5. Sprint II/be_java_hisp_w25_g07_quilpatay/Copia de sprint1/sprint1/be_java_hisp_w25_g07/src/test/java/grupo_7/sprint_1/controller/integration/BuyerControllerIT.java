@@ -3,8 +3,6 @@ package grupo_7.sprint_1.controller.integration;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import grupo_7.sprint_1.dtos.AddPostDto;
-import grupo_7.sprint_1.utils.MockBuilder;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class SellerControllerIT {
+public class BuyerControllerIT {
 
     @Autowired
     MockMvc mockMvc;
@@ -36,48 +34,33 @@ public class SellerControllerIT {
     }
 
     @Test
-    void addPostCorrectIT() throws Exception {
-
-        AddPostDto addPostDto = MockBuilder.mockPostDto();
-        String payloadJson = writer.writeValueAsString(addPostDto);
-
-        mockMvc.perform(post("/sellers/products/post")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(payloadJson))
-                .andDo(print())
-                .andExpect(status().isOk());
-    }
-
-    @Test
-    void getFollowersCountCorrectIT() throws Exception {
-
-        int userId = 1;
-
-        mockMvc.perform(get("/sellers/users/" + userId + "/followers/count")
+    void followSellerCorrectIT() throws Exception {
+        Integer userId = 11;
+        Integer sellerId = 4;
+        mockMvc.perform(post("/buyers/users/" + userId + "/follow/" + sellerId)
                         .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isOk());
     }
 
     @Test
-    void getFollowersListCorrectIT() throws Exception {
-
-        Integer userId = 1;
+    void getFollowedListCorrectIT() throws Exception {
+        Integer userId = 11;
         String order = "name_asc";
 
-        mockMvc.perform(get("/sellers/users/" + userId + "/followers/list?order=" + order)
-                        .contentType(MediaType.APPLICATION_JSON))
+        mockMvc.perform(get("/buyers/users/" + userId + "/followed/list")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .param("order", order))
                 .andDo(print())
                 .andExpect(status().isOk());
     }
 
     @Test
-    void getRecentPostsFromFollowedSellersCorrectIT() throws Exception {
-
+    void unfollowSellerCorrectIT() throws Exception {
         Integer userId = 11;
-        String order = "date_asc";
+        Integer sellerId = 1;
 
-        mockMvc.perform(get("/sellers/products/followed/" + userId + "/list?order=" + order)
+        mockMvc.perform(post("/buyers/users/" + userId + "/unfollow/" + sellerId)
                         .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isOk());

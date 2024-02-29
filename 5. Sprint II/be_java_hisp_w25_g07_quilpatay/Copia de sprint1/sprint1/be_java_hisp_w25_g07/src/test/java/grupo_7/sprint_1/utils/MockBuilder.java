@@ -27,6 +27,17 @@ public class MockBuilder {
         return sellers;
     }
 
+    public static List<SellerDTO> mockSellersDtos() {
+
+        List<SellerDTO> sellers = new ArrayList<>();
+        SellerDTO seller = new SellerDTO();
+
+        seller.setUserId(1);
+        seller.setUserName("Seller_1");
+        seller.setFollowerCount(3);
+        sellers.add(seller);
+        return sellers;
+    }
 
     public static Buyer mockBuyer() {
 
@@ -103,16 +114,6 @@ public class MockBuilder {
         );
     }
 
-    public static AddPostDto mockPostDto() {
-        return new AddPostDto(
-                1,
-                LocalDate.now().minusDays(2),
-                mockProductDto(999),
-                1,
-                100.0
-        );
-    }
-
     public static List<PostDto> mockPostDtosPlusDays() {
         return List.of(
                 new PostDto(mockProductDto(1), 1, 100.0, LocalDate.now().minusDays(20)),
@@ -132,4 +133,55 @@ public class MockBuilder {
         );
     }
 
+    public static SellerFollowersListDto mockSellerFollowersList() {
+        return new SellerFollowersListDto(
+                1,
+                "Seller_1",
+                List.of(
+                        new BuyerDtoRequisito3(
+                                11,
+                                "Buyer_11"
+                        )
+                )
+        );
+    }
+
+    public static AddPostDto mockPostDto() {
+        return new AddPostDto(
+                1,
+                LocalDate.now().minusDays(2),
+                mockProductDto(999),
+                1,
+                100.0
+        );
+    }
+
+    public static PostDto mockPostDtoResponse() {
+        return new PostDto(
+                mockProductDto(999),
+                1,
+                100.0,
+                LocalDate.now().minusDays(2)
+        );
+    }
+
+    public static Post mockPost() {
+        return new Post(
+                mockProduct(999),
+                1,
+                100.0,
+                LocalDate.now().minusDays(2)
+        );
+    }
+
+    private static Product mockProduct(int id) {
+        return new Product(
+                id,
+                null,
+                null,
+                null,
+                null,
+                null
+        );
+    }
 }

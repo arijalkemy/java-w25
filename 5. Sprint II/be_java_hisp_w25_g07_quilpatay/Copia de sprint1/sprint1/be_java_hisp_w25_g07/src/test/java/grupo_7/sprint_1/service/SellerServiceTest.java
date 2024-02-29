@@ -1,10 +1,14 @@
 package grupo_7.sprint_1.service;
 
+import grupo_7.sprint_1.dtos.AddPostDto;
 import grupo_7.sprint_1.dtos.PostDto;
 import grupo_7.sprint_1.dtos.SellerDTO;
+import grupo_7.sprint_1.dtos.SellerFollowersListDto;
 import grupo_7.sprint_1.entity.Buyer;
+import grupo_7.sprint_1.entity.Post;
 import grupo_7.sprint_1.entity.Seller;
 import grupo_7.sprint_1.exception.BadRequestException;
+import grupo_7.sprint_1.exception.NotFoundException;
 import grupo_7.sprint_1.repository.BuyerRepositoryImp;
 import grupo_7.sprint_1.repository.SellerRepositoryImp;
 import grupo_7.sprint_1.utils.MockBuilder;
@@ -17,6 +21,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.testng.Assert;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -146,5 +151,63 @@ public class SellerServiceTest {
             }
             lastDate = post.getDate();
         }
+    }
+
+    @Test
+    @DisplayName("T-0009: Agregar una publicación - Éxito")
+    public void addPostSuccess() {
+        Seller seller = MockBuilder.mockSeller();
+        AddPostDto paramPost = MockBuilder.mockPostDto();
+        PostDto expectedPost = MockBuilder.mockPostDtoResponse();
+        Post post = MockBuilder.mockPost();
+
+        List<Post> posts = new ArrayList<>(seller.getPosts());
+        posts.add(post);
+        seller.setPosts(posts);
+
+        when(sellerRepository.findById(seller.getUserId())).thenReturn(Optional.of(seller));
+        PostDto currentPost = sellerServiceImp.addPost(seller.getUserId(), paramPost);
+
+        assertEquals(expectedPost, currentPost);
+    }
+
+    @Test
+    @DisplayName("T-0009: Agregar una publicación - Excepción")
+    public void addPostException() {
+        Integer sellerId = 1;
+        AddPostDto newPost = MockBuilder.mockPostDto();
+        Seller seller = MockBuilder.mockSeller();
+
+        when(sellerRepository.findById(sellerId)).thenReturn(Optional.empty());
+
+        assertThrows(NotFoundException.class, () -> sellerServiceImp.addPost(sellerId, newPost));
+    }
+
+    @Test
+    @DisplayName("T-0010: Obtener lista de seguidores ordenada alfabéticamente - Éxito")
+    public void getListOrderedAlphabeticallySuccess() {
+        Integer userId = 1;
+        String order = "name_asc";
+        Seller seller = MockBuilder.mockSeller();
+        seller.setUserName("Seller_1");
+        seller.setFollowers(List.of(new Buyer(11, "Buyer_11")));
+        SellerFollowersListDto expected = MockBuilder.mockSellerFollowersList();
+
+        when(sellerRepository.findById(userId)).thenReturn(Optional.of(seller));
+
+        SellerFollowersListDto result = sellerServiceImp.getListOrderedAlphabetically(userId, order);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    @DisplayName("T-0010: Obtener lista de seguidores ordenada alfabéticamente - Excepción")
+    public void getListOrderedAlphabeticallyException() {
+        Integer userId = 1;
+        String order = "name_asc";
+
+        when(sellerRepository.findById(userId)).thenReturn(Optional.empty());
+
+        assertThrows(NotFoundException.class, () -> sellerServiceImp.getListOrderedAlphabetically(userId, order));
     }
 }

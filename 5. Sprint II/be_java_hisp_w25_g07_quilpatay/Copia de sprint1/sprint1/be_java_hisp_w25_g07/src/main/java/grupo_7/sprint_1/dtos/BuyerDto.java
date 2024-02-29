@@ -10,7 +10,7 @@ public record BuyerDto(
         @NotNull(message = "El  id no puede estar vacío.")
         @Positive(message = "El id debe ser mayor a cero")
         int userId,
-        @Max(value = 15,message = "El nombre no puede tener mas de 15 caracteres")
+        @Max(value = 15, message = "El nombre no puede tener mas de 15 caracteres")
         String userName,
         List<SellerListDto> sellerList
 ) {

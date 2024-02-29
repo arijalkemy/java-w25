@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
@@ -82,5 +82,16 @@ public class SellerRepositoryTest {
         List<Seller> currentSellers = sellerRepository.getAllSellers();
 
         assertNotEquals(expectedSellers, currentSellers);
+    }
+
+    @Test
+    public void updateSellerTest() {
+        Seller sellerToUpdate = new Seller();
+        sellerToUpdate.setUserId(1);
+
+        doNothing().when(sellerRepository).updateSeller(sellerToUpdate);
+        sellerRepository.updateSeller(sellerToUpdate);
+
+        verify(sellerRepository, times(1)).updateSeller(sellerToUpdate);
     }
 }

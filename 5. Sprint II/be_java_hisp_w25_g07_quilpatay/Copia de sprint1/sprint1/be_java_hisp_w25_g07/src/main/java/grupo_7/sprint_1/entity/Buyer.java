@@ -23,4 +23,8 @@ public class Buyer extends User {
         super(userId, userName);
         this.followed = followed;
     }
+
+    public Buyer(Integer userId, String userName) {
+        super(userId, userName);
+    }
 }

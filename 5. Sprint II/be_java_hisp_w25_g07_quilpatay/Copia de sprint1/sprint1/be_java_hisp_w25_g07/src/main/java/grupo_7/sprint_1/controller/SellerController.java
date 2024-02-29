@@ -55,6 +55,4 @@ public class SellerController {
         List<PostDto> posts = sellerService.getRecentPostsFromFollowedSellers(userId, order);
         return new ResponseEntity<>(posts, HttpStatus.OK);
     }
-
-
 }

@@ -1,6 +1,7 @@
 package grupo_7.sprint_1.repository;
 
 import grupo_7.sprint_1.entity.Buyer;
+import grupo_7.sprint_1.utils.MockBuilder;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -9,7 +10,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 import static org.springframework.test.util.AssertionErrors.assertNull;
 
 @SpringBootTest
@@ -38,6 +39,17 @@ public class BuyerRepositoryTest {
         Buyer current = buyerRepository.findBuyerById(nonExistentUserId);
 
         assertNull(null, current);
+    }
+
+    @Test
+    public void updateBuyerTest() {
+        Buyer buyerToUpdate = MockBuilder.mockBuyer();
+        buyerToUpdate.setUserId(1);
+
+        doNothing().when(buyerRepository).updateBuyer(buyerToUpdate);
+        buyerRepository.updateBuyer(buyerToUpdate);
+
+        verify(buyerRepository, times(1)).updateBuyer(buyerToUpdate);
     }
 
 }

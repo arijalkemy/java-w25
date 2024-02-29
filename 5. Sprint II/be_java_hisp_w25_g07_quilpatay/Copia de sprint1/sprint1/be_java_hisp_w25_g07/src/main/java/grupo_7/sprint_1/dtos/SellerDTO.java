@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SellerDTO{
-   private   int userId;
+public class SellerDTO {
+    private int userId;
     private String userName;
-    private  int followerCount;
+    private int followerCount;
 
 }

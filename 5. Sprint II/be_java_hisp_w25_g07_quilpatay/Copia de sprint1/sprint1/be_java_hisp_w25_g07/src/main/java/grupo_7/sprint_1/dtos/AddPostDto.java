@@ -2,10 +2,10 @@ package grupo_7.sprint_1.dtos;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotNull;
+
 import java.time.LocalDate;
 
 public record AddPostDto(

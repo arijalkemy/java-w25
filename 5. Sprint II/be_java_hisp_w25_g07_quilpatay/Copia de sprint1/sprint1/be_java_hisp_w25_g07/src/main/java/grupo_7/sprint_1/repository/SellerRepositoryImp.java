@@ -44,7 +44,8 @@ public class SellerRepositoryImp implements ISellerRepository {
                 .filter(seller -> seller.getUserId().equals(userId))
                 .findFirst();
     }
-@Override
+
+    @Override
     public int cantidadDeSeguidoresRepo(int userId) {
         return sellers.stream()
                 .filter(seller -> seller.getUserId() == userId)

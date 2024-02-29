@@ -17,7 +17,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.testng.Assert;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -32,11 +31,6 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class BuyerServiceTest {
 
-    /*@Mock
-    BuyerServiceImp service;
-    @InjectMocks
-    BuyerController controller; */
-
     @Mock
     BuyerRepositoryImp buyerRepositoryImp;
     @Mock
@@ -48,7 +42,6 @@ public class BuyerServiceTest {
     @Test
     @DisplayName("T-0002: Verificar que el usuario a dejar de seguir exista. (US-0007) - Éxito")
     public void unfollowSellerTestOk() {
-        // arrange
         int idUsuario = 11;
         int idUnfollow = 1;
 
@@ -58,29 +51,23 @@ public class BuyerServiceTest {
         vendedoresSeguidos.add(seller);
 
         Buyer buyer = new Buyer();
-        //buyer.setUserId(11);
         buyer.setFollowed(vendedoresSeguidos);
 
         Mockito.when(buyerRepositoryImp.findBuyerById(idUsuario)).thenReturn(buyer);
 
         MessageDto devolucion = new MessageDto("Se eliminó de seguidores correctamente");
 
-        // act
         var obtained = buyerServiceImp.unfollowSeller(idUsuario, idUnfollow);
 
-        // assert
         assertEquals(devolucion, obtained);
     }
 
     @Test
     @DisplayName("T-0002: Verificar que el usuario a dejar de seguir exista. (US-0007) - Exception Buyer")
-    // cambiar el repo getById por el otro q es igual.
     public void unfollowSellerNoExistBuyerBadTest() {
-        // arrange
         int idUsuario = 111;
         int idUnfollow = 1;
 
-        // act & assert
         Mockito.when(buyerRepositoryImp.findBuyerById(idUsuario)).thenReturn(null);
 
         Assertions.assertThrows(NotFoundException.class,
@@ -91,14 +78,12 @@ public class BuyerServiceTest {
     @Test
     @DisplayName("T-0002: Verificar que el usuario a dejar de seguir exista. (US-0007) - Exception Seller")
     public void unfollowSellerNoExistFollowedBadTest() {
-        // arrange
         int idUsuario = 11;
         int idUnfollow = 1;
 
         Buyer buyer = new Buyer();
         buyer.setFollowed(Collections.emptyList());
 
-        // act & assert
         Mockito.when(buyerRepositoryImp.findBuyerById(idUsuario)).thenReturn(buyer);
 
         Assertions.assertThrows(NotFoundException.class,
@@ -151,13 +136,11 @@ public class BuyerServiceTest {
     @Test
     @DisplayName("T-0004: Verificar que el tipo de ordenamiento alfabético funcione correctamente (US-0008) - Éxito")
     public void getFollowedListOrderAscExistenceOKTest() {
-        // arrange
         Integer id = 11;
         String order = "name_asc";
         when(buyerRepositoryImp.findBuyerById(id)).thenReturn(mockBuyer());
         BuyerDto buyerDto = mockBuyerAscDto();
 
-        // act
         BuyerDto buyerDto2 = buyerServiceImp.getBuyerfollow(id, order);
         assertEquals(buyerDto, buyerDto2);
     }
@@ -165,13 +148,11 @@ public class BuyerServiceTest {
     @Test
     @DisplayName("T-0004: Verificar que el tipo de ordenamiento alfabético invertido funcione correctamente (US-0008) - Éxito")
     public void getFollowedListOrderDescExistenceOKTest() {
-        // arrange
         Integer id = 11;
         String order = "name_desc";
         when(buyerRepositoryImp.findBuyerById(id)).thenReturn(mockBuyer());
         BuyerDto buyerDto = mockBuyerDescDto();
 
-        // act
         BuyerDto buyerDto2 = buyerServiceImp.getBuyerfollow(id, order);
         assertEquals(buyerDto, buyerDto2);
     }
