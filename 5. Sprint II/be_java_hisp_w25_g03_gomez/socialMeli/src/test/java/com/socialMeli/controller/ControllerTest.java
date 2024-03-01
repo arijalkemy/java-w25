@@ -30,7 +30,7 @@ import java.util.List;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class PostControllerTest {
+public class ControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
