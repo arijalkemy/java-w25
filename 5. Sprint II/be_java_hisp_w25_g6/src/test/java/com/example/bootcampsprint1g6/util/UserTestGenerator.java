@@ -18,8 +18,8 @@ public class UserTestGenerator {
         return new Seller(id, "Fulano", "fulano@mail.com");
     }
     public static User getBuyerFollowingSeller(Integer buyerId, Integer sellerId) {
-        Buyer buyer = (Buyer) getBuyerWithId(buyerId);
-        Seller seller = (Seller) getSellerWithId(sellerId);
+        Buyer buyer = getBuyerWithId(buyerId);
+        Seller seller = getSellerWithId(sellerId);
         buyer.follow(seller);
 
         return buyer;
@@ -42,13 +42,6 @@ public class UserTestGenerator {
     public static FollowersCountDTO getFollowersCountDTOWSeller(Integer id){
         Seller seller = getSellerWithFollowers(id);
         return new FollowersCountDTO(seller.getUserId(), seller.getUserName(), seller.getFollowers().size());
-    }
-
-    public static List<Seller> getFollowedUser(){
-        List<Seller> followedUsers = new ArrayList<>();
-        followedUsers.add(new Seller(1, "buyer1", "seller1@test.com"));
-        followedUsers.add(new Seller(2, "buyer2", "seller2@test.com"));
-        return followedUsers;
     }
 
     public static List<User> getFollowersUser(){
