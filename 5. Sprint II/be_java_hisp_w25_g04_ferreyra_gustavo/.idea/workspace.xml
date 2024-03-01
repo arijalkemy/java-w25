@@ -5,99 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47c3a62b-7d23-47d2-9a42-5689728eedcd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/breakingbytes/be_java_hisp_w25_g04/controller/ProductControllerTestsIntegration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/request/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/request/ProductDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/request/RequestPostDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/request/RequestPostDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/request/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/request/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/exception/ExceptionsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/exception/ExceptionsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/DbMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/DbMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/ISellerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/ISellerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/IUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/SellerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/SellerRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/service/SellerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/service/SellerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/resources/Sprint-1-g-04.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/../be_java_hisp_w25_g04/src/main/resources/Sprint-1-g-04.postman_collection.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/Diagrama Sprint1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/EjerciciosExtra-g04.postman_collection.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/Sprint-1-g-04.postman_collection.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/SprintOne-g04.postman_collection.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/BeJavaHispW25G04Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/controller/ProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/ProductDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/RequestPostDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/UserDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/FollowersCountDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/LastPostsDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ResponseDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ResponsePostDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/UserFollowedDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/UserFollowersDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/entity/Post.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/entity/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/entity/Seller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/exception/BadRequestException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/exception/ExceptionsConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/exception/NotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/repository/DbMock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/repository/IPostRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/repository/IProductRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/repository/ISellerRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/repository/IUserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/repository/PostRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/repository/ProductRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/repository/SellerRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/repository/UserRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/service/ISellerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/service/IUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/service/SellerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/service/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/utils/LocalDateDeserializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/classes/com/breakingbytes/be_java_hisp_w25_g04/utils/Mapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/test-classes/com/breakingbytes/be_java_hisp_w25_g04/BeJavaHispW25G04ApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/test-classes/com/breakingbytes/be_java_hisp_w25_g04/controller/ProductControllerTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/test-classes/com/breakingbytes/be_java_hisp_w25_g04/controller/UserControllerTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/test-classes/com/breakingbytes/be_java_hisp_w25_g04/service/SellerServiceTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/test-classes/com/breakingbytes/be_java_hisp_w25_g04/service/UserServiceTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g04/target/test-classes/com/breakingbytes/be_java_hisp_w25_g04/utils/FactoryUsers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/request/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/request/ProductDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/request/RequestPostDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/request/RequestPostDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/request/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/request/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/exception/ExceptionsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/exception/ExceptionsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/DbMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/DbMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/ISellerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/ISellerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/IUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/SellerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/repository/SellerRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/service/SellerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/service/SellerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breakingbytes/be_java_hisp_w25_g04/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Sprint-1-g-04.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Sprint-1-g-04.postman_collection.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/breakingbytes/be_java_hisp_w25_g04/controller/UserControllerTestsIntegration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/breakingbytes/be_java_hisp_w25_g04/controller/UserControllerTestsIntegration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint-1-g-04.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint-1-g-04.postman_collection.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/ProductDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/ProductDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/RequestPostDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/RequestPostDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/exception/ExceptionsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/exception/ExceptionsConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/repository/DbMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/repository/DbMock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/service/IUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/service/SellerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/service/SellerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/breakingbytes/be_java_hisp_w25_g04/controller/UserControllerTestsIntegration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/breakingbytes/be_java_hisp_w25_g04/controller/UserControllerTestsIntegration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,37 +21,37 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2d5nuF0ilCir5mco7AQPELjZ4Kw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.ProductControllerTestsIntegration.addPost.executor": "Run",
-    "JUnit.com.breakingbytes.be_java_hisp_w25_g04 in be_java_hisp_w25_g04.executor": "Coverage",
-    "JUnit.com.breakingbytes.be_java_hisp_w25_g04.controller in be_java_hisp_w25_g04.executor": "Profiler#1",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.BeJavaHispW25G04Application.executor": "Run",
-    "git-widget-placeholder": "ferreyra__gustavo",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/gusferreyra/GitHub/java-w25/5. Sprint II/be_java_hisp_w25_g04_ferreyra_gustavo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.ProductControllerTestsIntegration.addPost.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.com.breakingbytes.be_java_hisp_w25_g04 in be_java_hisp_w25_g04.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.com.breakingbytes.be_java_hisp_w25_g04.controller in be_java_hisp_w25_g04.executor&quot;: &quot;Profiler#1&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BeJavaHispW25G04Application.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ferreyra__gustavo&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/gusferreyra/GitHub/java-w25/5. Sprint II/be_java_hisp_w25_g04_ferreyra_gustavo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.breakingbytes.be_java_hisp_w25_g04.controller" />
@@ -238,7 +146,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709307028090</updated>
-      <workItem from="1709307029156" duration="1645000" />
+      <workItem from="1709307029156" duration="1825000" />
+      <workItem from="1709314509188" duration="59000" />
+      <workItem from="1709314576276" duration="1986000" />
     </task>
     <servers />
   </component>
@@ -246,7 +156,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g04_ferreyra_gustavo$com_breakingbytes_be_java_hisp_w25_g04_in_be_java_hisp_w25_g04.ic" NAME="com.breakingbytes.be_java_hisp_w25_g04 in be_java_hisp_w25_g04 Coverage Results" MODIFIED="1709307505683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g04_ferreyra_gustavo$com_breakingbytes_be_java_hisp_w25_g04_in_be_java_hisp_w25_g04.ic" NAME="com.breakingbytes.be_java_hisp_w25_g04 in be_java_hisp_w25_g04 Coverage Results" MODIFIED="1709310096890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.breakingbytes.be_java_hisp_w25_g04.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/be_java_hisp_w25_g04_ferreyra_gustavo$com_breakingbytes_be_java_hisp_w25_g04_controller_in_be_java_hisp_w25_g04.ic" NAME="com.breakingbytes.be_java_hisp_w25_g04.controller in be_java_hisp_w25_g04 Coverage Results" MODIFIED="1709309644098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
