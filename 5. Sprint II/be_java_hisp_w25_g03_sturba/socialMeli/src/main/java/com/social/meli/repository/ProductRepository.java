@@ -13,6 +13,7 @@ public class ProductRepository implements IProductRepository{
 
     public ProductRepository() {
         this.productList = new ArrayList<>();
+        productList.add(new Product(1,"auto","Vehicular","Rojo","Ferrari","Premium"));
     }
 
 

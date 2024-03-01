@@ -1,7 +1,6 @@
 package com.social.meli.repository;
 
 import com.social.meli.entity.Post;
-import com.social.meli.entity.Product;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
@@ -17,6 +16,7 @@ public class PostRepository implements IPostRepository {
 
     public PostRepository() {
         this.postBd = new ArrayList<>();
+        postBd.add(new Post(1,LocalDate.now(),1,1,2.0,8));
     }
 
     @Override

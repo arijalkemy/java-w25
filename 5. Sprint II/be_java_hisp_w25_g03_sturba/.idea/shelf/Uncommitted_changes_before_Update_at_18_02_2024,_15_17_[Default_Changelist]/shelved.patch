@@ -1,0 +1,19 @@
+Index: socialMeli/src/main/java/com/socialMeli/dto/response/VendorFollowCountDto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.socialMeli.dto.response;\n\nimport com.fasterxml.jackson.annotation.JsonProperty;\nimport com.socialMeli.entity.User;\nimport lombok.AccessLevel;\nimport lombok.Getter;\nimport lombok.Setter;\nimport lombok.experimental.FieldDefaults;\n\n@FieldDefaults(makeFinal = true,level = AccessLevel.PRIVATE)\n@Getter\n@Setter\npublic class VendorFollowCountDto {\n    @JsonProperty(\"user_id\")\n    Integer userId;\n    @JsonProperty(\"user_name\")\n    String userName;\n    @JsonProperty(\"followers_count\")\n    Integer followerCount;\n\n    public VendorFollowCountDto(User user) {\n        this.userId = user.getId();\n        this.userName = user.getName();\n        this.followerCount = user.getFollowersId().size();\n\n    }\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/socialMeli/src/main/java/com/socialMeli/dto/response/VendorFollowCountDto.java b/socialMeli/src/main/java/com/socialMeli/dto/response/VendorFollowCountDto.java
+--- a/socialMeli/src/main/java/com/socialMeli/dto/response/VendorFollowCountDto.java	(revision 72d3db4108e72337833f1393085e2b6e57185511)
++++ b/socialMeli/src/main/java/com/socialMeli/dto/response/VendorFollowCountDto.java	(date 1708280221216)
+@@ -7,7 +7,7 @@
+ import lombok.Setter;
+ import lombok.experimental.FieldDefaults;
+ 
+-@FieldDefaults(makeFinal = true,level = AccessLevel.PRIVATE)
++@FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
+ @Getter
+ @Setter
+ public class VendorFollowCountDto {

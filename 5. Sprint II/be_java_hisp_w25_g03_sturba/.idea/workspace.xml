@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fa403a4e-8583-42b3-96c1-933219cb8b8c" name="Default Changelist" comment="Commenting test">
+      <change beforePath="$PROJECT_DIR$/.idea/be_java_hisp_w25_g03.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/be_java_hisp_w25_g03.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialMeli/src/main/java/com/social/meli/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialMeli/src/main/java/com/social/meli/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialMeli/src/main/java/com/social/meli/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialMeli/src/main/java/com/social/meli/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialMeli/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/socialMeli/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialMeli/src/test/java/com/social/meli/controller/PostControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialMeli/src/test/java/com/social/meli/controller/PostControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialMeli/src/test/java/com/social/meli/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialMeli/src/test/java/com/social/meli/controller/UserControllerTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="1" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="development" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="development" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="asturba" />
+                    <option name="lastUsedInstant" value="1709305678" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="development" />
+                    <option name="lastUsedInstant" value="1709301062" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="featureValidations" />
+                    <option name="lastUsedInstant" value="1709124375" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature_development" />
+                    <option name="lastUsedInstant" value="1709124361" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1709124306" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2cSSnMjtg1uZ14sHoDY7L2nFgdl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HTTP Request.generated-requests | #2.executor": "Run",
+    "JUnit.PostControllerTest.addNewPostOkTest.executor": "Run",
+    "JUnit.PostControllerTest.addNewPostUserNotFoundTest (1).executor": "Run",
+    "JUnit.PostControllerTest.addNewPostUserNotFoundTest.executor": "Run",
+    "JUnit.PostControllerTest.addNewPostUserNotValidJsonTest.executor": "Run",
+    "JUnit.PostControllerTest.addNewPostUserNotVendorTest.executor": "Run",
+    "JUnit.PostControllerTest.executor": "Run",
+    "JUnit.PostControllerTest.obtainLastPublicationsByTheFollowedVendorsIncorrectOrderOk.executor": "Run",
+    "JUnit.PostControllerTest.obtainLastPublicationsByTheFollowedVendorsOk.executor": "Run",
+    "JUnit.PostControllerTest.obtainLastPublicationsByTheFollowedVendorsOrderOk (1).executor": "Run",
+    "JUnit.PostControllerTest.obtainLastPublicationsByTheFollowedVendorsOrderOk.executor": "Run",
+    "JUnit.PostRepositoryTest.executor": "Coverage",
+    "JUnit.PostServiceTest.addPostOK.executor": "Run",
+    "JUnit.PostServiceTest.addPostUserNotFound.executor": "Run",
+    "JUnit.PostServiceTest.executor": "Run",
+    "JUnit.PostServiceTest.obtainLastPublicationsByTheFollowedVendorsTest_Ok_descOrder.executor": "Coverage",
+    "JUnit.PostServiceTest.obtainLastPublicationsByTheFollowedVendorsTest_Throws_NotFoundException.executor": "Run",
+    "JUnit.UserControllerTest.executor": "Run",
+    "JUnit.UserControllerTest.followUserOkTest.executor": "Run",
+    "JUnit.UserControllerTest.followUserUserIdNotFoundTest.executor": "Run",
+    "JUnit.UserControllerTest.followUserUserNotValidTest.executor": "Run",
+    "JUnit.UserControllerTest.getFollowedListInvalidDataTest.executor": "Run",
+    "JUnit.UserControllerTest.getFollowedListOkTest.executor": "Run",
+    "JUnit.UserControllerTest.getFollowerCount.executor": "Run",
+    "JUnit.UserControllerTest.getInvalidVendorFollowerCountInvalidIdTest (1).executor": "Run",
+    "JUnit.UserControllerTest.getInvalidVendorFollowerCountInvalidIdTest.executor": "Run",
+    "JUnit.UserControllerTest.getInvalidVendorFollowerCountOkTest.executor": "Run",
+    "JUnit.UserControllerTest.getVendorFollowerCount.executor": "Run",
+    "JUnit.UserControllerTest.getVendorFollowerCountOkTest.executor": "Run",
+    "JUnit.UserControllerTest.getVendorFollowersInvalidDataTests.executor": "Run",
+    "JUnit.UserControllerTest.getVendorFollowersInvalidUsersTests.executor": "Run",
+    "JUnit.UserControllerTest.getVendorFollowersOkTest.executor": "Run",
+    "JUnit.UserControllerTest.getVendorFollowersUserNotFoundTest.executor": "Run",
+    "JUnit.UserControllerTest.getVendorFollowersUserNotVendorTest.executor": "Run",
+    "JUnit.UserControllerTest.getVendorFollowersWithAscOrderOkTest.executor": "Run",
+    "JUnit.UserControllerTest.getVendorFollowersWithDescOrderOkTest.executor": "Run",
+    "JUnit.UserControllerTest.getVendorFollowersWithIncorrectOrderTest.executor": "Run",
+    "JUnit.UserControllerTest.getVendorFollowersWithOrderOkTest.executor": "Run",
+    "JUnit.UserControllerTest.performVendorFollowed.executor": "Run",
+    "JUnit.UserControllerTest.performVendorFollowers.executor": "Run",
+    "JUnit.UserControllerTest.unfollowUserOkTest.executor": "Run",
+    "JUnit.UserControllerTest.unfollowUserUserNotValidTest.executor": "Run",
+    "JUnit.UserRepositoryTest.executor": "Coverage",
+    "JUnit.UserRepositoryTest.findUserByUserIdFoundTest.executor": "Run",
+    "JUnit.UserRepositoryTest.findUserByUserIdNotFoundTest.executor": "Run",
+    "JUnit.UserRepositoryTest.unfollowUserTest.executor": "Run",
+    "JUnit.UserRepositoryTest.unfollowUserWhoDontFollowEachOtherTest.executor": "Run",
+    "JUnit.UserRepositoryTest.unfollowUserWhoYouDontFollowTest.executor": "Run",
+    "JUnit.UserServiceTest.executor": "Run",
+    "JUnit.UserServiceTest.getFollowerCountNotFoundErrorTest.executor": "Run",
+    "JUnit.UserServiceTest.getFollowerCountOkTest.executor": "Coverage",
+    "JUnit.UserServiceTest.getFollowerCountUserNotFoundTest.executor": "Coverage",
+    "JUnit.UserServiceTest.getFollowerCountUserNotVendorTest.executor": "Coverage",
+    "JUnit.UserServiceTest.unfollowNotFoundUserTest.executor": "Coverage",
+    "JUnit.UserServiceTest.unfollowUserIsNotInFollowersListTest.executor": "Run",
+    "JUnit.UserServiceTest.unfollowUserNotFoundUserTest (1).executor": "Run",
+    "JUnit.UserServiceTest.unfollowUserNotFoundUserTest.executor": "Run",
+    "JUnit.UserServiceTest.unfollowUserOkTest.executor": "Run",
+    "JUnit.controller in socialMeli.executor": "Coverage",
+    "JUnit.java in socialMeli.executor": "Run",
+    "JUnit.meli in socialMeli.executor": "Coverage",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "Spring Boot.SocialMeliApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/asturba/Documents/GitHub/be_java_hisp_w25_g03",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.idesettings.debugger.capture",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="/private/var/folders/1n/crcwjp4x5hl30dsr75zzw98c6nl1lk/T/qodana_output/qodana.sarif.json" reportGuid="4e30a92c-3c1f-4f3b-bfb1-2bf5fac4ef87" reportId="socialMeli/qodana/2024-03-01" />
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.socialMeli.exception" />
+      <recent name="com.socialMeli.dto.response" />
+      <recent name="com.socialMeli.dto" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/socialMeli/src/main/java/com/socialMeli" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.social.meli.controller" />
+      <recent name="com.socialMeli.service" />
+      <recent name="com.socialMeli.repository" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.java in socialMeli">
+    <configuration name="PostControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="socialMeli" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.social.meli.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.social.meli.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.social.meli.controller.PostControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostControllerTest.addNewPostOkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="socialMeli" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.social.meli.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.social.meli.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.social.meli.controller.PostControllerTest" />
+      <option name="METHOD_NAME" value="addNewPostOkTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostControllerTest.addNewPostUserNotFoundTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="socialMeli" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.social.meli.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.social.meli.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.social.meli.controller.PostControllerTest" />
+      <option name="METHOD_NAME" value="addNewPostUserNotFoundTest(java.lang.Integer,org.springframework.http.HttpStatus,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostControllerTest.addNewPostUserNotFoundTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="socialMeli" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.social.meli.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.social.meli.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.social.meli.controller.PostControllerTest" />
+      <option name="METHOD_NAME" value="addNewPostUserNotFoundTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in socialMeli" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="socialMeli" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/socialMeli/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocialMeliApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="socialMeli" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.social.meli.SocialMeliApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocialMeliApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="socialMeli" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.socialMeli.SocialMeliApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocialMeliApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ENABLE_JMX_AGENT" value="false" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="socialMeli" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.social.meli.SocialMeliApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.PostControllerTest" />
+      <item itemvalue="JUnit.PostControllerTest.addNewPostOkTest" />
+      <item itemvalue="JUnit.PostControllerTest.addNewPostUserNotFoundTest" />
+      <item itemvalue="JUnit.PostControllerTest.addNewPostUserNotFoundTest (1)" />
+      <item itemvalue="JUnit.java in socialMeli" />
+      <item itemvalue="Spring Boot.SocialMeliApplication (2)" />
+      <item itemvalue="Spring Boot.SocialMeliApplication (1)" />
+      <item itemvalue="Spring Boot.SocialMeliApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.java in socialMeli" />
+        <item itemvalue="JUnit.PostControllerTest" />
+        <item itemvalue="JUnit.PostControllerTest.addNewPostOkTest" />
+        <item itemvalue="JUnit.PostControllerTest.addNewPostUserNotFoundTest (1)" />
+        <item itemvalue="JUnit.PostControllerTest.addNewPostUserNotFoundTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-53826d6a" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa403a4e-8583-42b3-96c1-933219cb8b8c" name="Default Changelist" comment="" />
+      <created>1708103656376</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708103656376</updated>
+      <workItem from="1708103661942" duration="3215000" />
+      <workItem from="1708112855737" duration="83000" />
+      <workItem from="1708113142062" duration="5893000" />
+      <workItem from="1708347674191" duration="18390000" />
+      <workItem from="1708434664523" duration="5295000" />
+      <workItem from="1708519853367" duration="357000" />
+      <workItem from="1708532407880" duration="1458000" />
+      <workItem from="1708535658393" duration="762000" />
+      <workItem from="1709045495604" duration="1870000" />
+      <workItem from="1709054304812" duration="21529000" />
+      <workItem from="1709148567452" duration="17278000" />
+      <workItem from="1709228688937" duration="187000" />
+      <workItem from="1709228887538" duration="157000" />
+      <workItem from="1709229279768" duration="819000" />
+      <workItem from="1709294078900" duration="4960000" />
+      <workItem from="1709300807036" duration="308000" />
+      <workItem from="1709302708874" duration="7459000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit, añadiendo estructura basica del repositorio, con sus clases minimas.">
+      <created>1708104421122</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708104421122</updated>
+    </task>
+    <task id="LOCAL-00002" summary="us_0002: Añadiendo endpoint para obtener la cantidad de followers.">
+      <option name="closed" value="true" />
+      <created>1708116778412</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708116778412</updated>
+    </task>
+    <task id="LOCAL-00003" summary="us_0002: Añadiendo findUserByUserId">
+      <option name="closed" value="true" />
+      <created>1708116816141</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708116816141</updated>
+    </task>
+    <task id="LOCAL-00004" summary="us_0002: Añadiendo anotaciones para mantener convencion de java">
+      <option name="closed" value="true" />
+      <created>1708280189144</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708280189144</updated>
+    </task>
+    <task id="LOCAL-00005" summary="us_0002: Fixing PostDto constructor error and converting findUserByUserId return to optional.">
+      <option name="closed" value="true" />
+      <created>1708280711916</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708280711916</updated>
+    </task>
+    <task id="LOCAL-00006" summary="us_0007: Adding method to unfollow a specific user">
+      <option name="closed" value="true" />
+      <created>1708351765875</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708351765875</updated>
+    </task>
+    <task id="LOCAL-00007" summary="us_0007: Adding gitignore">
+      <option name="closed" value="true" />
+      <created>1708352540858</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708352540858</updated>
+    </task>
+    <task id="LOCAL-00008" summary="us_0007: getting pull request and resolving conflict">
+      <option name="closed" value="true" />
+      <created>1708353441259</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708353441259</updated>
+    </task>
+    <task id="LOCAL-00009" summary="us_0003: Refactoring us_0003">
+      <option name="closed" value="true" />
+      <created>1708356408442</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708356408442</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Refactoring development branch">
+      <option name="closed" value="true" />
+      <created>1708374071961</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708374071961</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refactoring de duplicate code.">
+      <option name="closed" value="true" />
+      <created>1708533237956</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708533237956</updated>
+    </task>
+    <task id="LOCAL-00012" summary="T_0007: Adding tests for followerCount and findUser in UserRepositoryTest.">
+      <option name="closed" value="true" />
+      <created>1709055511539</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709055511540</updated>
+    </task>
+    <task id="LOCAL-00013" summary="T_0002: Adding tests for unfollowUser both in service and repository">
+      <option name="closed" value="true" />
+      <created>1709060570108</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709060570108</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Test de ingregracion">
+      <option name="closed" value="true" />
+      <created>1709147713737</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1709147713737</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Test de ingregracion">
+      <option name="closed" value="true" />
+      <created>1709152594754</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1709152594754</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Updating code coverage">
+      <option name="closed" value="true" />
+      <created>1709298579270</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1709298579270</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Commenting test">
+      <option name="closed" value="true" />
+      <created>1709300205568</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1709300205568</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit, añadiendo estructura basica del repositorio, con sus clases minimas." />
+    <MESSAGE value="us_0002: Añadiendo endpoint para obtener la cantidad de followers." />
+    <MESSAGE value="us_0002: Añadiendo findUserByUserId" />
+    <MESSAGE value="us_0002: Añadiendo anotaciones para mantener convencion de java" />
+    <MESSAGE value="us_0002: Fixing PostDto constructor error and converting findUserByUserId return to optional." />
+    <MESSAGE value="us_0007: Adding method to unfollow a specific user" />
+    <MESSAGE value="us_0007: Adding gitignore" />
+    <MESSAGE value="us_0007: getting pull request and resolving conflict" />
+    <MESSAGE value="us_0003: Refactoring us_0003" />
+    <MESSAGE value="Refactoring development branch" />
+    <MESSAGE value="Refactoring de duplicate code" />
+    <MESSAGE value="Refactoring de duplicate code." />
+    <MESSAGE value="T_0007: Adding tests for followerCount and findUser in UserRepositoryTest." />
+    <MESSAGE value="T_0002: Adding tests for unfollowUser both in service and repository" />
+    <MESSAGE value="Test de ingregracion" />
+    <MESSAGE value="Agregando tests de integracion" />
+    <MESSAGE value="Updating code coverage" />
+    <MESSAGE value="Commenting test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commenting test" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/socialMeli$UserServiceTest_getFollowerCountUserNotFoundTest.ic" NAME="UserServiceTest.getFollowerCountUserNotFoundTest Coverage Results" MODIFIED="1709055001368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.socialMeli.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/socialMeli$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1709149331954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.social.meli.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/socialMeli$PostRepositoryTest.ic" NAME="PostRepositoryTest Coverage Results" MODIFIED="1709149278937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.social.meli.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/socialMeli$UserRepositoryTest.ic" NAME="UserRepositoryTest Coverage Results" MODIFIED="1709149286488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.social.meli.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/socialMeli$PostServiceTest.ic" NAME="PostServiceTest Coverage Results" MODIFIED="1709149309659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.social.meli.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/socialMeli$meli_in_socialMeli.ic" NAME="meli in socialMeli Coverage Results" MODIFIED="1709298661752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/socialMeli$controller_in_socialMeli.ic" NAME="controller in socialMeli Coverage Results" MODIFIED="1709228920303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/socialMeli$UserServiceTest_getFollowerCountUserNotVendorTest.ic" NAME="UserServiceTest.getFollowerCountUserNotVendorTest Coverage Results" MODIFIED="1709055013387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.socialMeli.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/socialMeli$UserControllerTest.ic" NAME="UserControllerTest Coverage Results" MODIFIED="1709149293317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.social.meli.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/socialMeli$PostServiceTest_obtainLastPublicationsByTheFollowedVendorsTest_Ok_descOrder.ic" NAME="PostServiceTest.obtainLastPublicationsByTheFollowedVendorsTest_Ok_descOrder Coverage Results" MODIFIED="1709148413937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.social.meli.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/socialMeli$UserServiceTest_unfollowNotFoundUserTest.ic" NAME="UserServiceTest.unfollowNotFoundUserTest Coverage Results" MODIFIED="1709148418215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.social.meli.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/socialMeli$UserServiceTest_getFollowerCountOkTest.ic" NAME="UserServiceTest.getFollowerCountOkTest Coverage Results" MODIFIED="1709055007754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.socialMeli.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/socialMeli$java_in_socialMeli.ic" NAME="java in socialMeli Coverage Results" MODIFIED="1709300268762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

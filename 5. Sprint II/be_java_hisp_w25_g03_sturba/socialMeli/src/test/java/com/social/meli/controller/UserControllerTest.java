@@ -84,7 +84,7 @@ class UserControllerTest {
         );
     }
 
-    static Stream<Arguments> invalidVendorFollowerCountData() {
+    static Stream<Arguments> invalidUserData() {
         return Stream.of(
                 Arguments.of(11, NOT_FOUND, "No se encontro al usuario"),
                 Arguments.of(1, FORBIDDEN, "El usuario no es un vendedor")
@@ -155,7 +155,7 @@ class UserControllerTest {
     }
 
     @ParameterizedTest
-    @MethodSource("invalidVendorFollowerCountData")
+    @MethodSource("invalidUserData")
     void getInvalidVendorFollowerCountInvalidUserTest(Integer userId, HttpStatus expectedStatusCode, String errorMessage) throws Exception {
         mockMvc.perform(get("/users/{userId}/followers/count", userId))
                 .andDo(print())

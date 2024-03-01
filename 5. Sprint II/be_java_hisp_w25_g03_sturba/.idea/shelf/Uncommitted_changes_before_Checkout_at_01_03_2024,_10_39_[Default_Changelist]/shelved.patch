@@ -1,0 +1,49 @@
+Index: .idea/be_java_hisp_w25_g03.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"JAVA_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\n    <exclude-output />\n    <content url=\"file://$MODULE_DIR$\" />\n    <orderEntry type=\"inheritedJdk\" />\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/be_java_hisp_w25_g03.iml b/.idea/be_java_hisp_w25_g03.iml
+--- a/.idea/be_java_hisp_w25_g03.iml	(revision 9983ab0e196b1b6a64c9ef80c408597bd9155d88)
++++ b/.idea/be_java_hisp_w25_g03.iml	(date 1709300232289)
+@@ -6,4 +6,7 @@
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
++  <component name="SonarLintModuleSettings">
++    <option name="uniqueId" value="00b664e0-e213-4dbc-adde-376da7880c1d" />
++  </component>
+ </module>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\n  <component name=\"MavenProjectsManager\">\n    <option name=\"originalFiles\">\n      <list>\n        <option value=\"$PROJECT_DIR$/socialMeli/pom.xml\" />\n      </list>\n    </option>\n    <option name=\"workspaceImportForciblyTurnedOn\" value=\"true\" />\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" project-jdk-name=\"17 (2)\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/out\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 9983ab0e196b1b6a64c9ef80c408597bd9155d88)
++++ b/.idea/misc.xml	(date 1709300232293)
+@@ -7,7 +7,6 @@
+         <option value="$PROJECT_DIR$/socialMeli/pom.xml" />
+       </list>
+     </option>
+-    <option name="workspaceImportForciblyTurnedOn" value="true" />
+   </component>
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17 (2)" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+Index: socialMeli/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/socialMeli/src/main/resources/application.properties b/socialMeli/src/main/resources/application.properties
+--- a/socialMeli/src/main/resources/application.properties	(revision 9983ab0e196b1b6a64c9ef80c408597bd9155d88)
++++ b/socialMeli/src/main/resources/application.properties	(date 1709300232295)
+@@ -1,1 +1,0 @@
+-

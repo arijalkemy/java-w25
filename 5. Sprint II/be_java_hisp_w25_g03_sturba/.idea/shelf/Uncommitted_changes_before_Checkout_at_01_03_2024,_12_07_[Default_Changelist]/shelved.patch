@@ -1,0 +1,23 @@
+Index: socialMeli/src/test/java/com/socialMeli/repository/PostRepositoryTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.socialMeli.socialMeli.repository;\n\nimport com.socialMeli.entity.Post;\nimport com.socialMeli.repository.IPostRepository;\nimport com.socialMeli.repository.PostRepository;\nimport org.junit.jupiter.api.BeforeEach;\nimport org.junit.jupiter.api.Test;\n\nimport java.time.LocalDate;\nimport java.time.Period;\nimport java.util.List;\nimport java.util.Optional;\n\nimport static org.junit.jupiter.api.Assertions.assertEquals;\nimport static org.junit.jupiter.api.Assertions.assertFalse;\n\npublic class PostRepositoryTest {\n\n    IPostRepository postRepository = new PostRepository();\n\n    @BeforeEach\n    void setUp() {\n        Period twoWeeksPeriod1W = Period.ofWeeks(1);\n        Post post1 = new Post(1, LocalDate.now(),1,1,12.000,1);\n        Post post2 = new Post(2, LocalDate.now().minus(twoWeeksPeriod1W),1,1,12.000,1);\n        postRepository.add(post1);\n        postRepository.add(post2);\n    }\n    @Test\n    void add_new_product(){\n        // Arrange\n        Post post = new Post(3, LocalDate.now(),2,1,12.000,1);\n        //Act\n        Integer returnedValue = postRepository.add(post);\n        //Assert\n        assertEquals(3, returnedValue);\n    }\n\n    @Test\n    void getPostFromTheLastTwoWeeksByUserId_Ok(){\n        Optional<List<Post>> obtainedPosts = postRepository.getPostFromTheLastTwoWeeksByUserId(1);\n        assertFalse(obtainedPosts.isEmpty());\n    }\n}\n
+===================================================================
+diff --git a/socialMeli/src/test/java/com/socialMeli/repository/PostRepositoryTest.java b/socialMeli/src/test/java/com/socialMeli/repository/PostRepositoryTest.java
+--- a/socialMeli/src/test/java/com/socialMeli/repository/PostRepositoryTest.java	
++++ b/socialMeli/src/test/java/com/socialMeli/repository/PostRepositoryTest.java	
+@@ -1,4 +1,4 @@
+-package com.socialMeli.socialMeli.repository;
++package com.socialMeli.repository;
+ 
+ import com.socialMeli.entity.Post;
+ import com.socialMeli.repository.IPostRepository;
+@@ -14,7 +14,7 @@
+ import static org.junit.jupiter.api.Assertions.assertEquals;
+ import static org.junit.jupiter.api.Assertions.assertFalse;
+ 
+-public class PostRepositoryTest {
++ class PostRepositoryTest {
+ 
+     IPostRepository postRepository = new PostRepository();
+ 
