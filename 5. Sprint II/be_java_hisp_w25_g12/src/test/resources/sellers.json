@@ -1,0 +1,32 @@
+[
+  {
+    "id": 6,
+    "name": "Willy Wonka",
+    "followers": [1, 2, 3, 4],
+    "posts": [0, 2]
+  },
+  {
+    "id": 7,
+    "name": "Indiana Jones",
+    "followers": [1],
+    "posts": [1, 3, 4]
+  },
+  {
+    "id": 8,
+    "name": "Tony Stark",
+    "followers": [3, 1, 2],
+    "posts": [7, 8]
+  },
+  {
+    "id": 9,
+    "name": "Bruce Wayne",
+    "followers": [4, 2],
+    "posts": [6]
+  },
+  {
+    "id": 10,
+    "name": "Peter Parker",
+    "followers": [],
+    "posts": [5]
+  }
+]
