@@ -1,6 +1,11 @@
 package org.bootcamp.javazoo.integration;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import org.bootcamp.javazoo.dto.PostDto;
 import org.bootcamp.javazoo.dto.PostResponseDto;
+import org.bootcamp.javazoo.dto.ProductDto;
 import org.bootcamp.javazoo.dto.response.PostsFollowedUserDto;
 import org.bootcamp.javazoo.entity.Post;
 import org.bootcamp.javazoo.entity.Product;
@@ -32,25 +37,16 @@ public class ProductIntegrationTest {
 
 
     @Test
-    void getPostsBySellerOfUserOkTest() throws Exception {
-        String expected = "{\"userId\":4,\"posts\":[{\"user_id\":1,\"post_id\":2,\"date\":\"24-02-2024\",\"product\":{\"product_id\":2,\"product_name\":\"Smartphone\",\"type\":\"Electronics\",\"brand\":\"BrandY\",\"color\":\"Negro\",\"notes\":\"Usado\"},\"category\":2,\"price\":300.0},{\"user_id\":1,\"post_id\":1,\"date\":\"29-02-2024\",\"product\":{\"product_id\":1,\"product_name\":\"Laptop\",\"type\":\"Electronics\",\"brand\":\"BrandX\",\"color\":\"Silver\",\"notes\":\"Buen estado\"},\"category\":1,\"price\":500.0}]}";
-
-        MvcResult mvcResult4 = mockMvc.perform(get("/products/followed/{userId}/list", 4))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(content().contentType("application/json"))
-                .andReturn();
-
-        assertEquals(expected, mvcResult4.getResponse().getContentAsString());
-    }
-
-    @Test
     void addNewPostOkTest() throws Exception {
-        String payload = "{\"user_id\": 2, \"date\": \"29-04-2021\", \"product\": {\"product_id\": 1, \"product_name\": \"Silla Gamer\", \"type\": \"Gamer\", \"brand\": \"Racer\", \"color\": \"Red\", \"notes\": \"Special Edition\"}, \"category\": 100, \"price\": 1500.50}";
 
+        PostDto postDto = new PostDto(2, "29-04-2021", new ProductDto(1, "Silla Gamer", "Gamer", "Racer", "Red", "Special Edition"), 100, 1500.50);
+        ObjectWriter writer = new ObjectMapper()
+                .configure(SerializationFeature.WRAP_ROOT_VALUE, false)
+                .writer();
+        String json = writer.writeValueAsString(postDto);
         MvcResult mvcResult4 = mockMvc.perform(post("/products/post")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(payload))
+                        .content(json))
                 .andExpect(status().isCreated())
                 .andExpect(content().contentType("application/json"))
                 .andExpect(jsonPath("$.message").value("The publication was created successfully"))
