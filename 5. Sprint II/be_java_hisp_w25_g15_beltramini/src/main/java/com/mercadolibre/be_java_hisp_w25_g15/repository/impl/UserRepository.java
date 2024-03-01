@@ -14,18 +14,11 @@ import java.util.Optional;
 @Repository
 public class UserRepository implements IUserRepository {
 
-    List<User> users = new ArrayList<>(
-            List.of(
-                Seller.builder().id(1).username("Tony Stark").followed(new ArrayList<>()).followers(new ArrayList<>()).build(),
-                Seller.builder().id(2).username("Luca").followed(new ArrayList<>()).followers(new ArrayList<>()).build(),
-                Seller.builder().id(3).username("Martin").followed(new ArrayList<>()).followers(new ArrayList<>()).build(),
-                Buyer.builder().id(4).username("Santiago").followed(new ArrayList<>()).build(),
-                Buyer.builder().id(5).username("Orlando").followed(new ArrayList<>()).build(),
-                Buyer.builder().id(6).username("Miguel").followed(new ArrayList<>()).build(),
-                Buyer.builder().id(7).username("Samuel").followed(new ArrayList<>()).build(),
-                Buyer.builder().id(8).username("Tony Stark").followed(new ArrayList<>()).build()
-            )
-    );
+    List<User> users;
+
+    public UserRepository(){
+        loadData();
+    }
 
     @Override
     public boolean removeFollower(Seller seller, User user) {
@@ -59,5 +52,29 @@ public class UserRepository implements IUserRepository {
     @Override
     public List<User> getAllUsers() {
         return this.users;
+    }
+
+    private void loadData(){
+        // Usuarios con seguidores
+        Seller seller = Seller.builder().id(9).username("Capitan America").followed(new ArrayList<>()).followers(new ArrayList<>()).build();
+        Buyer buyer = Buyer.builder().id(10).username("Federico").followed(new ArrayList<>()).build();
+        seller.getFollowers().add(buyer);
+        buyer.getFollowed().add(seller);
+        //Seteamos la data
+        users = new ArrayList<>(
+                List.of(
+                        Seller.builder().id(1).username("Tony Stark").followed(new ArrayList<>()).followers(new ArrayList<>()).build(),
+                        Seller.builder().id(2).username("Luca").followed(new ArrayList<>()).followers(new ArrayList<>()).build(),
+                        Seller.builder().id(3).username("Martin").followed(new ArrayList<>()).followers(new ArrayList<>()).build(),
+                        Buyer.builder().id(4).username("Santiago").followed(new ArrayList<>(
+                        )).build(),
+                        Buyer.builder().id(5).username("Orlando").followed(new ArrayList<>()).build(),
+                        Buyer.builder().id(6).username("Miguel").followed(new ArrayList<>()).build(),
+                        Buyer.builder().id(7).username("Samuel").followed(new ArrayList<>()).build(),
+                        Buyer.builder().id(8).username("Tony Stark").followed(new ArrayList<>()).build(),
+                        seller,
+                        buyer
+                )
+        );
     }
 }
