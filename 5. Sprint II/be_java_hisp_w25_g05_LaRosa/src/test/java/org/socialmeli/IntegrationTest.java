@@ -22,6 +22,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.socialmeli.dto.request.PostReqDto;
 import org.socialmeli.dto.response.ProductDto;
+import org.socialmeli.entity.Client;
 import org.socialmeli.entity.Vendor;
 import org.socialmeli.util.ObjectFactory;
 
@@ -104,11 +105,23 @@ public class IntegrationTest {
 
         @Test
         @DisplayName("/users/{userId}/follow/{userIdToFollow} -> Sad path: Un vendedor no se puede seguir a un vendedor")
-        public void followUserOkTest() throws Exception {
+        public void followUserNotOkTest() throws Exception {
                 Vendor vendor = objectFactory.getValidVendor();
                 mockMvc.perform(MockMvcRequestBuilders
                                 .post("/users/{userId}/follow/{userIdToFollow}", vendor.getUserId(), vendor.getUserId())
                                 .contentType(MediaType.APPLICATION_JSON))
                                 .andExpect(MockMvcResultMatchers.status().isBadRequest());
+        }
+
+        @Test
+        @DisplayName("/users/{userId}/follow/{userIdToFollow} -> Happy path")
+        public void followUserOkTest() throws Exception {
+                Client client = objectFactory.getValidClient();
+                Vendor vendor = objectFactory.getValidVendor();
+                mockMvc.perform(MockMvcRequestBuilders
+                                .post("/users/{userId}/follow/{userIdToFollow}", client.getUserId(), vendor.getUserId())
+                                .contentType(MediaType.APPLICATION_JSON))
+                                .andExpect(status().isOk())
+                                .andExpect(MockMvcResultMatchers.jsonPath("$.message").value("Vendedor seguido exitosamente"));
         }
 }
