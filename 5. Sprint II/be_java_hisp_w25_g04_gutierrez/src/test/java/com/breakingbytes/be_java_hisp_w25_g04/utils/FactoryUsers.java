@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-public class FactoryUsers {
+public class FactoryUsers { // llamar a los metodos estaticos
 
     public static ModelMapper mapper = new ModelMapper();
 
@@ -256,20 +256,20 @@ public class FactoryUsers {
         return seller;
     }
         
-    public static RequestPostDTO generatePostDTO(){
+    public static RequestPostDTO generatePostDTO() {
         return new RequestPostDTO(
                 3,
                 LocalDate.now(),
                 new ProductDTO(
                         21,
-                        "Mac mini",
-                        "Tech",
-                        "Apple",
-                        "Space gray",
-                        null
+                        "Laptop",
+                        "Electronics",
+                        "Dell",
+                        "Silver",
+                        "Thin and lightweight design"
                 ),
                 100,
-                400D
+                1500.0
         );
     }
 }
