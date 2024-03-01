@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9320e7df-448e-435c-ac6a-bb90dc03cfaf" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2d3B1NQH370zgNpxUbA5WeJ1DZp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.All in be_java_hisp_w25_g10.executor": "Coverage",
+    "JUnit.PostControllerIntegrationTest.addPostIntegrationOKTest.executor": "Run",
+    "JUnit.PostServiceTests.VerifyListPostAsc.executor": "Run",
+    "JUnit.PostServiceTests.VerifyListPostDesc.executor": "Run",
+    "JUnit.UserControllerIntegrationTest.FollowIntegrationTest.executor": "Run",
+    "JUnit.UserControllerIntegrationTest.UnfollowIntegrationTest.executor": "Run",
+    "JUnit.UserControllerIntegrationTest.getFollowedIntegrationAscTest.executor": "Run",
+    "JUnit.UserControllerIntegrationTest.getFollowedIntegrationDescTest.executor": "Run",
+    "JUnit.UserControllerIntegrationTest.getFollowedIntegrationTest.executor": "Run",
+    "JUnit.UserControllerIntegrationTest.getFollowersIntegrationTest.executor": "Run",
+    "JUnit.UserControllerIntegrationTest.getFollowersNumber.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.BeJavaHispW25G10Application.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/vgonzalezcas/Documents/SPRINT2/be_java_hisp_w25_g10_Gonzalez/be_java_hisp_w25_g10_Gonzalez",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.All in be_java_hisp_w25_g10">
+    <configuration name="All in be_java_hisp_w25_g10" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g10" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerIntegrationTest.FollowIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.be_java_hisp_w25_g10.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.be_java_hisp_w25_g10.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.be_java_hisp_w25_g10.controller.UserControllerIntegrationTest" />
+      <option name="METHOD_NAME" value="FollowIntegrationTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerIntegrationTest.getFollowedIntegrationAscTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.be_java_hisp_w25_g10.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.be_java_hisp_w25_g10.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.be_java_hisp_w25_g10.controller.UserControllerIntegrationTest" />
+      <option name="METHOD_NAME" value="getFollowedIntegrationAscTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerIntegrationTest.getFollowedIntegrationDescTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.be_java_hisp_w25_g10.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.be_java_hisp_w25_g10.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.be_java_hisp_w25_g10.controller.UserControllerIntegrationTest" />
+      <option name="METHOD_NAME" value="getFollowedIntegrationDescTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerIntegrationTest.getFollowersIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.be_java_hisp_w25_g10.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.be_java_hisp_w25_g10.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.be_java_hisp_w25_g10.controller.UserControllerIntegrationTest" />
+      <option name="METHOD_NAME" value="getFollowersIntegrationTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeJavaHispW25G10Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="be_java_hisp_w25_g10" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.be_java_hisp_w25_g10.BeJavaHispW25G10Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in be_java_hisp_w25_g10" />
+        <item itemvalue="JUnit.UserControllerIntegrationTest.getFollowersIntegrationTest" />
+        <item itemvalue="JUnit.UserControllerIntegrationTest.getFollowedIntegrationAscTest" />
+        <item itemvalue="JUnit.UserControllerIntegrationTest.getFollowedIntegrationDescTest" />
+        <item itemvalue="JUnit.UserControllerIntegrationTest.FollowIntegrationTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9320e7df-448e-435c-ac6a-bb90dc03cfaf" name="Changes" comment="" />
+      <created>1709226665952</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709226665952</updated>
+      <workItem from="1709226666985" duration="12839000" />
+      <workItem from="1709304193199" duration="3610000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/be_java_hisp_w25_g10/services/posts/PostService.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/be_java_hisp_w25_g10/services/posts/PostService.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/sprint_2_INDIVIDUAL$All_in_be_java_hisp_w25_g10.ic" NAME="All in be_java_hisp_w25_g10 Coverage Results" MODIFIED="1709264377924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g10_Gonzalez$All_in_be_java_hisp_w25_g10.ic" NAME="All in be_java_hisp_w25_g10 Coverage Results" MODIFIED="1709307974738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
