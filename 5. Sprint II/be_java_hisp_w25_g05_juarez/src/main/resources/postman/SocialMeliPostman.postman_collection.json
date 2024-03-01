@@ -1,0 +1,1709 @@
+{
+	"info": {
+		"_postman_id": "c41aa8bd-c998-4be8-88a6-f3e90df6cdab",
+		"name": "SocialMeliPostman (snake_case)",
+		"description": "Vendedor del 1-5, cliente del 6-9\n\nCorrer el request SetUp para realizar varios follows",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32843174"
+	},
+	"item": [
+		{
+			"name": "US_0001",
+			"item": [
+				{
+					"name": "Cliente sigue a vendedor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/{{idClienteValido}}/follow/{{idVendedorValido}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"{{idClienteValido}}",
+								"follow",
+								"{{idVendedorValido}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Un cliente no puede volver a seguir a un vendedor que ya sigue",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/{{idClienteValido}}/follow/{{idVendedorValido}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"{{idClienteValido}}",
+								"follow",
+								"{{idVendedorValido}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vendedor sigue a vendedor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/{{idVendedorValido2}}/follow/{{idVendedorValido}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"{{idVendedorValido2}}",
+								"follow",
+								"{{idVendedorValido}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Un vendedor no puede volver a seguir a un vendedor que ya sigue",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/{{idVendedorValido2}}/follow/{{idVendedorValido}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"{{idVendedorValido2}}",
+								"follow",
+								"{{idVendedorValido}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Un usuario no se puede seguir a si mismo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/{{idClienteValido}}/follow/{{idClienteValido}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"{{idClienteValido}}",
+								"follow",
+								"{{idClienteValido}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Un cliente no se reconoce como vendedor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/{{idVendedorValido}}/follow/{{idClienteValido}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"{{idVendedorValido}}",
+								"follow",
+								"{{idClienteValido}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "US_0002",
+			"item": [
+				{
+					"name": "Contar nuevo seguidor",
+					"item": [
+						{
+							"name": "Si un vendedor no tiene seguidores se lista como cero",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/{{idVendedorValido}}/followers/count",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idVendedorValido}}",
+										"followers",
+										"count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Un usuario sigue al vendedor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/{{idClienteNewFollower}}/follow/{{idVendedorValido}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idClienteNewFollower}}",
+										"follow",
+										"{{idVendedorValido}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "El vendor pasa a tener un seguidor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/{{idVendedorValido}}/followers/count",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idVendedorValido}}",
+										"followers",
+										"count"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "No se reconoce a un cliente como un usuario con seguidores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/{{idClienteValido}}/followers/count",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"{{idClienteValido}}",
+								"followers",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "No se traen vendedores inexistentes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/{{IdVendedorInvalido}}/followers/count",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"{{IdVendedorInvalido}}",
+								"followers",
+								"count"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "US_0005",
+			"item": [
+				{
+					"name": "Se realiza el posteo de un vendedor exitosamente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": {{idVendedorValido}},\n    \"date\": {{fecha_menor_a_dos_semanas}},\n    \"product\": {\n        \"product_id\": 32,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Un cliente no puede realizar posteos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": {{idClienteValido}},\n    \"date\": \"{{$isoTimestamp}}\",\n    \"product\": {\n        \"product_id\": 1,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "No se puede realizar posts con un usuario inexistenet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": {{IdVendedorInvalido}},\n    \"date\": \"2021-04-29\",\n    \"product\": {\n        \"product_id\": 1,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"post"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "US_0006",
+			"item": [
+				{
+					"name": "Verificar listado de posts",
+					"item": [
+						{
+							"name": "Cliente sigue a vendedor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/{{idClienteValido}}/follow/{{idVendedorValido}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idClienteValido}}",
+										"follow",
+										"{{idVendedorValido}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Se listan los posteos hechos por el vendedor hasta el momento",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/products/followed/{{idClienteValido}}/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products",
+										"followed",
+										"{{idClienteValido}}",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "El vendedor postea un artículo dentro de las últimas dos semanas",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": {{idVendedorValido}},\n    \"date\": {{fecha_menor_a_dos_semanas}},\n    \"product\": {\n        \"product_id\": 32,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/products/post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Se lista el ultimo post realizado por el vendedor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/products/followed/{{idClienteValido}}/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products",
+										"followed",
+										"{{idClienteValido}}",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "El vendedor postea un artículo fuera de las últimas dos semanas",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": {{idVendedorValido}},\n    \"date\": {{fecha_mayor_a_dos_semanas}},\n    \"product\": {\n        \"product_id\": 32,\n        \"product_name\": \"Silla Gamer\",\n        \"type\": \"Gamer\",\n        \"brand\": \"Racer\",\n        \"color\": \"Red & Black\",\n        \"notes\": \"Special Edition\"\n    },\n    \"category\": 100,\n    \"price\": 1500.50\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/products/post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "El post no entra en el listado",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/products/followed/{{idClienteValido}}/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products",
+										"followed",
+										"{{idClienteValido}}",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Si un usuario deja de seguir a un vendedor ya no observa sus posts",
+					"item": [
+						{
+							"name": "Cliente sigue a vendedor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/{{idClienteValido}}/follow/{{idVendedorValido}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idClienteValido}}",
+										"follow",
+										"{{idVendedorValido}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Se listan los posteos hechos por el vendedor hasta el momento",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/products/followed/{{idClienteValido}}/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products",
+										"followed",
+										"{{idClienteValido}}",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "El usuario deja de seguir al vendedor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/{{idClienteValido}}/unfollow/{{idVendedorValido}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idClienteValido}}",
+										"unfollow",
+										"{{idVendedorValido}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Ya no se muestran posts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/products/followed/{{idClienteValido}}/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products",
+										"followed",
+										"{{idClienteValido}}",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "404 Not Found",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/followed/{{IdVendedorInvalido}}/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"followed",
+								"{{IdVendedorInvalido}}",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "US_0007",
+			"item": [
+				{
+					"name": "Cliente deja de seguir vendedor",
+					"item": [
+						{
+							"name": "Usuario sigue a un vendedor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/{{idClienteUnfollow}}/follow/{{idVendedorValido}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idClienteUnfollow}}",
+										"follow",
+										"{{idVendedorValido}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "El vendedor se encuentra en el listado de seguidos por el usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/{{idClienteUnfollow}}/followed/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idClienteUnfollow}}",
+										"followed",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "El usuario aparece en la lista de seguidores del vendedor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/{{idVendedorValido}}/followers/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idVendedorValido}}",
+										"followers",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "El usuario deja de seguir al vendedor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/{{idClienteUnfollow}}/unfollow/{{idVendedorValido}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idClienteUnfollow}}",
+										"unfollow",
+										"{{idVendedorValido}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Ya no se lista el usuario en la lista de seguidores",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/{{idVendedorValido}}/followers/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idVendedorValido}}",
+										"followers",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Ya no se lista el vendedor en la lista de seguidos por el usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/{{idClienteUnfollow}}/followed/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idClienteUnfollow}}",
+										"followed",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Vendedor deja de seguir vendedor",
+					"item": [
+						{
+							"name": "Usuario sigue a un vendedor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/{{idVendedorUnfollow}}/follow/{{idVendedorValido}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idVendedorUnfollow}}",
+										"follow",
+										"{{idVendedorValido}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "El vendedor se encuentra en el listado de seguidos por el usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/{{idVendedorUnfollow}}/followed/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idVendedorUnfollow}}",
+										"followed",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "El usuario aparece en la lista de seguidores del vendedor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/{{idVendedorValido}}/followers/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idVendedorValido}}",
+										"followers",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "El usuario deja de seguir al vendedor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/{{idClienteUnfollow}}/unfollow/{{idVendedorValido}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idClienteUnfollow}}",
+										"unfollow",
+										"{{idVendedorValido}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Ya no se lista el usuario en la lista de seguidores",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/{{idVendedorValido}}/followers/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idVendedorValido}}",
+										"followers",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Ya no se lista el vendedor en la lista de seguidos por el usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/{{idClienteUnfollow}}/followed/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idClienteUnfollow}}",
+										"followed",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "No se puede dejar de seguir a un vendedor luego de haberlo dejado de seguir",
+					"item": [
+						{
+							"name": "Usuario sigue a un vendedor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/{{idClienteUnfollow}}/follow/{{idVendedorValido}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idClienteUnfollow}}",
+										"follow",
+										"{{idVendedorValido}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "El usuario deja de seguir al vendedor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/{{idClienteUnfollow}}/unfollow/{{idVendedorValido}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idClienteUnfollow}}",
+										"unfollow",
+										"{{idVendedorValido}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Si el usuario intenta dejar de seguir devuelta se indica que no lo está siguiendo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/{{idClienteUnfollow}}/unfollow/{{idVendedorValido}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idClienteUnfollow}}",
+										"unfollow",
+										"{{idVendedorValido}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Un usuario no se puede dejar de seguir a si mismo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/{{idVendedorValido}}/unfollow/{{idVendedorValido}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"{{idVendedorValido}}",
+								"unfollow",
+								"{{idVendedorValido}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "No se puede dejar de seguir un vendedor inexistente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/{{idClienteValido}}/unfollow/{{IdVendedorInvalido}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"{{idClienteValido}}",
+								"unfollow",
+								"{{IdVendedorInvalido}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Un cliente inexistente no puede dejar de seguir a un vendedor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/{{idClienteInvalido}}/unfollow/{{IdVendedorInvalido}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"{{idClienteInvalido}}",
+								"unfollow",
+								"{{IdVendedorInvalido}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Un usuario que no está siguiendo a un vendedor no puede dejar de seguirlo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/{{idClienteValido}}/unfollow/{{idVendedorValido}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"{{idClienteValido}}",
+								"unfollow",
+								"{{idVendedorValido}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Followers list tests",
+			"item": [
+				{
+					"name": "SetUp",
+					"item": [
+						{
+							"name": "SetUp",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"let url = pm.globals.get(\"local\");",
+											"",
+											"for(var i = 1; i <= 9;i++) {",
+											"    if(i!=1) {",
+											"        pm.sendRequest({",
+											"            url: url+\"/users/1/follow/\"+i,",
+											"            method: 'POST'",
+											"            }, function (err, response) {",
+											"        });",
+											"    }",
+											"    if(i!=1) {",
+											"        pm.sendRequest({",
+											"            url: url+\"/users/\"+i+\"/follow/1\",",
+											"            method: 'POST'",
+											"            }, function (err, response) {",
+											"        });",
+											"    }",
+											"}",
+											"",
+											"for(var i = 1; i <= 5;i++) {",
+											"    ",
+											"        pm.sendRequest({",
+											"            url: url+\"/users/\"+i+\"/follow/1\",",
+											"            method: 'POST'",
+											"            }, function (err, response) {",
+											"        });",
+											"    ",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://postman-echo.com/get",
+									"protocol": "https",
+									"host": [
+										"postman-echo",
+										"com"
+									],
+									"path": [
+										"get"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "US_0003",
+					"item": [
+						{
+							"name": "Se lista nuevo seguidor",
+							"item": [
+								{
+									"name": "Se listan correctamente los seguidores de un vendedor",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/users/{{idVendedorValido}}/followers/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"users",
+												"{{idVendedorValido}}",
+												"followers",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Se agrego un nuevo seguidor",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/users/{{idClienteNewFollower2}}/follow/{{idVendedorValido}}",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"users",
+												"{{idClienteNewFollower2}}",
+												"follow",
+												"{{idVendedorValido}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Se observa el nuevo seguidor en la lista",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/users/{{idVendedorValido}}/followers/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"users",
+												"{{idVendedorValido}}",
+												"followers",
+												"list"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Un cliente no tiene lista de seguidores",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/{{idClienteValido}}/followers/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{idClienteValido}}",
+										"followers",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "No se encuentra un usuario inexistente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/{{IdVendedorInvalido}}/followers/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"{{IdVendedorInvalido}}",
+										"followers",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "US_0004",
+					"item": [
+						{
+							"name": "Se lista nuevo seguidor",
+							"item": [
+								{
+									"name": "Se listan los vendedores a los que se sigue correctamente",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/users/{{idClienteValido}}/followed/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"users",
+												"{{idClienteValido}}",
+												"followed",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Se agrego un nuevo vendedor seguido",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/users/{{idClienteValido}}/follow/{{idVendedorValido}}",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"users",
+												"{{idClienteValido}}",
+												"follow",
+												"{{idVendedorValido}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Se observa el nuevo vendedor seguido",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/users/{{idClienteValido}}/followed/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"users",
+												"{{idClienteValido}}",
+												"followed",
+												"list"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "No se encuentra un id inexistente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/100/followed/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"100",
+										"followed",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "US_0008",
+					"item": [
+						{
+							"name": "Seguidores de un vendedor",
+							"item": [
+								{
+									"name": "Listar seguidores según ordenamiento",
+									"item": [
+										{
+											"name": "Se listan los seguidores ascendentemente",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8080/users/{{idVendedorValido}}/followed/list?order=name_asc",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"users",
+														"{{idVendedorValido}}",
+														"followed",
+														"list"
+													],
+													"query": [
+														{
+															"key": "order",
+															"value": "name_asc"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Se listan los seguidores descendientemente",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8080/users/{{idVendedorValido}}/followed/list?order=name_desc",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"users",
+														"{{idVendedorValido}}",
+														"followed",
+														"list"
+													],
+													"query": [
+														{
+															"key": "order",
+															"value": "name_desc"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "No se reconoce un ordenamiento invalido",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/users/{{idVendedorValido}}/followed/list?order=invalido",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"users",
+												"{{idVendedorValido}}",
+												"followed",
+												"list"
+											],
+											"query": [
+												{
+													"key": "order",
+													"value": "invalido"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Vendedores seguidos por un usuario",
+							"item": [
+								{
+									"name": "Listar seguidores según ordenamiento",
+									"item": [
+										{
+											"name": "Se listan los vendedores ascendientemente",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8080/users/{{idVendedorValido}}/followers/list?order=name_asc",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"users",
+														"{{idVendedorValido}}",
+														"followers",
+														"list"
+													],
+													"query": [
+														{
+															"key": "order",
+															"value": "name_asc"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Se listan los vendedores descendientemente",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8080/users/{{idVendedorValido}}/followers/list?order=name_desc",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"users",
+														"{{idVendedorValido}}",
+														"followers",
+														"list"
+													],
+													"query": [
+														{
+															"key": "order",
+															"value": "name_desc"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "No se reconoce un ordenamiento invalido",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/users/{{idVendedorValido}}/followers/list?order=invalido",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"users",
+												"{{idVendedorValido}}",
+												"followers",
+												"list"
+											],
+											"query": [
+												{
+													"key": "order",
+													"value": "invalido"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "US_0009",
+					"item": [
+						{
+							"name": "Listar productos según ordenamiento",
+							"item": [
+								{
+									"name": "Se listan los posts ascendentemente",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/products/followed/{{idClienteValido}}/list?order=date_asc",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"products",
+												"followed",
+												"{{idClienteValido}}",
+												"list"
+											],
+											"query": [
+												{
+													"key": "order",
+													"value": "date_asc"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Se listan los posts descendientemente",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/products/followed/{{idClienteValido}}/list?order=date_desc",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"products",
+												"followed",
+												"{{idClienteValido}}",
+												"list"
+											],
+											"query": [
+												{
+													"key": "order",
+													"value": "date_desc"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "No se reconoce un ordenamiento invalido",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/products/followed/{{idClienteValido}}/list?order=invalido",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products",
+										"followed",
+										"{{idClienteValido}}",
+										"list"
+									],
+									"query": [
+										{
+											"key": "order",
+											"value": "invalido"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "idClienteValido",
+			"value": "9"
+		},
+		{
+			"key": "idVendedorValido",
+			"value": "1"
+		},
+		{
+			"key": "idVendedorValido2",
+			"value": "2"
+		},
+		{
+			"key": "idClienteNewFollower",
+			"value": "6"
+		},
+		{
+			"key": "IdVendedorInvalido",
+			"value": "100000"
+		},
+		{
+			"key": "idClienteNewFollower2",
+			"value": "7"
+		},
+		{
+			"key": "idClienteUnfollow",
+			"value": "8"
+		},
+		{
+			"key": "fecha_menor_a_dos_semanas",
+			"value": "\"2024-02-19\""
+		},
+		{
+			"key": "fecha_mayor_a_dos_semanas",
+			"value": "\"2024-02-05\""
+		},
+		{
+			"key": "idVendedorUnfollow",
+			"value": "3"
+		},
+		{
+			"key": "idClienteInvalido",
+			"value": "100001"
+		}
+	]
+}
