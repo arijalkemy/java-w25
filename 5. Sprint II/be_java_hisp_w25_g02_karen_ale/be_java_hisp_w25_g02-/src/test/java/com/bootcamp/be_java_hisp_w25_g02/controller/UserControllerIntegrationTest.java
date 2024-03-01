@@ -1,10 +1,15 @@
 package com.bootcamp.be_java_hisp_w25_g02.controller;
 
+import com.bootcamp.be_java_hisp_w25_g02.dto.request.PostDTO;
 import com.bootcamp.be_java_hisp_w25_g02.dto.response.FollowerListDTO;
+import com.bootcamp.be_java_hisp_w25_g02.dto.response.GenericResponseDTO;
+import com.bootcamp.be_java_hisp_w25_g02.dto.response.ProductDTO;
 import com.bootcamp.be_java_hisp_w25_g02.dto.response.UserDTO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import lombok.SneakyThrows;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +22,13 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.util.Assert;
 
 import java.nio.charset.StandardCharsets;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -62,5 +71,5 @@ public class UserControllerIntegrationTest {
         Assertions.assertEquals(expectedResult, myResult.getResponse().getContentAsString(StandardCharsets.UTF_8));
 
     }
-
 }
+
