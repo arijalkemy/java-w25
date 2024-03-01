@@ -255,7 +255,6 @@ public class FactoryUsers { // llamar a los metodos estaticos
         ));
         return seller;
     }
-        
     public static RequestPostDTO generatePostDTO() {
         return new RequestPostDTO(
                 3,
