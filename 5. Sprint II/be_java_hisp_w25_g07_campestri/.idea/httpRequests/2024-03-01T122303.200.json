@@ -1,0 +1,18 @@
+{
+  "sellerId": 1,
+  "sellerUserName": "Seller_1",
+  "buyers": [
+    {
+      "id": 13,
+      "userName": "Buyer_3"
+    },
+    {
+      "id": 12,
+      "userName": "Buyer_2"
+    },
+    {
+      "id": 11,
+      "userName": "Buyer_1"
+    }
+  ]
+}
