@@ -2,8 +2,6 @@ package com.grupo08.socialmeli.controller;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ProductControllerTest {
 
     @Test
@@ -11,7 +9,7 @@ class ProductControllerTest {
     }
 
     @Test
-    void followProcducts() {
+    void followProducts() {
     }
 
     @Test

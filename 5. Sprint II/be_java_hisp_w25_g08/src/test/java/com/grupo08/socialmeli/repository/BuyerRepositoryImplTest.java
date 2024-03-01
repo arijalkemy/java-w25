@@ -17,6 +17,7 @@ class BuyerRepositoryImplTest {
 
     @InjectMocks
     BuyerRepositoryImpl buyerRepository;
+
     @Test
     void findAll() {
         //arrange
@@ -27,7 +28,7 @@ class BuyerRepositoryImplTest {
 
         //verify
         assertNotNull(buyers);
-        assertEquals(expectedSize,buyers.size());
+        assertEquals(expectedSize, buyers.size());
     }
 
     @Test
@@ -43,7 +44,7 @@ class BuyerRepositoryImplTest {
 
         //assert
         assertTrue(buyer.isPresent());
-        assertEquals(userId,buyer.get().getId());
+        assertEquals(userId, buyer.get().getId());
 
 
     }

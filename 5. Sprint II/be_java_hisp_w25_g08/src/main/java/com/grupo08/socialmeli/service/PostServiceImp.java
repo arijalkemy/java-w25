@@ -48,7 +48,7 @@ public class PostServiceImp implements IPostService {
     @Override
     public void findExceptionsPostDto(PostDto postDto) {
 
-        if (
+        /*if (
             postDto.getUserId() == null ||
             postDto.getDate() == null ||
             postDto.getProduct() == null ||
@@ -61,7 +61,7 @@ public class PostServiceImp implements IPostService {
             postDto.getCategory() == null ||
             postDto.getPrice() == null
         )
-            throw new BadRequestException("Faltan datos");
+            throw new BadRequestException("Faltan datos");*/
 
         Optional<Seller> getSeller = sellerRepository.findById(postDto.getUserId());
         if (!getSeller.isPresent())

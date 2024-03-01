@@ -1,6 +1,9 @@
 package com.grupo08.socialmeli.controller;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Positive;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import com.grupo08.socialmeli.dto.PostDto;
@@ -12,6 +15,7 @@ import org.springframework.http.HttpStatus;
 
 @RestController
 @RequestMapping("/products")
+@Validated
 public class ProductController {
 
     @Autowired
@@ -25,8 +29,9 @@ public class ProductController {
         return new ResponseEntity<>(postService.getAll(),HttpStatus.OK);
     }
     @GetMapping("/followed/{userId}/list")
-    public ResponseEntity<?> followProcducts(@PathVariable("userId") Integer idUser,@RequestParam(required = false)  String order){
-        System.out.println("-------"+order+"--------");
+    public ResponseEntity<?> followProcducts(@Positive(message = "El id debe ser mayor a 0.")
+                                                 @PathVariable("userId") Integer idUser,
+                                             @RequestParam(required = false)  String order){
         if(order==null){
             return new ResponseEntity<>(userService.postSortWeeks(idUser),HttpStatus.OK);
         }else{
@@ -37,7 +42,7 @@ public class ProductController {
     }
 
     @PostMapping("/post")
-    public ResponseEntity<?> insertPost(@RequestBody PostDto postDto) {
+    public ResponseEntity<?> insertPost(@Valid @RequestBody PostDto postDto) {
         return new ResponseEntity<>(postService.insertPost(postDto),HttpStatus.OK);
     }
 

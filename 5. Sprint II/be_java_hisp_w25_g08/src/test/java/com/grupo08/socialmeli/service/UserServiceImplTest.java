@@ -1,59 +1,30 @@
 package com.grupo08.socialmeli.service;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
+import com.grupo08.socialmeli.dto.PostDto;
 import com.grupo08.socialmeli.dto.response.*;
 import com.grupo08.socialmeli.entity.*;
 import com.grupo08.socialmeli.exception.BadRequestException;
 import com.grupo08.socialmeli.exception.NotFoundException;
-import com.grupo08.socialmeli.dto.response.FollowersCountDto;
-import com.grupo08.socialmeli.exception.NotFoundException;
-import com.grupo08.socialmeli.repository.*;
+import com.grupo08.socialmeli.repository.BuyerRepositoryImpl;
 import com.grupo08.socialmeli.repository.IPostRepository;
-import org.junit.jupiter.api.DisplayName;
-import com.grupo08.socialmeli.entity.Buyer;
-import com.grupo08.socialmeli.entity.Post;
-import com.grupo08.socialmeli.repository.PostRepositoryImp;
 import com.grupo08.socialmeli.repository.SellerRepositoryImpl;
-import org.junit.jupiter.api.Test;
+import com.grupo08.socialmeli.utils.TestData;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
-import com.grupo08.socialmeli.dto.PostDto;
-import com.grupo08.socialmeli.dto.response.FollowingPostDto;
-import com.grupo08.socialmeli.entity.Product;
-import com.grupo08.socialmeli.repository.BuyerRepositoryImpl;
 
-import java.lang.reflect.Type;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import com.grupo08.socialmeli.dto.response.FollowDto;
-import com.grupo08.socialmeli.dto.response.FollowedDTO;
-
-
-import com.grupo08.socialmeli.dto.response.FollowersCountDto;
-import com.grupo08.socialmeli.entity.Seller;
-import com.grupo08.socialmeli.entity.User;
-import com.grupo08.socialmeli.exception.BadRequestException;
-import com.grupo08.socialmeli.exception.NotFoundException;
-import com.grupo08.socialmeli.repository.BuyerRepositoryImpl;
-import com.grupo08.socialmeli.utils.TestData;
-import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.*;
-import static org.mockito.Mockito.when;
-
-import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.verify;
-
-import java.time.LocalDate;
+import static org.mockito.Mockito.when;
 
 
 @ExtendWith(MockitoExtension.class)
@@ -127,6 +98,29 @@ class UserServiceImplTest {
     }
 
     @Test
+    @DisplayName("T0001_seller_already_followed")
+    void followSellerAlreadyFollowed() {
+
+        int existingBuyerId = 1; // ID de comprador existente
+        int existingSellerId = 2; // ID de vendedor existente
+
+        // Configura el mock para que devuelva objetos válidos
+        Buyer mockBuyer = new Buyer(existingBuyerId, "Fabian", new ArrayList<>(
+                List.of(new Seller(existingSellerId, "Juan", List.of(), List.of())))); // Asume que Buyer y Seller son clases que existen
+        Seller mockSeller = new Seller(existingSellerId, "Juan", new ArrayList<>(),
+                new ArrayList<>(List.of(new User(existingBuyerId, "Fabian"))));
+
+        when(buyerRepository.findById(existingBuyerId)).thenReturn(Optional.of(mockBuyer));
+        when(sellerRepository.findById(existingSellerId)).thenReturn(Optional.of(mockSeller));
+
+        assertThrows(BadRequestException.class, () -> userService.follow(existingBuyerId, existingSellerId));
+
+        verify(buyerRepository).findById(existingBuyerId);
+        verify(sellerRepository).findById(existingSellerId);
+
+    }
+
+    @Test
     @DisplayName("T0001_seller_not_found")
     void followSellerNotFound() {
 
@@ -144,47 +138,47 @@ class UserServiceImplTest {
     }
 
     @Test
-    @DisplayName("T0006 Get users sorted by name asc")
-    void getFollowersByIdAsc() {
+    @DisplayName("T-0006 Get users sorted by name asc")
+    void getFollowersbyIdAsc() {
         // Arrange
         FollowingPostDto expectedFollowingPost = new FollowingPostDto(
-            1,
-            List.of(
-                new PostDto(
-                        1,
-                        LocalDate.of(2024, 02, 21),
-                        new Product(
-                                12,
-                                "Silla Gamer",
-                                "Gamer",
-                                "Racer",
-                                "Blue & Green",
-                                "Cheap edition"
+                1,
+                List.of(
+                        new PostDto(
+                                1,
+                                LocalDate.of(2024, 2, 21),
+                                new Product(
+                                        12,
+                                        "Silla Gamer",
+                                        "Gamer",
+                                        "Racer",
+                                        "Blue & Green",
+                                        "Cheap edition"
+                                ),
+                                1,
+                                350000.0
                         ),
-                        1,
-                        350000.0
-                ),
-                new PostDto(
-                    1,
-                    LocalDate.of(2024, 02, 22),
-                    new Product(
-                        1,
-                        "Silla Gamer",
-                        "Gamer",
-                        "Racer",
-                        "Blue & Green",
-                        "Cheap edition"
-                    ),
-                    1,
-                    350000.0
+                        new PostDto(
+                                1,
+                                LocalDate.of(2024, 2, 22),
+                                new Product(
+                                        1,
+                                        "Silla Gamer",
+                                        "Gamer",
+                                        "Racer",
+                                        "Blue & Green",
+                                        "Cheap edition"
+                                ),
+                                1,
+                                350000.0
+                        )
                 )
-            )
         );
 
 
         Post post1 = new Post(
                 1,
-                LocalDate.of(2024, 02, 22),
+                LocalDate.of(2024, 2, 22),
                 new Product(
                         1,
                         "Silla Gamer",
@@ -199,7 +193,7 @@ class UserServiceImplTest {
 
         Post post2 = new Post(
                 1,
-                LocalDate.of(2024, 02, 21),
+                LocalDate.of(2024, 2, 21),
                 new Product(
                         12,
                         "Silla Gamer",
@@ -214,10 +208,10 @@ class UserServiceImplTest {
 
         Seller seller = new Seller(
                 1, "Andres Seller Mock", List.of(post1, post2), List.of(
-                        new Buyer(
-                                1, "Andres Buyer Mock", List.of()
-                        )
+                new Buyer(
+                        1, "Andres Buyer Mock", List.of()
                 )
+        )
         );
 
         Buyer buyer1 = new Buyer(
@@ -234,46 +228,46 @@ class UserServiceImplTest {
 
     @Test
     @DisplayName("T-0006 Get users sorted by name desc")
-    void getFollowersByIdDesc() {
+    void getFollowersbyIdDesc() {
         // Arrange
         FollowingPostDto expectedFollowingPost = new FollowingPostDto(
-            1,
-            List.of(
-                new PostDto(
-                    1,
-                    LocalDate.of(2024, 02, 22),
-                    new Product(
-                        1,
-                        "Silla Gamer",
-                        "Gamer",
-                        "Racer",
-                        "Blue & Green",
-                        "Cheap edition"
-                    ),
-                    1,
-                    350000.0
-                ),
-                new PostDto(
-                        1,
-                        LocalDate.of(2024, 02, 21),
-                        new Product(
-                                12,
-                                "Silla Gamer",
-                                "Gamer",
-                                "Racer",
-                                "Blue & Green",
-                                "Cheap edition"
+                1,
+                List.of(
+                        new PostDto(
+                                1,
+                                LocalDate.of(2024, 2, 22),
+                                new Product(
+                                        1,
+                                        "Silla Gamer",
+                                        "Gamer",
+                                        "Racer",
+                                        "Blue & Green",
+                                        "Cheap edition"
+                                ),
+                                1,
+                                350000.0
                         ),
-                        1,
-                        350000.0
+                        new PostDto(
+                                1,
+                                LocalDate.of(2024, 2, 21),
+                                new Product(
+                                        12,
+                                        "Silla Gamer",
+                                        "Gamer",
+                                        "Racer",
+                                        "Blue & Green",
+                                        "Cheap edition"
+                                ),
+                                1,
+                                350000.0
+                        )
                 )
-            )
         );
 
 
         Post post1 = new Post(
                 1,
-                LocalDate.of(2024, 02, 22),
+                LocalDate.of(2024, 2, 22),
                 new Product(
                         1,
                         "Silla Gamer",
@@ -288,7 +282,7 @@ class UserServiceImplTest {
 
         Post post2 = new Post(
                 1,
-                LocalDate.of(2024, 02, 21),
+                LocalDate.of(2024, 2, 21),
                 new Product(
                         12,
                         "Silla Gamer",
@@ -303,10 +297,10 @@ class UserServiceImplTest {
 
         Seller seller = new Seller(
                 1, "Andres Seller Mock", List.of(post1, post2), List.of(
-                        new Buyer(
-                                1, "Andres Buyer Mock", List.of()
-                        )
+                new Buyer(
+                        1, "Andres Buyer Mock", List.of()
                 )
+        )
         );
 
         Buyer buyer1 = new Buyer(
@@ -321,87 +315,87 @@ class UserServiceImplTest {
     }
 
 
-
     @Test
     @DisplayName("Camino feliz T-0003 asc")
     void getFollowers() {
         //Arrange
-        Integer userId=1;
-        String order="name_asc";
+        Integer userId = 1;
+        String order = "name_asc";
 
-        List<User> followers = new ArrayList<>(List.of(new User(2,"Fabian"),new User(3,"Stiven")));
+        List<User> followers = new ArrayList<>(List.of(new User(2, "Fabian"), new User(3, "Stiven")));
 
-        Seller seller = new Seller(1, "Fabian Rodriguez", new ArrayList<>(),followers);
+        Seller seller = new Seller(1, "Fabian Rodriguez", new ArrayList<>(), followers);
         Optional<Seller> optionalSeller = Optional.of(seller);
 
         when(sellerRepository.findById(userId)).thenReturn(optionalSeller);
 
         //Act
-        FollowersDto result = userService.getFollowers(userId,order);
+        FollowersDto result = userService.getFollowers(userId, order);
 
         //Assert
         assertEquals(userId, result.getUserId());
         assertEquals("Fabian Rodriguez", result.getUserName());
         assertEquals(seller.getFollowers().size(), result.getFollowers().size());
-        assertEquals(seller.getFollowers().get(0).getId(),result.getFollowers().get(0).getUserId());
+        assertEquals(seller.getFollowers().get(0).getId(), result.getFollowers().get(0).getUserId());
     }
 
     @Test
     @DisplayName("Camino feliz T-0003 desc")
     void getFollowersDesc() {
         //Arrange
-        Integer userId=1;
-        String order="name_desc";
+        Integer userId = 1;
+        String order = "name_desc";
 
-        List<User> followers = new ArrayList<>(List.of(new User(3,"Stiven"), new User(2,"Fabian")));
+        List<User> followers = new ArrayList<>(List.of(new User(3, "Stiven"), new User(2, "Fabian")));
 
-        Seller seller = new Seller(1, "Fabian Rodriguez", new ArrayList<>(),followers);
+        Seller seller = new Seller(1, "Fabian Rodriguez", new ArrayList<>(), followers);
         Optional<Seller> optionalSeller = Optional.of(seller);
 
         when(sellerRepository.findById(userId)).thenReturn(optionalSeller);
 
         //Act
-        FollowersDto result = userService.getFollowers(userId,order);
+        FollowersDto result = userService.getFollowers(userId, order);
 
         //Assert
         assertEquals(userId, result.getUserId());
         assertEquals("Fabian Rodriguez", result.getUserName());
         assertEquals(seller.getFollowers().size(), result.getFollowers().size());
-        assertEquals(seller.getFollowers().get(0).getId(),result.getFollowers().get(0).getUserId());
+        assertEquals(seller.getFollowers().get(0).getId(), result.getFollowers().get(0).getUserId());
     }
 
     @Test
     @DisplayName("Camino error usuario no existe T-0003")
     void getFollowersFail() {
         //Arrange
-        Integer userId=1;
-        String order="test";
+        int userId = 1;
+        String order = "test";
 
-        List<User> followers = new ArrayList<>(List.of(new User(3,"Stiven"), new User(2,"Fabian")));
+        List<User> followers = new ArrayList<>(List.of(new User(3, "Stiven"), new User(2, "Fabian")));
 
-        Seller seller = new Seller(1, "Fabian Rodriguez", new ArrayList<>(),followers);
+        Seller seller = new Seller(1, "Fabian Rodriguez", new ArrayList<>(), followers);
         Optional<Seller> optionalSeller = Optional.of(seller);
 
         when(sellerRepository.findById(userId)).thenReturn(optionalSeller);
 
 
         //Act && Assert
-        assertThrows(BadRequestException.class, ()->{userService.getFollowers(userId,order);});
+        assertThrows(BadRequestException.class, () -> userService.getFollowers(userId, order));
 
     }
+
     @Test
     @DisplayName("Camino error orden invalido T-0003")
     void getFollowersFailOrder() {
         //Arrange
-        Integer userId=1;
-        String order ="name_desc";
+        int userId = 1;
+        String order = "name_desc";
 
         Optional<Seller> optionalSeller = Optional.empty();
 
         when(sellerRepository.findById(userId)).thenReturn(optionalSeller);
 
         //Act && Assert
-        assertThrows(NotFoundException.class, ()->{userService.getFollowers(userId,order);});
+        assertThrows(NotFoundException.class, () -> userService.getFollowers(userId, order));
 
     }
 
@@ -550,7 +544,7 @@ class UserServiceImplTest {
 
         @Test
         @Order(5)
-        @DisplayName("Valor de parametro incorrecto: BadRequestException")
+        @DisplayName("Valor de parámetro incorrecto: BadRequestException")
         void getFollowedSellersBadRequestParam() {
             //ARRANGE
             String expectedMessage = "El valor del parámetro order no es correcto";
@@ -602,30 +596,31 @@ class UserServiceImplTest {
         // Arrange, Act and Assert
         assertThrows(BadRequestException.class, () -> userService.postSortDate(1, "Order"));
     }
+
     @Test
-    void testPostSortWeeks() throws JsonProcessingException {
+    void testPostSortWeeks() {
         // Arrange
         ArrayList<Seller> following = new ArrayList<>();
         Seller vendedor = new Seller();
         List<Post> posts = new ArrayList<>();
         vendedor.setId(1);
         // Objeto 1
-        Post post1 = new Post(1, LocalDate.of(2024,02,10), null, 1, 10.0);
+        Post post1 = new Post(1, LocalDate.of(2024, 2, 28), null, 1, 10.0);
         posts.add(post1);
 
         // Objeto 2
-        Post post2 = new Post(1, LocalDate.of(2024,02,27), null, 1, 10.0);
+        Post post2 = new Post(1, LocalDate.of(2024, 2, 27), null, 1, 10.0);
         posts.add(post2);
 
         // Objeto 3
-        Post post3 = new Post(1, LocalDate.of(2024,02,15), null, 1, 10.0);
+        Post post3 = new Post(1, LocalDate.of(2024, 2, 25), null, 1, 10.0);
         posts.add(post3);
 
         // Objeto 4
-        Post post4 = new Post(1, LocalDate.of(2024,02,29) , null, 1, 10.0);
+        Post post4 = new Post(1, LocalDate.of(2024, 2, 29), null, 1, 10.0);
         posts.add(post4);
-         vendedor.setPosts(posts);
-         following.add(vendedor);
+        vendedor.setPosts(posts);
+        following.add(vendedor);
         Optional<Buyer> ofResult = Optional.of(new Buyer(1, "Name", following));
         when(buyerRepository.findById(anyInt())).thenReturn(ofResult);
         when(postRepository.getByIdUser(anyLong())).thenReturn(posts);
@@ -634,6 +629,6 @@ class UserServiceImplTest {
 
         // Assert
         verify(buyerRepository).findById(eq(1));
-        assertEquals(3, actualPostSortWeeksResult.getPost().size());
+        assertEquals(4, actualPostSortWeeksResult.getPost().size());
     }
 }

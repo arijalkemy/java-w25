@@ -82,14 +82,13 @@ class UserControllerTest {
     void getFollowedSellers() {
         //ARRANGE
         int userId = 1000;
-        String order = null;
 
         FollowedDTO followedDTO = TestData.getFollowedDTOResponse(userId);
-        when(userService.getFollowedSellers(userId, order)).thenReturn(followedDTO);
+        when(userService.getFollowedSellers(userId, null)).thenReturn(followedDTO);
 
         //ACT
         ResponseEntity<?> response =
-                userController.getFollowedSellers(followedDTO.getUserId(), order);
+                userController.getFollowedSellers(followedDTO.getUserId(), null);
 
         //ASSERT
         assertNotNull(response);
