@@ -1,0 +1,128 @@
+[
+  {
+    "id": 0,
+    "date": "2024-02-27",
+    "product": {
+      "id": 100,
+      "name": "Barra de Chocolate",
+      "type": "Comida",
+      "brand": "Industrias Wonka",
+      "color": "Marrón",
+      "notes": "Deliciosa barra de chocolate mágica con la posibilidad de encontrar un billete dorado"
+    },
+    "category": 1,
+    "price": 2.99
+  },
+  {
+    "id": 1,
+    "date": "2024-02-26",
+    "product": {
+      "id": 101,
+      "name": "Artefacto Antiguo",
+      "type": "Antigüedades",
+      "brand": "Civilizaciones Perdidas",
+      "color": "Oro",
+      "notes": "Artefacto raro y misterioso descubierto durante una expedición aventurera"
+    },
+    "category": 2,
+    "price": 9999.99
+  },
+  {
+    "id": 2,
+    "date": "2024-02-25",
+    "product": {
+      "id": 102,
+      "name": "Gobstopper Eterno",
+      "type": "Dulce",
+      "brand": "Industrias Wonka",
+      "color": "Multicolor",
+      "notes": "Un caramelo que nunca se desvanece, nunca se disuelve y nunca pierde su sabor"
+    },
+    "category": 1,
+    "price": 0.99
+  },
+  {
+    "id": 3,
+    "date": "2024-02-24",
+    "product": {
+      "id": 103,
+      "name": "Sombrero Fedora",
+      "type": "Ropa",
+      "brand": "Equipo del Aventurero",
+      "color": "Marrón",
+      "notes": "Sombrero icónico usado por el arqueólogo más renombrado del mundo"
+    },
+    "category": 3,
+    "price": 59.99
+  },
+  {
+    "id": 4,
+    "date": "2024-02-23",
+    "product": {
+      "id": 104,
+      "name": "Látigo",
+      "type": "Accesorio",
+      "brand": "Equipo del Aventurero",
+      "color": "Negro",
+      "notes": "Herramienta esencial para cualquier aventurero, perfecta para navegar por terrenos peligrosos"
+    },
+    "category": 3,
+    "price": 29.99
+  },
+  {
+    "id": 5,
+    "date": "2024-02-22",
+    "product": {
+      "id": 105,
+      "name": "Traje de Spider-Man",
+      "type": "Disfraz",
+      "brand": "Innovaciones Parker",
+      "color": "Rojo y Azul",
+      "notes": "Traje de alta tecnología diseñado por Peter Parker para mejorar la agilidad y la fuerza"
+    },
+    "category": 4,
+    "price": 199.99
+  },
+  {
+    "id": 6,
+    "date": "2024-02-21",
+    "product": {
+      "id": 106,
+      "name": "Batimóvil",
+      "type": "Vehículo",
+      "brand": "Empresas Wayne",
+      "color": "Negro",
+      "notes": "El vehículo definitivo equipado con tecnología de punta para la justicia vigilante"
+    },
+    "category": 5,
+    "price": 250000.00
+  },
+  {
+    "id": 7,
+    "date": "2024-02-20",
+    "product": {
+      "id": 107,
+      "name": "Reactor Arc",
+      "type": "Tecnología",
+      "brand": "Industrias Stark",
+      "color": "Plata",
+      "notes": "Fuente de energía limpia capaz de alimentar desde un corazón hasta un rascacielos"
+    },
+    "category": 6,
+    "price": 5000.00
+  },
+  {
+    "id": 8,
+    "date": "2024-02-19",
+    "product": {
+      "id": 108,
+      "name": "Traje de Iron Man",
+      "type": "Armadura",
+      "brand": "Industrias Stark",
+      "color": "Rojo y Oro",
+      "notes": "Traje exoesqueleto avanzado que proporciona fuerza sobrehumana y capacidad de vuelo"
+    },
+    "category": 4,
+    "price": 150000.00
+  }
+]
