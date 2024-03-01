@@ -36,6 +36,10 @@ class UserRepositoryTest {
     @DisplayName("JUnit Test for get all users")
     void getAllUsers() {
         // arrange
+        Seller seller = Seller.builder().id(9).username("Capitan America").followed(new ArrayList<>()).followers(new ArrayList<>()).build();
+        Buyer buyer = Buyer.builder().id(10).username("Federico").followed(new ArrayList<>()).build();
+        seller.getFollowers().add(buyer);
+        buyer.getFollowed().add(seller);
         List<User> expectedUsers = List.of(
                 Seller.builder().id(1).username("Tony Stark").followed(new ArrayList<>()).followers(new ArrayList<>()).build(),
                 Seller.builder().id(2).username("Luca").followed(new ArrayList<>()).followers(new ArrayList<>()).build(),
@@ -45,7 +49,9 @@ class UserRepositoryTest {
                 Buyer.builder().id(5).username("Orlando").followed(new ArrayList<>()).build(),
                 Buyer.builder().id(6).username("Miguel").followed(new ArrayList<>()).build(),
                 Buyer.builder().id(7).username("Samuel").followed(new ArrayList<>()).build(),
-                Buyer.builder().id(8).username("Tony Stark").followed(new ArrayList<>()).build()
+                Buyer.builder().id(8).username("Tony Stark").followed(new ArrayList<>()).build(),
+                seller,
+                buyer
         );
 
         // act
@@ -57,47 +63,53 @@ class UserRepositoryTest {
 
     @Test
     void removeFollower() {
-        // Arrange
-        Seller seller = Seller.builder().id(1).username("Tony Stark").followed(new ArrayList<>()).followers(new ArrayList<>()).build();
-        User user = Buyer.builder().id(4).username("Santiago").followed(new ArrayList<>()).build();
-        seller.getFollowers().add(user);
-        // Act
-        userRepository.removeFollower(seller, user);
-        // Assert
-        assertFalse(seller.getFollowers().contains(user));
+        //Arrange
+        boolean resultExpected = true;
+        //Act
+        boolean result = this.userRepository.removeFollower(
+                (Seller) this.userRepository.users.get(8),
+                this.userRepository.users.get(9)
+        );
+        //Assert
+        assertEquals(resultExpected, result);
     }
 
     @Test
     void removeFollowed() {
-        // Arrange
-        Seller seller = Seller.builder().id(1).username("Tony Stark").followed(new ArrayList<>()).followers(new ArrayList<>()).build();
-        User user = Buyer.builder().id(4).username("Santiago").followed(new ArrayList<>()).build();
-        user.getFollowed().add(seller);
-        // Act
-        userRepository.removeFollowed(user, seller);
-        // Assert
-        assertFalse(user.getFollowed().contains(seller));
+        //Arrange
+        boolean resultExpected = true;
+        //Act
+        boolean result = this.userRepository.removeFollowed(
+                this.userRepository.users.get(9),
+                (Seller) this.userRepository.users.get(8)
+        );
+        //Assert
+        assertEquals(resultExpected, result);
     }
 
     @Test
     void addFollower() {
-        // Arrange
-        Seller seller = Seller.builder().id(1).username("Tony Stark").followed(new ArrayList<>()).followers(new ArrayList<>()).build();
-        User user = Buyer.builder().id(4).username("Santiago").followed(new ArrayList<>()).build();
-        // Act
-        userRepository.addFollower(seller, user);
-        // Assert
-        assertTrue(seller.getFollowers().contains(user));
+        //Arrange
+        boolean resultExpected = true;
+        //Act
+        boolean result = this.userRepository.addFollower(
+                (Seller) this.userRepository.users.get(8),
+                this.userRepository.users.get(9)
+        );
+        //Assert
+        assertEquals(resultExpected, result);
     }
 
     @Test
     void addFollowed() {
-        // Arrange
-        Seller seller = Seller.builder().id(1).username("Tony Stark").followed(new ArrayList<>()).followers(new ArrayList<>()).build();
-        User user = Buyer.builder().id(4).username("Santiago").followed(new ArrayList<>()).build();
-        // Act
-        userRepository.addFollowed(user, seller);
-        // Assert
-        assertTrue(user.getFollowed().contains(seller));
+        //Arrange
+        boolean resultExpected = true;
+        //Act
+        boolean result = this.userRepository.addFollowed(
+                this.userRepository.users.get(9),
+                (Seller) this.userRepository.users.get(8)
+        );
+        //Assert
+        assertEquals(resultExpected, result);
     }
 }
