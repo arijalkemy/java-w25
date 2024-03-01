@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c715caf6-cd72-4445-814e-0adff490c1f3" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dianalatte1&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8285b573-6363-42e5-8901-6294897eea55" />
+        <option name="url" value="git@github.com:czapatalopez/socialmeli2.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2cxGg7NTRFHBZSkrzVRthi3avEz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BeJavaHispW25G14Application.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTests.testGetUserFollowersCount.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserRepoTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserRepoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.testGetUserFollowersCount_UserExistsAndIsSeller.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTests.testGetUserFollowersCount_DoesNotHaveFollowers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTests.testGetUserFollowersCount_UserExistsAndIsSeller.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTests.testGetUserFollowersCount_UserNotFound.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTests.testGetUserFollowersCount_UserNotSeller.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dibautista/Documents/socialmeli2&quot;
+  }
+}</component>
+  <component name="RunManager" selected="JUnit.All in be_java_hisp_w25_g14">
+    <configuration name="All in be_java_hisp_w25_g14" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeJavaHispW25G14ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.BeJavaHispW25G14ApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.service" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.service.PostServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration.UserControllerTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.service" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.service.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in be_java_hisp_w25_g14" />
+        <item itemvalue="JUnit.UserControllerTests" />
+        <item itemvalue="JUnit.BeJavaHispW25G14ApplicationTests" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.PostServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.22-azul-11.0.22-f644763e9732-472d431e" />
+        <option value="jdk-17.0.10-azul-17.0.10-3183f394aec4-a35e86d0" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c715caf6-cd72-4445-814e-0adff490c1f3" name="Changes" comment="" />
+      <created>1709045925115</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709045925115</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/socialmeli2$UserServiceTests_testGetUserFollowersCount_UserExistsAndIsSeller.ic" NAME="UserServiceTests.testGetUserFollowersCount_UserExistsAndIsSeller Coverage Results" MODIFIED="1709086776493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.bootcamp.be_java_hisp_w25_g14.T0007.*</FILTER>
+    </SUITE>
+  </component>
+</project>
