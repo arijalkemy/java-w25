@@ -12,4 +12,5 @@ public interface ICrudRepository <T, ID> {
     boolean delete(ID id);
     boolean existing(ID id);
 
+    void clearData();
 }

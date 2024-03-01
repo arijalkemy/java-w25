@@ -1,9 +1,7 @@
 package com.example.be_java_hisp_w25_g11.service.seller_post;
 
 import com.example.be_java_hisp_w25_g11.dto.SellerPostDTO;
-import com.example.be_java_hisp_w25_g11.dto.commons.enums.EnumDateOrganizer;
 import com.example.be_java_hisp_w25_g11.dto.request.CreatePostRequestDTO;
-import com.example.be_java_hisp_w25_g11.dto.request.OrganizerByDateDTO;
 import com.example.be_java_hisp_w25_g11.dto.response.SellerPostsListDTO;
 import com.example.be_java_hisp_w25_g11.entity.Buyer;
 import com.example.be_java_hisp_w25_g11.entity.Product;
@@ -16,7 +14,6 @@ import com.example.be_java_hisp_w25_g11.repository.seller.ISellerRepository;
 import com.example.be_java_hisp_w25_g11.repository.seller_post.ISellerPostRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;

@@ -1,7 +1,6 @@
 package com.example.be_java_hisp_w25_g11.service.user;
 
 import com.example.be_java_hisp_w25_g11.dto.UserDTO;
-import com.example.be_java_hisp_w25_g11.dto.commons.enums.EnumNameOrganizer;
 import com.example.be_java_hisp_w25_g11.dto.response.*;
 import com.example.be_java_hisp_w25_g11.entity.Buyer;
 import com.example.be_java_hisp_w25_g11.entity.Seller;
@@ -245,12 +244,7 @@ public class UserServiceImp implements IUserService {
         );
     }
 
-    private List<UserDTO> getSortedUsers(Set<Integer> usersId, EnumNameOrganizer organizer){
-        return usersId.stream()
-                .filter(this::isThisIdInSellerOrBuyerRepositories)
-                .map(this::mapBuyersAndSeyersToUserDTO)
-                .sorted(Comparator.comparing(UserDTO::getName,organizer.getComparator())).toList();
-    }
+
 
     private UserDTO mapBuyersAndSeyersToUserDTO(Integer sellerId){
         if(this.sellerRepository.get(sellerId).isPresent()){

@@ -1,17 +1,14 @@
 package com.example.be_java_hisp_w25_g11.repository.seller_post;
 
 import com.example.be_java_hisp_w25_g11.entity.SellerPost;
-import org.springframework.format.datetime.DateFormatter;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
 
 import java.util.*;
 
 @Repository
 public class SellerPostRepositoryImp implements ISellerPostRepository {
     private final Map<Integer,SellerPost> sellerPosts;
-    private Integer index = 0;
+    private Integer index = 1;
 
     public SellerPostRepositoryImp() {
         this.sellerPosts = new HashMap<>();
@@ -27,7 +24,10 @@ public class SellerPostRepositoryImp implements ISellerPostRepository {
 
     @Override
     public List<SellerPost> createAll(List<SellerPost> entities) {
-        entities.forEach(p -> sellerPosts.put(p.getPostId(), p));
+        entities.forEach(p -> {
+            p.setPostId(index++);
+            sellerPosts.put(p.getPostId(), p);
+        });
 
         return entities;
     }
@@ -63,5 +63,11 @@ public class SellerPostRepositoryImp implements ISellerPostRepository {
     @Override
     public boolean existing(Integer id) {
         return sellerPosts.containsKey(id);
+    }
+
+    @Override
+    public void clearData() {
+        sellerPosts.clear();
+        index = 1;
     }
 }

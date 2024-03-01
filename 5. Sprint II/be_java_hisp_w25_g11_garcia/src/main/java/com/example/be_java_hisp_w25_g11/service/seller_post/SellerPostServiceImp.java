@@ -1,9 +1,7 @@
 package com.example.be_java_hisp_w25_g11.service.seller_post;
 
 import com.example.be_java_hisp_w25_g11.dto.SellerPostDTO;
-import com.example.be_java_hisp_w25_g11.dto.commons.enums.EnumDateOrganizer;
 import com.example.be_java_hisp_w25_g11.dto.request.CreatePostRequestDTO;
-import com.example.be_java_hisp_w25_g11.dto.request.OrganizerByDateDTO;
 import com.example.be_java_hisp_w25_g11.dto.response.SellerPostsListDTO;
 import com.example.be_java_hisp_w25_g11.entity.Buyer;
 import com.example.be_java_hisp_w25_g11.entity.Product;
@@ -123,7 +121,4 @@ public class SellerPostServiceImp implements ISellerPostService {
         return posts;
     }
 
-    private boolean compareDate(LocalDate a, LocalDate b) {
-        return a.isAfter(b);
-    }
 }

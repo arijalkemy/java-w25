@@ -1,7 +1,6 @@
 package com.example.be_java_hisp_w25_g11.service.user;
 
 import com.example.be_java_hisp_w25_g11.dto.UserDTO;
-import com.example.be_java_hisp_w25_g11.dto.commons.enums.EnumNameOrganizer;
 import com.example.be_java_hisp_w25_g11.dto.response.*;
 import com.example.be_java_hisp_w25_g11.entity.Buyer;
 import com.example.be_java_hisp_w25_g11.entity.Seller;
@@ -45,12 +44,12 @@ public class UserServiceImp implements IUserService {
         Object user = getUser(userId);
         Object userToFollow = getUser(userIdToFollow);
 
-        if (!(userToFollow instanceof Seller)) {
-            throw new BadRequestException("El usuario a seguir debe ser un vendedor.");
-        }
-
         if (userId.equals(userIdToFollow)) {
             throw new BadRequestException("El usuario no se puede seguir a si mismo.");
+        }
+
+        if (!(userToFollow instanceof Seller)) {
+            throw new BadRequestException("El usuario a seguir debe ser un vendedor.");
         }
 
         if (user instanceof Buyer) {
@@ -84,32 +83,6 @@ public class UserServiceImp implements IUserService {
         int followersCount = seller.get().getFollowers().size();
         System.out.println(followersCount);
         return new FollowerCountDTO (sellerId, seller.get().getName(), followersCount);
-    }
-
-    @Override
-    public FollowerDTO userFollowSellers(Integer sellerId) {
-        Optional<Seller> seller = sellerRepository.get(sellerId);
-        if(seller.isEmpty()){
-            if(buyerRepository.get(sellerId).isPresent()){
-                throw new BadRequestException("Un comprador no puede tener seguidores.");
-            }
-            throw new NotFoundException("El vendedor con id="+sellerId+" no existe.");
-        }
-
-        List<UserDTO> followers = seller.get().getFollowers()
-                .stream()
-                .map(followerId ->{
-                    if (buyerRepository.existing(followerId)
-                    ) {
-                        return buyerRepository.get(followerId);
-                    }
-                    else{
-                        return sellerRepository.get(followerId);
-                    }
-                })
-                .map(u -> modelMapper.map(u.get(), UserDTO.class))
-                .toList();
-        return new FollowerDTO(sellerId,seller.get().getName(),followers);
     }
 
     private List<UserDTO> getSocialUsersList(Integer userId, String type) {
@@ -175,7 +148,7 @@ public class UserServiceImp implements IUserService {
         Optional<Buyer> buyer = buyerRepository.get(userId);
         String name;
         if (buyer.isPresent())
-            throw new NotFoundException("Los compradores no pueden tener seguidores");
+            throw new BadRequestException("Los compradores no pueden tener seguidores");
         else if (seller.isPresent())
             name = seller.get().getName();
         else
@@ -245,29 +218,4 @@ public class UserServiceImp implements IUserService {
         );
     }
 
-    private List<UserDTO> getSortedUsers(Set<Integer> usersId, EnumNameOrganizer organizer){
-        return usersId.stream()
-                .filter(this::isThisIdInSellerOrBuyerRepositories)
-                .map(this::mapBuyersAndSeyersToUserDTO)
-                .sorted(Comparator.comparing(UserDTO::getName,organizer.getComparator())).toList();
-    }
-
-    private UserDTO mapBuyersAndSeyersToUserDTO(Integer sellerId){
-        if(this.sellerRepository.get(sellerId).isPresent()){
-            Seller lambdaSeller = this.sellerRepository.get(sellerId).get();
-            return new UserDTO(lambdaSeller.getId(),lambdaSeller.getName());
-        }
-        Buyer lambdaBuyer = this.buyerRepository.get(sellerId).get();
-        return new UserDTO(lambdaBuyer.getId(),lambdaBuyer.getName());
-    }
-
-    //Filtramos para asegurarnos de que él id del usuario a mostrar sea un usuario existente como cliente o como vendedor
-    private boolean isThisIdInSellerOrBuyerRepositories(Integer userId){
-        return  this.buyerRepository.get(userId).isPresent() || this.sellerRepository.get(userId).isPresent();
-    }
-
-    @Override
-    public boolean isSeller(Integer userId) {
-        return false;
-    }
 }

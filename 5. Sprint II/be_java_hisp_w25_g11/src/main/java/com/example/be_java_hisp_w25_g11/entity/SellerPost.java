@@ -3,7 +3,6 @@ package com.example.be_java_hisp_w25_g11.entity;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Getter @Setter
 @AllArgsConstructor

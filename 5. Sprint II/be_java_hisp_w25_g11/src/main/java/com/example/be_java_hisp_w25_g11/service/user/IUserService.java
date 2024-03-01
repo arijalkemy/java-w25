@@ -1,6 +1,5 @@
 package com.example.be_java_hisp_w25_g11.service.user;
 
-import com.example.be_java_hisp_w25_g11.dto.request.OrganizerByNameDTO;
 import com.example.be_java_hisp_w25_g11.dto.response.FollowedDTO;
 import com.example.be_java_hisp_w25_g11.dto.response.FollowerCountDTO;
 import com.example.be_java_hisp_w25_g11.dto.response.FollowerDTO;

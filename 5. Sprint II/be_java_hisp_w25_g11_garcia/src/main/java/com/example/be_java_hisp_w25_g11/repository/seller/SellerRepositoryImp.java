@@ -1,6 +1,5 @@
 package com.example.be_java_hisp_w25_g11.repository.seller;
 
-import com.example.be_java_hisp_w25_g11.entity.Buyer;
 import com.example.be_java_hisp_w25_g11.entity.Seller;
 import org.springframework.stereotype.Repository;
 
@@ -84,5 +83,10 @@ public class SellerRepositoryImp implements ISellerRepository {
     public Boolean removeFollowed(Seller user, Integer userIdToRemove) {
         user.getFollowed().remove(userIdToRemove);
         return update(user.getId(),user);
+    }
+
+    @Override
+    public void clearData() {
+        sellers.clear();
     }
 }

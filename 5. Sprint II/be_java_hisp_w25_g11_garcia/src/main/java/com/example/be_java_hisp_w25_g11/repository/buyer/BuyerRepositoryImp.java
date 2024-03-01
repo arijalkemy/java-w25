@@ -69,4 +69,9 @@ public class BuyerRepositoryImp implements IBuyerRepository {
         user.getFollowed().remove(userIdToRemove);
         return update(user.getId(),user);
     }
+
+    @Override
+    public void clearData() {
+        buyers.clear();
+    }
 }
