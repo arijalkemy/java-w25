@@ -25,7 +25,7 @@ public class BuyerController {
     // US 0004: Obtener  un listado de todos los vendedores a los cuales sigue un determinado usuario (¿A quién sigo?)
     // US 0008: Ordenamiento alfabético ascendente y descendente
     @GetMapping("/users/{userid}/followed/list")
-    public ResponseEntity<?> getfollowedlist(@PathVariable @NotNull Integer userid, @RequestParam @NotNull String order) {
+    public ResponseEntity<?> getfollowedlist(@PathVariable Integer userid, @RequestParam String order) {
         return new ResponseEntity<>(buyerService.getBuyerfollow(userid, order), HttpStatus.OK);
     }
 
