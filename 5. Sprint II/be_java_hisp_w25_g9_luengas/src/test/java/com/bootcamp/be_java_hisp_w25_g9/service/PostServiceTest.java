@@ -2,8 +2,10 @@ package com.bootcamp.be_java_hisp_w25_g9.service;
 
 import com.bootcamp.be_java_hisp_w25_g9.dto.ProductDto;
 import com.bootcamp.be_java_hisp_w25_g9.dto.ProductDtoMixIn;
+import com.bootcamp.be_java_hisp_w25_g9.dto.request.PostRequestDto;
 import com.bootcamp.be_java_hisp_w25_g9.dto.request.PostRequestDtoMixin;
 import com.bootcamp.be_java_hisp_w25_g9.dto.response.FollowedPostsDto;
+import com.bootcamp.be_java_hisp_w25_g9.dto.response.MessageDto;
 import com.bootcamp.be_java_hisp_w25_g9.dto.response.PostResponseDto;
 import com.bootcamp.be_java_hisp_w25_g9.exceptions.BadRequestException;
 import com.bootcamp.be_java_hisp_w25_g9.exceptions.NotFoundException;
@@ -12,11 +14,11 @@ import com.bootcamp.be_java_hisp_w25_g9.model.Post;
 import com.bootcamp.be_java_hisp_w25_g9.model.Product;
 import com.bootcamp.be_java_hisp_w25_g9.model.Seller;
 import com.bootcamp.be_java_hisp_w25_g9.repository.PostRepository;
+import com.bootcamp.be_java_hisp_w25_g9.repository.ProductRepository;
 import com.bootcamp.be_java_hisp_w25_g9.repository.UserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -38,10 +40,19 @@ class PostServiceTest {
     UserRepository userRepository;
     @Mock
     PostRepository postRepository;
+    @Mock
+    ProductRepository productRepository;
 
     @InjectMocks
     PostService postService;
     static ObjectMapper mapper = new ObjectMapper();
+
+    @BeforeAll
+    public static void before() {
+        mapper.registerModule(new JavaTimeModule());
+        mapper.addMixIn(Post.class, PostRequestDtoMixin.class);
+        mapper.addMixIn(Product.class, ProductDtoMixIn.class);
+    }
 
     @Test
     void getPostVerifyOrderingOkDesc() {
@@ -58,19 +69,25 @@ class PostServiceTest {
         productList.add(new Product(2, "Pantalón", "Ropa", "Marca B", "Negro", "Poliéster"));
         productList.add(new Product(3, "Zapatos", "Calzado", "Marca C", "Blanco", "Cuero"));
         List<Post> postList = new ArrayList<>();
-        postList.add(new Post(1, 29, 25, LocalDate.of(2024,1,10), productList.get(0), 81.0));
-        postList.add(new Post(2, 29, 40, LocalDate.of(2024,2,19), productList.get(1), 82.0));
-        postList.add(new Post(3, 29, 43, LocalDate.of(2024,2,27), productList.get(0), 65.0));
-        postList.add(new Post(4, 30, 12, LocalDate.of(2024,2,24), productList.get(2), 9.0));
-        postList.add(new Post(5, 30, 32, LocalDate.of(2024,2,25), productList.get(1), 65.0));
+        postList.add(new Post(1, 29, 25, LocalDate.of(2024, 1, 10), productList.get(0), 81.0));
+        postList.add(new Post(2, 29, 40, LocalDate.of(2024, 2, 19), productList.get(1), 82.0));
+        postList.add(new Post(3, 29, 43, LocalDate.of(2024, 2, 27), productList.get(0), 65.0));
+        postList.add(new Post(4, 30, 12, LocalDate.of(2024, 2, 24), productList.get(2), 9.0));
+        postList.add(new Post(5, 30, 32, LocalDate.of(2024, 2, 25), productList.get(1), 65.0));
         ProductDto productDto1 = new ProductDto(1, "Camisa", "Ropa", "Marca A", "Azul", "Algodón");
-        ProductDto productDto2 = new ProductDto(2, "Pantalón", "Ropa", "Marca B", "Negro", "Poliéster");
-        ProductDto productDto3 = new ProductDto(3, "Zapatos", "Calzado", "Marca C", "Blanco", "Cuero");
+        ProductDto productDto2 = new ProductDto(2, "Pantalón", "Ropa", "Marca B", "Negro",
+                "Poliéster");
+        ProductDto productDto3 = new ProductDto(3, "Zapatos", "Calzado", "Marca C", "Blanco",
+                "Cuero");
         List<PostResponseDto> expectedPostList = new ArrayList<>();
-        expectedPostList.add(new PostResponseDto(3, 29,  LocalDate.of(2024,2,27), productDto1, 43, 65.0));
-        expectedPostList.add(new PostResponseDto(5, 30, LocalDate.of(2024,2,25), productDto2, 32, 65.0));
-        expectedPostList.add(new PostResponseDto(4, 30, LocalDate.of(2024,2,24), productDto3, 12,9.0));
-        expectedPostList.add(new PostResponseDto(2, 29, LocalDate.of(2024,2,19), productDto2, 40, 82.0));
+        expectedPostList.add(
+                new PostResponseDto(3, 29, LocalDate.of(2024, 2, 27), productDto1, 43, 65.0));
+        expectedPostList.add(
+                new PostResponseDto(5, 30, LocalDate.of(2024, 2, 25), productDto2, 32, 65.0));
+        expectedPostList.add(
+                new PostResponseDto(4, 30, LocalDate.of(2024, 2, 24), productDto3, 12, 9.0));
+        expectedPostList.add(
+                new PostResponseDto(2, 29, LocalDate.of(2024, 2, 19), productDto2, 40, 82.0));
         FollowedPostsDto expected = new FollowedPostsDto(userId, expectedPostList);
 
         when(userRepository.userExists(userId)).thenReturn(userExists);
@@ -93,23 +110,30 @@ class PostServiceTest {
         Seller sellerFollowed2 = new Seller(30, "Patrick Blanco");
         clientById.setFollowed(List.of(sellerFollowed1, sellerFollowed2));
         ArrayList<Product> productList = new ArrayList<>();
+
         productList.add(new Product(1, "Camisa", "Ropa", "Marca A", "Azul", "Algodón"));
         productList.add(new Product(2, "Pantalón", "Ropa", "Marca B", "Negro", "Poliéster"));
         productList.add(new Product(3, "Zapatos", "Calzado", "Marca C", "Blanco", "Cuero"));
         List<Post> postList = new ArrayList<>();
-        postList.add(new Post(1, 29, 25, LocalDate.of(2024,1,10), productList.get(0), 81.0));
-        postList.add(new Post(2, 29, 40, LocalDate.of(2024,2,19), productList.get(1), 82.0));
-        postList.add(new Post(3, 29, 43, LocalDate.of(2024,2,27), productList.get(0), 65.0));
-        postList.add(new Post(4, 30, 12, LocalDate.of(2024,2,24), productList.get(2), 9.0));
-        postList.add(new Post(5, 30, 32, LocalDate.of(2024,2,25), productList.get(1), 65.0));
+        postList.add(new Post(1, 29, 25, LocalDate.of(2024, 1, 10), productList.get(0), 81.0));
+        postList.add(new Post(2, 29, 40, LocalDate.of(2024, 2, 19), productList.get(1), 82.0));
+        postList.add(new Post(3, 29, 43, LocalDate.of(2024, 2, 27), productList.get(0), 65.0));
+        postList.add(new Post(4, 30, 12, LocalDate.of(2024, 2, 24), productList.get(2), 9.0));
+        postList.add(new Post(5, 30, 32, LocalDate.of(2024, 2, 25), productList.get(1), 65.0));
         ProductDto productDto1 = new ProductDto(1, "Camisa", "Ropa", "Marca A", "Azul", "Algodón");
-        ProductDto productDto2 = new ProductDto(2, "Pantalón", "Ropa", "Marca B", "Negro", "Poliéster");
-        ProductDto productDto3 = new ProductDto(3, "Zapatos", "Calzado", "Marca C", "Blanco", "Cuero");
+        ProductDto productDto2 = new ProductDto(2, "Pantalón", "Ropa", "Marca B", "Negro",
+                "Poliéster");
+        ProductDto productDto3 = new ProductDto(3, "Zapatos", "Calzado", "Marca C", "Blanco",
+                "Cuero");
         List<PostResponseDto> expectedPostList = new ArrayList<>();
-        expectedPostList.add(new PostResponseDto(2, 29, LocalDate.of(2024,2,19), productDto2, 40, 82.0));
-        expectedPostList.add(new PostResponseDto(4, 30, LocalDate.of(2024,2,24), productDto3, 12,9.0));
-        expectedPostList.add(new PostResponseDto(5, 30, LocalDate.of(2024,2,25), productDto2, 32, 65.0));
-        expectedPostList.add(new PostResponseDto(3, 29,  LocalDate.of(2024,2,27), productDto1, 43, 65.0));
+        expectedPostList.add(
+                new PostResponseDto(2, 29, LocalDate.of(2024, 2, 19), productDto2, 40, 82.0));
+        expectedPostList.add(
+                new PostResponseDto(4, 30, LocalDate.of(2024, 2, 24), productDto3, 12, 9.0));
+        expectedPostList.add(
+                new PostResponseDto(5, 30, LocalDate.of(2024, 2, 25), productDto2, 32, 65.0));
+        expectedPostList.add(
+                new PostResponseDto(3, 29, LocalDate.of(2024, 2, 27), productDto1, 43, 65.0));
         FollowedPostsDto expected = new FollowedPostsDto(userId, expectedPostList);
 
         when(userRepository.userExists(userId)).thenReturn(userExists);
@@ -119,13 +143,6 @@ class PostServiceTest {
         FollowedPostsDto result = postService.getPost(userId, order);
         //Assert
         assertEquals(expected, result);
-    }
-
-    @BeforeAll
-    public static void before() {
-        mapper.registerModule(new JavaTimeModule());
-        mapper.addMixIn(Product.class, ProductDtoMixIn.class);
-        mapper.addMixIn(Post.class, PostRequestDtoMixin.class);
     }
 
     @Test
@@ -175,24 +192,24 @@ class PostServiceTest {
         String order = "date_asce";
         //ACT
         //ASSERT
-        assertThrows(BadRequestException.class,()-> postService.getPost(userId, order));
+        assertThrows(BadRequestException.class, () -> postService.getPost(userId, order));
     }
 
     @Test
-    void getPostByIdNotOkNotFound(){
+    void getPostByIdNotOkNotFound() {
         //ARRANGE
         int userId = 1;
         String order = "date_asc";
         //ACT
         when(userRepository.userExists(userId)).thenReturn(false);
         //ASSERT
-        NotFoundException exception = assertThrows(NotFoundException.class,()-> postService.getPost(userId, order));
-        assertEquals(exception.getMessage(),"El usuario con id 1 no existe");
+        NotFoundException exception = assertThrows(NotFoundException.class,
+                () -> postService.getPost(userId, order));
+        assertEquals(exception.getMessage(), "El usuario con id 1 no existe");
     }
 
     @Test
-
-    void getPostByIdNotOkNotFoundSeller(){
+    void getPostByIdNotOkNotFoundSeller() {
         //ARRANGE
         int userId = 1;
         String order = "date_asc";
@@ -201,12 +218,13 @@ class PostServiceTest {
         when(userRepository.userExists(userId)).thenReturn(true);
         when(userRepository.getUserById(userId)).thenReturn(client);
         //ASSERT
-        NotFoundException exception =  assertThrows(NotFoundException.class,()-> postService.getPost(userId, order));
-        assertEquals(exception.getMessage(),"El usuario 1 no tiene vendedores seguidos");
+        NotFoundException exception = assertThrows(NotFoundException.class,
+                () -> postService.getPost(userId, order));
+        assertEquals(exception.getMessage(), "El usuario 1 no tiene vendedores seguidos");
     }
 
     @Test
-    void getPostByIdNotOkNotFOundPosts(){
+    void getPostByIdNotOkNotFOundPosts() {
         //ARRANGE
         int userId = 1;
         String order = "date_asc";
@@ -229,9 +247,69 @@ class PostServiceTest {
         when(userRepository.getUserById(userId)).thenReturn(client);
         when(postRepository.findAll()).thenReturn(postList);
         //ACT
-        NotFoundException exception =  assertThrows(NotFoundException.class,()-> postService.getPost(userId, order));
-        assertEquals(exception.getMessage(),"No se encontraron post de los vendedores seguidos del usuario 1");
+        NotFoundException exception = assertThrows(NotFoundException.class,
+                () -> postService.getPost(userId, order));
+        assertEquals(exception.getMessage(),
+                "No se encontraron post de los vendedores seguidos del usuario 1");
     }
 
+    @Test
+    void createPostWithExistingProductOk() {
+        //ARRANGE
+        Seller seller = new Seller(1, "Quynn Nunez");
+        Product product1 = new Product(2, "Pantalón", "Ropa", "Marca B", "Negro", "Poliéster");
+        Post post = new Post(2, 1, 10, LocalDate.now(), product1, 200000.0);
 
+        MessageDto expectedMessageDto = new MessageDto("Publicación creada con éxito");
+
+        //ACT
+        when(userRepository.getUserById(seller.getUserId())).thenReturn(seller);
+        when(productRepository.getProductById(product1.getProductId())).thenReturn(product1);
+//        when(productRepository.findAll()).thenReturn(List.of(product1, product1));
+        when(postRepository.findAll()).thenReturn(
+                List.of(new Post(1, 1, 10, LocalDate.now(), product1, 10.0)));
+
+        //ASSERT
+        assertEquals(postService.createPost(mapper.convertValue(post, PostRequestDto.class)),
+                expectedMessageDto);
+    }
+
+    @Test
+    void createPostWithNewProductOk() {
+        //ARRANGE
+        Seller seller = new Seller(1, "Quynn Nunez");
+        Product product1 = new Product(1, "Camisa", "Ropa", "Marca A", "Azul", "Algodón");
+        Product product2 = new Product(2, "Pantalón", "Ropa", "Marca B", "Negro", "Poliéster");
+        Post post = new Post(2, 1, 10, LocalDate.now(), product2, 200000.0);
+
+        MessageDto expectedMessageDto = new MessageDto("Publicación creada con éxito");
+
+        //ACT
+        when(userRepository.getUserById(seller.getUserId())).thenReturn(seller);
+        when(productRepository.getProductById(product2.getProductId())).thenReturn(null);
+        when(productRepository.findAll()).thenReturn(List.of(product1));
+        when(postRepository.findAll()).thenReturn(
+                List.of(new Post(1, 1, 10, LocalDate.now(), product2, 10.0)));
+
+        //ASSERT
+        assertEquals(postService.createPost(mapper.convertValue(post, PostRequestDto.class)),
+                expectedMessageDto);
+    }
+
+    @Test
+    void createPostWithBadProductDataException() {
+        //ARRANGE
+        Seller seller = new Seller(1, "Quynn Nunez");
+        Product product = new Product(2, "Pantalón", "Ropa", "Marca B", "Negro", "Poliéster");
+        Product diffProduct = new Product(2, "Camisa", "Ropa", "Marca A", "Azul", "Algodón");
+
+        Post post = new Post(2, 1, 10, LocalDate.now(), diffProduct, 200000.0);
+
+        //ACT
+        when(userRepository.getUserById(seller.getUserId())).thenReturn(seller);
+        when(productRepository.getProductById(diffProduct.getProductId())).thenReturn(product);
+
+        // ASSERT
+        assertThrows(BadRequestException.class, () -> postService.createPost(mapper.convertValue(post, PostRequestDto.class)));
+    }
 }

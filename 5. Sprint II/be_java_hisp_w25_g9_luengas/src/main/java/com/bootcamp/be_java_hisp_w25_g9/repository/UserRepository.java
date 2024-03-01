@@ -21,11 +21,6 @@ public class UserRepository implements IUserRepository {
     }
 
     @Override
-    public String addUser(User user){
-        return null;
-    }
-
-    @Override
     public List<User> findAll(){
         return this.userList;
     }
