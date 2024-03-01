@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bff0ac11-b138-43ea-aed4-ca8be7840e0a" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file:///private/var/folders/y6/j_0nx3sn63v0x_pl11zv9rg9rt582q/T/tmp_1_UserServiceImp.class" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///private/var/folders/y6/j_0nx3sn63v0x_pl11zv9rg9rt582q/T/tmp_2_UserServiceImp.class" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///private/var/folders/y6/j_0nx3sn63v0x_pl11zv9rg9rt582q/T/tmp__UserServiceImp.class" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2d07OuI3Uawdex55Ej0gS9axQwf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BeJavaHispW25G14Application.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BeJavaHispW25G14ApplicationTests.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.IntegrationTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.IntegrationTest.getFollowedOkTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RepositoryTest.listSellersFollowersDescTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RepositoryTest.listSellersFollowersNoUserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RepositoryTest.listSellersFollowersTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ServiceTest.listSellersFollowersTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserRepoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserRepoTest.validateAscOrderTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.getFollowedByUserAscTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.getFollowedByUserNotFoundTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.getFollowedByUserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.listSellersFollowersNoFollowersTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.listSellersFollowersNoUserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.listSellersFollowersTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.validateAscOrderTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.validateDescOrderTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in be_java_hisp_w25_g14.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lrodriguezmo/Documents/Sprint2/socialmeli2&quot;
+  }
+}</component>
+  <component name="RunManager" selected="JUnit.java in be_java_hisp_w25_g14">
+    <configuration name="BeJavaHispW25G14Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.BeJavaHispW25G14Application" />
+      <module name="be_java_hisp_w25_g14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeJavaHispW25G14ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.BeJavaHispW25G14ApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.controller.IntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTest.getFollowedOkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.controller.IntegrationTest" />
+      <option name="METHOD_NAME" value="getFollowedOkTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in be_java_hisp_w25_g14" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="socialmeli2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="socialmeli2" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.java in be_java_hisp_w25_g14" />
+        <item itemvalue="JUnit.BeJavaHispW25G14ApplicationTests" />
+        <item itemvalue="JUnit.IntegrationTest" />
+        <item itemvalue="JUnit.IntegrationTest.getFollowedOkTest" />
+        <item itemvalue="Application.BeJavaHispW25G14Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-3183f394aec4-96c0d24d" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bff0ac11-b138-43ea-aed4-ca8be7840e0a" name="Changes" comment="" />
+      <created>1709133113687</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709133113687</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/socialmeli2$java_in_be_java_hisp_w25_g14.ic" NAME="java in be_java_hisp_w25_g14 Coverage Results" MODIFIED="1709308605050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/socialmeli2$BeJavaHispW25G14ApplicationTests.ic" NAME="BeJavaHispW25G14ApplicationTests Coverage Results" MODIFIED="1709308256063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.bootcamp.be_java_hisp_w25_g14.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/socialmeli2$IntegrationTest.ic" NAME="IntegrationTest Coverage Results" MODIFIED="1709308006358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.bootcamp.be_java_hisp_w25_g14.controller.*</FILTER>
+    </SUITE>
+  </component>
+</project>
