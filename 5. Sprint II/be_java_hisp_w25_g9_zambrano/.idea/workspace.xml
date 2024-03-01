@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e8c343da-30fe-480f-818d-838536ab08c6" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2caVcbDuUBrjr5OURIiCrq5NHjJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.All in be_java_hisp_w25_g9.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostControllerIntegratedTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostControllerIntegratedTest.getFollowedPostOrderByDateTestOk.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostControllerIntegratedTest.getFollowedPostOrderByDateTestOkDesc.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostControllerIntegratedTest.insertNewPostNotFoundException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostControllerIntegratedTest.insertNewPostOK.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostControllerIntegratedTest.insertNewPostTestHttpNotReadable.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostControllerIntegratedTest.insertNewPostTestMethodArgumentNotValid.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostServiceTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.PostServiceTest.getPostVerifyOrderingOk.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostServiceTest.getPostVerifyOrderingOkDesc.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerIntegratedTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerIntegratedTest.followUserTestAlreadyFollowedSeller.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerIntegratedTest.followUserTestClientNotFound.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerIntegratedTest.followUserTestFollowedNotSeller.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerIntegratedTest.followUserTestOk.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.UserControllerIntegratedTest.followUserTestSellerNotFound.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.com.bootcamp.be_java_hisp_w25_g9 in be_java_hisp_w25_g9.executor&quot;: &quot;Coverage&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BeJavaHispW25G9Application.executor&quot;: &quot;Debug&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dzambranoboh/Documents/Sprint1/be_java_hisp_w25_g9&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.bootcamp.be_java_hisp_w25_g9.controller" />
+      <recent name="com.bootcamp.be_java_hisp_w25_g9.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.java in be_java_hisp_w25_g9">
+    <configuration name="All in be_java_hisp_w25_g9" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g9" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerIntegratedTest.followUserTestAlreadyFollowedSeller" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g9.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g9.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g9.controller.UserControllerIntegratedTest" />
+      <option name="METHOD_NAME" value="followUserTestAlreadyFollowedSeller" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerIntegratedTest.followUserTestFollowedNotSeller" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g9.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g9.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g9.controller.UserControllerIntegratedTest" />
+      <option name="METHOD_NAME" value="followUserTestFollowedNotSeller" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerIntegratedTest.followUserTestSellerNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g9.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g9.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g9.controller.UserControllerIntegratedTest" />
+      <option name="METHOD_NAME" value="followUserTestSellerNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in be_java_hisp_w25_g9" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g9" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeJavaHispW25G9Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="be_java_hisp_w25_g9" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bootcamp.be_java_hisp_w25_g9.BeJavaHispW25G9Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.java in be_java_hisp_w25_g9" />
+        <item itemvalue="JUnit.All in be_java_hisp_w25_g9" />
+        <item itemvalue="JUnit.UserControllerIntegratedTest.followUserTestAlreadyFollowedSeller" />
+        <item itemvalue="JUnit.UserControllerIntegratedTest.followUserTestFollowedNotSeller" />
+        <item itemvalue="JUnit.UserControllerIntegratedTest.followUserTestSellerNotFound" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-92e50af3" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e8c343da-30fe-480f-818d-838536ab08c6" name="Changes" comment="" />
+      <created>1708349758452</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708349758452</updated>
+      <workItem from="1708349759690" duration="1809000" />
+      <workItem from="1708351628100" duration="11743000" />
+      <workItem from="1708433681601" duration="1311000" />
+      <workItem from="1708435301040" duration="10604000" />
+      <workItem from="1708524474020" duration="3959000" />
+      <workItem from="1708551103404" duration="99000" />
+      <workItem from="1708551218965" duration="244000" />
+      <workItem from="1709040014521" duration="899000" />
+      <workItem from="1709060969922" duration="6339000" />
+      <workItem from="1709125808651" duration="6719000" />
+      <workItem from="1709214752024" duration="3386000" />
+      <workItem from="1709300899705" duration="854000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="social-15" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g9$com_bootcamp_be_java_hisp_w25_g9_in_be_java_hisp_w25_g9.ic" NAME="com.bootcamp.be_java_hisp_w25_g9 in be_java_hisp_w25_g9 Coverage Results" MODIFIED="1709152727064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.bootcamp.be_java_hisp_w25_g9.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g9$PostServiceTest.ic" NAME="PostServiceTest Coverage Results" MODIFIED="1709066012264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.bootcamp.be_java_hisp_w25_g9.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g9$All_in_be_java_hisp_w25_g9.ic" NAME="All in be_java_hisp_w25_g9 Coverage Results" MODIFIED="1709239800972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
