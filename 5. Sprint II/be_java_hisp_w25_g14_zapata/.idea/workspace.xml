@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37ba1827-ae91-41c5-88e2-12ff3d27fb37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bootcamp/be_java_hisp_w25_g14/integration/UserIntegrationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bootcamp/be_java_hisp_w25_g14/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/be_java_hisp_w25_g14/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bootcamp/be_java_hisp_w25_g14/service/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/be_java_hisp_w25_g14/service/UserServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bootcamp/be_java_hisp_w25_g14/service/PostServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bootcamp/be_java_hisp_w25_g14/service/PostServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/bootcamp/be_java_hisp_w25_g14/integration/UserIntegrationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/bootcamp/be_java_hisp_w25_g14/integration/UserIntegrationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,95 +55,92 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "ajustePost",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/czapatalopez/Documents/java-w25/5. Sprint II/be_java_hisp_w25_g14_zapata",
+    "last_opened_file_path": "/Users/czapatalopez/Documents/java-w25/5. Sprint II/be_java_hisp_w25_g14_zapata/src/test/resources",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "reference.idesettings.debugger.capture",
-    "spring.configuration.checksum": "e99df6a150bbaa8105c49cdfcab01dc0"
+    "spring.configuration.checksum": "db86c05792723672c744298d658fa372"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bootcamp.be_java_hisp_w25_g14.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.bootcamp.be_java_hisp_w25_g14 in be_java_hisp_w25_g14_zapata">
-    <configuration name="UserIntegrationTests.testFollowUserException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PostServiceTest.validatePostSellerIsOnDateRangeOk">
+    <configuration name="All in be_java_hisp_w25_g14_zapata" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="be_java_hisp_w25_g14_zapata" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration" />
-      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration.UserIntegrationTests" />
-      <option name="METHOD_NAME" value="testFollowUserException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserIntegrationTests.testFollowUserNotFoundExceptionFollowe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="be_java_hisp_w25_g14_zapata" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration" />
-      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration.UserIntegrationTests" />
-      <option name="METHOD_NAME" value="testFollowUserNotFoundExceptionFollowe" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserIntegrationTests.testFollowUserNotFoundExceptionFollower" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="be_java_hisp_w25_g14_zapata" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration" />
-      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration.UserIntegrationTests" />
-      <option name="METHOD_NAME" value="testFollowUserNotFoundExceptionFollower" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserIntegrationTests.testFollowUserNotFoundExceptionSeller" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="be_java_hisp_w25_g14_zapata" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration" />
-      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration.UserIntegrationTests" />
-      <option name="METHOD_NAME" value="testFollowUserNotFoundExceptionSeller" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.bootcamp.be_java_hisp_w25_g14 in be_java_hisp_w25_g14_zapata" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="be_java_hisp_w25_g14_zapata" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14" />
+      <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostIntegrationTest.testFindAllPostOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14_zapata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration.PostIntegrationTest" />
+      <option name="METHOD_NAME" value="testFindAllPostOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostIntegrationTest.testSavePostException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14_zapata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration.PostIntegrationTest" />
+      <option name="METHOD_NAME" value="testSavePostException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostIntegrationTest.testSavePostOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14_zapata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration.PostIntegrationTest" />
+      <option name="METHOD_NAME" value="testSavePostOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostServiceTest.validatePostSellerIsOnDateRangeOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14_zapata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.service" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.service.PostServiceTest" />
+      <option name="METHOD_NAME" value="validatePostSellerIsOnDateRangeOk" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -161,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.com.bootcamp.be_java_hisp_w25_g14 in be_java_hisp_w25_g14_zapata" />
-        <item itemvalue="JUnit.UserIntegrationTests.testFollowUserException" />
-        <item itemvalue="JUnit.UserIntegrationTests.testFollowUserNotFoundExceptionFollower" />
-        <item itemvalue="JUnit.UserIntegrationTests.testFollowUserNotFoundExceptionFollowe" />
-        <item itemvalue="JUnit.UserIntegrationTests.testFollowUserNotFoundExceptionSeller" />
+        <item itemvalue="JUnit.PostServiceTest.validatePostSellerIsOnDateRangeOk" />
+        <item itemvalue="JUnit.All in be_java_hisp_w25_g14_zapata" />
+        <item itemvalue="JUnit.PostIntegrationTest.testSavePostException" />
+        <item itemvalue="JUnit.PostIntegrationTest.testSavePostOk" />
+        <item itemvalue="JUnit.PostIntegrationTest.testFindAllPostOk" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +191,8 @@
       <workItem from="1709119410519" duration="3823000" />
       <workItem from="1709125942701" duration="22458000" />
       <workItem from="1709215136326" duration="3943000" />
-      <workItem from="1709241630797" duration="5171000" />
+      <workItem from="1709241630797" duration="5630000" />
+      <workItem from="1709295033872" duration="9278000" />
     </task>
     <servers />
   </component>
@@ -216,7 +218,8 @@
     <SUITE FILE_PATH="coverage/be_java_hisp_w25_g14_zapata$com_bootcamp_be_java_hisp_w25_g14_controller_in_be_java_hisp_w25_g14_zapata.ic" NAME="com.bootcamp.be_java_hisp_w25_g14.controller in be_java_hisp_w25_g14_zapata Coverage Results" MODIFIED="1709242331567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.bootcamp.be_java_hisp_w25_g14.controller.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g14_zapata$com_bootcamp_be_java_hisp_w25_g14_in_be_java_hisp_w25_g14_zapata.ic" NAME="com.bootcamp.be_java_hisp_w25_g14 in be_java_hisp_w25_g14_zapata Coverage Results" MODIFIED="1709246999018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g14_zapata$All_in_be_java_hisp_w25_g14_zapata.ic" NAME="All in be_java_hisp_w25_g14_zapata Coverage Results" MODIFIED="1709306098500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g14_zapata$com_bootcamp_be_java_hisp_w25_g14_in_be_java_hisp_w25_g14_zapata.ic" NAME="com.bootcamp.be_java_hisp_w25_g14 in be_java_hisp_w25_g14_zapata Coverage Results" MODIFIED="1709295147809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.bootcamp.be_java_hisp_w25_g14.*</FILTER>
     </SUITE>
   </component>
