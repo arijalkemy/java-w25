@@ -29,8 +29,8 @@ public class IntegrationTest {
 
   @Test
   void createPostIntegrationTest() throws Exception {
-    PostDTO postDto = new PostDTO(21, LocalDate.parse("2024-01-03"),
-        new ProductDTO(1,"Silla Gamer", "Gamer", "Razer", "Negro", "Comoda"),
+    PostDTO postDto = new PostDTO(26, LocalDate.parse("2024-01-03"),
+        new ProductDTO(5,"Silla Gamer", "Gamer", "Razer", "Negro", "Comoda"),
         1, 1000000D);
 
     mockMvc.perform(MockMvcRequestBuilders.post("/products/post")
@@ -38,15 +38,15 @@ public class IntegrationTest {
         .content(serializePost(postDto)))
         .andDo(print())
         .andExpect(status().isOk())
-        .andExpect(MockMvcResultMatchers.jsonPath("$.userId").value(21));
+        .andExpect(MockMvcResultMatchers.jsonPath("$.userId").value(26));
   }
   @Test
   void getPostPerSellerIntegrationTest() throws Exception {
-    PostDTO postDto = new PostDTO(21, LocalDate.now(),
-        new ProductDTO(2,"Silla Gamer", "Gamer", "Razer", "Negro", "Comoda"),
+    PostDTO postDto = new PostDTO(26, LocalDate.now(),
+        new ProductDTO(6,"Silla Gamer", "Gamer", "Razer", "Negro", "Comoda"),
         1, 1000000D);
 
-    mockMvc.perform(MockMvcRequestBuilders.post("/users/{userId}/follow/{userIdToFollow}", 1, 21));
+    mockMvc.perform(MockMvcRequestBuilders.post("/users/{userId}/follow/{userIdToFollow}", 1, 26));
     mockMvc.perform(MockMvcRequestBuilders.post("/products/post")
         .contentType(MediaType.APPLICATION_JSON)
         .content(serializePost(postDto)));
