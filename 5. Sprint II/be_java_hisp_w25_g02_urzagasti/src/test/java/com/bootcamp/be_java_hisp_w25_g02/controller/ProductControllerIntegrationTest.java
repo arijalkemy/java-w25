@@ -127,7 +127,7 @@ class ProductControllerIntegrationTest {
     }
 
     @Test
-    @DisplayName("IntegrationTest US-0005- Create post without post (null)")
+    @DisplayName("IntegrationTest US-0005- Create post without post (null) - BadRequest")
     @Order(5)
     void createPostWithoutAPost() throws Exception {
         //arrange
@@ -198,7 +198,7 @@ class ProductControllerIntegrationTest {
     }
 
     @Test
-    @DisplayName("IntegrationTest US-0006- List of post order date_asc")
+    @DisplayName("IntegrationTest US-0006- List of post order date_asc -TestOK")
     @Order(8)
     void getFollowedPostsDescTestOk() throws Exception {
         //arrange
