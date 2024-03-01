@@ -1,6 +1,8 @@
 package controller;
 
+
 import com.example.be_java_hisp_w25_g01.BeJavaHispW25G01Application;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -17,6 +19,8 @@ public class UserControllerIntegrationTest {
     @Autowired
     MockMvc mockMvc;
 
+
+    @DisplayName("Desarrollo Individual - Test de Integración Follow User Ok")
     @Test
     public void followUserOkTest() throws Exception {
         // Arrange
@@ -33,4 +37,26 @@ public class UserControllerIntegrationTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.message").value("User with id: 1 is now following user with id: 4"));
     }
+
+    @DisplayName("Desarrollo Individual - Test de Integración UnFollow User Ok")
+    @Test
+    public void unFollowUserOkTest() throws Exception {
+        // Arrange
+        int userId = 1;
+        int userIdToUnfollow = 5;
+        String payloadJson = "{\"message\": \"User with id: 1 is now unfollowing user with id: 5\"}";
+
+        // Act & Assert
+
+        this.mockMvc.perform(post("/users/" + userId + "/unfollow/" + userIdToUnfollow)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(payloadJson))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$.message").value("User with id: 1 is now unfollowing user with id: 5"));
+
+    }
+
+
+
 }
