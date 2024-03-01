@@ -25,5 +25,6 @@ public class BuyerControllerTest {
                 .andExpect(content().json("{\"message\":\"El comprador no existe\"}"));
     }
 
+
 }
 
