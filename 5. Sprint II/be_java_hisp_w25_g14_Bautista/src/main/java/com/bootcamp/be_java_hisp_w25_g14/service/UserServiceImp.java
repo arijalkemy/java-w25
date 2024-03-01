@@ -101,6 +101,6 @@ public class UserServiceImp implements IUserService {
             if(sorted!=null && sorted.equalsIgnoreCase("name_desc"))
                 return users.stream().sorted(Comparator.comparing(User::getUserName).reversed()).toList();
         }
-        return null;
+        return users;
     }
 }

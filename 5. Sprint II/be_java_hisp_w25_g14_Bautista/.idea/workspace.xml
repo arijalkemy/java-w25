@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c715caf6-cd72-4445-814e-0adff490c1f3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/BeJavaHispW25G14Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/controller/PostController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/dto/FollowedListResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/dto/ListFollowersDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/dto/MessageDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/dto/PostDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/dto/ProductDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/dto/UserDataDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/dto/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/dto/UserFollowedPostDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/dto/UserFollowersCountDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/entity/Post.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/entity/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/exceptions/ExceptionConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/exceptions/FollowException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/exceptions/InvalidRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/exceptions/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/exceptions/NotSellerException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/exceptions/NotValidDateException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/exceptions/UserIdException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/repository/IPostRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/repository/IUserRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/repository/PostRepoImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/repository/UserRepoImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/service/IPostService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/service/IUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/service/PostServiceImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/service/UserServiceImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/utils/ApiMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/utils/HelperFunctions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/java/com/bootcamp/be_java_hisp_w25_g14/utils/UserValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/resources/SocialMeli.postman_collection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/resources/post.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/main/resources/user.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/test/java/com/bootcamp/be_java_hisp_w25_g14/BeJavaHispW25G14ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/test/java/com/bootcamp/be_java_hisp_w25_g14/controller/UserControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/test/java/com/bootcamp/be_java_hisp_w25_g14/integration/UserControllerTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/test/java/com/bootcamp/be_java_hisp_w25_g14/repository/UserRepoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/test/java/com/bootcamp/be_java_hisp_w25_g14/service/PostServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/test/java/com/bootcamp/be_java_hisp_w25_g14/service/UserServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be_java_hisp_w25_g14_Bautista/src/test/resources/user.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dianalatte1&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8285b573-6363-42e5-8901-6294897eea55" />
+        <option name="url" value="git@github.com:czapatalopez/socialmeli2.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2cxGg7NTRFHBZSkrzVRthi3avEz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BeJavaHispW25G14Application.executor": "Run",
+    "JUnit.All in be_java_hisp_w25_g14.executor": "Coverage",
+    "JUnit.BeJavaHispW25G14ApplicationTests.executor": "Run",
+    "JUnit.PostServiceTest.executor": "Run",
+    "JUnit.UserControllerTest.executor": "Run",
+    "JUnit.UserControllerTests.executor": "Run",
+    "JUnit.UserControllerTests.testGetUserFollowersCount.executor": "Run",
+    "JUnit.UserRepoTest (1).executor": "Run",
+    "JUnit.UserRepoTest.executor": "Run",
+    "JUnit.UserServiceTest.executor": "Run",
+    "JUnit.UserServiceTest.testGetUserFollowersCount_UserExistsAndIsSeller.executor": "Run",
+    "JUnit.UserServiceTests.executor": "Run",
+    "JUnit.UserServiceTests.testGetUserFollowersCount_DoesNotHaveFollowers.executor": "Run",
+    "JUnit.UserServiceTests.testGetUserFollowersCount_UserExistsAndIsSeller.executor": "Run",
+    "JUnit.UserServiceTests.testGetUserFollowersCount_UserNotFound.executor": "Run",
+    "JUnit.UserServiceTests.testGetUserFollowersCount_UserNotSeller.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "bautista__diana",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/dibautista/Documents/java-w25/5. Sprint II/socialmeli2/src/test/java/com/bootcamp/be_java_hisp_w25_g14"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/com/bootcamp/be_java_hisp_w25_g14" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in be_java_hisp_w25_g14">
+    <configuration name="All in be_java_hisp_w25_g14" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeJavaHispW25G14ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.BeJavaHispW25G14ApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.service" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.service.PostServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.integration.UserControllerTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.be_java_hisp_w25_g14.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bootcamp.be_java_hisp_w25_g14.service" />
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.be_java_hisp_w25_g14.service.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in be_java_hisp_w25_g14" />
+        <item itemvalue="JUnit.UserControllerTests" />
+        <item itemvalue="JUnit.BeJavaHispW25G14ApplicationTests" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.PostServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.22-azul-11.0.22-f644763e9732-472d431e" />
+        <option value="jdk-17.0.10-azul-17.0.10-3183f394aec4-a35e86d0" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c715caf6-cd72-4445-814e-0adff490c1f3" name="Changes" comment="" />
+      <created>1709045925115</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709045925115</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/socialmeli2$UserServiceTests_testGetUserFollowersCount_UserExistsAndIsSeller.ic" NAME="UserServiceTests.testGetUserFollowersCount_UserExistsAndIsSeller Coverage Results" MODIFIED="1709086776493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.bootcamp.be_java_hisp_w25_g14.T0007.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/socialmeli2$All_in_be_java_hisp_w25_g14.ic" NAME="All in be_java_hisp_w25_g14 Coverage Results" MODIFIED="1709316110770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
