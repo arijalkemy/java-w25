@@ -9,6 +9,7 @@ import com.example.bootcampsprint1g6.util.PostTestGenerator;
 import com.example.bootcampsprint1g6.util.UserTestGenerator;
 import com.example.bootcampsprint1g6.util.mapper.PostMapper;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -48,7 +49,9 @@ public class PostControllerTest {
         (user3).addPost(post2);
         (user3).addPost(post3);
     }
+    
     @Test
+    @DisplayName("T0005 - (Controller) - Verify that the sort by date type exists - Success")
     void getLastPostsByFollowedOkTest(){
         //Arrange
         PostListDTO expected = new PostListDTO(1, new ArrayList<>(){{
@@ -66,6 +69,7 @@ public class PostControllerTest {
     }
 
     @Test
+    @DisplayName("T0005 - (Controller) - Verify that the sort by date asc exists - Success")
     void getLastPostsByFollowedAscOkTest(){
         //Arrange
         PostListDTO expected = new PostListDTO(1, new ArrayList<>(){{
@@ -83,6 +87,7 @@ public class PostControllerTest {
     }
 
     @Test
+    @DisplayName("T0005 - (Controller) - Verify that the sort by date desc exists - Success")
     void getLastPostsByFollowedDescOkTest(){
         //Arrange
         PostListDTO expected = new PostListDTO(1, new ArrayList<>(){{

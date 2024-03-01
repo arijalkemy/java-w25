@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -48,6 +49,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check throw NotFound when consult non-existent endpoint")
     void inexistentEndpointException() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/asd"))
                 .andDo(print())
@@ -57,6 +59,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check throw MethodNotAllowed when consult endpoint with bad method")
     void httpRequestMethodNotSupportedException() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/users/{userId}/follow/{userIdToFollow}", seller1.getUserId(), seller2.getUserId()))
                 .andDo(print())
@@ -65,6 +68,7 @@ public class UserControllerTest {
                 .andExpect(jsonPath("$.message").value("Metodo no soportado"));
     }
     @Test
+    @DisplayName("Integration - Check that the user can follow a seller")
     void followOk() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/api/users/{userId}/follow/{userIdToFollow}", seller1.getUserId(), seller2.getUserId()))
                 .andDo(print())
@@ -74,6 +78,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check that the user can't follow again the same seller")
     void followAgainException() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/api/users/{userId}/follow/{userIdToFollow}", seller1.getUserId(), seller2.getUserId()));
         mockMvc.perform(MockMvcRequestBuilders.post("/api/users/{userId}/follow/{userIdToFollow}", seller1.getUserId(), seller2.getUserId()))
@@ -84,6 +89,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check that the user can't follow himself")
     void followSameIdException() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/api/users/{userId}/follow/{userIdToFollow}", seller1.getUserId(), seller1.getUserId()))
                 .andDo(print())
@@ -93,6 +99,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check that the user can't follow an non-existent seller")
     void followFromInexistentIdException() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/api/users/{userId}/follow/{userIdToFollow}", 10, seller1.getUserId()))
                 .andDo(print())
@@ -102,6 +109,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check that a non-existent user cannot follow a user")
     void followToInexistentIdException() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/api/users/{userId}/follow/{userIdToFollow}", seller1.getUserId(), 10))
                 .andDo(print())
@@ -111,6 +119,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check that the user can't follow a malformed userId")
     void followWithIncorrectIdException() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/api/users/{userId}/follow/{userIdToFollow}", seller1.getUserId(), "10a"))
                 .andDo(print())
@@ -120,6 +129,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check that user can unfollow a user")
     void unfollowOk() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/api/users/{userId}/follow/{userIdToFollow}", seller1.getUserId(), seller2.getUserId()));
         mockMvc.perform(MockMvcRequestBuilders.post("/api/users/{userId}/unfollow/{userIdToFollow}", seller1.getUserId(), seller2.getUserId()))
@@ -130,6 +140,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check that user can get a list of followed")
     void getFollowedListOk() throws Exception {
         FollowedDTO followedDTO = new FollowedDTO();
         followedDTO.setUserId(seller1.getUserId());
@@ -147,6 +158,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check that user can get a list of followed in ascending order")
     void getFollowedListAscOk() throws Exception {
         FollowedDTO followedDTO = new FollowedDTO();
         followedDTO.setUserId(seller1.getUserId());
@@ -165,6 +177,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check that user can get a list of followed in descending order")
     void getFollowedListDescOk() throws Exception {
         FollowedDTO followedDTO = new FollowedDTO();
         followedDTO.setUserId(seller1.getUserId());
@@ -183,6 +196,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check that user can get a followers count")
     void getFollowersCountOk() throws Exception {
         FollowersCountDTO followersCountDTO = new FollowersCountDTO();
         followersCountDTO.setUserId(1);
@@ -199,6 +213,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check that user can get a list of followers")
     void getFollowesListOk() throws Exception {
         FollowersDTO followersDTO = new FollowersDTO();
         followersDTO.setUserId(1);
@@ -216,6 +231,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check that user can get a list of followers in ascending order")
     void getFollowesListAscOk() throws Exception {
         FollowersDTO followersDTO = new FollowersDTO();
         followersDTO.setUserId(1);
@@ -233,6 +249,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check that user can get a list of followers in descending order")
     void getFollowesListDescOk() throws Exception {
         FollowersDTO followersDTO = new FollowersDTO();
         followersDTO.setUserId(1);
@@ -250,6 +267,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check throws NotFound when try to get a list of followers with non-existent userId")
     void getFollowesListInvalidIdException() throws Exception {
         Integer userId = 10;
         mockMvc.perform(MockMvcRequestBuilders.get("/api/users/{userId}/followers/list", userId).param("order","name_desc"))
@@ -260,6 +278,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check throws BadRequest when try to get a list of followers with malformed order")
     void getFollowesListInvalidOrderArgException() throws Exception {
         String param = "asd";
         mockMvc.perform(MockMvcRequestBuilders.get("/api/users/{userId}/followers/list", seller1.getUserId()).param("order",param))

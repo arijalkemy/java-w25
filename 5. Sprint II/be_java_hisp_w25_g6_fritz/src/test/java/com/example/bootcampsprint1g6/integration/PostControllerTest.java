@@ -15,6 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -49,6 +50,7 @@ public class PostControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Verify that the post was created")
     void createPostOkTest() throws Exception{
         String expected = writer.writeValueAsString(postResponseDTO);
         String post = writer.writeValueAsString(postRequestDTO);
@@ -65,6 +67,7 @@ public class PostControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check throw BadRequest when post has null field")
     void createPostFieldExceptionTest() throws Exception{
         postRequestDTO.setPrice(null);
         String post = writer.writeValueAsString(postRequestDTO);
@@ -80,6 +83,7 @@ public class PostControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check throw BadRequest when post has invalid date")
     void createPostDateExceptionTest() throws Exception{
         postRequestDTO.setDate("30-22-2020");
         String post = writer.writeValueAsString(postRequestDTO);
@@ -94,6 +98,7 @@ public class PostControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check throw BadRequest when post has future date")
     void createPostFutureDateExceptionTest() throws Exception{
         postRequestDTO.setDate(DateFormatter.parseDateLocalDate(LocalDate.now().plusYears(1)));
         String post = writer.writeValueAsString(postRequestDTO);
@@ -108,6 +113,7 @@ public class PostControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check throw BadRequest when post has empty date")
     void createPostDateEmptyExceptionTest() throws Exception{
         postRequestDTO.setDate(null);
         String post = writer.writeValueAsString(postRequestDTO);
@@ -122,6 +128,7 @@ public class PostControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check throw NotFound when post has non-existent userId")
     void createPostInexistentUserExceptionTest() throws Exception{
         postRequestDTO.setUserId(10);
         String post = writer.writeValueAsString(postRequestDTO);
@@ -136,6 +143,7 @@ public class PostControllerTest {
     }
 
     @Test
+    @DisplayName("Integration - Check throw BadRequest when post has buyer user")
     void createPostFromBuyerExceptionTest() throws Exception{
         Buyer buyer = UserTestGenerator.getBuyerWithId(5);
         postRequestDTO.setUserId(buyer.getUserId());

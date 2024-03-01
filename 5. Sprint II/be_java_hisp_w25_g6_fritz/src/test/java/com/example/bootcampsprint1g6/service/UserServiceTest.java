@@ -19,7 +19,6 @@ import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 
-import java.time.LocalDate;
 import java.util.Optional;
 
 import static com.example.bootcampsprint1g6.util.UserTestGenerator.*;
@@ -50,6 +49,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @DisplayName("T0003 - (Service) - List followed users with ascendant order parameter is ok")
     public void getFollowedListOrdAscTestOk(){
         //Arrange
         Integer userId = 1;
@@ -65,6 +65,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @DisplayName("T0004 - (Service) - List followed users with ascendant order parameter is sorted ok")
     public void getFollowedListOrdAscIsSortedTestOk(){
         //Arrange
         Integer userId = 1;
@@ -89,6 +90,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @DisplayName("T0003 - (Service) - List followed users with descendent order parameter is ok")
     public void getFollowedListDescAscTestOk(){
         //Arrange
         Integer userId = 1;
@@ -104,6 +106,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @DisplayName("T0004 - (Service) - List followed users with descendent order parameter is sorted ok")
     public void getFollowedListOrdDescIsSortedTestOk(){
         //Arrange
         Integer userId = 1;
@@ -129,6 +132,7 @@ public class UserServiceTest {
 
 
     @Test
+    @DisplayName("T0003 - (Service) - List followers users with ascendant order parameter is ok")
     public void getFollowersListOrdAscTestOk(){
         //Arrange
         Integer userId = 1;
@@ -144,6 +148,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @DisplayName("T0004 - (Service) - List followers users with ascendant order parameter is sorted ok")
     public void getFollowersListOrdAscIsSortedTestOk(){
         //Arrange
         Integer userId = 1;
@@ -167,6 +172,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @DisplayName("T0003 - (Service) - List followers users with descendet order parameter is ok")
     public void getFollowersListOrdDescTestOk(){
         //Arrange
         Integer userId = 1;
@@ -182,6 +188,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @DisplayName("T0004 - (Service) - List followers users with descendet order parameter is sorted ok")
     public void getFollowersListOrdDescIsSortedTestOk(){
         //Arrange
         Integer userId = 1;
@@ -204,6 +211,7 @@ public class UserServiceTest {
         assertEquals(expectedFollowersList, obtainedFollowersList);
     }
     @Test
+    @DisplayName("T0003 - (Service) - List followed users with invalid order parameter raise an exception")
     public void getFollowedListOrdNotValidTestOk(){
         //Arrange
         Integer userId = 1;
@@ -216,6 +224,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @DisplayName("T0003 - (Service) - List followers users with invalid order parameter raise an exception")
     public void getFollowersListOrdNotValidTestOk(){
         //Arrange
         Integer userId = 1;
@@ -228,6 +237,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @DisplayName("T0003 - (Service) -List followers users from a Buyer raise an exception")
     void getFollowersListTestThrowsExceptionBadRequest(){
         // arrange
         Integer userId = 1;
@@ -242,6 +252,7 @@ public class UserServiceTest {
         assertThrows(BadRequestException.class, () -> userService.getFollowersList(userId, order));
     }
     @Test
+    @DisplayName("T0001 - (Service) - Follow Success")
     public void followTestOk() {
         //Arrange
         int idUserWhoFollows = 1;
@@ -262,6 +273,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @DisplayName("T0001 - (Service) - Error Follow yourself")
     public void followTestFollowingYourself() {
         //Arrange
         int idUserWhoFollows = 1;
@@ -276,6 +288,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @DisplayName("T0001 - (Service) - Follow Error cannot follow buyer")
     public void followTestFollowingBuyerThrowsException() {
         //Arrange
         int idUserWhoFollows = 1;
@@ -290,6 +303,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @DisplayName("T0001 - (Service) - Follow  Error no user exits")
     public void followTestFollowingNotExistingUserThrowsException() {
         //Arrange
         int idUserWhoFollows = 1;
@@ -303,6 +317,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @DisplayName("T0001 -  (Service) - Follow Error already following")
     public void followTestFollowingAlreadyFollowedUserThrowsException() {
         //Arrange
         int idUserWhoFollows = 1;
@@ -318,7 +333,7 @@ public class UserServiceTest {
     }
 
     @Test
-    @DisplayName("T-0002 Unfollow Test BAD Same User")
+    @DisplayName("T0002 - (Service) - Unfollow Test Error Same User")
     public void unfollowTestWhenSameUser() {
         // Arrange
         Integer idUser = 1;
@@ -335,7 +350,7 @@ public class UserServiceTest {
     }
 
     @Test
-    @DisplayName("T-0002 Unfollow Test BAD User Not Following")
+    @DisplayName("T-0002 - (Service) - Unfollow Test Error User Not Following")
     public void unfollowTestWhenUserNotFollowing() {
         // Arrange
         Integer idUserWhoUnfollows = 1;
@@ -360,7 +375,7 @@ public class UserServiceTest {
     }
 
     @Test
-    @DisplayName("T-0002 Unfollow Test OK")
+    @DisplayName("T0002 - (Service) - Unfollow Test Success")
     public void unfollowTestOk() {
         // Arrange
         int userId = 1;
@@ -382,7 +397,7 @@ public class UserServiceTest {
     }
 
     @Test
-    @DisplayName("Get followers amount (Service) - Success")
+    @DisplayName("T0007 - (Service) -Get followers amount Success")
     void getFollowersCountTestOk(){
         //arrange
         Integer id = 1;
@@ -398,7 +413,7 @@ public class UserServiceTest {
         assertEquals(followers, readFollowers);
     }
     @Test
-    @DisplayName("Get followers amount (Service) - No followers")
+    @DisplayName("T0007 -(Service) -  Get followers amount No followers")
     void getFollowersCountTestEmpty(){
         //arrange
         Integer id = 1;
@@ -415,7 +430,7 @@ public class UserServiceTest {
     }
 
     @Test
-    @DisplayName("Get followers amount (Service) - Success")
+    @DisplayName("T0007 - (Service) - Get followers amount Success")
     void getFollowersCountTestUserIsNotSellerThrowsException(){
         //Arrange
         Integer id = 1;
@@ -427,7 +442,7 @@ public class UserServiceTest {
     }
 
     @Test
-    @DisplayName("Get followers amount (Service) - Success")
+    @DisplayName("T0007 - (Service) - Get followers amount Success")
     void getFollowersCountTestNotExistingUserThrowsException(){
         //Arrange
         Integer id = 999;
