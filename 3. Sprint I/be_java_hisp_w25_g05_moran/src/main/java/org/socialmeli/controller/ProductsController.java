@@ -42,6 +42,13 @@ public class ProductsController {
         return new ResponseEntity<>(postsService.countPromoPosts(user_id), HttpStatus.OK);
     }
 
+    @GetMapping("/promo-post/list")
+    public ResponseEntity<PromoPostCountDto> listVendorPromos(
+            @RequestParam Integer user_id
+    ) {
+        return new ResponseEntity<>(postsService.countPromoPosts(user_id), HttpStatus.OK);
+    }
+
     // US_0006 & US_0009
     @GetMapping("/followed/{userId}/list")
     public ResponseEntity<FollowedListDto> followedList(
