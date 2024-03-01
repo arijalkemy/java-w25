@@ -64,4 +64,38 @@ public class ExceptionIT {
                 .andExpect(jsonPath("$.message").value("Error en el tipo de datos de los parámetros"));
     }
 
+    @Test
+    @DisplayName("No Resource Found Exception (IT) - Error")
+    void noResourceFoundExceptionError() throws Exception {
+        mockMvc.perform(get("/api/productss")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(""))
+                .andExpect(status().isNotFound())
+                .andExpect(jsonPath("$.message").value("Endpoint inexistente"));
+    }
+    //HttpMessageNotReadableException
+    @Test
+    @DisplayName("HttpMessageNotReadableException (IT) - Error")
+    void httpMessageNotReadableExceptionError() throws Exception {
+        String payloadJson = "{\n" +
+                "    \"user_id\": \"udssds1\",\n" +
+                "    \"date\" : \"17-02-2024\",\n" +
+                "    \"product\": {\n" +
+                "        \"product_id\": 23,\n" +
+                "        \"product_name\" : \"camisa a rayas\",\n" +
+                "        \"type\" :  \"indumentaria\",\n" +
+                "        \"brand\" : \"sarkany\",\n" +
+                "        \"color\" :  \"rojo\",\n" +
+                "        \"notes\" : \"unico color, puro algodon\"\n" +
+                "    },\n" +
+                "    \"category\" : 123,\n" +
+                "    \"price\" : 23.4\n" +
+                "    }";
+        mockMvc.perform(post("/api/products/post")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(payloadJson))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.message").value("Error en el tipo de datos enviados"));
+    }
+
 }
