@@ -1,9 +1,6 @@
 package grupo_7.sprint_1.utils;
 
-import grupo_7.sprint_1.dtos.BuyerDto;
-import grupo_7.sprint_1.dtos.PostDto;
-import grupo_7.sprint_1.dtos.ProductDto;
-import grupo_7.sprint_1.dtos.SellerListDto;
+import grupo_7.sprint_1.dtos.*;
 import grupo_7.sprint_1.entity.Buyer;
 import grupo_7.sprint_1.entity.Post;
 import grupo_7.sprint_1.entity.Product;
@@ -47,6 +44,23 @@ public class MockBuilder {
         seller3.setUserName("Seller_3");
 
         return new Buyer(1, "Buyer_1", List.of(seller1, seller2, seller3));
+    }
+    public static AddPostDto mockPostDto() {
+        return new AddPostDto(
+                1,
+                LocalDate.now().minusDays(2),
+                mockProductDto(999),
+                1,
+                100.0
+        );
+    }
+    public static PostDto mockPostDtoResponse() {
+        return new PostDto(
+                mockProductDto(999),
+                1,
+                100.0,
+                LocalDate.now().minusDays(2)
+        );
     }
 
     public static BuyerDto mockBuyerAscDto() {
