@@ -38,6 +38,7 @@ public class UserController {
     public ResponseEntity<?> removeFollow(@PathVariable Integer userId, @PathVariable Integer userIdToUnfollow) {
         validateUserId(userId, "UserId");
         validateUserId(userIdToUnfollow, "UserIdToUnFollow");
+        this.userService.removeFollow(userId,userIdToUnfollow);
         return new ResponseEntity<>(new MessageDto("Unfollow successfully", ""), HttpStatus.OK);
     }
 
