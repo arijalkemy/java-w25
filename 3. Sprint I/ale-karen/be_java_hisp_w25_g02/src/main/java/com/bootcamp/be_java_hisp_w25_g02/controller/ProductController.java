@@ -38,7 +38,7 @@ public class ProductController {
     }
 
     @PatchMapping("products/promo-post/{post_id}/end-promotion")
-    public ResponseEntity<?>pachEndPromotion(@PathVariable Integer post_id){
+    public ResponseEntity<?> patchEndPromotion(@PathVariable Integer post_id){
         GenericResponseDTO response = this.postService.endPromo(post_id);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

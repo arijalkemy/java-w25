@@ -68,7 +68,7 @@ public class PostServiceImpl implements IPostService{
         return new FollowingPostDTO(userId, posts.stream().map(this::mapPostToDTO).toList());
     }
     private PostDTO mapPostToDTO(Post post){
-        return new PostDTO(post.getUser_id(), post.getPostDate(), mapToProductDTO(post.getProduct()),post.getCategory(), post.getPrice());
+        return new PostDTO(post.getUserId(), post.getPostDate(), mapToProductDTO(post.getProduct()),post.getCategory(), post.getPrice());
 
     }
     private ProductDTO mapToProductDTO(Product product){
@@ -103,10 +103,10 @@ public class PostServiceImpl implements IPostService{
             throw new NotFoundException("No se encontro el posteo con el id " + postId);
         }
         Post post = postOptional.get();
-        if (!post.getHas_promo()){
+        if (!post.getHasPromo()){
             throw new BadRequestException("Su producto no tiene promoción");
         }
-        post.setHas_promo(false);
+        post.setHasPromo(false);
         post.setDiscount(0.0);
         return new GenericResponseDTO("Operación realizada con exito, su producto ya no tiene promoción");
     }

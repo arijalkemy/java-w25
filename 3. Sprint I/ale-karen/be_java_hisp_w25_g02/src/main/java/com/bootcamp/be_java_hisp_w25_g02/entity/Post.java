@@ -14,24 +14,24 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Post {
-    Integer post_id;
-    Integer user_id;
+    Integer postId;
+    Integer userId;
     @JsonFormat(pattern = "dd-MM-yyyy") //TODO: corroborar que formatee a dd-MM-yyyy. Es posible agregar "yyyy-MM-dd@HH:mm:ss.SSSZ"
     LocalDate postDate;
     Product product;
     Integer category;
     Double price;
-    Boolean has_promo;
+    Boolean hasPromo;
     Double discount;
 
-    public Post(Integer post_id, Integer user_id, LocalDate postDate, Product product, Integer category, Double price) {
-        this.post_id = post_id;
-        this.user_id = user_id;
+    public Post(Integer postId, Integer userId, LocalDate postDate, Product product, Integer category, Double price) {
+        this.postId = postId;
+        this.userId = userId;
         this.postDate = postDate;
         this.product = product;
         this.category = category;
         this.price = price;
-        this.has_promo = false;
+        this.hasPromo = false;
         this.discount = 0.0;
     }
 }

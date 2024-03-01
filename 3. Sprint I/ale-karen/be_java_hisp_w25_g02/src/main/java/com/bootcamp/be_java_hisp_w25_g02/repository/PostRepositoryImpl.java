@@ -34,7 +34,7 @@ public class PostRepositoryImpl implements IPostRepository
 
     @Override
     public Optional<Post> findById(Integer id) {
-        return this.postList.stream().filter(post -> Objects.equals(post.getPost_id(), id)).findFirst();
+        return this.postList.stream().filter(post -> Objects.equals(post.getPostId(), id)).findFirst();
     }
 
     @Override
@@ -49,18 +49,18 @@ public class PostRepositoryImpl implements IPostRepository
 
     @Override
     public long savePost(Post post) {
-        post.setPost_id( postList.size());
+        post.setPostId( postList.size());
         postList.add(post);
-        return post.getPost_id();
+        return post.getPostId();
 }
     public List<Post> findByUserId(Integer userId) {
         LocalDate twoWeeksAgo = LocalDate.now().minusWeeks(2);
-        return this.postList.stream().filter(post -> post.getPostDate().isAfter(twoWeeksAgo) && Objects.equals(post.getUser_id(), userId)).toList();
+        return this.postList.stream().filter(post -> post.getPostDate().isAfter(twoWeeksAgo) && Objects.equals(post.getUserId(), userId)).toList();
 
     }
 
     @Override
     public Integer findPromoCount(int id) {
-        return this.postList.stream().filter(post -> post.getUser_id() == id && post.getHas_promo()).toList().size();
+        return this.postList.stream().filter(post -> post.getUserId() == id && post.getHasPromo()).toList().size();
     }
 }
