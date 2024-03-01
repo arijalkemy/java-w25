@@ -62,13 +62,49 @@ public class UserControllerTest {
     @DisplayName("T001 Get Followers List")
     void getFollowersListTest() throws Exception{
 
-        MvcResult mvcResult =
                 this.mockMvc.perform(get("/users/{id}/followers/list",1)
-                                .param("order", "name_asc"))
+                        .param("order", "name_asc"))
                         .andDo(print())
                         .andExpect(status().isOk())
                         .andReturn();
     }
+
+    @Test
+    @DisplayName("T002 Get Followers List Error 405")
+    void getFollowersListErrorTest() throws Exception{
+
+                this.mockMvc.perform(get("/users/{id}/followers/list",10)
+                                .param("order", "name_asc"))
+                        .andDo(print())
+                        .andExpect(status().isBadRequest())
+                        .andReturn();
+    }
+
+
+    @Test
+    @DisplayName("T004 Add followed status ok")
+    void addFollowsOk() throws Exception {
+
+        this.mockMvc
+                .perform(get("/users/{userId}/follow/{userIdToFollow}",4, 2))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andReturn();
+
+    }
+
+    @Test
+    @DisplayName("T003 Add followed Error")
+    void addFollowsError() throws Exception {
+
+        this.mockMvc
+                .perform(get("/users/{userId}/follow/{userIdToFollow}",1, 2))
+                .andDo(print())
+                .andExpect(status().isBadRequest())
+                .andReturn();
+
+    }
+
 
 
 }

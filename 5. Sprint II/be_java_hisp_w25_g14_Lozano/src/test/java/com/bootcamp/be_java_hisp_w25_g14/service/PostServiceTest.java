@@ -327,22 +327,21 @@ public class PostServiceTest {
 
 
     private List<Post> generateMockPosts(Integer id){
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         if(id==2){
             return List.of(
-                    new Post(2,2,LocalDate.parse("15-02-2024", formatter), new Product(2,"ASUS ROG","Gamer","Asus","Negro","nueva"),10,15000.0),
-                    new Post(4,2,LocalDate.parse("01-02-2024", formatter), new Product(4,"Teclado Gamer","Gamer","HyperX","Negro","Elite Alloy"),10,2300.0)
+                    new Post(2,2,LocalDate.now().minusDays(10), new Product(2,"ASUS ROG","Gamer","Asus","Negro","nueva"),10,15000.0),
+                    new Post(4,2,LocalDate.now().minusDays(20), new Product(4,"Teclado Gamer","Gamer","HyperX","Negro","Elite Alloy"),10,2300.0)
             );
         }else if(id==3){
             return List.of(
-                    new Post(3, 3, LocalDate.parse("11-02-2024", formatter), new Product(3, "Silla gamer", "Gamer", "Racer", "Negro y azul", "special edition"), 100, 1500.0),
-                    new Post(5, 3, LocalDate.parse("01-01-2024", formatter), new Product(56, "Mouse", "Office", "Logitech", "Negro", "G203"), 40, 200.0),
-                    new Post(6, 3, LocalDate.parse("18-02-2024", formatter), new Product(12, "Termo", "Office", "Yeti", "Gris", "Large"), 40, 1200.0)
+                    new Post(3, 3, LocalDate.now().minusDays(7), new Product(3, "Silla gamer", "Gamer", "Racer", "Negro y azul", "special edition"), 100, 1500.0),
+                    new Post(5, 3, LocalDate.now().minusDays(18), new Product(56, "Mouse", "Office", "Logitech", "Negro", "G203"), 40, 200.0),
+                    new Post(6, 3, LocalDate.now().minusDays(3), new Product(12, "Termo", "Office", "Yeti", "Gris", "Large"), 40, 1200.0)
             );
         }else{
             return List.of(
-                    new Post(2,2,LocalDate.parse("30-01-2024", formatter), new Product(2,"ASUS ROG","Gamer","Asus","Negro","nueva"),10,15000.0),
-                    new Post(4,2,LocalDate.parse("20-01-2024", formatter), new Product(4,"Teclado Gamer","Gamer","HyperX","Negro","Elite Alloy"),10,2300.0)
+                    new Post(2,2,LocalDate.now().minusDays(40), new Product(2,"ASUS ROG","Gamer","Asus","Negro","nueva"),10,15000.0),
+                    new Post(4,2,LocalDate.now().minusDays(34), new Product(4,"Teclado Gamer","Gamer","HyperX","Negro","Elite Alloy"),10,2300.0)
             );
         }
 
