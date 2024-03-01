@@ -20,6 +20,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.util.CollectionUtils;
 
 import java.util.Optional;
 
@@ -61,8 +62,7 @@ class UserServiceImplTest {
         //Assert
         verify(iUserRepository, atLeastOnce()).findById(userId);
         verify(iUserRepository, atLeastOnce()).findById(userIdToFollow);
-
-
+        assertTrue(CollectionUtils.contains(user.get().getFollowing().iterator(), userToFollow.get().getUserId()));
     }
 
     @Test
