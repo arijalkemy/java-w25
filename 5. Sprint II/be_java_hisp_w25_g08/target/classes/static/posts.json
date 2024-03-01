@@ -1,0 +1,343 @@
+[
+    {
+      "userId": 101,
+      "date": "01-02-2024",
+      "product": {
+        "productId": 1,
+        "productName": "Silla Gamer",
+        "type": "Gamer",
+        "brand": "Racer",
+        "color": "Red & Black",
+        "notes": "Special Edition"
+      },
+      "category": 100,
+      "price": 1500.50
+    },
+    {
+      "userId": 102,
+      "date": "01-02-2024",
+      "product": {
+        "productId": 2,
+        "productName": "Teclado Mecánico",
+        "type": "Gamer",
+        "brand": "Corsair",
+        "color": "RGB",
+        "notes": "Cherry MX switches"
+      },
+      "category": 100,
+      "price": 200.75
+    },
+    {
+      "userId": 103,
+      "date": "02-02-2024",
+      "product": {
+        "productId": 3,
+        "productName": "Auriculares Gamer",
+        "type": "Gamer",
+        "brand": "Logitech",
+        "color": "Black",
+        "notes": "Noise-cancelling mic"
+      },
+      "category": 100,
+      "price": 100.25
+    },
+    {
+      "userId": 104,
+      "date": "02-02-2024",
+      "product": {
+        "productId": 4,
+        "productName": "Mesa Gamer",
+        "type": "Gamer",
+        "brand": "DXRacer",
+        "color": "Carbon Fiber",
+        "notes": "Adjustable height"
+      },
+      "category": 100,
+      "price": 800.99
+    },
+    {
+      "userId": 105,
+      "date": "03-02-2024",
+      "product": {
+        "productId": 5,
+        "productName": "Mouse Gamer",
+        "type": "Gamer",
+        "brand": "SteelSeries",
+        "color": "White",
+        "notes": "10000 DPI sensor"
+      },
+      "category": 100,
+      "price": 70.00
+    },
+    {
+      "userId": 106,
+      "date": "04-02-2024",
+      "product": {
+        "productId": 6,
+        "productName": "Sofá",
+        "type": "Home",
+        "brand": "Ashley Furniture",
+        "color": "Gray",
+        "notes": "3-seater"
+      },
+      "category": 101,
+      "price": 1200.00
+    },
+    {
+      "userId": 107,
+      "date": "04-02-2024",
+      "product": {
+        "productId": 7,
+        "productName": "Lámpara de Pie",
+        "type": "Home",
+        "brand": "Ikea",
+        "color": "Silver",
+        "notes": "Adjustable brightness"
+      },
+      "category": 101,
+      "price": 75.50
+    },
+    {
+      "userId": 108,
+      "date": "05-02-2024",
+      "product": {
+        "productId": 8,
+        "productName": "Alfombra",
+        "type": "Home",
+        "brand": "Mohawk Home",
+        "color": "Beige",
+        "notes": "5x7 feet"
+      },
+      "category": 101,
+      "price": 199.99
+    },
+    {
+      "userId": 109,
+      "date": "05-02-2024",
+      "product": {
+        "productId": 9,
+        "productName": "Juego de Sábanas",
+        "type": "Home",
+        "brand": "AmazonBasics",
+        "color": "Navy Blue",
+        "notes": "Queen size"
+      },
+      "category": 101,
+      "price": 50.25
+    },
+    {
+      "userId": 110,
+      "date": "06-02-2024",
+      "product": {
+        "productId": 10,
+        "productName": "Mesa de Centro",
+        "type": "Home",
+        "brand": "Walker Edison",
+        "color": "Espresso",
+        "notes": "Modern design"
+      },
+      "category": 101,
+      "price": 300.00
+    },
+    {
+      "userId": 111,
+      "date": "07-02-2024",
+      "product": {
+        "productId": 11,
+        "productName": "Collar para Perros",
+        "type": "Pets",
+        "brand": "Blueberry Pet",
+        "color": "Pink",
+        "notes": "Adjustable size"
+      },
+      "category": 102,
+      "price": 15.99
+    },
+    {
+      "userId": 112,
+      "date": "07-02-2024",
+      "product": {
+        "productId": 12,
+        "productName": "Cama para Gatos",
+        "type": "Pets",
+        "brand": "Frisco",
+        "color": "Gray",
+        "notes": "Soft plush material"
+      },
+      "category": 102,
+      "price": 40.50
+    },
+    {
+      "userId": 113,
+      "date": "08-02-2024",
+      "product": {
+        "productId": 13,
+        "productName": "Juguete para Perros",
+        "type": "Pets",
+        "brand": "KONG",
+        "color": "Red",
+        "notes": "Durable rubber"
+      },
+      "category": 102,
+      "price": 10.75
+    },
+    {
+      "userId": 114,
+      "date": "08-02-2024",
+      "product": {
+        "productId": 14,
+        "productName": "Arena para Gatos",
+        "type": "Pets",
+        "brand": "Arm & Hammer",
+        "color": "White",
+        "notes": "Odor control"
+      },
+      "category": 102,
+      "price": 20.00
+    },
+    {
+      "userId": 115,
+      "date": "09-02-2024",
+      "product": {
+        "productId": 15,
+        "productName": "Comedero para Pájaros",
+        "type": "Pets",
+        "brand": "Perky-Pet",
+        "color": "Green",
+        "notes": "Hangable design"
+      },
+      "category": 102,
+      "price": 12.99
+    },
+    {
+      "userId": 116,
+      "date": "10-02-2024",
+      "product": {
+        "productId": 16,
+        "productName": "Comida para Perros",
+        "type": "Food",
+        "brand": "Royal Canin",
+        "flavor": "Chicken & Rice",
+        "size": "10kg",
+        "notes": "For all breeds"
+      },
+      "category": 103,
+      "price": 45.25
+    },
+    {
+      "userId": 117,
+      "date": "11-02-2024",
+      "product": {
+        "productId": 17,
+        "productName": "Comida para Gatos",
+        "type": "Food",
+        "brand": "Hill's Science Diet",
+        "flavor": "Salmon",
+        "size": "5kg",
+        "notes": "Healthy digestion"
+      },
+      "category": 103,
+      "price": 35.99
+    },
+    {
+      "userId": 118,
+      "date": "11-02-2024",
+      "product": {
+        "productId": 18,
+        "productName": "Snacks para Perros",
+        "type": "Food",
+        "brand": "Greenies",
+        "flavor": "Original",
+        "size": "1.5kg",
+        "notes": "Dental care"
+      },
+      "category": 103,
+      "price": 20.50
+    },
+    {
+      "userId": 119,
+      "date": "12-02-2024",
+      "product": {
+        "productId": 19,
+        "productName": "Snacks para Gatos",
+        "type": "Food",
+        "brand": "Temptations",
+        "flavor": "Chicken",
+        "size": "200g",
+        "notes": "Crunchy outside, soft inside"
+      },
+      "category": 103,
+      "price": 5.99
+    },
+    {
+      "userId": 120,
+      "date": "13-02-2024",
+      "product": {
+        "productId": 20,
+        "productName": "Juguete para Gatos",
+        "type": "Toys",
+        "brand": "Yeowww!",
+        "color": "Yellow",
+        "notes": "Catnip filled"
+      },
+      "category": 104,
+      "price": 8.99
+    },
+    {
+      "userId": 121,
+      "date": "13-02-2024",
+      "product": {
+        "productId": 21,
+        "productName": "Set de Construcción",
+        "type": "Toys",
+        "brand": "LEGO",
+        "color": "6Grey",
+        "notes": "Classic bricks"
+      },
+      "category": 104,
+      "price": 29.75
+    },
+    {
+      "userId": 122,
+      "date": "14-02-2024",
+      "product": {
+        "productId": 22,
+        "productName": "Peluche",
+        "type": "Toys",
+        "brand": "GUND",
+        "color": "0Grey",
+        "notes": "Soft and huggable"
+      },
+      "category": 104,
+      "price": 15.00
+    },
+    {
+      "userId": 123,
+      "date": "14-02-2024",
+      "product": {
+        "productId": 23,
+        "productName": "Muñeca",
+        "type": "Toys",
+        "brand": "Barbie",
+        "color": "3Grey",
+        "notes": "Fashion doll"
+      },
+      "category": 104,
+      "price": 19.99
+    },
+    {
+      "userId": 124,
+      "date": "15-02-2024",
+      "product": {
+        "productId": 24,
+        "productName": "Rompecabezas de Madera",
+        "type": "Toys",
+        "brand": "Melissa & Doug",
+        "color": "Grey",
+        "notes": "Educational toy"
+      },
+      "category": 104,
+      "price": 12.50
+    }
+]
+
