@@ -4,11 +4,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9a7d273-f240-4871-9253-2022d1444fbe" name="Changes" comment="" />
+    <list default="true" id="d9a7d273-f240-4871-9253-2022d1444fbe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/src/test/java/grupo_7/sprint_1/controller/Integration/SellerControllerTestIntegracion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/src/test/java/grupo_7/sprint_1/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/Sprint1Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/Sprint1Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/controller/BuyerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/controller/BuyerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/controller/SellerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/controller/SellerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/AddPostDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/AddPostDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/BuyerDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/BuyerDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/BuyerDtoRequisito3.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/BuyerDtoRequisito3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/ExceptionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/ExceptionDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/GenericResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/GenericResponseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/MessageDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/MessageDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/PostDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/PostDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/ProductDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/ProductDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/SellerDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/SellerDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/SellerFollowersListDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/SellerFollowersListDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/SellerListDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/dtos/SellerListDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Buyer$BuyerBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Buyer$BuyerBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Buyer.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Buyer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Post$PostBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Post$PostBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Product$ProductBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Product$ProductBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Seller$SellerBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Seller$SellerBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Seller.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/Seller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/exception/BadRequestException.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/exception/BadRequestException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/exception/ExceptionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/exception/ExceptionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/exception/InvalidArgsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/exception/InvalidArgsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/exception/NotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/exception/NotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/repository/BuyerRepositoryImp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/repository/BuyerRepositoryImp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/repository/BuyerRepositoryImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/repository/BuyerRepositoryImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/repository/IBuyerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/repository/IBuyerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/repository/ISellerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/repository/ISellerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/repository/SellerRepositoryImp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/repository/SellerRepositoryImp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/repository/SellerRepositoryImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/repository/SellerRepositoryImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/service/BuyerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/service/BuyerServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/service/IBuyerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/service/IBuyerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/service/ISellerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/service/ISellerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/service/SellerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/service/SellerServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/utils/Mapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/classes/grupo_7/sprint_1/utils/Mapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/test-classes/grupo_7/sprint_1/utils/MockBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/target/test-classes/grupo_7/sprint_1/utils/MockBuilder.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -24,6 +78,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.All in be_java_hisp_w25_g07.executor": "Coverage",
+    "JUnit.BuyerControllerTestIntegration.unfollowSellerControllerIdBuyerInvalidTestSadPath.executor": "Run",
+    "JUnit.BuyerControllerTestIntegration.unfollowSellerControllerIdFollowedInvalidTestSadPath.executor": "Run",
+    "JUnit.BuyerControllerTestIntegration.unfollowSellerControllerTestOk.executor": "Run",
+    "JUnit.SellerControllerTestIntegracion.addPostControllerTestOk.executor": "Run",
+    "JUnit.SellerControllerTestIntegracion.getFollowersCountTestOk.executor": "Run",
+    "JUnit.SellerControllerTestIntegracion.getFollowersListTestOk (1).executor": "Run",
+    "JUnit.SellerControllerTestIntegracion.getFollowersListTestOk.executor": "Run",
+    "JUnit.SellerControllerTestIntegracion.getFollowersListTestSadPath.executor": "Run",
     "JUnit.java in be_java_hisp_w25_g07.executor": "Coverage",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -31,6 +93,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.Sprint1Application.executor": "Run",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -44,11 +107,72 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.All in be_java_hisp_w25_g07">
-    <configuration name="All in be_java_hisp_w25_g07" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="grupo_7.sprint_1.controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.java in be_java_hisp_w25_g07">
+    <configuration name="BuyerControllerTestIntegration.unfollowSellerControllerTestOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="be_java_hisp_w25_g07" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="grupo_7.sprint_1.controller.Integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="grupo_7.sprint_1.controller.Integration" />
+      <option name="MAIN_CLASS_NAME" value="grupo_7.sprint_1.controller.Integration.BuyerControllerTestIntegration" />
+      <option name="METHOD_NAME" value="unfollowSellerControllerTestOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SellerControllerTestIntegracion.getFollowersCountTestOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g07" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="grupo_7.sprint_1.controller.Integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="grupo_7.sprint_1.controller.Integration" />
+      <option name="MAIN_CLASS_NAME" value="grupo_7.sprint_1.controller.Integration.SellerControllerTestIntegracion" />
+      <option name="METHOD_NAME" value="getFollowersCountTestOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SellerControllerTestIntegracion.getFollowersListTestOk (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g07" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="grupo_7.sprint_1.controller.Integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="grupo_7.sprint_1.controller.Integration" />
+      <option name="MAIN_CLASS_NAME" value="grupo_7.sprint_1.controller.Integration.SellerControllerTestIntegracion" />
+      <option name="METHOD_NAME" value="getFollowersListTestOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SellerControllerTestIntegracion.getFollowersListTestSadPath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g07" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="grupo_7.sprint_1.Integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="grupo_7.sprint_1.Integration" />
+      <option name="MAIN_CLASS_NAME" value="grupo_7.sprint_1.Integration.SellerControllerTestIntegracion" />
+      <option name="METHOD_NAME" value="getFollowersListTestSadPath" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -71,8 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in be_java_hisp_w25_g07" />
         <item itemvalue="JUnit.java in be_java_hisp_w25_g07" />
+        <item itemvalue="JUnit.SellerControllerTestIntegracion.getFollowersCountTestOk" />
+        <item itemvalue="JUnit.BuyerControllerTestIntegration.unfollowSellerControllerTestOk" />
+        <item itemvalue="JUnit.SellerControllerTestIntegracion.getFollowersListTestOk (1)" />
+        <item itemvalue="JUnit.SellerControllerTestIntegracion.getFollowersListTestSadPath" />
       </list>
     </recent_temporary>
   </component>
@@ -86,7 +213,7 @@
       <updated>1709217819361</updated>
       <workItem from="1709217820496" duration="71000" />
       <workItem from="1709217900338" duration="1533000" />
-      <workItem from="1709221450323" duration="1000000" />
+      <workItem from="1709221450323" duration="13792000" />
     </task>
     <servers />
   </component>
@@ -94,6 +221,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/5__Sprint_II$java_in_be_java_hisp_w25_g07.ic" NAME="java in be_java_hisp_w25_g07 Coverage Results" MODIFIED="1709222113226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/5__Sprint_II$java_in_be_java_hisp_w25_g07.ic" NAME="java in be_java_hisp_w25_g07 Coverage Results" MODIFIED="1709310909588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/5__Sprint_II$All_in_be_java_hisp_w25_g07.ic" NAME="All in be_java_hisp_w25_g07 Coverage Results" MODIFIED="1709222452468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
