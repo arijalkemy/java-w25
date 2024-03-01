@@ -15,8 +15,8 @@ import java.util.List;
 @NoArgsConstructor
 public class FollowingPostDto {
     @JsonProperty("user_id")
-    @NotBlank(message = "El id no puede estar vacio.")
+    //@NotBlank(message = "El id no puede estar vacio.")
     @Positive(message = "El id debe ser mayor a 0.")
-    Integer userId;
-    List<PostDto> post;
+    private Integer userId;
+    private List<PostDto> post;
 }

@@ -15,11 +15,11 @@ import lombok.NoArgsConstructor;
 
 public class FollowDto {
     @JsonProperty("user_id")
-    @NotBlank(message = "El id no puede estar vacio.")
+    //@NotBlank(message = "El id no puede estar vacio.")
     @Positive(message = "El id debe ser mayor a 0.")
-    public Integer userId;
+    private Integer userId;
 
     @JsonProperty("user_name")
     @Size(max = 15, message = "Maximo 15 caracteres")
-    public String userName;
+    private String userName;
 }

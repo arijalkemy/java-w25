@@ -1,9 +1,7 @@
 package com.grupo08.socialmeli.entity;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Positive;
-import jakarta.validation.constraints.Size;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,9 +11,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class Product {
-    @NotBlank(message = "El id no puede estar vacía.")
+    @JsonProperty("product_id")
+    //@NotBlank(message = "El id no puede estar vacía.")
     @Positive(message = "El id debe ser mayor a 0.")
     private Integer productId;
+    @JsonProperty("product_name")
+    @NotEmpty(message = "El campo product_name no puede estar vacío.")
     @Size(max = 40, message = "La longitud no puede superar los 40 caracteres.")
     @Pattern(regexp = "^[a-zA-Z0-9 ]*$", message = "El campo no puede poseer caracteres especiales.")
     private String productName;
