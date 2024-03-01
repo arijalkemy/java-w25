@@ -13,20 +13,16 @@ public class PostRepositoryImpl implements IPostRepository {
     private List<Post> listOfPosts = new ArrayList<>();
     private Integer index = 0;
 
-    @Override
-    public List<Post> findAll(){
-        return listOfPosts;
-    }
-
+    /**
+     * Save the post in a listsOfPosts.
+     * @param post
+     * @return the post saved
+     */
     @Override
     public Post save(Post post){
         post.setPostId(index);
         listOfPosts.add(post);
         index++;
         return post;
-    }
-    @Override
-    public Post findById(Integer id){
-        return listOfPosts.stream().filter(p->p.getPostId().equals(id)).findFirst().orElse(null);
     }
 }

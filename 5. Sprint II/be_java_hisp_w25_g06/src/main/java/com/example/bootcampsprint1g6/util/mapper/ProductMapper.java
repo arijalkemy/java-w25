@@ -5,12 +5,14 @@ import com.example.bootcampsprint1g6.entity.Product;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ProductMapper {
+    /**
+     * Get an instance of ProductDTO from a Product instance
+     * @param product Product instance to initialize a new ProductDTO
+     * @return A new ProductDTO instance
+     */
     public static ProductDTO getInstance(Product product) {
         ProductDTO dto = ProductDTO.builder()
                 .productId(product.getProductId())
@@ -23,10 +25,11 @@ public class ProductMapper {
         return dto;
     }
 
-    public static List<ProductDTO> getInstances(List<Product> personas) {
-        return personas.stream().map(ProductMapper::getInstance).collect(Collectors.toList());
-    }
-
+    /**
+     * Get a Product instance from a ProductDTO instance
+     * @param dto ProductDTO to get the Product instance
+     * @return A new Product instance
+     */
     public static Product getEntityInstance(ProductDTO dto) {
         return new Product(dto.getProductId(), dto.getProductName(), dto.getType(), dto.getBrand(), dto.getColor(), dto.getNotes());
     }

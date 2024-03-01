@@ -3,7 +3,6 @@ package com.example.bootcampsprint1g6.util;
 import com.example.bootcampsprint1g6.entity.Post;
 import com.example.bootcampsprint1g6.entity.Product;
 import com.example.bootcampsprint1g6.entity.Seller;
-import com.example.bootcampsprint1g6.entity.User;
 
 import java.time.LocalDate;
 

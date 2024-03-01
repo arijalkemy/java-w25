@@ -13,6 +13,11 @@ import java.util.stream.Collectors;
 
 public class PostMapper {
 
+    /**
+     * Get a PostResponseDTO instance from a Post instance
+     * @param post Post the post instance to return
+     * @return the postResponseDTO ready to send
+     */
     public static PostResponseDTO getResponseInstance(Post post) {
         PostResponseDTO dto = PostResponseDTO.builder()
                 .postId(post.getPostId())
@@ -27,10 +32,12 @@ public class PostMapper {
         return dto;
     }
 
-    public static List<PostResponseDTO> getResponseInstances(List<Post> posts) {
-        return posts.stream().map(PostMapper::getResponseInstance).collect(Collectors.toList());
-    }
-
+    /**
+     * Get a Post instance from a PostRequestDTO and a seller instance
+     * @param request PostRequestDTO the post info sent to create the post
+     * @param seller the seller instace that will own the post
+     * @return the post created
+     */
     public static Post getEntityInstance(PostRequestDTO request, Seller seller) {
         LocalDate localDate = DateFormatter.parseDateString(request.getDate());
         return Post.builder()
