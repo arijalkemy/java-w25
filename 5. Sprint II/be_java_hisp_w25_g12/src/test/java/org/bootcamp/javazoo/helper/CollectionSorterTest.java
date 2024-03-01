@@ -18,6 +18,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -86,7 +87,9 @@ class CollectionSorterTest {
         Integer sellerId = 2;
         List<PostResponseDto> request = (MockBuilder.postsBuilder()).stream()
                 .map(post -> Mapper.mapToPostDto(post, sellerId)).toList();
-        List<PostResponseDto> expected = CollectionSorter.sortPostDtoByDate(request, order);
+        List<PostResponseDto> expected = request.stream()
+                .sorted(Comparator.comparing(PostResponseDto::getDate))
+                .collect(Collectors.toList());
 
         //Act
         List<PostResponseDto> result = CollectionSorter.sortPostDtoByDate(request, order);
@@ -105,7 +108,9 @@ class CollectionSorterTest {
         Integer sellerId = 2;
         List<PostResponseDto> request = (MockBuilder.postsBuilder()).stream()
                 .map(post -> Mapper.mapToPostDto(post, sellerId)).toList();
-        List<PostResponseDto> expected = CollectionSorter.sortPostDtoByDate(request, order);
+        List<PostResponseDto> expected = request.stream()
+                .sorted(Comparator.comparing(PostResponseDto::getDate).reversed())
+                .collect(Collectors.toList());
 
         //Act
         List<PostResponseDto> result = CollectionSorter.sortPostDtoByDate(request, order);
