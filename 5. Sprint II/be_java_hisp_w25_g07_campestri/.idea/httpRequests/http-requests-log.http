@@ -1,3 +1,82 @@
+POST http://localhost:8080/buyers/users/11/unfollow/1
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-03-01T145951.200.json
+
+###
+
+POST http://localhost:8080/buyers/users/2/unfollow/12
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-03-01T145854.404.json
+
+###
+
+POST http://localhost:8080/buyers/users/12/unfollow/2
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-03-01T145835.404.json
+
+###
+
+POST http://localhost:8080/buyers/users/12/unfollow/2
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-03-01T145815.404.json
+
+###
+
+POST http://localhost:8080/buyers/users/12/unfollow/2
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-03-01T145814-1.404.json
+
+###
+
+POST http://localhost:8080/buyers/users/12/unfollow/2
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-03-01T145814.404.json
+
+###
+
+POST http://localhost:8080/buyers/users/12/unfollow/2
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-03-01T145805.404.json
+
+###
+
+GET http://localhost:8080/sellers/users/1/followers/list?order=kimba
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-03-01T145728.200.json
+
+###
+
 GET http://localhost:8080/sellers/users/1/followers/list?order=kimba
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)

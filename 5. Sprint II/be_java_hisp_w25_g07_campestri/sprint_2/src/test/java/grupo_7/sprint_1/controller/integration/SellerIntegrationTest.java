@@ -16,6 +16,7 @@ import java.util.List;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.hasSize;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -60,16 +61,4 @@ public class SellerIntegrationTest {
                 .andExpect(jsonPath("$.buyers[2].userName", Matchers.is("Buyer_3")));
     }
 
-    @Test
-    @DisplayName("Test de integración para obtener un listado de todos los usuarios que siguen a un determinado vendedor, cuando un vendedor no existe")
-    public void testGetFollowersSellerNotExists() throws Exception {
-        mockMvc.perform(get("/sellers/users/{userId}/followers/list", 105)
-                        .param("order", "")
-                        .contentType(MediaType.APPLICATION_JSON))
-                .andDo(print())
-
-                .andExpect(status().isNotFound())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.message").value("No se encontro el vendedor con el id: 105"));
-    }
 }

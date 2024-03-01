@@ -52,7 +52,7 @@ public class BuyerServiceImp implements IBuyerService {
     public BuyerDto getBuyerfollow(Integer id, String order) {
         Buyer buyer = buyerRepository.findBuyerById(id);
         if (buyer == null) {
-            throw new NotFoundException("el id ingresado no corresponde a ningun comprador");
+            throw new NotFoundException("El id ingresado no corresponde a ningun comprador");
         }
         if (order != "name_asc" && order != "name_desc"){
             throw new BadRequestException("No se ha ingresado una opción de ordenamiento válida");

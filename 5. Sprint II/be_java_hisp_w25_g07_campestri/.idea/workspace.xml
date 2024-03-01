@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8b61e32-fb6c-4855-8854-9a6916817d5f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprint_2/src/test/java/grupo_7/sprint_1/controller/integration/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/sprint_2/src/test/java/grupo_7/sprint_1/controller/integration/BuyerIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprint_2/src/main/java/grupo_7/sprint_1/controller/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sprint_2/src/main/java/grupo_7/sprint_1/controller/BuyerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprint_2/src/main/java/grupo_7/sprint_1/service/BuyerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/sprint_2/src/main/java/grupo_7/sprint_1/service/BuyerServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprint_2/src/test/java/grupo_7/sprint_1/controller/integration/BuyerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/sprint_2/src/test/java/grupo_7/sprint_1/controller/integration/BuyerIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprint_2/src/test/java/grupo_7/sprint_1/controller/integration/SellerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/sprint_2/src/test/java/grupo_7/sprint_1/controller/integration/SellerIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +45,22 @@
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "HTTP Request.generated-requests | #1.executor": "Run",
+    "HTTP Request.generated-requests | #2.executor": "Run",
+    "JUnit.BuyerIntegrationTest.executor": "Run",
+    "JUnit.BuyerIntegrationTest.testGetFollowedListAscOk.executor": "Run",
+    "JUnit.BuyerIntegrationTest.testGetFollowedListBuyerNotExists.executor": "Run",
+    "JUnit.BuyerIntegrationTest.testGetFollowedListOk.executor": "Run",
+    "JUnit.BuyerIntegrationTest.testUnfollowSellerNotExists.executor": "Run",
+    "JUnit.BuyerIntegrationTest.testUnfollowSellerOk.executor": "Run",
     "JUnit.IntegrationTest.executor": "Run",
     "JUnit.IntegrationTest.testFollowSeller.executor": "Run",
+    "JUnit.SellerIntegrationTest.executor": "Run",
+    "JUnit.SellerIntegrationTest.testAddPostOk.executor": "Run",
     "JUnit.SellerIntegrationTest.testGetFollowersOk.executor": "Run",
     "JUnit.SellerIntegrationTest.testGetFollowersOrderedOk.executor": "Run",
     "JUnit.SellerIntegrationTest.testGetFollowersSellerNotExists.executor": "Run",
     "JUnit.controller in be_java_hisp_w25_g07.executor": "Coverage",
+    "JUnit.java in be_java_hisp_w25_g07.executor": "Coverage",
     "JUnit.sprint_1 in be_java_hisp_w25_g07.executor": "Coverage",
     "Maven.be_java_hisp_w25_g07 [clean].executor": "Run",
     "Maven.be_java_hisp_w25_g07 [install].executor": "Run",
@@ -70,8 +84,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="HttpClient.HttpRequestRunConfigurationType" />
+      </set>
+    </option>
+  </component>
   <component name="RunManager" selected="JUnit.java in be_java_hisp_w25_g07">
-    <configuration name="SellerIntegrationTest.testGetFollowersOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BuyerIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="be_java_hisp_w25_g07" />
       <extension name="coverage">
         <pattern>
@@ -80,14 +101,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="grupo_7.sprint_1.controller.integration" />
-      <option name="MAIN_CLASS_NAME" value="grupo_7.sprint_1.controller.integration.SellerIntegrationTest" />
-      <option name="METHOD_NAME" value="testGetFollowersOk" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="grupo_7.sprint_1.controller.integration.BuyerIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SellerIntegrationTest.testGetFollowersOrderedOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BuyerIntegrationTest.testGetFollowedListAscOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="be_java_hisp_w25_g07" />
       <extension name="coverage">
         <pattern>
@@ -96,17 +116,41 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="grupo_7.sprint_1.controller.integration" />
-      <option name="MAIN_CLASS_NAME" value="grupo_7.sprint_1.controller.integration.SellerIntegrationTest" />
-      <option name="METHOD_NAME" value="testGetFollowersOrderedOk" />
+      <option name="MAIN_CLASS_NAME" value="grupo_7.sprint_1.controller.integration.BuyerIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetFollowedListAscOk" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="controller in be_java_hisp_w25_g07" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BuyerIntegrationTest.testGetFollowedListBuyerNotExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="be_java_hisp_w25_g07" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/sprint_2/src/test/java/grupo_7/sprint_1/controller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="grupo_7.sprint_1.controller.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="grupo_7.sprint_1.controller.integration" />
+      <option name="MAIN_CLASS_NAME" value="grupo_7.sprint_1.controller.integration.BuyerIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetFollowedListBuyerNotExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BuyerIntegrationTest.testGetFollowedListOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g07" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="grupo_7.sprint_1.controller.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="grupo_7.sprint_1.controller.integration" />
+      <option name="MAIN_CLASS_NAME" value="grupo_7.sprint_1.controller.integration.BuyerIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetFollowedListOk" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,14 +159,6 @@
       <module name="be_java_hisp_w25_g07" />
       <option name="TEST_OBJECT" value="directory" />
       <dir value="$PROJECT_DIR$/sprint_2/src/test/java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="sprint_1 in be_java_hisp_w25_g07" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="be_java_hisp_w25_g07" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/sprint_2/src/test/java/grupo_7/sprint_1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,10 +174,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.java in be_java_hisp_w25_g07" />
-        <item itemvalue="JUnit.controller in be_java_hisp_w25_g07" />
-        <item itemvalue="JUnit.sprint_1 in be_java_hisp_w25_g07" />
-        <item itemvalue="JUnit.SellerIntegrationTest.testGetFollowersOrderedOk" />
-        <item itemvalue="JUnit.SellerIntegrationTest.testGetFollowersOk" />
+        <item itemvalue="JUnit.BuyerIntegrationTest" />
+        <item itemvalue="JUnit.BuyerIntegrationTest.testGetFollowedListAscOk" />
+        <item itemvalue="JUnit.BuyerIntegrationTest.testGetFollowedListBuyerNotExists" />
+        <item itemvalue="JUnit.BuyerIntegrationTest.testGetFollowedListOk" />
       </list>
     </recent_temporary>
   </component>
@@ -176,5 +212,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/be_java_hisp_w25_g07_campestri$sprint_1_in_be_java_hisp_w25_g07.ic" NAME="sprint_1 in be_java_hisp_w25_g07 Coverage Results" MODIFIED="1709309945891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/be_java_hisp_w25_g07_campestri$controller_in_be_java_hisp_w25_g07.ic" NAME="controller in be_java_hisp_w25_g07 Coverage Results" MODIFIED="1709310158680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g07_campestri$BuyerIntegrationTest.ic" NAME="BuyerIntegrationTest Coverage Results" MODIFIED="1709322522253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>grupo_7.sprint_1.controller.integration.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g07_campestri$java_in_be_java_hisp_w25_g07.ic" NAME="java in be_java_hisp_w25_g07 Coverage Results" MODIFIED="1709319040050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
