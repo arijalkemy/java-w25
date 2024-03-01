@@ -13,13 +13,9 @@ import com.breakingbytes.be_java_hisp_w25_g04.exception.NotFoundException;
 import com.breakingbytes.be_java_hisp_w25_g04.repository.IPostRepository;
 import com.breakingbytes.be_java_hisp_w25_g04.repository.IProductRepository;
 import com.breakingbytes.be_java_hisp_w25_g04.repository.ISellerRepository;
-
 import com.breakingbytes.be_java_hisp_w25_g04.repository.IUserRepository;
-import com.breakingbytes.be_java_hisp_w25_g04.utils.Mapper;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.NamingConventions;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.Banner;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -45,7 +41,12 @@ public class SellerServiceImpl implements ISellerService{
                 .setFieldAccessLevel(org.modelmapper.config.Configuration.AccessLevel.PRIVATE)
                 .setSourceNamingConvention(NamingConventions.JAVABEANS_MUTATOR);
     }
-
+    /**
+     * @apiNote Método utilizado para agregar una publicación.
+     * @param requestPostDTO Objeto RequestPostDTO que contiene los datos de la publicación a agregar.
+     * @throws NotFoundException Si no se encuentra un vendedor con el ID proporcionado.
+     * @throws BadRequestException Si ya existe un producto con el ID proporcionado.
+     */
     @Override
     public void addPost(RequestPostDTO requestPostDTO) {
         Post post = mapper.map(requestPostDTO, Post.class);
@@ -58,24 +59,36 @@ public class SellerServiceImpl implements ISellerService{
         sellerRepository.addPost(post, seller.get());
     }
 
+    /**
+     *
+     * @apiNote Metodo Extra
+     * @return Devuelve una lista de todos los posts
+     *
+     * */
     @Override
     public List<RequestPostDTO> findAllPosts() {
         return postRepository.findAll()
                 .stream().map(p -> mapper.map(p, RequestPostDTO.class)).toList();
     }
 
-    public Boolean quitFollower(Integer sellerIdInt, Integer userIdInt) {
+    /**
+     * @apiNote Método utilizado para que un vendedor quite de sus seguidores a un usuario.
+     * @param sellerId: ID del vendedor.
+     * @param userId: ID del usuario.
+     * @return Devuelve un booleano que indica si se ejecutó el metodo.
+     */
+    public Boolean quitFollower(Integer sellerId, Integer userId) {
 
-        Optional<Seller> sellerOpt = sellerRepository.findById(sellerIdInt);
+        Optional<Seller> sellerOpt = sellerRepository.findById(sellerId);
         if(sellerOpt.isEmpty()) {
-            throw new NotFoundException("No se ha encontrado vendedor con id: " + sellerIdInt);
+            throw new NotFoundException("No se ha encontrado vendedor con id: " + sellerId);
         }
 
         Seller seller = sellerOpt.get();
         List<User> sellerFollowers = seller.getFollowers();
         Optional<User> userUnfollowedOpt = sellerFollowers
                                                 .stream()
-                                                .filter(u -> Objects.equals(u.getId(), userIdInt))
+                                                .filter(u -> Objects.equals(u.getId(), userId))
                                                 .findFirst();
         if(userUnfollowedOpt.isEmpty()) {
             throw new NotFoundException("El usuario no se encuentra entre los seguidores.");
@@ -83,32 +96,48 @@ public class SellerServiceImpl implements ISellerService{
 
         User user = userUnfollowedOpt.get();
         sellerFollowers.remove(user);
-        sellerRepository.setSellerFollowers(sellerIdInt, sellerFollowers);
+        sellerRepository.setSellerFollowers(sellerId, sellerFollowers);
 
         return true;
     }
+
+    /**
+     * @apiNote Metodo utilizado para filtrar los Posts de los vendedores que sigue el usuario
+     * que se hayan realizado hace menos de 2 semanas
+     * @param id Identificador del Usuario a consultar
+     * @param order Ordenamiento de Fechas, valores posibles: date_asc, date_desc y ""
+     * @return Devuelve LastPostsDTO que contine al usuario y al listado de los post de los vendedores filtrados por fecha
+     */
     @Override
     public LastPostsDTO getPostOfVendorsFollowedByUser(Integer id, String order) {
+        //Se busca el usuario en la DB
         Optional<User> opt = this.userRepository.findById(id);
+        //De no se encontrado se lanza excepcion
         if (opt.isEmpty()) throw new NotFoundException("No se encuentra el id buscado");
         User user = opt.get();
-        List<ResponsePostDTO> posts = new ArrayList<>();
+        List<ResponsePostDTO> posts = new ArrayList<>();;
+        //Se recorre a los vendedore que sigue el usuario
         for (Seller s : user.getFollowing()) {
+            //Se recorren las publicaciones de cada vendedor
             for (Post p : s.getPosts()) {
+                //Se seleccionan aquellas que tienen menos de 2 semanas de antiguedad
                 if (!p.getDate().isBefore(LocalDate.now().minusWeeks(2))) {
+                    //Se crea respuesta en caso de cumplir el requisito
                     ResponsePostDTO responsePostDTO = mapper.map(p, ResponsePostDTO.class);
                     responsePostDTO.setUserId(s.getId());
                     posts.add(responsePostDTO);
                 }
             }
         }
+        //En caso de que no existan publicaciones que tengan menor antiguedad a 2 semanas
+        //Se lanza una excepcion para indicarlo
         if (posts.isEmpty()) throw new NotFoundException("No hay publicaciones que cumplan con el requisito");
-        ordenarPostsPorFecha(posts, order); // ordena la lista q se manda
+        ordenarPostsPorFecha(posts, order); //Se ordena la lista de acuerdo el parametro de ordenamiento
         return new LastPostsDTO(user.getId(), posts);
     }
 
     /**
-     *
+     * Ordena la lista de acuerdo al parámetro de ordenamiento pasado
      * @param posts = "Lista de posts DTO"
      * @param order = "Ordenamiento de posts", pueden ser de tipo date_asc, "date_desc" y ""
      */
@@ -122,6 +151,13 @@ public class SellerServiceImpl implements ISellerService{
         }
     }
 
+    /**
+     *
+     * @apiNote Metodo que recibe el id del vendedor y devuelve la cantidad de seguidores que tiene
+     * @param id ID del vendedor para calcular la cantidad de seguidores
+     * @return Devuelve la cantidad de seguidores del vendedor ingresado
+     *
+     * */
     @Override
     public FollowersCountDTO getCountFollowersOfSeller(Integer id){
         Optional<Seller> seller = sellerRepository.findById(id);

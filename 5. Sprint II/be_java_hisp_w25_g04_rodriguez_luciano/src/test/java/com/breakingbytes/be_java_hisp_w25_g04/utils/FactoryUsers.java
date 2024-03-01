@@ -107,8 +107,8 @@ public class FactoryUsers { // llamar a los metodos estaticos
         juan.addFollower(pepe);
 
         Seller robert = new Seller(); // ID: 4
-        robert.setName("Robert");
         robert.setId(4);
+        robert.setName("Robert");
         robert.addFollower(carlos);
         carlos.addFollowing(robert);
 
