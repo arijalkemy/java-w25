@@ -28,7 +28,7 @@ public class RequestPostDTO {
     @JsonFormat(pattern="dd-MM-yyyy")
     LocalDate date;
     @Valid
-    ProductDTO product; // TODO: Agregar validaciones
+    ProductDTO product;
     @NotNull(message = "El campo no puede estar vacío.")
     Integer category;
     @NotNull(message = "El campo no puede estar vacío.")

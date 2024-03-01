@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class LastPostsDTO {
-    Integer userId; //Id of User
-    List<ResponsePostDTO> posts; //Posts of Sellers that user follows
+    Integer userId;
+    List<ResponsePostDTO> posts;
 }
 

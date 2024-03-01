@@ -12,7 +12,6 @@ import java.util.List;
 @Data
 public class ExceptionDTO {
     String message;
-    // Anotacion para que si viene null no se muestre en el json ??
     @JsonInclude(JsonInclude.Include.NON_NULL)
     List<ExceptionValidatorsDTO> validations;
 
