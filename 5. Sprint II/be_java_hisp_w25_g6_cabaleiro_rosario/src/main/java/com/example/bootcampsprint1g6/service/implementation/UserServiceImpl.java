@@ -32,6 +32,12 @@ public class UserServiceImpl implements IUserService {
     private final String NAME_ASC = "name_asc";
     private final String NAME_DESC = "name_desc";
 
+    /**
+     * Used to follow a seller
+     * @param userId Unique user identifier.
+     * @param userIdToFollow Unique seller user identifier.
+     * @return GenericResponseDTO
+     */
     @Override
     public GenericResponseDTO follow(Integer userId, Integer userIdToFollow){
         if (userId.equals(userIdToFollow)) {
@@ -51,6 +57,12 @@ public class UserServiceImpl implements IUserService {
         return new GenericResponseDTO(HttpStatus.OK.value(), "Ok");
     }
 
+    /**
+     * Get a followers list
+     * @param userId Unique user identifier.
+     * @param order type allowed: name_asc | name_desc
+     * @return FollowersDTO
+     */
     @Override
     public FollowersDTO getFollowersList(Integer userId, String order) {
         if (order != null && !order.equals(NAME_ASC) && !order.equals(NAME_DESC))
@@ -74,10 +86,20 @@ public class UserServiceImpl implements IUserService {
         return new FollowersDTO(user.getUserId(), user.getUserName(), followerDTOList);
     }
 
+    /**
+     * Get a user by id
+     * @param id Unique user identifier.
+     * @return User
+     */
     private User getUserById (Integer id){
         return userRepository.findById(id).orElseThrow(() -> new NotFoundException("No existe el usuario con id: " + id));
     }
 
+    /**
+     * Valid if user is already following the seller
+     * @param buyer
+     * @param seller
+     */
     private void validateFollow(User buyer, User seller) {
         if (buyer.getFollowed().stream().anyMatch(f -> f.getUserId().equals(seller.getUserId()))) {
             throw new BadRequestException("El usuario ya está siguiendo al vendedor con ID: " + seller.getUserId());
@@ -85,6 +107,12 @@ public class UserServiceImpl implements IUserService {
     }
 
 
+    /**
+     * Used to unfollow a seller
+     * @param userId Unique user identifier.
+     * @param userIdToFollow Unique user identifier.
+     * @return GenericResponseDTO
+     */
     public GenericResponseDTO unfollow(Integer userId, Integer userIdToFollow) {
         if (userId.equals(userIdToFollow)) {
             throw new BadRequestException("El usuario no se puede dejar de seguir así mismo ID: " + userIdToFollow);
@@ -101,7 +129,12 @@ public class UserServiceImpl implements IUserService {
 
         return new GenericResponseDTO(HttpStatus.OK.value(), "Ok");
     }
-    
+
+    /**
+     * Get followers count from a seller
+     * @param userId Unique user identifier.
+     * @return FollowersCountDTO
+     */
     @Override
     public FollowersCountDTO getFollowersCount(Integer userId) {
         User user = userRepository.findById(userId).orElseThrow(() -> new NotFoundException("No existe el usuario con id: " + userId));
@@ -111,6 +144,12 @@ public class UserServiceImpl implements IUserService {
         return new FollowersCountDTO(user.getUserId(), user.getUserName(), ((Seller) user).getFollowers().size());
     }
 
+    /**
+     * Get a followers list
+     * @param userId Unique user identifier.
+     * @param order type allowed: name_asc | name_desc
+     * @return FollowedDTO
+     */
     @Override
     public FollowedDTO getFollowedList(Integer userId, String order) {
         if (order != null && !order.equals(NAME_ASC) && !order.equals(NAME_DESC))

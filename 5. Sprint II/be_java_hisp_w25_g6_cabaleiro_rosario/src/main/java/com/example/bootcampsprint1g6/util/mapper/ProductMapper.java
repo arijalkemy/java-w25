@@ -8,6 +8,11 @@ import lombok.experimental.FieldDefaults;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ProductMapper {
+    /**
+     * Get an instance of ProductDTO from a Product instance
+     * @param product Product instance to initialize a new ProductDTO
+     * @return A new ProductDTO instance
+     */
     public static ProductDTO getInstance(Product product) {
         return ProductDTO.builder()
                 .productId(product.getProductId())
@@ -19,6 +24,11 @@ public class ProductMapper {
                 .build();
     }
 
+    /**
+     * Get a Product instance from a ProductDTO instance
+     * @param dto ProductDTO to get the Product instance
+     * @return A new Product instance
+     */
     public static Product getEntityInstance(ProductDTO dto) {
         return new Product(dto.getProductId(), dto.getProductName(), dto.getType(), dto.getBrand(), dto.getColor(), dto.getNotes());
     }

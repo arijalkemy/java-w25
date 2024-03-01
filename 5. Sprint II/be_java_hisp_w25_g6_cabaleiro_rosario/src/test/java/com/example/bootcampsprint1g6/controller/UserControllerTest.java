@@ -30,6 +30,7 @@ public class UserControllerTest {
     private UserController userController;
 
     @Test
+    @DisplayName("T0003 & T0004 - (Controller) - List followed users with ascendant order is ok")
     public void getFollowedListOrdAscTestOK(){
         //Arrange
         Integer userId = 1;
@@ -51,7 +52,7 @@ public class UserControllerTest {
     }
 
     @Test
-    @DisplayName("T-0002 Unfollow User OK")
+    @DisplayName("T0002 - (Controller) - Unfollow - Test Success")
     public void unfollowTestOk(){
         Integer userId = 1;
         Integer userIdUnfollow = 2;
@@ -69,7 +70,7 @@ public class UserControllerTest {
     }
 
     @Test
-    @DisplayName("Get followers amount (Controller) - Success")
+    @DisplayName("T0007 - (Controller) - Get followers amount - Success")
     public void getFollowersCountTestOk(){
         //arrange
         Integer id = 1;
@@ -86,6 +87,7 @@ public class UserControllerTest {
 //    Verificar que el tipo de ordenamiento por fecha exista
 
     @Test
+    @DisplayName("T0003 & T0004 - (Controller) - List followed users with descendent order is ok")
     public void getFollowedListOrdDescTestOK(){
         //Arrange
         Integer userId = 1;
@@ -106,6 +108,7 @@ public class UserControllerTest {
         assertEquals(expectedResponse, obtainedResponse);
     }
     @Test
+    @DisplayName("T0003 & T0004  - (Controller) - List followers users with ascendant order is ok")
     public void getFollowersListOrdAscTestOK(){
         //Arrange
         Integer userId = 1;
@@ -127,6 +130,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("T0003 & T0004 - (Controller) - List followed users with descendent order is ok")
     public void getFollowersListOrdDescTestOK(){
         //Arrange
         Integer userId = 1;
@@ -149,6 +153,7 @@ public class UserControllerTest {
     }
 
     @Test
+    @DisplayName("T0001 - (Controller) - Follow valid user - Success")
     public void followTestOk() {
         //Arrange
         GenericResponseDTO expectedResponse = new GenericResponseDTO(HttpStatus.OK.value(), "Ok");

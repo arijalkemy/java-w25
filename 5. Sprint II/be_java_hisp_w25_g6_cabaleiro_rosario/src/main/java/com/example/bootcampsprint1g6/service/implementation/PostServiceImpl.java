@@ -33,6 +33,14 @@ public class PostServiceImpl implements IPostService {
         this.userRepository = userRepository;
     }
 
+    /**
+     * Create a Post from a request.
+     * In case if request its invalid throws BadRequestException.
+     * In case if userId is inexistent throws NotFoundException.
+     * In case if user not is a Seller throws BadRequestException.
+     * @param request
+     * @return the post created
+     */
     @Override
     public PostResponseDTO createPost(PostRequestDTO request){
 
@@ -51,6 +59,14 @@ public class PostServiceImpl implements IPostService {
         return PostMapper.getResponseInstance(postCreated);
     }
 
+    /**
+     * Get list of posts from a followed users.
+     * In case if userId is inexistent throws NotFoundException.
+     * In case if order doesn't match throws IllegalArgumentException.
+     * @param userId
+     * @param order
+     * @return the list of posts
+     */
     @Override
     public PostListDTO getLastPostsByFollowed(Integer userId, String order) {
         Optional<User> user = userRepository.findById(userId);
