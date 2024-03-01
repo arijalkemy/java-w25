@@ -1,5 +1,6 @@
 package com.bootcamp.be_java_hisp_w25_g02.service;
 
+import com.bootcamp.be_java_hisp_w25_g02.dto.response.FollowerCountDTO;
 import com.bootcamp.be_java_hisp_w25_g02.dto.response.UserFollowingDTO;
 import com.bootcamp.be_java_hisp_w25_g02.entity.User;
 import com.bootcamp.be_java_hisp_w25_g02.exception.BadRequestException;
@@ -15,12 +16,18 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
+import java.util.ArrayList;
 import java.util.Optional;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.when;
+
 import java.util.List;
 import static org.mockito.ArgumentMatchers.*;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 @SpringBootTest
@@ -30,6 +37,97 @@ class UserServiceImplTest {
     IUserRepository iUserRepository;
     @InjectMocks
     UserServiceImpl userServiceImpl;
+
+    @Test
+    @DisplayName("T-0001 - Follow user - Test ok")
+    void followUserTestOk() {
+        //Arange
+        Integer userId = 1;
+        Integer userIdToFollow = 10;
+        Optional<User> user = Optional.of(TestUtilGenerator.getUserWithFollowingSellers());
+        Optional<User> userToFollow = Optional.of(TestUtilGenerator.getUserSeller());
+
+        when(iUserRepository.findById(userId)).thenReturn(user);
+        when(iUserRepository.findById(userIdToFollow)).thenReturn(userToFollow);
+
+        //Act
+        userServiceImpl.followUser(userId, userIdToFollow);
+
+        //Assert
+        verify(iUserRepository, atLeastOnce()).findById(userId);
+        verify(iUserRepository, atLeastOnce()).findById(userIdToFollow);
+
+
+    }
+
+    @Test
+    @DisplayName("T-0001 - Follow user - Bad Request")
+    void followUserTestBadRequest() {
+        //Arrange
+        Integer userId = 1;
+        Integer userToFollowId = 3;
+        Optional<User> user = Optional.of(TestUtilGenerator.getUserWithFollowingSellers());
+        Optional<User> userToFollow = Optional.of(TestUtilGenerator.getUserNotSeller());
+
+        when(iUserRepository.findById(userId)).thenReturn(user);
+        when(iUserRepository.findById(userToFollowId)).thenReturn(userToFollow);
+
+        // Act + Assert
+        assertThrows(BadRequestException.class, () -> {
+            userServiceImpl.followUser(userId, userToFollowId);
+        });
+
+        verify(iUserRepository, atLeastOnce()).findById(userId);
+        verify(iUserRepository, atLeastOnce()).findById(userToFollowId);
+
+
+    }
+
+    @Test
+    @DisplayName("T-0002 - Unfollow user - Test ok")
+    void unfollowUserTestOk() {
+        //Arange
+        Integer userId = 1;
+        Integer userIdToUnfollow = 10;
+        Optional<User> user = Optional.of(TestUtilGenerator.getUserWithFollowingSellers());
+        Optional<User> userToUnfollow = Optional.of(TestUtilGenerator.getUserSeller());
+
+        when(iUserRepository.findById(userId)).thenReturn(user);
+        when(iUserRepository.findById(userIdToUnfollow)).thenReturn(userToUnfollow);
+
+        //Act
+        userServiceImpl.unfollowUser(userId, userIdToUnfollow);
+
+        //Assert
+        verify(iUserRepository,atLeastOnce()).findById(userId);
+        verify(iUserRepository,atLeastOnce()).findById(userIdToUnfollow);
+
+
+    }
+
+    @Test
+    @DisplayName("T-0002 - Unfollow user - Bad request")
+    void unfollowUserTestBadRequest() {
+        //Arange
+        Integer userId = 1;
+        Integer userIdToUnfollow = 15;
+        Optional<User> user = Optional.of(TestUtilGenerator.getUserWithFollowingSellers());
+        Optional<User> userToUnfollow = Optional.empty();
+
+        when(iUserRepository.findById(userId)).thenReturn(user);
+        when(iUserRepository.findById(userIdToUnfollow)).thenReturn(userToUnfollow);
+
+        // Act + Assert
+        assertThrows(BadRequestException.class, () -> {
+            userServiceImpl.unfollowUser(userId, userIdToUnfollow);
+        });
+
+        verify(iUserRepository, atLeastOnce()).findById(userId);
+        verify(iUserRepository, atLeastOnce()).findById(userIdToUnfollow);
+
+
+    }
+
 
     @Test
     @DisplayName("T-0003 - Alphabetical Followed Order Doesn't Exist")
@@ -137,32 +235,17 @@ class UserServiceImplTest {
     }
 
     @Test
-    @DisplayName("T0004 - When calling getFollowersList(), without an 'order' param, the list is returned without any order.")
+    @DisplayName("T-0004 - When calling getFollowersList(), without an 'order' param, the list is returned without any order.")
     public void getFollowersListTestNoOrderParam(){
         // Arr
         String order = null;
 
-        List<Integer> list1 = List.of(1, 2, 3);
-        List<Integer> list2 = List.of(6, 7, 10);
-        User user1 = new User(5, "Matias Del Salvador", true, list1, list2);
+        User user1 = TestUtilGenerator.createUser1(); // Matias
+        User user2 = TestUtilGenerator.createUser2(); // Romina
+        User user3 = TestUtilGenerator.createUser3(); // Abel
+        User user4 = TestUtilGenerator.createUser4(); // jorge
 
-        List<Integer> list3 = List.of(1, 2, 3);
-        List<Integer> list4 = List.of(5, 7, 10);
-        User user2 = new User(6, "Romina Fuentes", true, list3, list4);
-
-        List<Integer> list5 = List.of(1, 2, 3);
-        List<Integer> list6 = List.of(5, 6, 10);
-        User user3 = new User(7, "Abel Gomez", true, list5, list6);
-
-        List<Integer> list8 = List.of(5, 6, 7);
-        List<Integer> list9 = List.of(5, 6, 7);
-        User user4 = new User(12, "Jorge Alba", true, list8, list9);
-
-        List<UserDTO> listOfUserDTOs = List.of(
-                new UserDTO(user1.getUserId(), user1.getUserName()),
-                new UserDTO(user2.getUserId(), user2.getUserName()),
-                new UserDTO(user3.getUserId(), user3.getUserName())
-        );
+        List<UserDTO> listOfUserDTOs = TestUtilGenerator.createFollowerDTOList(null);
 
         FollowerListDTO myAnsDTO = new FollowerListDTO(user4.getUserId(), user4.getUserName(), listOfUserDTOs);
         // Act
@@ -179,90 +262,60 @@ class UserServiceImplTest {
     }
 
     @Test
-    @DisplayName("T0004 - When calling getFollowersList(), with 'order' param being 'name_asc' , the list is returned in order ascending by name.")
+    @DisplayName("T-0004 - When calling getFollowersList(), with 'order' param being 'name_asc' , the list is returned in order ascending by name.")
     public void getFollowersListTestOrderAsc(){
         // Arr
-        String order = null;
+        String order = "name_asc";
 
-        List<Integer> list1 = List.of(1, 2, 3);
-        List<Integer> list2 = List.of(6, 7, 10);
-        User user1 = new User(5, "Matias Del Salvador", true, list1, list2);
+        User user1 = TestUtilGenerator.createUser1(); // Matias
+        User user2 = TestUtilGenerator.createUser2(); // Romina
+        User user3 = TestUtilGenerator.createUser3(); // Abel
+        User user4 = TestUtilGenerator.createUser4(); // jorge
 
-        List<Integer> list3 = List.of(1, 2, 3);
-        List<Integer> list4 = List.of(5, 7, 10);
-        User user2 = new User(6, "Romina Fuentes", true, list3, list4);
-
-        List<Integer> list5 = List.of(1, 2, 3);
-        List<Integer> list6 = List.of(5, 6, 10);
-        User user3 = new User(7, "Abel Gomez", true, list5, list6);
-
-        List<Integer> list8 = List.of(5, 6, 7);
-        List<Integer> list9 = List.of(5, 6, 7);
-        User user4 = new User(12, "Jorge Alba", true, list8, list9);
-
-        List<UserDTO> listOfUserDTOs = List.of(
-                new UserDTO(user3.getUserId(), user3.getUserName()),
-                new UserDTO(user1.getUserId(), user1.getUserName()),
-                new UserDTO(user2.getUserId(), user2.getUserName())
-        );
+        List<UserDTO> listOfUserDTOs = TestUtilGenerator.createFollowerDTOList("name_asc");
 
         FollowerListDTO myAnsDTO = new FollowerListDTO(user4.getUserId(), user4.getUserName(), listOfUserDTOs);
         // Act
 
         when(iUserRepository.findById(anyInt())).thenReturn(
                 Optional.of(user4),
-                Optional.of(user3),
-                Optional.of(user1),
-                Optional.of(user2)
+                Optional.of(user3), // Abel
+                Optional.of(user1), // Matias
+                Optional.of(user2) // Romina
         );
         // Assert
-        Assertions.assertEquals(myAnsDTO, userServiceImpl.getFollowersList(12, null));
+        Assertions.assertEquals(myAnsDTO, userServiceImpl.getFollowersList(12, order));
     }
 
     @Test
-    @DisplayName("T0004 - When calling getFollowersList(), with 'order' param being 'name_desc' , the list is returned in order descending by name.")
+    @DisplayName("T-0004 - When calling getFollowersList(), with 'order' param being 'name_desc' , the list is returned in order descending by name.")
     public void getFollowersListTestOrderDesc(){
 
         // Arr
-        String order = null;
+        String order = "name_desc";
 
-        List<Integer> list1 = List.of(1, 2, 3);
-        List<Integer> list2 = List.of(6, 7, 10);
-        User user1 = new User(5, "Matias Del Salvador", true, list1, list2);
+        User user1 = TestUtilGenerator.createUser1(); // Matias
+        User user2 = TestUtilGenerator.createUser2(); // Romina
+        User user3 = TestUtilGenerator.createUser3(); // Abel
+        User user4 = TestUtilGenerator.createUser4(); // jorge
 
-        List<Integer> list3 = List.of(1, 2, 3);
-        List<Integer> list4 = List.of(5, 7, 10);
-        User user2 = new User(6, "Romina Fuentes", true, list3, list4);
-
-        List<Integer> list5 = List.of(1, 2, 3);
-        List<Integer> list6 = List.of(5, 6, 10);
-        User user3 = new User(7, "Abel Gomez", true, list5, list6);
-
-        List<Integer> list8 = List.of(5, 6, 7);
-        List<Integer> list9 = List.of(5, 6, 7);
-        User user4 = new User(12, "Jorge Alba", true, list8, list9);
-
-        List<UserDTO> listOfUserDTOs = List.of(
-                new UserDTO(user2.getUserId(), user2.getUserName()),
-                new UserDTO(user1.getUserId(), user1.getUserName()),
-                new UserDTO(user3.getUserId(), user3.getUserName())
-        );
+        List<UserDTO> listOfUserDTOs = TestUtilGenerator.createFollowerDTOList("name_desc");
 
         FollowerListDTO myAnsDTO = new FollowerListDTO(user4.getUserId(), user4.getUserName(), listOfUserDTOs);
         // Act
 
         when(iUserRepository.findById(anyInt())).thenReturn(
-                Optional.of(user4),
-                Optional.of(user2),
+                Optional.of(user4), // Jorge no se agrega a la lista de sus propios seguidores, no necesitamos aqui para simular buscarlo por ID
+                Optional.of(user2), // Agregamos los usuarios en la lista de jorge en orden correspondeiente.
                 Optional.of(user1),
                 Optional.of(user3)
         );
         // Assert
-        Assertions.assertEquals(myAnsDTO, userServiceImpl.getFollowersList(12, null));
+        Assertions.assertEquals(myAnsDTO, userServiceImpl.getFollowersList(12, order));
     }
 
     @Test
-    @DisplayName("T0003 - When calling getFollowersList(), an exception is thrown if 'order' has an incorrect value")
+    @DisplayName("T-0003 - When calling getFollowersList(), an exception is thrown if 'order' has an incorrect value")
     public void getFollowersListTestIncorrectOrderParam(){
         // Arr
         String incorrectOrderString = "algoIncorrecto";
@@ -272,4 +325,19 @@ class UserServiceImplTest {
                 ()-> userServiceImpl.getFollowersList(1, incorrectOrderString));
     }
 
+    @Test
+    @DisplayName("T-0007 - Total followers given user ID")
+    void getUserTotalFollowers() {
+        //ARRANGE
+        User user = TestUtilGenerator.createUser1();
+        Integer userId = 1;
+        when(iUserRepository.findById(userId)).thenReturn(Optional.of(user));
+
+        //ACT
+        FollowerCountDTO result = userServiceImpl.getUserTotalFollowers(userId);
+        //ASSERT
+        verify(iUserRepository, atLeastOnce()).findById(userId);
+        assertNotNull(result);
+        assertThat(result.followersCount()).isEqualTo(user.getFollowedBy().size());
+    }
 }
