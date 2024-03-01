@@ -5,8 +5,6 @@ import com.breakingbytes.be_java_hisp_w25_g04.service.IUserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-
 @RestController
 @RequestMapping("/users")
 public class UserController {
