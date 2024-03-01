@@ -2,10 +2,10 @@ package com.breakingbytes.be_java_hisp_w25_g04.controller;
 
 import com.breakingbytes.be_java_hisp_w25_g04.service.ISellerService;
 import com.breakingbytes.be_java_hisp_w25_g04.service.IUserService;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Max;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/users")
@@ -18,7 +18,7 @@ public class UserController {
     }
 
     @PostMapping("/{user_id}/unfollow/{user_id_to_unfollow}")
-    public ResponseEntity<?> unfollowUser(@PathVariable("user_id") Integer user_id,
+    public ResponseEntity<?> unfollowUser(@Valid @PathVariable("user_id") Integer user_id,
                                           @PathVariable("user_id_to_unfollow") Integer user_id_to_unfollow) {
         sellerService.quitFollower(user_id_to_unfollow, user_id);
         return ResponseEntity.ok()

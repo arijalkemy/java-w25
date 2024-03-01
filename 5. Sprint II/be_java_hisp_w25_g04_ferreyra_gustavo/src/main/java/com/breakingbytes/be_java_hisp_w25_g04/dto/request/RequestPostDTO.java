@@ -1,19 +1,17 @@
 package com.breakingbytes.be_java_hisp_w25_g04.dto.request;
 
-import com.breakingbytes.be_java_hisp_w25_g04.entity.Product;
 import com.breakingbytes.be_java_hisp_w25_g04.utils.LocalDateDeserializer;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
-import javax.validation.Valid;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
 import java.time.LocalDate;
 
 @Data
@@ -27,6 +25,7 @@ public class RequestPostDTO {
     Integer userId;
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @NotNull(message = "La fecha no puede estar vacía.")
+    @JsonFormat(pattern="dd-MM-yyyy")
     LocalDate date;
     @Valid
     ProductDTO product; // TODO: Agregar validaciones
