@@ -100,7 +100,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/products/promo-post/count?user_id=3",
+							"raw": "http://localhost:8080/products/promo-post/count?user_id=50",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -114,7 +114,7 @@
 							"query": [
 								{
 									"key": "user_id",
-									"value": "3"
+									"value": "50"
 								}
 							]
 						}
@@ -160,6 +160,77 @@
 									"key": "user_id",
 									"value": "3"
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bonus extra",
+			"item": [
+				{
+					"name": "Discount",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/promo-post/list/25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"promo-post",
+								"list",
+								"25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Not Found Post With discount",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/promo-post/list/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"promo-post",
+								"list",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Discount Not Valid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/promo-post/list/-10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"promo-post",
+								"list",
+								"-10"
 							]
 						}
 					},
