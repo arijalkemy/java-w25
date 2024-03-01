@@ -35,7 +35,6 @@ public class SellerServiceImpl implements ISellerService{
         this.productRepository = productRepository;
         this.userRepository = iUserRepository;
 
-        //Configuracion del mapper
         this.mapper.getConfiguration()
                 .setFieldMatchingEnabled(true)
                 .setFieldAccessLevel(org.modelmapper.config.Configuration.AccessLevel.PRIVATE)

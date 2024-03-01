@@ -30,21 +30,18 @@ public class ExceptionsConfig {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<?> methodArgumentNotValidException(MethodArgumentNotValidException e){
-        // e.getFieldError().getDefaultMessage() --> Con esto se ve el mensaje de error de la validacion,
-        // pero.. ¿como vemos si hay varias validaciones?
-        // De la siguiente forma:
         List<ExceptionValidatorsDTO> validatorsDTO = new ArrayList<>();
         e.getFieldErrors().forEach(fieldError -> validatorsDTO.add(new ExceptionValidatorsDTO(fieldError.getField(), fieldError.getDefaultMessage())));
         ExceptionDTO exceptionDto = new ExceptionDTO("Hay campos invalidos" ,validatorsDTO);
         return new ResponseEntity<>(exceptionDto, HttpStatus.BAD_REQUEST);
     }
-    @ExceptionHandler(HttpMessageNotReadableException.class) // Es para cuando mandas algo mal en el body
+    @ExceptionHandler(HttpMessageNotReadableException.class)
     public ResponseEntity<?> httpMessageNotReadableException(HttpMessageNotReadableException e){
         ExceptionDTO exceptionDto = new ExceptionDTO(e.getMessage());
         return new ResponseEntity<>(exceptionDto, HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler(MissingServletRequestParameterException.class) // Para los notNull
+    @ExceptionHandler(MissingServletRequestParameterException.class)
     public ResponseEntity<?> notValid(MissingServletRequestParameterException e){
         ExceptionDTO exceptionDto = new ExceptionDTO(e.getMessage());
         return new ResponseEntity<>(exceptionDto,HttpStatus.BAD_REQUEST);
