@@ -69,4 +69,31 @@ class UserControllerIntegrationTest {
                 .andReturn();
         Assertions.assertEquals(expected, result.getResponse().getContentAsString());
     }
+    @Test
+    void unfollowUserOk() throws Exception {
+        ObjectWriter writer = new ObjectMapper()
+                .configure(SerializationFeature.WRAP_ROOT_VALUE, false)
+                .writer();
+        Integer userId=10;
+        Integer userIdToUnfollow=9;
+        String expected = writer.writeValueAsString(new MessageResponseDto("User unfollowed successfully"));
+
+        MvcResult result = mockMvc.perform(post("/users/{userId}/unfollow/{userIdToFollow}",userId,userIdToUnfollow))
+                .andExpect(content().contentType("application/json"))
+                .andExpect(status().isOk())
+                .andReturn();
+        Assertions.assertEquals(expected, result.getResponse().getContentAsString());
+    }
+    @Test
+    void unfollowUserBadPathVariable() throws Exception {
+        Integer userId=4;
+        Integer userIdToUnfollow=-1;
+        String expected = "{\"userIdToUnfollow\":\"The user id to unfollow must be a positive integer\"}";
+
+        MvcResult result = mockMvc.perform(post("/users/{userId}/unfollow/{userIdToFollow}",userId,userIdToUnfollow))
+                .andExpect(content().contentType("application/json"))
+                .andExpect(status().isBadRequest())
+                .andReturn();
+        Assertions.assertEquals(expected, result.getResponse().getContentAsString());
+    }
 }
