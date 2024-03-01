@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5a47cd0-59a5-431f-ae3a-0bd6ea4e4f4e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../5. Sprint II/be_java_hisp_w25_g04_ferreyra_gustavo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../5. Sprint II/be_java_hisp_w25_g04_ferreyra_gustavo/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b5a47cd0-59a5-431f-ae3a-0bd6ea4e4f4e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,9 +31,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2d63Boj5jgCNufdwnmvr1mtNrRB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,7 +50,7 @@
     "Spring Boot.RomanNumbersApplication.executor": "Run",
     "git-widget-placeholder": "ferreyra__gustavo",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/gusferreyra/GitHub/java-w25/2. Modulo Spring/romanNumbers",
+    "last_opened_file_path": "/Users/gusferreyra/GitHub/java-w25/2. Modulo Spring/ejercicio_romanos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,7 +88,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709314568038</updated>
-      <workItem from="1709314569083" duration="2095000" />
+      <workItem from="1709314569083" duration="2048000" />
+      <workItem from="1709316669246" duration="602000" />
     </task>
     <servers />
   </component>
