@@ -3,13 +3,13 @@ package com.example.bootcampsprint1g6.service;
 import com.example.bootcampsprint1g6.dto.PostListDTO;
 import com.example.bootcampsprint1g6.entity.*;
 import com.example.bootcampsprint1g6.exception.NotFoundException;
-import com.example.bootcampsprint1g6.repository.IPostRepository;
 import com.example.bootcampsprint1g6.repository.IUserRepository;
 import com.example.bootcampsprint1g6.service.implementation.PostServiceImpl;
 import com.example.bootcampsprint1g6.util.PostTestGenerator;
 import com.example.bootcampsprint1g6.util.UserTestGenerator;
 import com.example.bootcampsprint1g6.util.mapper.PostMapper;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -51,6 +51,7 @@ public class PostServiceTest {
     }
 
     @Test
+    @DisplayName("T0008 - (Service) - Verify get last posts by followed - Success")
     void getLastPostsByFollowedOkTest(){
         //Arrange
         PostListDTO expected = new PostListDTO(1, new ArrayList<>(){{
@@ -65,6 +66,7 @@ public class PostServiceTest {
         assertEquals(expected, result);
     }
     @Test
+    @DisplayName("T0005 - (Service) - Verify that the sort by date_asc exists - Success")
     void getLastPostsByFollowedExistTestOk(){
         //Arrange
         Integer userId = 1;
@@ -81,6 +83,7 @@ public class PostServiceTest {
         assertEquals(expected,result);
     }
     @Test
+    @DisplayName("T0005 - (Service) - Verify that the sort by date_desc exists - Success")
     void getLastPostsByFollowedExistDescTestOk(){
         //Arrange
         Integer userId = 1;
@@ -98,6 +101,7 @@ public class PostServiceTest {
     }
 
     @Test
+    @DisplayName("T0006 - (Service) - Verify that the sort by date_asc sort correctly - Success")
     void getLastPostsByFollowedAscOkTest(){
         //Arrange
         PostListDTO expected = new PostListDTO(1, new ArrayList<>(){{
@@ -113,6 +117,7 @@ public class PostServiceTest {
     }
 
     @Test
+    @DisplayName("T0006 - (Service) - Verify that the sort by date_desc sort correctly - Success")
     void getLastPostsByFollowedDescOkTest(){
         //Arrange
         PostListDTO expected = new PostListDTO(1, new ArrayList<>(){{
@@ -128,21 +133,23 @@ public class PostServiceTest {
     }
 
     @Test
+    @DisplayName("T0008 - (Service) - Verify throw exception when id its not found - Success")
     void getLastPostsByFollowedNotFoundExTest(){
         //Arrange
         Integer userId = 0;
         //Act
         //Assert
-        assertThrows(NotFoundException.class, () -> {postService.getLastPostsByFollowed(userId, "");});
+        assertThrows(NotFoundException.class, () -> postService.getLastPostsByFollowed(userId, ""));
     }
 
     @Test
+    @DisplayName("T0008 - (Service) - Verify throw exception when 'order' string doesn't match - Success")
     void getLastPostsByFollowedIllegalArgumentExTest(){
         //Arrange
         Seller user = UserTestGenerator.getSellerWithId(1);
         when(userRepository.findById(user.getUserId())).thenReturn(Optional.of(user));
         //Act
         //Assert
-        assertThrows(IllegalArgumentException.class, () -> {postService.getLastPostsByFollowed(user.getUserId(), "asd");});
+        assertThrows(IllegalArgumentException.class, () -> postService.getLastPostsByFollowed(user.getUserId(), "asd"));
     }
 }

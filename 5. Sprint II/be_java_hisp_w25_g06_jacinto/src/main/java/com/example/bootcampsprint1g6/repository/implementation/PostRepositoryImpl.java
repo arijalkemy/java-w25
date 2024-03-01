@@ -13,6 +13,11 @@ public class PostRepositoryImpl implements IPostRepository {
     private List<Post> listOfPosts = new ArrayList<>();
     private Integer index = 0;
 
+    /**
+     * Save the post in a listsOfPosts.
+     * @param post
+     * @return the post saved
+     */
     @Override
     public Post save(Post post){
         post.setPostId(index);

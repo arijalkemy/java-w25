@@ -6,7 +6,6 @@ import com.example.bootcampsprint1g6.dto.response.PostResponseDTO;
 import com.example.bootcampsprint1g6.entity.Post;
 import com.example.bootcampsprint1g6.entity.Product;
 import com.example.bootcampsprint1g6.entity.Seller;
-import com.example.bootcampsprint1g6.entity.User;
 
 import java.time.LocalDate;
 

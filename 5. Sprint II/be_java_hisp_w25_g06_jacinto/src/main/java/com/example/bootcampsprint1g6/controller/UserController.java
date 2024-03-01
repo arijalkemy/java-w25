@@ -20,6 +20,13 @@ public class UserController {
         this.userService = userService;
 
     }
+
+    /**
+     * Endpoint to follow a seller
+     * @param userId The user who wants to follow a seller
+     * @param userIdToFollow User to be followed
+     * @return Confirmation of following
+     */
     @PostMapping("/{userId}/follow/{userIdToFollow}")
     public ResponseEntity<GenericResponseDTO> follow(
         @PathVariable Integer userId,
@@ -27,6 +34,13 @@ public class UserController {
     ) {
         return ResponseEntity.ok(userService.follow(userId, userIdToFollow));
     }
+
+    /**
+     * Endpoint to unfollow an user
+     * @param userId User who wants to unfollow a seller
+     * @param userIdToFollow User to be unfollowed
+     * @return Confirmation of unfollowing
+     */
     @PostMapping("/{userId}/unfollow/{userIdToFollow}")
     public ResponseEntity<GenericResponseDTO> unfollow(
         @PathVariable Integer userId,
@@ -36,6 +50,12 @@ public class UserController {
     }
 
 
+    /**
+     * Get followed list from an user
+     * @param userId User to get their followed list
+     * @param order Optional parameter to order the return list. Could be "name_asc" or "name_desc"
+     * @return ResponseEntity with the Followed list
+     */
     @GetMapping("/{userId}/followed/list")
     public ResponseEntity<FollowedDTO> getFollowedList(
             @PathVariable Integer userId,
@@ -43,15 +63,25 @@ public class UserController {
     ){
         return ResponseEntity.ok(userService.getFollowedList(userId, order));
     }
-  
+
+    /**
+     * Get quantity of followers from an user
+     * @param userId user to get followers quantity
+     * @return ResponseEntity with quantity of followers
+     */
     @GetMapping("/{userId}/followers/count")
     public ResponseEntity<FollowersCountDTO> getFollowersCount(
             @PathVariable Integer userId
     ) {
         return new ResponseEntity<>(userService.getFollowersCount(userId),HttpStatus.OK);
     }
-    
 
+    /**
+     * Get followers list from an user
+     * @param userId User to get their followers list
+     * @param order Optional parameter to order the return list. Could be "name_asc" or "name_desc"
+     * @return ResponseEntity with the Followers list
+     */
     @GetMapping("/{userId}/followers/list")
     public ResponseEntity<?> getFollowersList(
             @PathVariable Integer userId,

@@ -42,17 +42,32 @@ public class UserRepositoryImpl implements IUserRepository {
 
     }
 
+    /**
+     * Find an User from their user Id
+     * @param id User Id to find an User
+     * @return Found user
+     */
     @Override
     public Optional<User> findById(Integer id){
         return users.stream().filter(u->u.getUserId().equals(id)).findFirst();
     }
 
+    /**
+     * Get followed list of an User
+     * @param userId User if to get the followed list
+     * @return Followed list of the user
+     */
     @Override
     public List<Seller> getFollowedList(Integer userId) {
         User user = users.stream().filter(u -> Objects.equals(u.getUserId(), userId)).findFirst().get();
         return user.getFollowed();
     }
-  
+
+    /**
+     * Get followers list of an User
+     * @param userId User if to get the followers list
+     * @return Follower list of the user
+     */
     @Override
     public List<User> getFollowersList(Integer userId) {
         Seller seller = (Seller) users.stream().filter(u -> Objects.equals(u.getUserId(), userId)).findFirst().get();
@@ -60,6 +75,10 @@ public class UserRepositoryImpl implements IUserRepository {
 
     }
 
+    /**
+     * Add a post to an user
+     * @param post post to be added to the user
+     */
     public void addPostToUser(Post post){
         Seller seller = (Seller)findById(post.getSeller().getUserId()).get();
         seller.addPost(post);
