@@ -37,3 +37,9 @@
 [submodule "3. Sprint I/be_java_hisp_w25_g11_cardona"]
 	path = 3. Sprint I/be_java_hisp_w25_g11_cardona
 	url = https://github.com/dcardonaniev/be_java_hisp_w25_g11_cardona
+[submodule "5. Sprint II/be_java_hisp_w25_g11_2_cardona"]
+	path = 5. Sprint II/be_java_hisp_w25_g11_2_cardona
+	url = https://github.com/dcardonaniev/be_java_hisp_w25_g11_2_cardona
+[submodule "5. Sprint II/be_java_hisp_w25_g11_2"]
+	path = 5. Sprint II/be_java_hisp_w25_g11_2
+	url = https://github.com/jcalderondom/be_java_hisp_w25_g11_2
