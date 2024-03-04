@@ -1,0 +1,9 @@
+
+
+java:S1319l"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ò¿‹›8áöÃØ1
+G	java:S106%"+Replace this use of System.out by a logger.(Àñåë8ëöÃØ1
+G	java:S106-"+Replace this use of System.out by a logger.(Àñåë8ìöÃØ1
+]	java:S1256"<This block of commented-out lines of code should be removed.(şêó­úÿÿÿÿ8ìöÃØ1
+G	java:S106I"+Replace this use of System.out by a logger.(Ì‡ªÙ8ò˜ËØ1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Ñ¦çØ1
