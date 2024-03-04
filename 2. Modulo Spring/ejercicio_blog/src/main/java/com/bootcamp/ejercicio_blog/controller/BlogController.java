@@ -11,22 +11,21 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/blog")
 public class BlogController {
 
     @Autowired
     BlogServiceImp blogService;
 
-    @PostMapping()
+    @PostMapping("/blog")
     public ResponseEntity<ResponseEntradaBlogDTO> addEntry(@RequestBody EntradaBlogDTO request){
         ResponseEntradaBlogDTO response = blogService.addEntry(request);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
-    @GetMapping("/{id}")
+    @GetMapping("/blog/{id}")
     public ResponseEntity<EntradaBlogDTO> getById(@PathVariable int id){
         return new ResponseEntity<>(blogService.getById(id), HttpStatus.OK);
     }
-    @GetMapping()
+    @GetMapping("/blogs")
     public ResponseEntity<List<EntradaBlogDTO>> getAll(){
         return new ResponseEntity<>(blogService.getAll(), HttpStatus.OK);
     }

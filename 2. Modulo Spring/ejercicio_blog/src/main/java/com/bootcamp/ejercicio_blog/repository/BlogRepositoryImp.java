@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class BlogRepositoryImp implements IBlogRepository {
@@ -25,11 +26,12 @@ public class BlogRepositoryImp implements IBlogRepository {
         this.entradaBlogList.add(entradaBlog);
     }
 
+
     @Override
-    public EntradaBlog getById(int id) {
+    public Optional<EntradaBlog> getById(int id) {
         return this.entradaBlogList.stream()
                 .filter(entrada -> entrada.getId() == id)
-                .findFirst().orElse(null);
+                .findFirst();
     }
 
     @Override
