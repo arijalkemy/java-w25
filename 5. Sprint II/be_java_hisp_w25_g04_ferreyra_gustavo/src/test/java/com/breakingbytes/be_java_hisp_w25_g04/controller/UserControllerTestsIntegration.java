@@ -54,8 +54,8 @@ public class UserControllerTestsIntegration {
     }
 
     @Test
-    @DisplayName("listFollowersTestOk Integration")
-    public void fetFollowersCount() throws Exception {
+    @DisplayName("getFollowersCount Integration")
+    public void getFollowersCount() throws Exception {
         Integer userId = 4;
         String userName = "Robert";
         Integer followersCount = 1;

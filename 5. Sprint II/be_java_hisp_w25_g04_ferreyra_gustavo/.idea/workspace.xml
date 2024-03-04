@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47c3a62b-7d23-47d2-9a42-5689728eedcd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../2. Modulo Spring/ejercicio_edad/src/main/java/com/example/romanNumbers/RomanNumbersApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2. Modulo Spring/ejercicio_edad/src/main/java/com/example/romanNumbers/CalculateAgeApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2. Modulo Spring/ejercicio_edad/src/test/java/com/example/romanNumbers/RomanNumbersApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2. Modulo Spring/ejercicio_edad/src/test/java/com/example/romanNumbers/CalculateAgeApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2. Modulo Spring/ejercicio_edad/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2. Modulo Spring/ejercicio_edad/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/breakingbytes/be_java_hisp_w25_g04/controller/UserControllerTestsIntegration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/breakingbytes/be_java_hisp_w25_g04/controller/UserControllerTestsIntegration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/ProductDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/ProductDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/RequestPostDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/RequestPostDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/UserDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionValidatorsDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionValidatorsDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/FollowersCountDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/FollowersCountDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/LastPostsDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/LastPostsDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ResponseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ResponsePostDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ResponsePostDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/UserFollowedDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/UserFollowedDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/UserFollowersDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/UserFollowersDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/entity/Product.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +47,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.ProductControllerTestsIntegration.addPost.executor": "Run",
-    "JUnit.com.breakingbytes.be_java_hisp_w25_g04 in be_java_hisp_w25_g04.executor": "Coverage",
+    "JUnit.UserControllerTestsIntegration.getFollowersCount.executor": "Run",
+    "JUnit.be_java_hisp_w25_g04 in be_java_hisp_w25_g04.executor": "Coverage",
+    "JUnit.com.breakingbytes.be_java_hisp_w25_g04 in be_java_hisp_w25_g04.executor": "Run",
     "JUnit.com.breakingbytes.be_java_hisp_w25_g04.controller in be_java_hisp_w25_g04.executor": "Profiler#1",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -51,7 +67,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
@@ -61,7 +77,7 @@
       <recent name="com.breakingbytes.be_java_hisp_w25_g04.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.breakingbytes.be_java_hisp_w25_g04 in be_java_hisp_w25_g04">
+  <component name="RunManager" selected="JUnit.be_java_hisp_w25_g04 in be_java_hisp_w25_g04">
     <configuration name="ProductControllerTestsIntegration.addPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="be_java_hisp_w25_g04" />
       <extension name="coverage">
@@ -74,6 +90,30 @@
       <option name="MAIN_CLASS_NAME" value="com.breakingbytes.be_java_hisp_w25_g04.controller.ProductControllerTestsIntegration" />
       <option name="METHOD_NAME" value="addPost" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTestsIntegration.getFollowersCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.breakingbytes.be_java_hisp_w25_g04.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.breakingbytes.be_java_hisp_w25_g04.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.breakingbytes.be_java_hisp_w25_g04.controller.UserControllerTestsIntegration" />
+      <option name="METHOD_NAME" value="getFollowersCount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="be_java_hisp_w25_g04 in be_java_hisp_w25_g04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_java_hisp_w25_g04" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/breakingbytes/be_java_hisp_w25_g04" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -106,19 +146,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="be_java_hisp_w25_g04_ferreyra_gustavo" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="be_java_hisp_w25_g04_ferreyra_gustavo" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BeJavaHispW25G04Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="be_java_hisp_w25_g04" />
@@ -129,6 +156,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.be_java_hisp_w25_g04 in be_java_hisp_w25_g04" />
+        <item itemvalue="JUnit.UserControllerTestsIntegration.getFollowersCount" />
         <item itemvalue="JUnit.com.breakingbytes.be_java_hisp_w25_g04 in be_java_hisp_w25_g04" />
         <item itemvalue="JUnit.com.breakingbytes.be_java_hisp_w25_g04.controller in be_java_hisp_w25_g04" />
         <item itemvalue="JUnit.ProductControllerTestsIntegration.addPost" />
@@ -138,7 +167,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-53826d6a" />
+        <option value="jdk-17.0.10-corretto-17.0.10-3183f394aec4-96c0d24d" />
       </set>
     </attachedChunks>
   </component>
@@ -152,7 +181,7 @@
       <updated>1709307028090</updated>
       <workItem from="1709307029156" duration="1825000" />
       <workItem from="1709314509188" duration="59000" />
-      <workItem from="1709314576276" duration="2716000" />
+      <workItem from="1709314576276" duration="3385000" />
     </task>
     <servers />
   </component>
@@ -160,11 +189,12 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g04_ferreyra_gustavo$com_breakingbytes_be_java_hisp_w25_g04_in_be_java_hisp_w25_g04.ic" NAME="com.breakingbytes.be_java_hisp_w25_g04 in be_java_hisp_w25_g04 Coverage Results" MODIFIED="1709310096890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.breakingbytes.be_java_hisp_w25_g04.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/be_java_hisp_w25_g04_ferreyra_gustavo$com_breakingbytes_be_java_hisp_w25_g04_controller_in_be_java_hisp_w25_g04.ic" NAME="com.breakingbytes.be_java_hisp_w25_g04.controller in be_java_hisp_w25_g04 Coverage Results" MODIFIED="1709309644098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.breakingbytes.be_java_hisp_w25_g04.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g04_ferreyra_gustavo$be_java_hisp_w25_g04_in_be_java_hisp_w25_g04.ic" NAME="be_java_hisp_w25_g04 in be_java_hisp_w25_g04 Coverage Results" MODIFIED="1709566500504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g04_ferreyra_gustavo$com_breakingbytes_be_java_hisp_w25_g04_in_be_java_hisp_w25_g04.ic" NAME="com.breakingbytes.be_java_hisp_w25_g04 in be_java_hisp_w25_g04 Coverage Results" MODIFIED="1709310096890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.breakingbytes.be_java_hisp_w25_g04.*</FILTER>
     </SUITE>
   </component>
 </project>
