@@ -256,7 +256,7 @@ class ProductControllerIntegrationTest {
     }
 
     @Test
-    @DisplayName("IntegrationTest US-0006- Lists of posts but user does'nt exists -BadRequest")
+    @DisplayName("IntegrationTest US-0006- Lists of posts but user doesn't exists -BadRequest")
     @Order(10)
     void getFollowedPostsUserDoesntExists() throws Exception {
         //arrange
