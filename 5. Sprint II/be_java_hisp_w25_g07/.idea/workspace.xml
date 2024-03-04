@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8ba9b12-8073-4290-b55d-6446a5adf70c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/src/test/java/grupo_7/sprint_1/integration/integrationtestseller.java" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/src/test/java/grupo_7/sprint_1/integration/integrationtestseller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/src/test/java/grupo_7/sprint_1/utils/MockBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/src/test/java/grupo_7/sprint_1/utils/MockBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/src/test/java/grupo_7/sprint_1/integration/integrationTestBuyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/src/test/java/grupo_7/sprint_1/integration/integrationTestBuyer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +176,7 @@
       <workItem from="1709209005072" duration="64000" />
       <workItem from="1709209079746" duration="9759000" />
       <workItem from="1709219455127" duration="8526000" />
-      <workItem from="1709296788396" duration="5140000" />
+      <workItem from="1709296788396" duration="6926000" />
     </task>
     <servers />
   </component>
@@ -186,12 +184,12 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g07$grupo_7_sprint_1.ic" NAME="grupo_7.sprint_1 Coverage Results" MODIFIED="1709298173518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g07$grupo_7_sprint_1.ic" NAME="grupo_7.sprint_1 Coverage Results" MODIFIED="1709303429888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>grupo_7.sprint_1.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/be_java_hisp_w25_g07$_default_.ic" NAME="&lt;default&gt; Coverage Results" MODIFIED="1709219401926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/be_java_hisp_w25_g07$service_in_be_java_hisp_w25_g07.ic" NAME="service in be_java_hisp_w25_g07 Coverage Results" MODIFIED="1709219603252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g07$sprint_1_in_be_java_hisp_w25_g07.ic" NAME="sprint_1 in be_java_hisp_w25_g07 Coverage Results" MODIFIED="1709294374135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/be_java_hisp_w25_g07$sprint_1_in_be_java_hisp_w25_g07.ic" NAME="sprint_1 in be_java_hisp_w25_g07 Coverage Results" MODIFIED="1709303437898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/be_java_hisp_w25_g07$grupo_7_sprint_1_in_be_java_hisp_w25_g07.ic" NAME="grupo_7.sprint_1 in be_java_hisp_w25_g07 Coverage Results" MODIFIED="1709298180287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>grupo_7.sprint_1.*</FILTER>
     </SUITE>

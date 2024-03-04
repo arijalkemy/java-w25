@@ -28,7 +28,8 @@ public class integrationTestBuyer {
 
     @Test
     public void testGetValidUserAndFollowedList() throws Exception {
-        this.mockMvc.perform(MockMvcRequestBuilders.get("/buyers/users/{userid}/followed/list",11).param("order","name_asc"))
+        this.mockMvc.perform(MockMvcRequestBuilders.get("/buyers/users/{userid}/followed/list",11)
+                        .param("order","name_asc"))
                 .andExpect(content().contentType("application/json"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.userId").value(11))
