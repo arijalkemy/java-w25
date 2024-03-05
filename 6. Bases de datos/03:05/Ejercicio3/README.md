@@ -1,0 +1,4 @@
+1. **Join** se utiliza para obtener datos de varias tablas relacionadas entre sí. Consiste en combinar datos de una tabla con datos de la otra tabla, a partir de una o varias condiciones en común.
+2. **Inner Join** se utiliza para traer los datos relacionados de dos o más tablas. **Left jOIN** se utiliza para traer los datos de la tabla izquierda más los relacionados de la tabla derecha.
+3. El **GROUP BY** se utiliza para: Agrupar los resultados según las columnas indicadas, generar un solo registro por cada grupo de filas que compartan las columnas indicadas, reducir la cantidad de filas de la consulta y se suele utilizar en conjunto con funciones de agregación (para obtener datos resumidos y agrupados por las columnas que se necesiten).
+4. La cláusula **HAVING** se utiliza para incluir condiciones con algunas funciones SQL. La misma afecta a los resultados traidos por Group By.
