@@ -1,0 +1,2 @@
+**A/B:** La PK de las tablas de clientes y planes de internet será su respectivo ID. Es único y no se puede repetir.  
+**C:** Las tablas de clientes y planes de internet se relacionarán a través de una tercera tabla, que sirve de comunicación entre los mismas. Esta tercera tabla hara referencia a las 2 primeras tablas utilizando FK.
