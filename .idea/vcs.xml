@@ -2,9 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g03" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g03_lopezdecalle" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/5. Sprint II/be_java_hisp_w25_g03" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/5. Sprint II/be_java_hisp_w25_g03_lopezdecalle" vcs="Git" />
   </component>
 </project>
