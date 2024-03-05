@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ProductController {
-
     private final PostServiceImpl postService;
     public ProductController(PostServiceImpl postService){
         this.postService = postService;
