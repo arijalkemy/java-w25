@@ -1,0 +1,16 @@
+a. Cuál es la primary key para la tabla de clientes? Justificar respuesta
+
+ans: 
+Se creó la tabla con id como llave primaria, debido a que no es buena práctica utilizar como llave primaria información predecible, tales como el dni. Además, se seleccionó porque este tipo de índices son más eficientes para su búsqueda.
+
+b. ¿Cuál es la primary key para la tabla de planes de internet? Justificar respuesta.
+
+ans: 
+Es id (pk secuencial). Se seleccionó dado a que permite una mejor indexación este tipo de índices.
+
+
+c. ¿Cómo serían las relaciones entre tablas? ¿En qué tabla debería haber foreign key? ¿A qué campo de qué tabla hace referencia dicha foreign key? Justificar respuesta.
+
+ans:
+Dado a que los planes de internet tienen un descuento propio, se entiende que son característicos de cada cliente, por lo tanto la relación de Cliente-Planes de internet es Uno a Muchos (1-M).
+
