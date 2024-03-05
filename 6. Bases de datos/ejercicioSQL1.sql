@@ -20,6 +20,15 @@ SELECT title, rating FROM movies m WHERE title LIKE '%Toy Story%'; # Mostrar el 
 
 SELECT first_name, last_name FROM actors a WHERE  first_name LIKE 'Sam%'; # Mostrar a todos los actores cuyos nombres empiezan con Sam.
 
-SELECT title, release_date FROM movies WHERE YEAR(release_date) BETWEEN '2004' AND '2008'; # Mostrar el título de las películas que salieron entre el 2004 y 2008.
+SELECT title, rating, awards, release_date FROM movies m 
+WHERE rating > 3 AND awards > 1 AND YEAR(release_date) BETWEEN '1988' AND '2009' ORDER BY rating; # Traer el título de las películas con el rating mayor a 3, con más de 1 premio y con fecha de lanzamiento entre el año 1988 al 2009. Ordenar los resultados por rating.
 
-SELECT title, rating, awards, release_date FROM movies m WHERE rating > 3 AND awards > 1 AND YEAR(release_date) BETWEEN '1988' AND '2009' ORDER BY rating; # Traer el título de las películas con el rating mayor a 3, con más de 1 premio y con fecha de lanzamiento entre el año 1988 al 2009. Ordenar los resultados por rating.
+SELECT s.title,  g.name FROM series s JOIN genres g  ON s.genre_id = g.id ; #Mostrar el título y el nombre del género de todas las series.
+
+SELECT e.title, a.first_name, a.last_name FROM episodes e JOIN actor_episode ae ON e.id = ae.episode_id JOIN actors a on a.id = ae.actor_id; # Mostrar el título de los episodios, el nombre y apellido de los actores que trabajan en cada uno de ellos.
+
+SELECT s.title, MAX(s2.`number`) FROM series s JOIN seasons s2 ON s.id = s2.serie_id GROUP BY s.title ;# Mostrar el título de todas las series y el total de temporadas que tiene cada una de ellas.
+
+SELECT g.name, COUNT(m.id) as total_peliculas FROM genres g JOIN movies m ON m.genre_id = g.id GROUP BY g.name HAVING COUNT(m.id >=3);# Mostrar el nombre de todos los géneros y la cantidad total de películas por cada uno, siempre que sea mayor o igual a 3.
+
+SELECT DISTINCT a.first_name, a.last_name FROM actors a JOIN actor_movie am ON a.id = am.actor_id JOIN movies m ON m.id = am.movie_id WHERE m.title LIKE '%GUERRA%'; # Mostrar sólo el nombre y apellido de los actores que trabajan en todas las películas de la guerra de las galaxias y que estos no se repitan.SELECT g.name, COUNT(m.id) FROM genres g JOIN movies m ON m.genre_id = g.id ;# Mostrar el nombre de todos los géneros y la cantidad total de películas por cada uno, siempre que sea mayor o igual a 3.
