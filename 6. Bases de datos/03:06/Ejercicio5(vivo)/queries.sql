@@ -25,9 +25,10 @@ DELETE FROM movies_temp
 WHERE awards < 5;
 
 # 7.-
-SELECT DISTINCT g.*
+SELECT g.name
 FROM genres AS g
-INNER JOIN movies AS m ON m.genre_id = g.id;
+INNER JOIN movies AS m ON m.genre_id = g.id
+GROUP BY g.id;
 
 # 8.-
 SELECT a.*
