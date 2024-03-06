@@ -1,0 +1,13 @@
+a. ¿Cuál es la primary key para la tabla de clientes? Justificar respuesta
+
+- La primary key de la tabla clientes es id_cliente porque buscamos un identificador único. No utilizamos el dni porque hay casos en los que este puede repetirse, por ejemplo entre diferentes paises. 
+
+b. ¿Cuál es la primary key para la tabla de planes de internet? Justificar respuesta.
+
+- La primary key para la tabla planes de internet es id_planes, este id es único.
+
+c. ¿Cómo serían las relaciones entre tablas? ¿En qué tabla debería haber foreign key? ¿A qué campo de qué tabla hace referencia dicha foreign key? Justificar respuesta.
+
+- Para relacionar las tablas 'cliente' y 'plan_internet' decidí agregar una tabla intermedia que contenga como foreign key las primary keys de las dos primeras tablas. 
+
+- La razón por la que lo modele de esta manera fue para permitir que los clientes puedan solicitar más de un plan de internet y para que varios clientes puedan acceder al mismo plan de internet sin repetir los datos del mismo cada vez que se agrega un registro.
