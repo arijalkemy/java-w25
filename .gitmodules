@@ -43,3 +43,21 @@
 [submodule "5. Sprint II/be_java_hisp_w25_g11_2"]
 	path = 5. Sprint II/be_java_hisp_w25_g11_2
 	url = https://github.com/jcalderondom/be_java_hisp_w25_g11_2
+[submodule "2. Modulo Spring/EjercicioDeportistas"]
+	path = 2. Modulo Spring/EjercicioDeportistas
+	url = https://github.com/dcardonaniev/EjercicioDeportistas
+[submodule "2. Modulo Spring/EjercicioCodigoMorse"]
+	path = 2. Modulo Spring/EjercicioCodigoMorse
+	url = https://github.com/dcardonaniev/EjercicioCodigoMorse
+[submodule "2. Modulo Spring/EjercicioStarwars"]
+	path = 2. Modulo Spring/EjercicioStarwars
+	url = https://github.com/dcardonaniev/EjercicioStarwars
+[submodule "2. Modulo Spring/EjercicioLinkTracker"]
+	path = 2. Modulo Spring/EjercicioLinkTracker
+	url = https://github.com/dcardonaniev/EjercicioLinkTracker
+[submodule "4. Testing/EjercicioTestsMetrosCuadrados"]
+	path = 4. Testing/EjercicioTestsMetrosCuadrados
+	url = https://github.com/dcardonaniev/EjercicioTestsMetrosCuadrados
+[submodule "4. Testing/EjercicioTestsStarwars"]
+	path = 4. Testing/EjercicioTestsStarwars
+	url = https://github.com/dcardonaniev/EjercicioTestsStarwars
