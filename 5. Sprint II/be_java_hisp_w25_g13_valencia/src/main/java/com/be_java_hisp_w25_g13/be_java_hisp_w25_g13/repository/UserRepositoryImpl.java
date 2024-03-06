@@ -75,4 +75,9 @@ public class UserRepositoryImpl implements IUserRepository{
         }
         return sellers;
     }
+
+    public void cleanData(){
+        this.users = loadUserDataBase();
+        this.users.addAll(loadSellerDataBase());
+    }
 }

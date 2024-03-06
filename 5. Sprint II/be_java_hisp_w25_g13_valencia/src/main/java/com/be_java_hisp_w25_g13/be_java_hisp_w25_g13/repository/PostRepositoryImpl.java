@@ -26,4 +26,9 @@ public class PostRepositoryImpl implements IPostRepository{
                 && (post.getDate().isBefore(endDate) || post.getDate().isEqual(endDate)))
             .toList();
     }
+
+    public void cleanData(){
+        this.posts = new ArrayList<>();
+        idCount = 0;
+    }
 }

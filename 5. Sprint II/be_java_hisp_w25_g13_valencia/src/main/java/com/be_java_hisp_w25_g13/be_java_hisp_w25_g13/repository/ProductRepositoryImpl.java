@@ -24,4 +24,8 @@ public class ProductRepositoryImpl implements IProductRepository{
     public Optional<Product> getProductById(Integer id) {
         return products.stream().filter(product -> product.getProductId().equals(id)).findFirst();
     }
+
+    public void cleanData(){
+        this.products = new ArrayList<>();
+    }
 }
