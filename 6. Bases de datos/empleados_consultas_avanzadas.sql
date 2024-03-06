@@ -52,14 +52,14 @@ FROM empleados e
 INNER JOIN departamentos de
 ON e.depto_nro = de.depto_nro
 GROUP BY de.nombre_depto
-HAVING count(*) > 1;
+HAVING count(*) > 5;
 
 #3. Mostrar el nombre, salario y nombre del departamento de los empleados que tengan el mismo puesto que ‘Mito Barchuk’.
-SELECT e.nombre, e.salario, de.nombre_depto
+SELECT e.nombre, e.apellido, e.salario, de.nombre_depto
 FROM empleados e
 INNER JOIN departamentos de ON e.depto_nro = de.depto_nro
 WHERE nombre != 'Mito' AND apellido != 'Barchuk'
-AND de.depto_nro = (SELECT depto_nro
+AND e.puesto = (SELECT puesto
 					  FROM empleados 
                       WHERE nombre = 'Mito' AND apellido = 'Barchuk');
 
