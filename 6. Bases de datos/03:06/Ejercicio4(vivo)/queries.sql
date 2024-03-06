@@ -28,6 +28,8 @@ EXPLAIN SELECT * FROM actors WHERE last_name = "Lincoln";
 # Crea el indice:
 CREATE INDEX idx_last_name
 ON actors(last_name);
+# Comprueba la lista de indices para la tabla actors:
+SHOW INDEX FROM actors;
 # Al tener el campo last_name indexado, no tiene que escanear las 49 filas:
 EXPLAIN SELECT * FROM actors WHERE last_name = "Lincoln";
 
