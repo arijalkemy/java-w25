@@ -1,0 +1,8 @@
+
+G	java:S106"+Replace this use of System.out by a logger.(Ÿê˜8‘¶ ÔÖ1
+L
+java:S1068"*Remove this unused "nombre" private field.(µÿï„ùÿÿÿÿ8“¶ ÔÖ1
+J
+java:S1068"(Remove this unused "edad" private field.(®ÂèÍûÿÿÿÿ8“¶ ÔÖ1
+K
+java:S1068	".Remove this unused "hablidades" private field.(§‘Ğ˜8“¶ ÔÖ1
