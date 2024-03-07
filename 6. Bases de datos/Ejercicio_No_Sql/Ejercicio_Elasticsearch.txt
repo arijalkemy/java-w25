@@ -1,0 +1,108 @@
+# Creacion  de indice
+PUT /zapatillas_deportivas
+{
+  "mappings": {
+    "properties": {
+      "marca": {
+        "type": "text"
+      },
+      "talla": {
+        "type": "integer"
+      },
+      "color": {
+        "type": "text"
+      },
+      "precio": {
+        "type": "float"
+      },
+      "cantidad_disponible": {
+        "type": "integer"
+      }
+    }
+  }
+}
+
+# Inserción de un registro
+POST /zapatillas_deportivas/_doc/
+{
+  "marca": "Adidas",
+  "talla": 38,
+  "color": "Azul",
+  "precio": 500000,
+  "cantidad_disponible": 10
+}
+
+# Inserción de varios registros
+POST /zapatillas_deportivas/_bulk
+{ "index": { } }
+{ "marca": "Nike", "talla": 38, "color": "Azul", "precio": 500000, "cantidad_disponible": 10 }
+{ "index": { } }
+{ "marca": "Adidas", "talla": 35, "color": "Rojo", "precio": 520000, "cantidad_disponible": 15 }
+{ "index": { } }
+{ "marca": "Puma", "talla": 36, "color": "Azul", "precio": 500000, "cantidad_disponible": 10 }
+{ "index": { } }
+{ "marca": "Nike", "talla": 40, "color": "Blanco", "precio": 400000, "cantidad_disponible": 12 }
+{ "index": { } }
+{ "marca": "Vans", "talla": 38, "color": "Blanco", "precio": 720000, "cantidad_disponible": 8 }
+
+# Traer todas las zapatillas
+GET /zapatillas_deportivas/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+# Traer las zapatillas de cierta marca
+GET /zapatillas_deportivas/_search
+{
+  "query": {
+    "match": {
+      "marca": "Adidas"
+    }
+  }
+}
+
+# Traer las zapatillas de cierta talla
+GET /zapatillas_deportivas/_search
+{
+  "query": {
+    "match": {
+      "talla": 50
+    }
+  }
+}
+
+# Actualizar un campo de un registro
+POST /zapatillas_deportivas/_update/flyEGo4BzsihuWHKoZoO
+{
+    "doc" : {
+        "cantidad_disponible" : 10000
+    }
+}
+
+# Actualizar un registro entero
+PUT /zapatillas_deportivas/_doc/eVx8Go4BzsihuWHKVpr8
+{
+  "cantidad_disponible": 60
+}
+
+# Borrar los elementos que cumplen un criterio
+POST /zapatillas_deportivas/_delete_by_query
+{
+  "query": {
+    "match": {
+      "marca": "Adidas"
+    }
+  }
+}
+
+POST /zapatillas_deportivas/_delete_by_query
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+# Borrar un elemento por ID
+DELETE /zapatillas_deportivas/_doc/eVx8Go4BzsihuWHKVpr8
