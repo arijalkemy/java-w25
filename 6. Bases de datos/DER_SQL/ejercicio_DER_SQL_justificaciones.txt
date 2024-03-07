@@ -1,0 +1,5 @@
+Ej2:
+A) La PK de la tabla clientes en este caso es el DNI. Si bien es sabido que en la práctica puede haber DNI duplicados, decidimos no tener en cuenta esto para un ejercicio de práctica. En la realidad usaríamos una PK subrogada para evitar este conflicto.
+B) La de la tabla de planes es simplemente una PK subrogada autoincremental.
+C) Entre las tablas las entidades de Cliente y Plan hay una relación 1 a N (a un cliente le corresponde un plan y un plan puede ser contratados por 0 o N clientes). Decidimos que a un cliente le corresponde sí o sí algún plan ya que no le vimos sentido a que la empresa tenga clientes sin planes. Basado en esto, el cliente guarda el id del plan como FK, ya que con esto se puede identificar qué plan le corresponde al cliente.
+Como nota extra, menciono que agregamos entidades que representen Ciudad y Provincia, ya que suele suceder que estas se pueden escribir de varias maneras (ej., Buenos Aires, Bs. As., etc) y la representación mediante entidades soluciona esto. Con que el cliente guarde el id de la ciudad alcanza para también localizar a qué provincia pertenece.
