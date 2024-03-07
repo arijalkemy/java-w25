@@ -1,0 +1,7 @@
+
+m
+java:S6204;"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ªηψÿÿÿÿ
+m
+java:S6204D"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ªηψÿÿÿÿ
+Z
+java:S1612M"?Replace this lambda with method reference 'Vehiculo::getCosto'.(…Έχόÿÿÿÿ
