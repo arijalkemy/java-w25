@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "5801d728-0e58-40a2-b1c3-a0e0581eaa7e",
+		"name": "zapatilla",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32951611"
+	},
+	"item": [
+		{
+			"name": "add zapatilla",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "kbn-xsrf",
+						"value": "reporting"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"marca\":\"Rebook\",\n  \"color\":\"azul\",\n  \"medida\":6,\n  \"precio\":1800,\n  \"sexo\":\"H\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatos/_doc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatos",
+						"_doc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add zapatilla+",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "kbn-xsrf",
+						"value": "reporting"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"marca\":\"Rebook\",\n  \"color\":\"azul\",\n  \"medida\":6,\n  \"precio\":1800,\n  \"sexo\":\"H\",\n  \"modelo\":\"runner\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatos/_doc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatos",
+						"_doc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\":{\n    \"match\": {\n      \"marca\": \"Rebook\"\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatos/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatos",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchMarca",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\":{\n    \"match\": {\n      \"marca\": \"Rebook\"\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatos/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatos",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchModelo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\":{\n    \"match\": {\n      \"marca\": \"Rebook\"\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatos/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatos",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchMultiple",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\":{\n    \"match\": {\n      \"marca\": \"Rebook\"\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatos/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatos",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchColor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\":{\n    \"match\": {\n      \"marca\": \"Rebook\"\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatos/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatos",
+						"_search"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "searchColor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"query\":{\n    \"match\": {\n      \"marca\": \"Rebook\"\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9200/zapatos/_search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"zapatos",
+								"_search"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
