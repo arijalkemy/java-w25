@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "2fec3d15-f21b-4759-96d8-a59469686bd7",
+		"name": "ElasticSearch + Kibana - Ejercitación",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32838685"
+	},
+	"item": [
+		{
+			"name": "Probando ElasticSearch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9200"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear índice persona",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mappings\":{\n        \"properties\":{\n            \"nombre\":{\n                \"type\": \"text\"\n            },\n            \"apellido\":{\n                \"type\": \"text\"\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9200/persona"
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar documento de persona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Ulises\",\n    \"apellido\": \"Ramos\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9200/persona/_doc"
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar varios documento de persona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"index\":{ \"_index\": \"persona\"} }\n{\"nombre\":\"Gabriel\",\"apellido\":\"Soles\"}\n{ \"index\":{ \"_index\": \"persona\"} }\n{\"nombre\":\"Andrea\",\"apellido\":\"Constanzi\"}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9200/persona/_bulk"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por nombre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": {\n        \"match\": {\n            \"nombre\": \"Guillermo\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9200/persona/_search"
+			},
+			"response": []
+		},
+		{
+			"name": "Traer todos los indices disponibles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9200/_cat/indices"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todas las personas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9200/persona/_search"
+			},
+			"response": []
+		}
+	]
+}
