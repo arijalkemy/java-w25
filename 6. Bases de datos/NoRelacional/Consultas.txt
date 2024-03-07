@@ -1,0 +1,275 @@
+PUT zapatillas
+{
+    "mappings":{
+         "properties":{
+             "marca": { "type": "keyword" },
+             "modelo": { "type": "text" },
+             "precio": { "type": "float" },
+             "talla": { "type": "text" },
+             "color": { "type": "text" },
+             "tipo": { "type": "text" }
+          }
+    }
+}
+GET zapatillas/_search
+# 1
+POST zapatillas/_doc
+{
+    "marca": "Nike",
+    "modelo": "Air Max 90",
+    "precio": 150.99,
+    "talla": "42",
+    "color": "Negro",
+    "tipo": "Deportivas"
+}
+# 2
+POST zapatillas/_doc
+{
+    "marca": "Adidas",
+    "modelo": "Superstar",
+    "precio": 120.50,
+    "talla": "38",
+    "color": "Blanco",
+    "tipo": "Casual"
+}
+# 3
+POST zapatillas/_doc
+{
+    "marca": "Reebok",
+    "modelo": "Classic Leather",
+    "precio": 80.00,
+    "talla": "39",
+    "color": "Blanco",
+    "tipo": "Casual"
+}
+# 4
+POST zapatillas/_doc
+{
+    "marca": "Vans",
+    "modelo": "Old Skool",
+    "precio": 65.99,
+    "talla": "41",
+    "color": "Negro",
+    "tipo": "Skate"
+}
+# 5
+POST zapatillas/_doc
+{
+    "marca": "Puma",
+    "modelo": "RS-X3",
+    "precio": 99.99,
+    "talla": "40",
+    "color": "Azul",
+    "tipo": "Deportivas"
+}
+# 6
+POST zapatillas/_doc
+{
+    "marca": "Converse",
+    "modelo": "Chuck Taylor All Star",
+    "precio": 55.00,
+    "talla": "37",
+    "color": "Rojo",
+    "tipo": "Casual"
+}
+# 7
+POST zapatillas/_doc
+{
+    "marca": "New Balance",
+    "modelo": "574",
+    "precio": 90.00,
+    "talla": "43",
+    "color": "Gris",
+    "tipo": "Deportivas"
+}
+# 8
+POST zapatillas/_doc
+{
+    "marca": "Asics",
+    "modelo": "Gel-Kayano 27",
+    "precio": 170.00,
+    "talla": "44",
+    "color": "Azul",
+    "tipo": "Running"
+}
+# 9
+POST zapatillas/_doc
+{
+    "marca": "Fila",
+    "modelo": "Disruptor II",
+    "precio": 75.50,
+    "talla": "39",
+    "color": "Blanco",
+    "tipo": "Casual"
+}
+# 10
+POST zapatillas/_doc
+{
+    "marca": "Skechers",
+    "modelo": "D'Lites",
+    "precio": 55.99,
+    "talla": "40",
+    "color": "Negro",
+    "tipo": "Deportivas"
+}
+# 11
+POST zapatillas/_doc
+{
+    "marca": "Under Armour",
+    "modelo": "HOVR Phantom 2",
+    "precio": 140.00,
+    "talla": "41",
+    "color": "Gris",
+    "tipo": "Running"
+}
+# 12
+POST zapatillas/_doc
+{
+    "marca": "Salomon",
+    "modelo": "Speedcross 5",
+    "precio": 130.00,
+    "talla": "42",
+    "color": "Verde",
+    "tipo": "Trail Running"
+}
+# 13
+POST zapatillas/_doc
+{
+    "marca": "Nike",
+    "modelo": "Air Force 1",
+    "precio": 100,
+    "talla": "44",
+    "color": "Blanco",
+    "tipo": "Casual"
+}
+# 14
+POST zapatillas/_doc
+{
+    "marca": "Adidas",
+    "modelo": "All star",
+    "precio": 80,
+    "talla": "43",
+    "color": "Blanco",
+    "tipo": "Casual"
+}
+# 15
+POST zapatillas/_doc
+{
+    "marca": "Nike",
+    "modelo": "Air Max 100",
+    "precio": 160.99,
+    "talla": "43",
+    "color": "Negro",
+    "tipo": "Deportivas"
+}
+# 16
+POST zapatillas/_doc
+{
+    "marca": "Vans",
+    "modelo": "M WARD",
+    "precio": 70,
+    "talla": "41",
+    "color": "Negro",
+    "tipo": "Casual"
+}
+# 17
+POST zapatillas/_doc
+{
+    "marca": "Nike",
+    "modelo": "Jordan 1",
+    "precio": 150.99,
+    "talla": "42",
+    "color": "Negro",
+    "tipo": "Deportivas"
+}
+# 18
+POST zapatillas/_doc
+{
+    "marca": "Adidas",
+    "modelo": "Superstar",
+    "precio": 120.50,
+    "talla": "38",
+    "color": "Blanco",
+    "tipo": "Casual"
+}
+# 19
+POST zapatillas/_doc
+{
+    "marca": "Reebok",
+    "modelo": "Classic Leather",
+    "precio": 90.00,
+    "talla": "39",
+    "color": "Blanco",
+    "tipo": "Casual"
+}
+# 20
+POST zapatillas/_doc
+{
+    "marca": "Nike",
+    "modelo": "Jordan 2",
+    "precio": 170,
+    "talla": "42",
+    "color": "Negro",
+    "tipo": "Deportivas"
+}
+GET zapatillas/_search
+{
+    "query":{
+        "match":{
+            "marca":"Nike"
+        }
+    }
+}
+GET zapatillas/_search
+{
+  "size": 0,
+  "query": {
+    "match":{
+          "marca":"Nike"
+      }
+  },
+  "aggs": {
+    "precio_promedio": {
+      "avg": {
+        "field": "precio"
+      }
+    },
+    "precio_minimo": {
+      "min": {
+        "field": "precio"
+      }
+    }
+  }
+}
+PUT zapatillas/_mapping
+{
+  "properties": {
+    "marca": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}
+GET zapatillas/_search
+{
+  "size": 0,
+  "query": { "match_all":{} },
+  "aggs": {
+    "group_by_marca": {
+      "terms": {
+        "field": "marca"
+      },
+      "aggs": {
+        "precio_promedio": {
+          "avg": {
+            "field": "precio"
+          }
+        }
+      }
+    }
+  }
+}
