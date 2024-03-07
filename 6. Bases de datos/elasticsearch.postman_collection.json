@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "462d14e6-ca01-492d-868e-efcb953ad752",
+		"name": "Elastic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32842741"
+	},
+	"item": [
+		{
+			"name": "Elastic",
+			"item": [
+				{
+					"name": "CREATE index",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mappings\": {\n        \"properties\": {\n            \"brand\": {\n                \"type\": \"text\"\n            },\n            \"name\": {\n                \"type\": \"text\"\n            },\n            \"price\": {\n                \"type\": \"integer\"\n            }\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9200/zapatillas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"zapatillas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST zapatillas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"index\":{\"_id\":\"1\"}}\n{\"brand\":\"Adidas\",\"name\": \"Court\", \"price\": 100}\n{\"index\":{\"_id\":\"2\"}}\n{\"brand\":\"Nike\",\"name\": \"Court\", \"price\": 200}\n{\"index\":{\"_id\":\"3\"}}\n{\"brand\":\"Reebok\",\"name\": \"SAFadf\", \"price\": 300}\n{\"index\":{\"_id\":\"4\"}}\n{\"brand\":\"Asics\",\"name\": \"Runners\", \"price\": 200}\n{\"index\":{\"_id\":\"5\"}}\n{\"brand\":\"Nike\",\"name\": \"Mercurial\", \"price\": 500}\n{\"index\":{\"_id\":\"6\"}}\n{\"brand\":\"Adidas\",\"name\": \"Basket\", \"price\": 600}\n{\"index\":{\"_id\":\"7\"}}\n{\"brand\":\"Rebook\",\"name\": \"White\", \"price\": 200}\n{\"index\":{\"_id\":\"8\"}}\n{\"brand\":\"Nike\",\"name\": \"Court\", \"price\": 200}\n{\"index\":{\"_id\":\"9\"}}\n{\"brand\":\"Adidas\",\"name\": \"Court\", \"price\": 100}\n{\"index\":{\"_id\":\"10\"}}\n{\"brand\":\"Nike\",\"name\": \"Vapor\", \"price\": 100}\n{\"index\":{\"_id\":\"11\"}}\n{\"brand\":\"Adidas2\",\"name\": \"Court\", \"price\": 100}\n{\"index\":{\"_id\":\"12\"}}\n{\"brand\":\"Nike2\",\"name\": \"Court\", \"price\": 200}\n{\"index\":{\"_id\":\"13\"}}\n{\"brand\":\"Reebok2\",\"name\": \"SAFadf\", \"price\": 300}\n{\"index\":{\"_id\":\"14\"}}\n{\"brand\":\"Asics2\",\"name\": \"Runners\", \"price\": 200}\n{\"index\":{\"_id\":\"15\"}}\n{\"brand\":\"Nike2\",\"name\": \"Mercurial\", \"price\": 500}\n{\"index\":{\"_id\":\"16\"}}\n{\"brand\":\"Adidas2\",\"name\": \"Basket\", \"price\": 600}\n{\"index\":{\"_id\":\"17\"}}\n{\"brand\":\"Rebook2\",\"name\": \"White\", \"price\": 200}\n{\"index\":{\"_id\":\"18\"}}\n{\"brand\":\"Nike2\",\"name\": \"Court\", \"price\": 200}\n{\"index\":{\"_id\":\"19\"}}\n{\"brand\":\"Adidas2\",\"name\": \"Court\", \"price\": 100}\n{\"index\":{\"_id\":\"20\"}}\n{\"brand\":\"Adidas3\",\"name\": \"Court\", \"price\": 1000}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9200/zapatillas/_bulk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"zapatillas",
+								"_bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET all zapatillas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"from\": 5,\n    \"size\": 15\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9200/zapatillas/_search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"zapatillas",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET zapatillas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"query\": {\n        \"match\": {\n            \"brand\": \"Adidas\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9200/zapatillas/_search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"zapatillas",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE zapatilla",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9200/zapatillas/_doc/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"zapatillas",
+								"_doc",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
