@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "4e64fc72-82e3-4064-aa00-6d5111bde3da",
+		"name": "elasticsearch_zapas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32837829"
+	},
+	"item": [
+		{
+			"name": "get all zapas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9200/zapatillas/_search"
+			},
+			"response": []
+		},
+		{
+			"name": "estado elastic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9200"
+			},
+			"response": []
+		},
+		{
+			"name": "buscar indices actuales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9200/_cat/indices"
+			},
+			"response": []
+		},
+		{
+			"name": "crear index nuevo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mappings\": {\n        \"properties\": {\n            \"tipo_texto\": {\n                \"type\": \"keyword\"\n            },\n            \"tipo_long\": {\n                \"type\": \"long\"\n            },\n            \"tipo_double\": {\n                \"type\": \"double\"\n            },\n            \"tipo_booleano\": {\n                \"type\": \"boolean\"\n            },\n            \"tipo_fecha\": {\n                \"type\": \"date\"\n            },\n            \"tipo_geo_point\": {\n                \"type\": \"geo_point\"\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9200/index_de_tuli"
+			},
+			"response": []
+		},
+		{
+			"name": "crear zapa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"modelo\": \"Tulis\",\n    \"marca\": \"MELIJ JJUJ U\",\n    \"precio\": 123000,\n    \"talle\": 40\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9200/zapatillas/_doc"
+			},
+			"response": []
+		},
+		{
+			"name": "buscar zapatilla",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": {\n        \"match\": {\n            \"marca\": \"MELIJ JJUJ U\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9200/zapatillas/_search"
+			},
+			"response": []
+		}
+	]
+}
