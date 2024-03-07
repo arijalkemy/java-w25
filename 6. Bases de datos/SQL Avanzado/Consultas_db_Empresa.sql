@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS empresa;
+
 CREATE DATABASE IF NOT EXISTS empresa;
 
 USE empresa;
