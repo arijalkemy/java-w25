@@ -32,7 +32,7 @@ VALUES
 ('D-000-1', 'Software', 'Los Tigres'),
 ('D-000-2', 'Sistemas', 'Guadalupe'),
 ('D-000-3','Contabilidad','La Roca'),
-('D-000-4', 'Ventas Plata', 'Plata');
+('D-000-4', 'Ventas', 'Plata');
 
 INSERT INTO employee 
 VALUES
