@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "78a94eba-7b23-49cb-bbbf-02f3a86de174",
+		"name": "Zapatillas-Elastic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33067279"
+	},
+	"item": [
+		{
+			"name": "Crear index",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mappings\": {\n        \"properties\": {\n            \"modelo\": {\n                \"type\": \"text\"\n            },\n            \"marca\": {\n                \"type\": \"text\"\n            },\n            \"precio\": {\n                \"type\": \"long\"\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar productos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-ndjson",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"index\": {}}\n{\"marca\": \"Adidas\", \"modelo\": \"Superstar\", \"precio\": 8000}\n{\"index\": {}}\n{\"marca\": \"Nike\", \"modelo\": \"Air Max 90\", \"precio\": 9000}\n{\"index\": {}}\n{\"marca\": \"Puma\", \"modelo\": \"Suede\", \"precio\": 7000}\n{\"index\": {}}\n{\"marca\": \"Reebok\", \"modelo\": \"Classic Leather\", \"precio\": 7500}\n{\"index\": {}}\n{\"marca\": \"Converse\", \"modelo\": \"All Star\", \"precio\": 6000}\n{\"index\": {}}\n{\"marca\": \"Vans\", \"modelo\": \"Authentic\", \"precio\": 6500}\n{\"index\": {}}\n{\"marca\": \"Under Armour\", \"modelo\": \"Speedform\", \"precio\": 8500}\n{\"index\": {}}\n{\"marca\": \"Skechers\", \"modelo\": \"Go Run\", \"precio\": 5500}\n{\"index\": {}}\n{\"marca\": \"New Balance\", \"modelo\": \"574\", \"precio\": 7500}\n{\"index\": {}}\n{\"marca\": \"Fila\", \"modelo\": \"Disruptor\", \"precio\": 7000}\n{\"index\": {}}\n{\"marca\": \"Asics\", \"modelo\": \"Gel-Kayano\", \"precio\": 8000}\n{\"index\": {}}\n{\"marca\": \"Lacoste\", \"modelo\": \"Carnaby\", \"precio\": 6500}\n{\"index\": {}}\n{\"marca\": \"Timberland\", \"modelo\": \"Premium\", \"precio\": 9500}\n{\"index\": {}}\n{\"marca\": \"Saucony\", \"modelo\": \"Grid\", \"precio\": 7800}\n{\"index\": {}}\n{\"marca\": \"Diadora\", \"modelo\": \"N9000\", \"precio\": 7200}\n{\"index\": {}}\n{\"marca\": \"Merrell\", \"modelo\": \"Moab\", \"precio\": 8300}\n{\"index\": {}}\n{\"marca\": \"DC Shoes\", \"modelo\": \"Court Graffik\", \"precio\": 6000}\n{\"index\": {}}\n{\"marca\": \"Salomon\", \"modelo\": \"Speedcross\", \"precio\": 9000}\n{\"index\": {}}\n{\"marca\": \"K-Swiss\", \"modelo\": \"Classic VN\", \"precio\": 6800}\n{\"index\": {}}\n{\"marca\": \"Mizuno\", \"modelo\": \"Wave Rider\", \"precio\": 7500}\n",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_bulk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por marca",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": {\n        \"match\": {\n            \"marca\": \"Salomon\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar las 20",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": {\n        \"match_all\": {}\n    },\n    \"size\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
