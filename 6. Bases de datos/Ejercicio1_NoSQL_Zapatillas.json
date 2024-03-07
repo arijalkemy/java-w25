@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "54729e8d-53b5-4b0e-88b8-5a913d644915",
+		"name": "Zapatillas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consulta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/zapatillas2/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas2",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Zapatillas POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\"nombre\": \"Air Force\",\"marca\": \"Nike\",\"modelo\": \"21\"}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas2/_doc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas2",
+						"_doc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crecion BBDD Zapatillas",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mappings\":{\n        \"properties\":{\n            \"nombre\": {\"type\":\"text\"},\n            \"marca\": {\"type\":\"text\"},\n            \"modelo\": {\"type\":\"text\"}\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk Agregar Lista de Objetos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"index\": {\"_id\": \"A\"}}\n{\"nombre\":\"john doe\",\"marca\":\"Nike\",\"modelo\":\"Ejemplo1\" }\n{\"index\": {\"_id\": \"B\"}}\n{\"nombre\":\"Zapatilla\",\"marca\":\"Nike\",\"modelo\":\"Ejemplo2\" }\n{\"index\": {\"_id\": \"C\"}}\n{\"nombre\":\"john doe\",\"marca\":\"Adidas\",\"modelo\":\"Ejemplo60\"}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas2/_bulk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas2",
+						"_bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Zapatilla",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/zapatillas2/_doc/V0OhGo4BAGLPcSxiOoj1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas2",
+						"_doc",
+						"V0OhGo4BAGLPcSxiOoj1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk Agregar Lista de Objetos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"index\": {\"_id\": \"A\"}}\n{\"nombre\":\"john doe\",\"marca\":\"Nike\",\"modelo\":\"Ejemplo1\" }\n{\"index\": {\"_id\": \"B\"}}\n{\"nombre\":\"Zapatilla\",\"marca\":\"Nike\",\"modelo\":\"Ejemplo2\" }\n{\"index\": {\"_id\": \"C\"}}\n{\"nombre\":\"john doe\",\"marca\":\"Adidas\",\"modelo\":\"Ejemplo60\"}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas2/_bulk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas2",
+						"_bulk"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
