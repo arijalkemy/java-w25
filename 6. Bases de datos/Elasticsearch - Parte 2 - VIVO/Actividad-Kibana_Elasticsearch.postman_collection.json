@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "2b49d6e7-ed1e-442a-8f57-37d75e336f5d",
+		"name": "Actividad-Kibana_Elasticsearch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create-Index",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mappings\":{\n        \"properties\":{\n            \"marca\":{\n                \"type\":\"text\"\n            },\n            \"modelo\":{\n                \"type\":\"text\"\n            },\n            \"color\":{\n                \"type\":\"text\"\n            },\n            \"talla\":{\n                \"type\":\"integer\"\n            },\n            \"anno_salida\":{\n                \"type\":\"text\"\n            },\n            \"precio\":{\n                \"type\":\"double\"\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear_zapatillas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"marca\": \"Nike\",\n    \"modelo\": \"Jordan 2\",\n    \"color\": \"Negro\",\n    \"talla\":41,\n    \"anno_salida\":\"1998\",\n    \"precio\":300.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_doc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_doc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear_zapatillas Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-ndjson",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"index\" : { \"_index\" : \"zapatillas\", \"_type\" : \"_doc\" }\n}\n{\n \"marca\": \"Nike\",\n \"modelo\": \"Air Max\",\n \"color\": \"Azul\",\n \"talla\": 42,\n \"anno_salida\": \"2023\",\n \"precio\": 150.99\n}\n{\n \"index\" : { \"_index\" : \"zapatillas\", \"_type\" : \"_doc\" }\n}\n{\n \"marca\": \"Adidas\",\n \"modelo\": \"Ultraboost\",\n \"color\": \"Negro\",\n \"talla\": 40,\n \"anno_salida\": \"2022\",\n \"precio\": 180.99\n}\n",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_bulk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchAll-Zapatillas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
