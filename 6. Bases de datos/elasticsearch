@@ -1,0 +1,49 @@
+GET sport_shoes/_search
+{
+  "query": {
+    "match": {"tipo": "futbol"} // match_all
+  }
+}
+
+
+ POST _bulk
+{"create": {"_index": "sport_shoes", "_id": 1}}
+{"marca": "equaline zinc cold remedy", "tipo": "running"}
+{"create": {"_index": "sport_shoes", "_id": 2}}
+{"marca": "Purminerals 4 in 1 Makeup SPF 15 Medium Dark", "tipo": "futbol"}
+{"create": {"_index": "sport_shoes", "_id": 3}}
+{"marca": "Tolnaftate", "tipo": "running"}
+{"create": {"_index": "sport_shoes", "_id": 4}}
+{"marca": "Fibromyalgia Relief", "tipo": "basket"}
+{"create": {"_index": "sport_shoes", "_id": 5}}
+{"marca": "West Sycamore", "tipo": "running"}
+{"create": {"_index": "sport_shoes", "_id": 6}}
+{"marca": "Entacapone", "tipo": "futbol"}
+{"create": {"_index": "sport_shoes", "_id": 7}}
+{"marca": "Stye", "tipo": "rest"}
+{"create": {"_index": "sport_shoes", "_id": 8}}
+{"marca": "Headache Soothe", "tipo": "basket"}
+{"create": {"_index": "sport_shoes", "_id": 9}}
+{"marca": "AVERTEAX", "tipo": "running"}
+{"create": {"_index": "sport_shoes", "_id": 10}}
+{"marca": "SNAIL THERAPY PACT", "tipo": "futbol"}
+{"create": {"_index": "sport_shoes", "_id": 11}}
+{"marca": "Vital HGH Immune Booster", "tipo": "rest"}
+{"create": {"_index": "sport_shoes", "_id": 12}}
+{"marca": "Synthroid", "tipo": "futbol"}
+{"create": {"_index": "sport_shoes", "_id": 13}}
+{"marca": "TELMISARTAN", "tipo": "basket"}
+{"create": {"_index": "sport_shoes", "_id": 14}}
+{"marca": "Cetirizine Hydrochloride", "tipo": "running"}
+{"create": {"_index": "sport_shoes", "_id": 15}}
+{"marca": "Antifungal", "tipo": "running"}
+{"create": {"_index": "sport_shoes", "_id": 16}}
+{"marca": "RHIZOPUS ARRHIZUS VAR ARRHIZUS", "tipo": "rest"}
+{"create": {"_index": "sport_shoes", "_id": 17}}
+{"marca": "AFLURIA", "tipo": "running"}
+{"create": {"_index": "sport_shoes", "_id": 18}}
+{"marca": "OXYGEN", "tipo": "basket"}
+{"create": {"_index": "sport_shoes", "_id": 19}}
+{"marca": "Tolterodine Tartrate", "tipo": "running"}
+{"create": {"_index": "sport_shoes", "_id": 20}}
+{"marca": "Cetirizine Hydrochloride", "tipo": "basket"}
