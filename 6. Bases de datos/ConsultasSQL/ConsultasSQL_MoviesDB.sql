@@ -1,0 +1,16 @@
+show databases;
+show tables;
+-- use movies_bd;
+SELECT * FROM movies;
+SELECT first_name as Nombre, last_name as Apellido, rating as Rating FROM actors;
+SELECT title as Titulo FROM series as Serie;
+SELECT first_name as Nombre, last_name as Apellido, rating as Rating FROM actors WHERE Rating>=7.5;
+SELECT title as Titulo, rating as Rating, awards as Premios FROM movies WHERE rating>7.5 AND awards>2;
+SELECT title as Titulo, rating as Rating FROM movies ORDER BY rating ASC;
+SELECT title as Titulo FROM movies LIMIT 3;
+SELECT title as Titulo, rating as Rating FROM movies ORDER BY rating DESC LIMIT 5; 
+SELECT concat(last_name, " ", first_name) as Nombre FROM actors LIMIT 10;
+SELECT title as Titulo, rating as Rating FROM movies WHERE title LIKE '%Toy Story%';
+SELECT concat(last_name, " ", first_name) as Nombre FROM actors WHERE first_name LIKE '%Sam%';
+SELECT title as Titulo, release_date as Estreno FROM movies WHERE release_date between '2004-01-01' and '2008-01-01'  ;
+SELECT title as Titulo, release_dateas Estreno, ratingas Rating, awards as Premios FROM movies WHERE release_date between '1988-01-01' and '2009-01-01' and awards > 1 and rating > 3 order by rating;
