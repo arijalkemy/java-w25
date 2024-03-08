@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47c3a62b-7d23-47d2-9a42-5689728eedcd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../2. Modulo Spring/ejercicio_edad/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2. Modulo Spring/ejercicio_edad/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/breakingbytes/be_java_hisp_w25_g04/controller/UserControllerTestsIntegration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/breakingbytes/be_java_hisp_w25_g04/controller/UserControllerTestsIntegration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/ProductDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/ProductDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/RequestPostDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/RequestPostDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/request/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionValidatorsDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ExceptionValidatorsDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/FollowersCountDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/FollowersCountDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/LastPostsDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/LastPostsDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ResponseDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ResponsePostDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/ResponsePostDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/UserFollowedDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/UserFollowedDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/UserFollowersDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/dto/response/UserFollowersDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/breakingbytes/be_java_hisp_w25_g04/entity/Product.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,34 +29,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.ProductControllerTestsIntegration.addPost.executor": "Run",
-    "JUnit.UserControllerTestsIntegration.getFollowersCount.executor": "Run",
-    "JUnit.be_java_hisp_w25_g04 in be_java_hisp_w25_g04.executor": "Coverage",
-    "JUnit.com.breakingbytes.be_java_hisp_w25_g04 in be_java_hisp_w25_g04.executor": "Run",
-    "JUnit.com.breakingbytes.be_java_hisp_w25_g04.controller in be_java_hisp_w25_g04.executor": "Profiler#1",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.BeJavaHispW25G04Application.executor": "Run",
-    "git-widget-placeholder": "ferreyra__gustavo",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/gusferreyra/GitHub/java-w25/5. Sprint II/be_java_hisp_w25_g04_ferreyra_gustavo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.ProductControllerTestsIntegration.addPost.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTestsIntegration.getFollowersCount.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.be_java_hisp_w25_g04 in be_java_hisp_w25_g04.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.com.breakingbytes.be_java_hisp_w25_g04 in be_java_hisp_w25_g04.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.com.breakingbytes.be_java_hisp_w25_g04.controller in be_java_hisp_w25_g04.executor&quot;: &quot;Profiler#1&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BeJavaHispW25G04Application.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ferreyra__gustavo&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/gusferreyra/GitHub/java-w25/5. Sprint II/be_java_hisp_w25_g04_ferreyra_gustavo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.breakingbytes.be_java_hisp_w25_g04.controller" />
