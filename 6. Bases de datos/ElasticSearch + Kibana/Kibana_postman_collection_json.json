@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "2ecca273-413d-4c32-a66e-23c887291cc5",
+		"name": "Kibana",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32841569"
+	},
+	"item": [
+		{
+			"name": "Creacion",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mappings\":\n    {\n        \"properties\":{\n            \"marca\":{\n                \"type\": \"keyword\"\n            } ,\n            \"modelo\":{\n                \"type\": \"keyword\"\n            },\n            \"precio\":{\n            \"type\": \"keyword\"\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Posts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"marca\": \"nike\", \n    \"modelo\": \"pegasus4\",\n    \"precio\": 123.90\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_doc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_doc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MultiPosts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"index\":{}}\n{\"marca\": \"Converse\", \"modelo\": \"Classic \", \"precio\": 90.00}\n{\"index\":{}}\n{\"marca\": \"Converse\", \"modelo\": \"All Star\", \"precio\": 80.00}\n{\"index\":{}}\n{\"marca\": \"Vans\", \"modelo\": \"Carmesi\", \"precio\": 70.00}\n{\"index\":{}}\n{\"marca\": \"Vans\", \"modelo\": \"111\", \"precio\": 110.00}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_bulk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\":{\n    \"match\": {\n      \"modelo\": \"pegasus4\"\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
