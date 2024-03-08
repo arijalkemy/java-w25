@@ -1,0 +1,84 @@
+#Mostrar indices
+GET /_cat/indices
+
+#Punto 1 - Crear indice
+PUT /zapatillas
+
+#Punto 2 - Crear objeto individualmente
+POST /zapatillas/_doc/1
+{
+  "marca": "Nike",
+  "modelo": "Air Max 90",
+  "color": "Negro",
+  "talla": "42",
+  "precio": 150.00
+}
+
+#Zapatillas por match de algun atributo
+GET /zapatillas/_search
+{
+  "query": {
+    "match": {
+      "marca": "Nike"
+    }
+  }
+}
+
+GET /zapatillas/_search
+{
+  "query": {
+    "match": {
+      "color": "Rojo"
+    }
+  }
+}
+
+#Listar primeros 20 registros (agregar "from" para paginacion)
+GET /zapatillas/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "size": 20
+}
+
+#Añadir n cantidad de registros
+POST /zapatillas/_bulk
+{"index":{"_id":"2"}}
+{"marca": "Adidas", "modelo": "Gazzelle", "color": "Celeste", "talla": "35", "precio": 1200.00}
+{"index":{"_id":"3"}}
+{"marca": "Puma", "modelo": "Borussia", "color": "Negro", "talla": "41", "precio": 5000.00}
+{"index":{"_id":"4"}}
+{"marca": "Adidas", "modelo": "Nemesis", "color": "Verde", "talla": "40", "precio": 200.00}
+{"index":{"_id":"5"}}
+{"marca": "Reebok", "modelo": "Classic Leather", "color": "Blanco", "talla": "39", "precio": 90.00}
+{"index":{"_id":"6"}}
+{"marca": "Converse", "modelo": "Chuck Taylor All Star", "color": "Azul", "talla": "41", "precio": 80.00}
+{"index":{"_id":"7"}}
+{"marca": "Vans", "modelo": "Old Skool", "color": "Negro", "talla": "38", "precio": 70.00}
+{"index":{"_id":"8"}}
+{"marca": "New Balance", "modelo": "574", "color": "Gris", "talla": "42", "precio": 110.00}
+{"index":{"_id":"9"}}
+{"marca": "New Balance", "modelo": "550", "color": "Verde", "talla": "40", "precio": 80.00}
+{"index":{"_id":"10"}}
+{"marca": "Vans", "modelo": "Sk8-Hi", "color": "Gris", "talla": "40", "precio": 90.00}
+{"index":{"_id":"11"}}
+{"marca": "Reebok", "modelo": "Aztrek", "color": "Rojo", "talla": "44", "precio": 100.00}
+{"index":{"_id":"12"}}
+{"marca": "Adidas", "modelo": "NMD_R1", "color": "Blanco", "talla": "34", "precio": 180.00}
+{"index":{"_id":"13"}}
+{"marca": "Nike", "modelo": "React Element 55", "color": "Negro", "talla": "42", "precio": 140.00}
+{"index":{"_id":"14"}}
+{"marca": "Puma", "modelo": "RS-X", "color": "Negro", "talla": "40", "precio": 130.00}
+{"index":{"_id":"15"}}
+{"marca": "Converse", "modelo": "One Star", "color": "Gris", "talla": "41", "precio": 70.00}
+{"index":{"_id":"16"}}
+{"marca": "Nike", "modelo": "Air Force 1", "color": "Blanco", "talla": "43", "precio": 120.00}
+{"index":{"_id":"17"}}
+{"marca": "Adidas", "modelo": "Stan Smith", "color": "Blanco", "talla": "42", "precio": 110.00}
+{"index":{"_id":"18"}}
+{"marca": "Adidas", "modelo": "Forum Buckle Low", "color": "Rosado", "talla": "43", "precio": 40.00}
+{"index":{"_id":"19"}}
+{"marca": "Air Jordan", "modelo": "1 Low Travis Scott", "color": "Cafe", "talla": "39", "precio": 990.00}
+{"index":{"_id":"20"}}
+{"marca": "Nike", "modelo": "Dunk Low ATL", "color": "Rojo", "talla": "44", "precio": 200.00}
