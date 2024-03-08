@@ -1,0 +1,77 @@
+Grupo 1: # Creacion de Indice = Tabla
+PUT zapatillas
+{
+  "mappings": {
+    "properties": {
+      "marca": {
+        "type": "text"
+      },
+      "numero_calzado": {
+        "type": "integer"
+      },
+      "color": {
+        "type": "text"
+      },
+      "precio": {
+        "type": "integer"
+      },
+      "deporte": {
+        "type": "text"
+      }
+    }
+  }
+}
+# Actualizar indice --> Agregamos nuevo campo
+PUT zapatillas/_mapping
+{
+  "properties": {
+      "genero": {
+        "type": "text"
+      }
+  }
+}
+# _index es el indice de la tabla/indice?
+POST zapatillas/_bulk
+{"index": {}}
+{"marca": "Pumadillas", "numero_calzado": "38", "color": "green", "precio": 12000, "deporte": "running", "genero": "femenino"}
+{"index": {}}
+{"marca": "Reebokito", "numero_calzado": "45", "color": "yellow", "precio": 18000, "deporte": "tennis", "genero": "masculino"}
+{"index": {}}
+{"marca": "Converzilianas", "numero_calzado": "37", "color": "purple", "precio": 13000, "deporte": "skateboarding", "genero": "femenino"}
+{"index": {}}
+{"marca": "Brooksiñas", "numero_calzado": "40", "color": "pink", "precio": 16000, "deporte": "atletismo", "genero": "femenino"}
+{"index": {}}
+{"marca": "Skechero", "numero_calzado": "39", "color": "black", "precio": 14000, "deporte": "caminata", "genero": "masculino"}
+{"index": {}}
+{"marca": "Vansito", "numero_calzado": "36", "color": "white", "precio": 11000, "deporte": "skateboarding", "genero": "femenino"}
+{"index": {}}
+{"marca": "Filaqueño", "numero_calzado": "41", "color": "orange", "precio": 17000, "deporte": "baloncesto", "genero": "masculino"}
+{"index": {}}
+{"marca": "Under Amoura", "numero_calzado": "38", "color": "silver", "precio": 19000, "deporte": "running", "genero": "femenino"}
+{"index": {}}
+{"marca": "New Blanche", "numero_calzado": "44", "color": "gray", "precio": 20000, "deporte": "tennis", "genero": "masculino"}
+{"index": {}}
+{"marca": "Salomoncito", "numero_calzado": "37", "color": "cyan", "precio": 21000, "deporte": "senderismo", "genero": "masculino"}
+{"index": {}}
+{"marca": "Lacostilla", "numero_calzado": "38", "color": "burgundy", "precio": 18000, "deporte": "golf", "genero": "femenino"}
+{"index": {}}
+{"marca": "DC Sneaker", "numero_calzado": "39", "color": "navy", "precio": 15000, "deporte": "skateboarding", "genero": "masculino"}
+{"index": {}}
+{"marca": "Uggly Boot", "numero_calzado": "35", "color": "brown", "precio": 22000, "deporte": "patinaje", "genero": "femenino"}
+{"index": {}}
+{"marca": "Quikflippers", "numero_calzado": "43", "color": "teal", "precio": 16000, "deporte": "natación", "genero": "masculino"}
+{"index": {}}
+{"marca": "Crocbasket", "numero_calzado": "40", "color": "olive", "precio": 17000, "deporte": "baloncesto", "genero": "femenino"}
+GET zapatillas/_search
+{
+  "query": {
+    "match": {
+      "campo_nuevo": "preuba"
+    }
+  }
+}
+GET clientes/_search
+POST zapatillas/_bulk
+{"index": {"_index": "zapatillas"}}
+{"marca": "prueba 2", "color": "green", "precio": 12000, "deporte": "running", "genero": "femenino", "campo_nuevo": "preuba"}
+GET _cat/indices
