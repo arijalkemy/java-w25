@@ -1,0 +1,363 @@
+{
+	"info": {
+		"_postman_id": "2b769e70-9d3d-44ee-bd47-aff741f8c0f5",
+		"name": "ElasticsearchP2Vivo",
+		"description": "Vivo 2 de elasticsearch creando, insertando y haciendo algunas consultas y borrados",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32839445"
+	},
+	"item": [
+		{
+			"name": "Create Index",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"mapping\": {\n    \"properties\": {\n      \"marca\": {\"type\": \"text\"},\n      \"modelo\": {\"type\": \"text\"},\n      \"talla\": {\"type\": \"integer\"},\n      \"color\": {\"type\": \"text\"}\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas_deportivas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas_deportivas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Created",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"mappings\": {\n    \"properties\": {\n      \"marca\": {\"type\": \"text\"},\n      \"modelo\": {\"type\": \"text\"},\n      \"talla\": {\"type\": \"integer\"},\n      \"color\": {\"type\": \"text\"}\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9200/zapatillas_deportivas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"zapatillas_deportivas"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-elastic-product",
+							"value": "Elasticsearch"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "content-length",
+							"value": "88"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"acknowledged\": true,\n    \"shards_acknowledged\": true,\n    \"index\": \"zapatillas_deportivas\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Insertar en bulk",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"adidas\", \"modelo\": \"nmd\", \"talle\": 40, \"color\": \"blanco\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"puma\", \"modelo\": \"basket\", \"talle\": 41, \"color\": \"negro\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"new balance\", \"modelo\": \"574\", \"talle\": 39, \"color\": \"azul marino\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"fila\", \"modelo\": \"venom\", \"talle\": 42, \"color\": \"verde\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"asics\", \"modelo\": \"gel lyte\", \"talle\": 43, \"color\": \"gris\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"reebok\", \"modelo\": \"nano\", \"talle\": 44, \"color\": \"amarillo\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"vans\", \"modelo\": \"sk8-hi\", \"talle\": 38, \"color\": \"rojo\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"under armour\", \"modelo\": \"charged\", \"talle\": 45, \"color\": \"azul eléctrico\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"skechers\", \"modelo\": \"go walk\", \"talle\": 37, \"color\": \"negro\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"nike\", \"modelo\": \"air force 1\", \"talle\": 39, \"color\": \"blanco\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"adidas\", \"modelo\": \"yeezy\", \"talle\": 42, \"color\": \"gris claro\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"puma\", \"modelo\": \"rs-x\", \"talle\": 41, \"color\": \"azul cielo\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"new balance\", \"modelo\": \"997\", \"talle\": 43, \"color\": \"negro\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"fila\", \"modelo\": \"ray tracer\", \"talle\": 40, \"color\": \"blanco\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"asics\", \"modelo\": \"gel quantum\", \"talle\": 38, \"color\": \"rojo\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"reebok\", \"modelo\": \"club c\", \"talle\": 44, \"color\": \"azul marino\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"vans\", \"modelo\": \"slip-on\", \"talle\": 39, \"color\": \"negro\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"under armour\", \"modelo\": \"forge\", \"talle\": 41, \"color\": \"gris oscuro\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"skechers\", \"modelo\": \"d'lites\", \"talle\": 42, \"color\": \"rosa\"}\n{\"index\": {\"_index\": \"zapatillas_deportivas\"}}\n{\"marca\": \"nike\", \"modelo\": \"air max\", \"talle\": 45, \"color\": \"azul marino\"}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9200/_bulk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"_bulk"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-elastic-product",
+							"value": "Elasticsearch"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "content-length",
+							"value": "350"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errors\": false,\n    \"took\": 94,\n    \"items\": [\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"-P9HHI4BTIzYN3XF9TwN\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 0,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"-f9HHI4BTIzYN3XF9TwN\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 1,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"-v9HHI4BTIzYN3XF9TwN\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 2,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"-_9HHI4BTIzYN3XF9TwN\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 3,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"_P9HHI4BTIzYN3XF9TwN\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 4,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"_f9HHI4BTIzYN3XF9TwN\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 5,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"_v9HHI4BTIzYN3XF9TwN\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 6,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"__9HHI4BTIzYN3XF9TwN\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 7,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"AP9HHI4BTIzYN3XF9T0N\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 8,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"Af9HHI4BTIzYN3XF9T0N\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 9,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"Av9HHI4BTIzYN3XF9T0N\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 10,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"A_9HHI4BTIzYN3XF9T0N\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 11,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"BP9HHI4BTIzYN3XF9T0N\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 12,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"Bf9HHI4BTIzYN3XF9T0N\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 13,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"Bv9HHI4BTIzYN3XF9T0N\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 14,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"B_9HHI4BTIzYN3XF9T0N\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 15,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"CP9HHI4BTIzYN3XF9T0N\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 16,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"Cf9HHI4BTIzYN3XF9T0N\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 17,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"Cv9HHI4BTIzYN3XF9T0N\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 18,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        },\n        {\n            \"index\": {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"C_9HHI4BTIzYN3XF9T0N\",\n                \"_version\": 1,\n                \"result\": \"created\",\n                \"_shards\": {\n                    \"total\": 2,\n                    \"successful\": 1,\n                    \"failed\": 0\n                },\n                \"_seq_no\": 19,\n                \"_primary_term\": 1,\n                \"status\": 201\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9200/zapatillas_deportivas/_search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"zapatillas_deportivas",
+								"_search"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-elastic-product",
+							"value": "Elasticsearch"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"took\": 1,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 1,\n        \"successful\": 1,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 20,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": 1,\n        \"hits\": [\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"-P9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"adidas\",\n                    \"modelo\": \"nmd\",\n                    \"talle\": 40,\n                    \"color\": \"blanco\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"-f9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"puma\",\n                    \"modelo\": \"basket\",\n                    \"talle\": 41,\n                    \"color\": \"negro\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"-v9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"new balance\",\n                    \"modelo\": \"574\",\n                    \"talle\": 39,\n                    \"color\": \"azul marino\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"-_9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"fila\",\n                    \"modelo\": \"venom\",\n                    \"talle\": 42,\n                    \"color\": \"verde\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"_P9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"asics\",\n                    \"modelo\": \"gel lyte\",\n                    \"talle\": 43,\n                    \"color\": \"gris\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"_f9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"reebok\",\n                    \"modelo\": \"nano\",\n                    \"talle\": 44,\n                    \"color\": \"amarillo\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"_v9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"vans\",\n                    \"modelo\": \"sk8-hi\",\n                    \"talle\": 38,\n                    \"color\": \"rojo\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"__9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"under armour\",\n                    \"modelo\": \"charged\",\n                    \"talle\": 45,\n                    \"color\": \"azul eléctrico\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"AP9HHI4BTIzYN3XF9T0N\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"skechers\",\n                    \"modelo\": \"go walk\",\n                    \"talle\": 37,\n                    \"color\": \"negro\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"Af9HHI4BTIzYN3XF9T0N\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"nike\",\n                    \"modelo\": \"air force 1\",\n                    \"talle\": 39,\n                    \"color\": \"blanco\"\n                }\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Adidas",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"query\": {\n        \"match\":{\n            \"marca\": \"adidas\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9200/zapatillas_deportivas/_search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"zapatillas_deportivas",
+								"_search"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-elastic-product",
+							"value": "Elasticsearch"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"took\": 2,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 1,\n        \"successful\": 1,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 2,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": 2.283956,\n        \"hits\": [\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"-P9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 2.283956,\n                \"_source\": {\n                    \"marca\": \"adidas\",\n                    \"modelo\": \"nmd\",\n                    \"talle\": 40,\n                    \"color\": \"blanco\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"Av9HHI4BTIzYN3XF9T0N\",\n                \"_score\": 2.283956,\n                \"_source\": {\n                    \"marca\": \"adidas\",\n                    \"modelo\": \"yeezy\",\n                    \"talle\": 42,\n                    \"color\": \"gris claro\"\n                }\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Borrar un registro",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Ok",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9200/zapatillas_deportivas/_doc/-f9HHI4BTIzYN3XF9TwN",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"zapatillas_deportivas",
+								"_doc",
+								"-f9HHI4BTIzYN3XF9TwN"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-elastic-product",
+							"value": "Elasticsearch"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "content-length",
+							"value": "165"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_index\": \"zapatillas_deportivas\",\n    \"_id\": \"-f9HHI4BTIzYN3XF9TwN\",\n    \"_version\": 2,\n    \"result\": \"deleted\",\n    \"_shards\": {\n        \"total\": 2,\n        \"successful\": 1,\n        \"failed\": 0\n    },\n    \"_seq_no\": 20,\n    \"_primary_term\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Despues de borrar",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9200/zapatillas_deportivas/_search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"zapatillas_deportivas",
+								"_search"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-elastic-product",
+							"value": "Elasticsearch"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"took\": 25,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 1,\n        \"successful\": 1,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 19,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": 1,\n        \"hits\": [\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"-P9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"adidas\",\n                    \"modelo\": \"nmd\",\n                    \"talle\": 40,\n                    \"color\": \"blanco\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"-v9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"new balance\",\n                    \"modelo\": \"574\",\n                    \"talle\": 39,\n                    \"color\": \"azul marino\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"-_9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"fila\",\n                    \"modelo\": \"venom\",\n                    \"talle\": 42,\n                    \"color\": \"verde\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"_P9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"asics\",\n                    \"modelo\": \"gel lyte\",\n                    \"talle\": 43,\n                    \"color\": \"gris\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"_f9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"reebok\",\n                    \"modelo\": \"nano\",\n                    \"talle\": 44,\n                    \"color\": \"amarillo\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"_v9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"vans\",\n                    \"modelo\": \"sk8-hi\",\n                    \"talle\": 38,\n                    \"color\": \"rojo\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"__9HHI4BTIzYN3XF9TwN\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"under armour\",\n                    \"modelo\": \"charged\",\n                    \"talle\": 45,\n                    \"color\": \"azul eléctrico\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"AP9HHI4BTIzYN3XF9T0N\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"skechers\",\n                    \"modelo\": \"go walk\",\n                    \"talle\": 37,\n                    \"color\": \"negro\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"Af9HHI4BTIzYN3XF9T0N\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"nike\",\n                    \"modelo\": \"air force 1\",\n                    \"talle\": 39,\n                    \"color\": \"blanco\"\n                }\n            },\n            {\n                \"_index\": \"zapatillas_deportivas\",\n                \"_id\": \"Av9HHI4BTIzYN3XF9T0N\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"marca\": \"adidas\",\n                    \"modelo\": \"yeezy\",\n                    \"talle\": 42,\n                    \"color\": \"gris claro\"\n                }\n            }\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}
