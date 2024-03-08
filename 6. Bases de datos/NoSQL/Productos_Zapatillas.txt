@@ -1,0 +1,62 @@
+
+PUT /productos_zapatillas
+
+GET /productos_zapatillas/_search
+
+POST /productos_zapatillas/_doc
+{
+  "nombre": "Zapatillas Reebok Nano X",
+  "marca": "Reebok",
+  "color": "Negro/Rojo",
+  "talla": 42,
+  "precio": 150.00,
+  "disponibilidad": true,
+  "descripcion": "Zapatillas diseñadas para entrenamientos de alta intensidad y levantamiento de pesas."
+}
+
+POST /productos_zapatillas/_bulk
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Nike Air Max 90","marca": "Nike","color": "Blanco/Negro","talla": 39,"precio": 120.00,"disponibilidad": true,"descripcion": "Zapatillas icónicas y cómodas para correr y entrenamientos."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Adidas Superstar","marca": "Adidas","color": "Blanco/Dorado","talla": 38,"precio": 100.00,"disponibilidad": true,"descripcion": "Zapatillas clásicas y versátiles para looks casuales."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Puma RS-X","marca": "Puma","color": "Azul/Blanco","talla": 40,"precio": 90.00,"disponibilidad": true,"descripcion": "Zapatillas modernas y ligeras para hombres y mujeres."}
+
+POST /productos_zapatillas/_bulk
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas New Balance 574","marca": "New Balance","color": "Gris/Rosa","talla": 37,"precio": 80.00,"disponibilidad": true,"descripcion": "Zapatillas retro unisex ideales para el día a día."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Vans Old Skool","marca": "Vans","color": "Negro/Blanco","talla": 42,"precio": 65.00,"disponibilidad": true,"descripcion": "Zapatillas clásicas de skate con suela waffle."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Converse Chuck Taylor","marca": "Converse","color": "Blanco","talla": 41,"precio": 70.00,"disponibilidad": true,"descripcion": "Zapatillas de lona icónicas y versátiles."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Jordan 1 Retro","marca": "Jordan","color": "Negro/Rojo","talla": 44,"precio": 200.00,"disponibilidad": true,"descripcion": "Zapatillas de baloncesto con diseño clásico y gran comodidad."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Reebok Classic Leather","marca": "Reebok","color": "Blanco","talla": 40,"precio": 75.00,"disponibilidad": true,"descripcion": "Zapatillas de cuero elegantes y duraderas."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Skechers Go Walk","marca": "Skechers","color": "Negro","talla": 39,"precio": 55.00,"disponibilidad": true,"descripcion": "Zapatillas ligeras y flexibles para caminar de forma cómoda."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Fila Disruptor","marca": "Fila","color": "Blanco","talla": 38,"precio": 85.00,"disponibilidad": true,"descripcion": "Zapatillas gruesas y llamativas para un estilo único."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Salomon Speedcross","marca": "Salomon","color": "Negro/Azul","talla": 43,"precio": 130.00,"disponibilidad": true,"descripcion": "Zapatillas de trail running con excelente tracción y amortiguación."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Mizuno Wave Rider","marca": "Mizuno","color": "Azul/Blanco","talla": 41,"precio": 110.00,"disponibilidad": true,"descripcion": "Zapatillas de running con tecnología de amortiguación y estabilidad."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Brooks Ghost","marca": "Brooks","color": "Gris/Rosa","talla": 40,"precio": 120.00,"disponibilidad": true,"descripcion": "Zapatillas neutras para correr con gran amortiguación y comodidad."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Under Armour HOVR","marca": "Under Armour","color": "Negro/Gris","talla": 42,"precio": 140.00,"disponibilidad": true,"descripcion": "Zapatillas de running con tecnología de retorno de energía para mayor impulso."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Asics Gel-Nimbus","marca": "Asics","color": "Azul/Rojo","talla": 39,"precio": 150.00,"disponibilidad": true,"descripcion": "Zapatillas para correr con gel en la suela para amortiguación y confort."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Merrell Moab 2","marca": "Merrell","color": "Marrón/Verde","talla": 43,"precio": 110.00,"disponibilidad": true,"descripcion": "Zapatillas de senderismo duraderas y con excelente tracción."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Columbia Redmond","marca": "Columbia","color": "Gris/Azul","talla": 41,"precio": 90.00,"disponibilidad": true,"descripcion": "Zapatillas impermeables ideales para actividades al aire libre."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Timberland Euro Sprint","marca": "Timberland","color": "Beige","talla": 42,"precio": 160.00,"disponibilidad": true,"descripcion": "Zapatillas de senderismo robustas y resistentes a la intemperie."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas DC Shoes Court Graffik","marca": "DC Shoes","color": "Negro","talla": 39,"precio": 75.00,"disponibilidad": true,"descripcion": "Zapatillas de skate con un diseño elegante y suela antideslizante."}
+{"index":{"_index":"productos_zapatillas"}}
+{"nombre": "Zapatillas Vans Authentic","marca": "Vans","color": "Negro/Blanco","talla": 38,"precio": 55.00,"disponibilidad": true,"descripcion": "Zapatillas clásicas y cómodas para el skate o uso diario."}
+
+
+
