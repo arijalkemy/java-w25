@@ -1,0 +1,68 @@
+/*
+Creamos el índice zapatillas
+*/
+PUT http://localhost:9200/zapatillas
+{
+ "mappings" : {
+    "properties" : {
+        "marca" : {
+            "type": "text"
+        },
+        "precio" : {
+            "type": "text"
+        },
+        "talle" : {
+            "type": "text"
+        },
+        "color" : {
+            "type": "text"
+        }
+    }
+ }
+}
+
+/*
+Insertamos registros
+*/
+
+POST http://localhost:9200/zapatillas/_doc
+{
+ "marca" : "adidas",
+ "precio" : "1000",
+ "talle" : "40",
+ "color" : "blanco"
+}
+
+/*
+Buscamos los registros
+*/
+
+GET http://localhost:9200/zapatillas/_search
+{
+    "size" : 20,
+    "query" : {
+        "match" : {
+            "talle" : "40"
+        }
+    }
+}
+
+/*
+Actualizamos registros
+*/
+
+POST http://localhost:9200/zapatillas/_update/id
+{
+  "doc": {
+      "marca": "nike",
+      "precio": "250"
+  }
+}
+
+/*
+Eliminamos registros
+*/
+
+DELETE http://localhost:9200/zapatillas/_doc/id
+
+
