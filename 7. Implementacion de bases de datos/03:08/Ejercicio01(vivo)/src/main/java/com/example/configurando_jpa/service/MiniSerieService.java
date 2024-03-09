@@ -1,8 +1,8 @@
-package com.miniseries.main.service;
+package com.example.configurando_jpa.service;
 
 import org.springframework.stereotype.Service;
 
-import com.miniseries.main.repository.IMiniSerieRepository;
+import com.example.configurando_jpa.repository.IMiniSerieRepository;
 
 @Service
 public class MiniSerieService {

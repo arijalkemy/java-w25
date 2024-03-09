@@ -1,4 +1,4 @@
-package com.miniseries.main.model;
+package com.example.configurando_jpa.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,7 +15,7 @@ import lombok.Setter;
 @Table(name = "mini_series")
 public class MiniSerie {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Double rating;
