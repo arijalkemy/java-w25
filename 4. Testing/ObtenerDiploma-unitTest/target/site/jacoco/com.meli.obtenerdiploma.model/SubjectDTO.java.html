@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SubjectDTO.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">obtenerDiploma</a> &gt; <a href="index.source.html" class="el_package">com.meli.obtenerdiploma.model</a> &gt; <span class="el_source">SubjectDTO.java</span></div><h1>SubjectDTO.java</h1><pre class="source lang-java linenums">package com.meli.obtenerdiploma.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.validation.constraints.*;
+
+<span class="nc" id="L10">@Getter @Setter</span>
+<span class="fc" id="L11">@AllArgsConstructor</span>
+<span class="nc" id="L12">@NoArgsConstructor</span>
+public class SubjectDTO {
+    @NotBlank(message = &quot;El nombre de la materia no puede estar vacío.&quot;)
+    @Pattern(regexp=&quot;([A-Z]|[0-9])[\\s|[0-9]|A-Z|a-z|ñ|ó|í|á|é|ú|Á|Ó|É|Í|Ú]*$&quot;, message = &quot;El nombre de la materia debe comenzar con mayúscula.&quot;)
+    @Size(max = 30, message = &quot;La longitud del nombre de la materia no puede superar los 30 caracteres.&quot;)
+<span class="nc" id="L17">    String name;</span>
+
+    @NotNull(message = &quot;La nota de la materia no puede estar vacía.&quot;)
+    @DecimalMax(value = &quot;10.0&quot;, message = &quot;La nota máxima de la materia es de 10 pts.&quot;)
+    @DecimalMin(value = &quot;0.0&quot;, message = &quot;La nota mínima de la materia es de 0 pts.&quot;)
+<span class="fc" id="L22">    Double score;</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

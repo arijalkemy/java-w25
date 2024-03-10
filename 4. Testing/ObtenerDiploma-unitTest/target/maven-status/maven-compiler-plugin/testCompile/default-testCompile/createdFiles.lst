@@ -1,0 +1,4 @@
+com/meli/obtenerdiploma/service/StudentServiceTest.class
+com/meli/obtenerdiploma/service/ObtenerDiplomaServiceTest.class
+com/meli/obtenerdiploma/repository/unit/StudentDAOTest.class
+com/meli/obtenerdiploma/ObtenerDiplomaApplicationTests.class

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.meli.obtenerdiploma.repository.unit.StudentDAOTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.322 s -- in com.meli.obtenerdiploma.repository.unit.StudentDAOTest

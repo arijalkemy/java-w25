@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StudentDTO.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">obtenerDiploma</a> &gt; <a href="index.source.html" class="el_package">com.meli.obtenerdiploma.model</a> &gt; <span class="el_source">StudentDTO.java</span></div><h1>StudentDTO.java</h1><pre class="source lang-java linenums">package com.meli.obtenerdiploma.model;
+
+import java.util.List;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+<span class="fc" id="L17">@Setter</span>
+<span class="fc" id="L18">@AllArgsConstructor</span>
+<span class="fc" id="L19">@NoArgsConstructor</span>
+public class StudentDTO {
+
+<span class="fc" id="L22">    Long id;</span>
+
+    @NotBlank(message = &quot;El nombre del estudiante no puede estar vacío.&quot;)
+    @Pattern(regexp = &quot;([A-Z]|[0-9])[\\s|[0-9]|A-Z|a-z|ñ|ó|í|á|é|ú|Á|Ó|É|Í|Ú]*$&quot;, message = &quot;El nombre del estudiante debe comenzar con mayúscula.&quot;)
+    @Size(max = 50, message = &quot;La longitud del nombre del estudiante no puede superar los 50 caracteres.&quot;)
+<span class="fc" id="L27">    String studentName;</span>
+
+<span class="fc" id="L29">    String message;</span>
+<span class="fc" id="L30">    Double averageScore;</span>
+
+    @NotEmpty(message = &quot;La lista de materias no puede estar vacía.&quot;)
+<span class="fc" id="L33">    List&lt;@Valid SubjectDTO&gt; subjects;</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

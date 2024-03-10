@@ -1,0 +1,16 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+obtenerDiploma,com.meli.obtenerdiploma.exception,ObtenerDiplomaException,0,21,0,0,0,5,0,3,0,3
+obtenerDiploma,com.meli.obtenerdiploma.exception,StudentNotFoundException,0,6,0,0,0,2,0,1,0,1
+obtenerDiploma,com.meli.obtenerdiploma.model,ErrorDTO,115,9,22,0,2,1,20,1,9,1
+obtenerDiploma,com.meli.obtenerdiploma.model,StudentDTO,0,56,0,0,0,8,0,12,0,12
+obtenerDiploma,com.meli.obtenerdiploma.model,SubjectDTO,14,12,0,0,3,2,4,2,4,2
+obtenerDiploma,com.meli.obtenerdiploma.repository,StudentRepository,0,31,0,0,0,9,0,2,0,2
+obtenerDiploma,com.meli.obtenerdiploma.repository,StudentDAO.new TypeReference() {...},0,6,0,0,0,1,0,1,0,1
+obtenerDiploma,com.meli.obtenerdiploma.repository,StudentRepository.new TypeReference() {...},0,6,0,0,0,1,0,1,0,1
+obtenerDiploma,com.meli.obtenerdiploma.repository,StudentDAO,9,144,0,2,6,42,0,10,0,9
+obtenerDiploma,com.meli.obtenerdiploma.controller,ObtenerDiplomaController,0,11,0,0,0,4,0,2,0,2
+obtenerDiploma,com.meli.obtenerdiploma.controller,ObtenerDiplomaExceptionController,36,3,0,0,6,1,3,1,3,1
+obtenerDiploma,com.meli.obtenerdiploma.controller,StudentController,0,37,0,0,0,11,0,6,0,6
+obtenerDiploma,com.meli.obtenerdiploma,ObtenerDiplomaApplication,5,3,0,0,2,1,1,1,1,1
+obtenerDiploma,com.meli.obtenerdiploma.service,StudentService,0,34,0,0,0,12,0,6,0,6
+obtenerDiploma,com.meli.obtenerdiploma.service,ObtenerDiplomaService,0,67,0,2,0,12,0,6,0,5

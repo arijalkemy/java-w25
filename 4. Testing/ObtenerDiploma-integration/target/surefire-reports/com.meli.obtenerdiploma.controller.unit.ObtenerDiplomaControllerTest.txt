@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.meli.obtenerdiploma.controller.unit.ObtenerDiplomaControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.857 s -- in com.meli.obtenerdiploma.controller.unit.ObtenerDiplomaControllerTest
