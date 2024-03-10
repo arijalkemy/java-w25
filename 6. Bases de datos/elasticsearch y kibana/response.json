@@ -1,0 +1,31 @@
+
+{
+    "took": 4,
+    "timed_out": false,
+    "_shards": {
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
+      "failed": 0
+    },
+    "hits": {
+      "total": {
+        "value": 1,
+        "relation": "eq"
+      },
+      "max_score": 6.9486523,
+      "hits": [
+        {
+          "_index": "clientes1",
+          "_id": "XaNuKo4BEi79khWkeRr0",
+          "_score": 6.9486523,
+          "_source": {
+            "nombre": "Carlos",
+            "apellido": "luna",
+            "pais": "IT",
+            "localidad": "posada"
+          }
+        }
+      ]
+    }
+  }

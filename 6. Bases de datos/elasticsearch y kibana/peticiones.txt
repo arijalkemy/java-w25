@@ -1,0 +1,17 @@
+# Click the Variables button, above, to create your own variables.
+POST  /clientes1/_doc
+{
+  "nombre":"Carlos",
+  "apellido":"luna",
+  "pais":"IT",
+  "localidad":"posada"
+}
+
+GET /clientes1/_search
+{
+  "query": {
+    "match": {
+      "localidad": "posada"
+    }
+  }
+}
