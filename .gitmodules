@@ -61,3 +61,9 @@
 [submodule "4. Testing/EjercicioTestsStarwars"]
 	path = 4. Testing/EjercicioTestsStarwars
 	url = https://github.com/dcardonaniev/EjercicioTestsStarwars
+[submodule "7. Implementacion de bases de datos/miniserie"]
+	path = 7. Implementacion de bases de datos/miniserie
+	url = https://github.com/samuelvillegasm/miniserie
+[submodule "7. Implementacion de bases de datos/EjercicioTesters"]
+	path = 7. Implementacion de bases de datos/EjercicioTesters
+	url = https://github.com/dcardonaniev/EjercicioTesters
