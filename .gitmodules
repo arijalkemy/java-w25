@@ -7,3 +7,6 @@
 [submodule "4. Testing/EjercicioTestsStarwars"]
 	path = 4. Testing/EjercicioTestsStarwars
 	url = https://github.com/dcardonaniev/EjercicioTestsStarwars.git
+[submodule "7. Implementacion de bases de datos/testers"]
+	path = 7. Implementacion de bases de datos/testers
+	url = https://github.com/samuelvillegasm/testers.git
