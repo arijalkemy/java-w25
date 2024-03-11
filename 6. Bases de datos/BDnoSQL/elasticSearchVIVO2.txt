@@ -1,0 +1,135 @@
+
+  "took": 1,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 20,
+      "relation": "eq"
+    },
+    "max_score": 1,
+    "hits": [
+      {
+        "_index": "zapatillas",
+        "_id": "ZrKIGo4BbrG5K2KuZ_MO",
+        "_score": 1,
+        "_source": {
+          "marca": "adidas",
+          "modelo": "fit",
+          "talle": 38,
+          "color": "azul"
+        }
+      },
+      {
+        "_index": "zapatillas",
+        "_id": "aLKUGo4BbrG5K2KuqfND",
+        "_score": 1,
+        "_source": {
+          "marca": "dc",
+          "modelo": "sport",
+          "talle": 40,
+          "color": "blanco"
+        }
+      },
+      {
+        "_index": "zapatillas",
+        "_id": "abKUGo4BbrG5K2KuqfND",
+        "_score": 1,
+        "_source": {
+          "marca": "nike",
+          "modelo": "air",
+          "talle": 45,
+          "color": "rojo"
+        }
+      },
+      {
+        "_index": "zapatillas",
+        "_id": "arKWGo4BbrG5K2KubPNr",
+        "_score": 1,
+        "_source": {
+          "marca": "converse",
+          "modelo": "sport",
+          "talle": 41,
+          "color": "blanco"
+        }
+      },
+      {
+        "_index": "zapatillas",
+        "_id": "a7KWGo4BbrG5K2KubPNs",
+        "_score": 1,
+        "_source": {
+          "marca": "lacoste",
+          "modelo": "elegant",
+          "talle": 43,
+          "color": "blanco"
+        }
+      },
+      {
+        "_index": "zapatillas",
+        "_id": "bLKZGo4BbrG5K2KuTfNK",
+        "_score": 1,
+        "_source": {
+          "marca": "puma",
+          "modelo": "running",
+          "talle": 42,
+          "color": "azul"
+        }
+      },
+      {
+        "_index": "zapatillas",
+        "_id": "bbKZGo4BbrG5K2KuTfNK",
+        "_score": 1,
+        "_source": {
+          "marca": "adidas",
+          "modelo": "ultraboost",
+          "talle": 44,
+          "color": "negro"
+        }
+      },
+      {
+        "_index": "zapatillas",
+        "_id": "brKZGo4BbrG5K2KuTfNK",
+        "_score": 1,
+        "_source": {
+          "marca": "new balance",
+          "modelo": "fresh foam",
+          "talle": 39,
+          "color": "verde"
+        }
+      },
+      {
+        "_index": "zapatillas",
+        "_id": "b7KZGo4BbrG5K2KuTfNK",
+        "_score": 1,
+        "_source": {
+          "marca": "fila",
+          "modelo": "disruptor",
+          "talle": 38,
+          "color": "rosado"
+        }
+      },
+      {
+        "_index": "zapatillas",
+        "_id": "cLKZGo4BbrG5K2KuTfNK",
+        "_score": 1,
+        "_source": {
+          "marca": "asics",
+          "modelo": "gel kayano",
+          "talle": 40,
+          "color": "amarillo"
+        }
+      }
+    ]
+  }
+}
+
+
+
+
+
+
