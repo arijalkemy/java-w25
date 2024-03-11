@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:./src/main/resources/database/joyas
+    username: admin
+    password: admin
+
+  h2:
+    console:
+      enabled: true
+      path: /db
