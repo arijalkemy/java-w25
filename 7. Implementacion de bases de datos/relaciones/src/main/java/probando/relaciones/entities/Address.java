@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "address")
 @Data
 public class Address {
     @Id
@@ -14,4 +13,5 @@ public class Address {
 
     @OneToOne(mappedBy = "address")
     private User user;
+
 }
