@@ -14,8 +14,11 @@ import java.util.List;
 @RequestMapping("/api/v1/miniseries")
 public class MiniserieController {
 
-    @Autowired
     private IMiniserieService miniserieService;
+
+    public MiniserieController(IMiniserieService miniserieService) {
+        this.miniserieService = miniserieService;
+    }
 
     @GetMapping
     public ResponseEntity<List<MiniSerieResponseDTO>> getAllMiniseries() {

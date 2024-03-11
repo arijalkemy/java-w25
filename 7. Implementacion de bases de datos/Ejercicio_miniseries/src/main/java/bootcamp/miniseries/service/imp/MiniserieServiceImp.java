@@ -16,8 +16,11 @@ import java.util.Optional;
 @Service
 public class MiniserieServiceImp implements IMiniserieService {
 
-    @Autowired
     IMiniserieRepository miniserieRepository;
+
+    public MiniserieServiceImp(IMiniserieRepository miniserieRepository) {
+        this.miniserieRepository = miniserieRepository;
+    }
 
     @Override
     public List<MiniSerieResponseDTO> findAll() {
