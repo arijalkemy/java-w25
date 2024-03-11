@@ -29,7 +29,7 @@ public class TestCaseController {
 
     @GetMapping
     public ResponseEntity<List<TestCaseDTO>> getTestCases(
-        @RequestParam String last_update
+        @RequestParam(required = false) String last_update
     ) {
         if (last_update == null) {
             return new ResponseEntity<List<TestCaseDTO>>(testCaseService.getAll(), HttpStatus.OK);
