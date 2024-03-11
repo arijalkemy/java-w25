@@ -28,8 +28,13 @@ public class TestCaseController {
     }
 
     @GetMapping
-    public ResponseEntity<List<TestCaseDTO>> getAllTestCases() {
-        return new ResponseEntity<List<TestCaseDTO>>(testCaseService.getAll(), HttpStatus.OK);
+    public ResponseEntity<List<TestCaseDTO>> getTestCases(
+        @RequestParam String last_update
+    ) {
+        if (last_update == null) {
+            return new ResponseEntity<List<TestCaseDTO>>(testCaseService.getAll(), HttpStatus.OK);
+        }
+        return new ResponseEntity<List<TestCaseDTO>>(testCaseService.getAfterUpdateDate(last_update), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
@@ -52,12 +57,5 @@ public class TestCaseController {
         @PathVariable Long id
     ) {
         return new ResponseEntity<MessageDTO>(testCaseService.delete(id), HttpStatus.OK);
-    }
-
-    @GetMapping("")
-    public ResponseEntity<List<TestCaseDTO>> getTestCasesByLastUpdate(
-        @RequestParam String last_update
-    ) {
-        return new ResponseEntity<List<TestCaseDTO>>(testCaseService.getAfterUpdateDate(last_update), HttpStatus.OK);
     }
 }
