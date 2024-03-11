@@ -1,40 +1,53 @@
 package com.bootcamp.LasPerlas.service;
 
+import com.bootcamp.LasPerlas.dto.MessageDTO;
+import com.bootcamp.LasPerlas.exception.NotFoundException;
 import com.bootcamp.LasPerlas.model.Joya;
 import com.bootcamp.LasPerlas.repository.IJoyaRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class JoyaService implements IJoyaService{
+    private final IJoyaRepository joyaRepo;
 
-    @Autowired
-    IJoyaRepository joyaRepo;
+    JoyaService (IJoyaRepository joyaRepo) {
+        this.joyaRepo = joyaRepo;
+    }
 
     @Override
-    public String saveJoya(Joya joya) {
-       joyaRepo.save(joya);
-
-       return "Joya guardada correctamente";
+    public MessageDTO saveJoya(Joya joya) {
+       Joya newJoya = joyaRepo.save(joya);
+       return new MessageDTO("Joya guardada correctamente con numero identificatorio " + newJoya.getNro_id());
     }
 
     @Override
     public List<Joya> getJoyas() {
-
-        return joyaRepo.findAll();
-
+        List<Joya> joyas = joyaRepo.findAll();
+        return joyas.stream()
+                .filter(Joya::isVentaONo)
+                .collect(Collectors.toList());
     }
 
     @Override
     public Joya findJoya(Long id) {
-        //el orElse nos permite devolver null en caso que no encuentre
-        return joyaRepo.findById(id).orElse(null);
+        Optional<Joya> joya = joyaRepo.findById(id);
+        if (joya.isPresent()) {
+            if (joya.get().isVentaONo()) {
+                return joya.get();
+            }
+        }
+        throw new NotFoundException("Joya no encontrada"
+            + " con el id " + id
+            + " o no se encuentra a la venta"
+        );
     }
 
     @Override
-    public String deleteJoya(Long id) {
+    public MessageDTO deleteJoya(Long id) {
 
         //haremos borrado lógico, por lo cual no eliminamos el registro de la bd
         //sino que solo cambiamos su estado de verdadero (a la venta) a falso (no a la venta)
@@ -43,11 +56,11 @@ public class JoyaService implements IJoyaService{
         joyaOriginal.setVentaONo(false);
         this.saveJoya(joyaOriginal);
 
-        return "Joya dada de baja para la venta correctamente";
+        return new MessageDTO("Joya dada de baja para la venta correctamente");
     }
 
     @Override
-    public String editJoya(Long id_modificar, Joya joya_modif) {
+    public MessageDTO editJoya(Long id_modificar, Joya joya_modif) {
 
         Joya joyaOriginal = this.findJoya(id_modificar);
 
@@ -59,7 +72,7 @@ public class JoyaService implements IJoyaService{
         joyaOriginal.setVentaONo(joya_modif.isVentaONo());
 
         this.saveJoya(joyaOriginal);
-        return "Modificaciones guardadas correctamente";
+        return new MessageDTO("Modificaciones guardadas correctamente");
 
     }
 }
