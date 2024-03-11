@@ -67,3 +67,6 @@
 [submodule "7. Implementacion de bases de datos/EjercicioTesters"]
 	path = 7. Implementacion de bases de datos/EjercicioTesters
 	url = https://github.com/dcardonaniev/EjercicioTesters
+[submodule "7. Implementacion de bases de datos/EjercicioDBRelaciones"]
+	path = 7. Implementacion de bases de datos/EjercicioDBRelaciones
+	url = https://github.com/dcardonaniev/EjercicioDBRelaciones
