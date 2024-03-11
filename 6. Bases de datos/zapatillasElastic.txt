@@ -1,0 +1,68 @@
+PUT localhost:9200/zapatillas2/
+{
+  "mappings": {
+    "properties": {
+      "marca": {
+        "type": "text"
+      },
+      "modelo": {
+        "type": "text"
+      },
+      "talle": {
+        "type": "text"
+      }
+    }
+  }
+}
+
+
+POST
+{ "index": {}}
+{ "marca": "Nike", "modelo": "OffWhite", "talle": "42" }
+{ "index": {}}
+{ "marca": "Adidas", "modelo": "Superstar", "talle": "40" }
+{ "index": {}}
+{ "marca": "Puma", "modelo": "Suede", "talle": "39" }
+{ "index": {}}
+{ "marca": "Reebok", "modelo": "Classic", "talle": "41" }
+{ "index": {}}
+{ "marca": "Converse", "modelo": "Chuck Taylor", "talle": "38" }
+{ "index": {}}
+{ "marca": "Vans", "modelo": "Old Skool", "talle": "43" }
+{ "index": {}}
+{ "marca": "New Balance", "modelo": "574", "talle": "42" }
+{ "index": {}}
+{ "marca": "Asics", "modelo": "Gel-Lyte", "talle": "41" }
+{ "index": {}}
+{ "marca": "Under Armour", "modelo": "UA HOVR", "talle": "44" }
+{ "index": {}}
+{ "marca": "Skechers", "modelo": "Go Walk", "talle": "39" }
+{ "index": {}}
+{ "marca": "Fila", "modelo": "Disruptor", "talle": "40" }
+{ "index": {}}
+{ "marca": "Salomon", "modelo": "Speedcross", "talle": "45" }
+{ "index": {}}
+{ "marca": "Lacoste", "modelo": "Carnaby", "talle": "41" }
+{ "index": {}}
+{ "marca": "Timberland", "modelo": "6 Inch Premium", "talle": "42" }
+{ "index": {}}
+{ "marca": "Dr. Martens", "modelo": "1460", "talle": "43" }
+{ "index": {}}
+{ "marca": "Gucci", "modelo": "Ace", "talle": "39" }
+{ "index": {}}
+{ "marca": "Balenciaga", "modelo": "Speed Trainer", "talle": "44" }
+{ "index": {}}
+{ "marca": "Yeezy", "modelo": "Boost 350", "talle": "42" }
+{ "index": {}}
+{ "marca": "Jordan", "modelo": "1 Retro High", "talle": "41" }
+{ "index": {}}
+{ "marca": "Vans", "modelo": "Sk8-Hi", "talle": "43" }
+
+GET localhost:9200/zapatillas2/_search
+{
+  "query": {
+    "match": {
+      "marca": "Nike"
+    }
+  }
+}
