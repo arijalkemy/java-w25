@@ -32,10 +32,10 @@ public class TestCaseController {
         return new ResponseEntity<>(TestCaseList, HttpStatusCode.valueOf(200));
     }
 
-    @GetMapping("/testcases")
-    public ResponseEntity<List<TestCaseResDTO>> xxxxxxx(
-            @RequestParam(required = true) String last_update) {
-        List<TestCaseResDTO> TestCaseList = iTestCaseService.getTestCase();
+    @GetMapping("/lastupdate")
+    public ResponseEntity<List<TestCaseResDTO>> getLastUpdates(
+            @RequestParam String last_update) {
+        List<TestCaseResDTO> TestCaseList = iTestCaseService.getLastUpdates(last_update);
         return new ResponseEntity<>(TestCaseList, HttpStatusCode.valueOf(200));
     }
 

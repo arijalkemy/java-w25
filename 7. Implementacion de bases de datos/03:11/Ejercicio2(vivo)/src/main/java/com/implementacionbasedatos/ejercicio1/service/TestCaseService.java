@@ -1,5 +1,7 @@
 package com.implementacionbasedatos.ejercicio1.service;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,13 +30,14 @@ public class TestCaseService implements ITestCaseService {
     }
 
     private TestCaseReqDTO TestCaseResDTOToReqDTO(TestCaseResDTO testCaseResDTO) {
-        return new TestCaseReqDTO(testCaseResDTO.getIdCase(), testCaseResDTO.getDescription(), testCaseResDTO.getTested(),
-        testCaseResDTO.getPassed(), testCaseResDTO.getNumberOfTries(), testCaseResDTO.getLastUpdate());
+        return new TestCaseReqDTO(testCaseResDTO.getIdCase(), testCaseResDTO.getDescription(),
+                testCaseResDTO.getTested(),
+                testCaseResDTO.getPassed(), testCaseResDTO.getNumberOfTries(), testCaseResDTO.getLastUpdate());
     }
 
     private TestCaseResDTO TestCaseModelToResDTO(TestCase TestCase) {
         return new TestCaseResDTO(TestCase.getIdCase(), TestCase.getDescription(), TestCase.getTested(),
-        TestCase.getPassed(), TestCase.getNumberOfTries(), TestCase.getLastUpdate());
+                TestCase.getPassed(), TestCase.getNumberOfTries(), TestCase.getLastUpdate());
     }
 
     @Override
@@ -89,4 +92,23 @@ public class TestCaseService implements ITestCaseService {
         return TestCaseFound;
     }
 
+    @Override
+    @Transactional(readOnly = true)
+    public List<TestCaseResDTO> getLastUpdates(String lastUpdate) {
+        LocalDate lastUpdateLD = LocalDate.now();
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            lastUpdateLD = LocalDate.parse(lastUpdate, formatter);
+        } catch (Exception e) {
+            throw new NotFoundException("El formato de fecha es inválido. El formato correcto es yyyy-MM-dd.");
+        }
+        List<TestCase> TestCaseList = iTestCaseRepository.findAll();
+        List<TestCaseResDTO> TestCaseListDTO = new ArrayList<>();
+        for (TestCase e : TestCaseList) {
+            if (e.getLastUpdate().isAfter(lastUpdateLD)) {
+                TestCaseListDTO.add(TestCaseModelToResDTO(e));
+            }
+        }
+        return TestCaseListDTO;
+    }
 }

@@ -15,4 +15,10 @@ public class GlobalExceptionHandler {
         MessageResDTO messageException = new MessageResDTO(e.getMessage());
         return new ResponseEntity<>(messageException, HttpStatusCode.valueOf(404));
     }
+
+    @ExceptionHandler(LocalDateInvalidException.class)
+    public ResponseEntity<?> LocalDateInvalid(Exception e) {
+        MessageResDTO messageException = new MessageResDTO(e.getMessage());
+        return new ResponseEntity<>(messageException, HttpStatusCode.valueOf(400));
+    }
 }

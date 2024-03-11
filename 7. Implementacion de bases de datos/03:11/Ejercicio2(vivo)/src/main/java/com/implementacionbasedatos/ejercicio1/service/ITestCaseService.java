@@ -18,4 +18,5 @@ public interface ITestCaseService {
 
     public TestCaseResDTO putTestCase(Long id, TestCaseReqDTO testCaseReqDTO);
 
+    public List<TestCaseResDTO> getLastUpdates(String last_update);
 }
