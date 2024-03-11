@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "ace748d1-09d9-45f1-b0dd-9d3aa36abb62",
+		"name": "zapatillas_deportivas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32843116"
+	},
+	"item": [
+		{
+			"name": "Creacion_masiva",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"index\": {}}\n{\"color\": \"Negro\", \"marca\": \"Nike\", \"talla\": \"42\", \"precio\": 99.99}\n{\"index\": {}}\n{\"color\": \"Blanco\", \"marca\": \"Adidas\", \"talla\": \"38\", \"precio\": 79.99}\n{\"index\": {}}\n{\"color\": \"Azul\", \"marca\": \"Puma\", \"talla\": \"40\", \"precio\": 89.99}\n{\"index\": {}}\n{\"color\": \"Gris\", \"marca\": \"Reebok\", \"talla\": \"39\", \"precio\": 69.99}\n{\"index\": {}}\n{\"color\": \"Rojo\", \"marca\": \"Converse\", \"talla\": \"41\", \"precio\": 59.99}\n{\"index\": {}}\n{\"color\": \"Verde\", \"marca\": \"New Balance\", \"talla\": \"37\", \"precio\": 109.99}\n{\"index\": {}}\n{\"color\": \"Marrón\", \"marca\": \"Vans\", \"talla\": \"43\", \"precio\": 49.99}\n{\"index\": {}}\n{\"color\": \"Amarillo\", \"marca\": \"Asics\", \"talla\": \"41\", \"precio\": 79.99}\n{\"index\": {}}\n{\"color\": \"Negro\", \"marca\": \"Under Armour\", \"talla\": \"40\", \"precio\": 89.99}\n{\"index\": {}}\n{\"color\": \"Blanco\", \"marca\": \"Skechers\", \"talla\": \"38\", \"precio\": 69.99}\n{\"index\": {}}\n{\"color\": \"Azul\", \"marca\": \"Fila\", \"talla\": \"39\", \"precio\": 99.99}\n{\"index\": {}}\n{\"color\": \"Gris\", \"marca\": \"Lacoste\", \"talla\": \"42\", \"precio\": 119.99}\n{\"index\": {}}\n{\"color\": \"Rojo\", \"marca\": \"Polo Ralph Lauren\", \"talla\": \"41\", \"precio\": 79.99}\n{\"index\": {}}\n{\"color\": \"Verde\", \"marca\": \"Tommy Hilfiger\", \"talla\": \"37\", \"precio\": 129.99}\n{\"index\": {}}\n{\"color\": \"Marrón\", \"marca\": \"Calvin Klein\", \"talla\": \"43\", \"precio\": 89.99}\n{\"index\": {}}\n{\"color\": \"Negro\", \"marca\": \"Hugo Boss\", \"talla\": \"40\", \"precio\": 149.99}\n{\"index\": {}}\n{\"color\": \"Morado\", \"marca\": \"Nike\", \"talla\": \"43\", \"precio\": 299.99}\n{\"index\": {}}\n{\"color\": \"Gris\", \"marca\": \"Puma\", \"talla\": \"12\", \"precio\": 19.99}\n{\"index\": {}}\n{\"color\": \"Amarillo\", \"marca\": \"Jordan\", \"talla\": \"37\", \"precio\": 99.99}\n{\"index\": {}}\n{\"color\": \"Rojo\", \"marca\": \"Fila\", \"talla\": \"52\", \"precio\": 89.99}\n\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_bulk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta_individual",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta_color",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\":{\n    \"match\":{\n      \"color\":\"Negro\"\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "color",
+							"value": "Negro",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creacion_zaptilla",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"color\": \"Blanco\", \n    \"marca\": \"Reebok\",\n    \"talla\": \"39\",\n    \"precio\": 69.99\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_doc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_doc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta_varios_param",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"query\" : {\n        \"bool\": {\n            \"should\": [\n               {\n                   \"match_phrase\": {\n                      \"marca\": \"Reebok\"\n                   }\n               },\n               {\n                   \"match_phrase\": {\n                      \"color\": \"Negro\"\n                   }\n               }\n            ]\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
