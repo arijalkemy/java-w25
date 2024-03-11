@@ -20,7 +20,6 @@ public class JewelController {
 
     @GetMapping("/jewelry")
     public List<Jewel> getAllJewels() {
-        System.out.println("Le pego a endpoint");
         return jewelService.getAllJewels();
     }
 
@@ -33,7 +32,14 @@ public class JewelController {
     @DeleteMapping("/jewelry/delete/{id}")
     public ResponseEntity<String> deleteJewel(@PathVariable Long id) {
         jewelService.deleteJewel(id);
-        return new ResponseEntity<String>("La joya fue borrada exitosamente",HttpStatus.OK);
+        return new ResponseEntity<>("La joya fue borrada exitosamente",HttpStatus.OK);
+    }
+
+    @PutMapping("/jewelry/update/{iDmodificar}")
+    public ResponseEntity<Jewel> modifyJewel(@PathVariable Long iDmodificar, @RequestBody Jewel jewel) {
+        System.out.println("Llamando a modify");
+        jewelService.modifyJewel(iDmodificar, jewel);
+        return new ResponseEntity<>(jewel,HttpStatus.OK);
     }
 
 }
