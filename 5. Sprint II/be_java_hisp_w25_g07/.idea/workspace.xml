@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8ba9b12-8073-4290-b55d-6446a5adf70c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/src/test/java/grupo_7/sprint_1/integration/integrationTestBuyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/src/test/java/grupo_7/sprint_1/integration/integrationTestBuyer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be_java_hisp_w25_g07/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/be_java_hisp_w25_g07/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,41 +35,41 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.IntegrationTestBuyer.testGetValidUserAndFollowedList.executor": "Run",
-    "JUnit.IntegrationTestSeller.testGetValidUserAndFollowedList.executor": "Run",
-    "JUnit.grupo_7.sprint_1 in be_java_hisp_w25_g07.executor": "Coverage",
-    "JUnit.integrationTestBuyer.testGetValidUserAndFollowedList.executor": "Run",
-    "JUnit.integrationTestBuyer.testUnfollowCorrectly.executor": "Run",
-    "JUnit.integrationTestSeller.testGetValidCountOfFollowers.executor": "Run",
-    "JUnit.integrationTestSeller.testGetValidUserAndFollowedList.executor": "Run",
-    "JUnit.integrationtestseller.addPostTest.executor": "Run",
-    "JUnit.integrationtestseller.testAddPostCorrectly.executor": "Run",
-    "JUnit.integrationtestseller.testGetValidCountOfFollowers.executor": "Run",
-    "JUnit.integrationtestseller.testGetValidFollowersList.executor": "Run",
-    "JUnit.java in be_java_hisp_w25_g07.executor": "Coverage",
-    "JUnit.service in be_java_hisp_w25_g07.executor": "Coverage",
-    "JUnit.sprint_1 in be_java_hisp_w25_g07.executor": "Coverage",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.<default>.executor": "Coverage",
-    "TestNG.grupo_7.sprint_1.executor": "Coverage",
-    "git-widget-placeholder": "tulian__ignacio",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/itulian/Documents/GitHub/w25/5. Sprint II/be_java_hisp_w25_g07",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.IntegrationTestBuyer.testGetValidUserAndFollowedList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.IntegrationTestSeller.testGetValidUserAndFollowedList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.grupo_7.sprint_1 in be_java_hisp_w25_g07.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.integrationTestBuyer.testGetValidUserAndFollowedList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.integrationTestBuyer.testUnfollowCorrectly.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.integrationTestSeller.testGetValidCountOfFollowers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.integrationTestSeller.testGetValidUserAndFollowedList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.integrationtestseller.addPostTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.integrationtestseller.testAddPostCorrectly.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.integrationtestseller.testGetValidCountOfFollowers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.integrationtestseller.testGetValidFollowersList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in be_java_hisp_w25_g07.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.service in be_java_hisp_w25_g07.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.sprint_1 in be_java_hisp_w25_g07.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.&lt;default&gt;.executor&quot;: &quot;Coverage&quot;,
+    &quot;TestNG.grupo_7.sprint_1.executor&quot;: &quot;Coverage&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;tulian__ignacio&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/itulian/Documents/GitHub/w25/5. Sprint II/be_java_hisp_w25_g07&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.sprint_1 in be_java_hisp_w25_g07">
     <configuration name="grupo_7.sprint_1 in be_java_hisp_w25_g07" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="be_java_hisp_w25_g07" />
@@ -177,11 +178,34 @@
       <workItem from="1709209079746" duration="9759000" />
       <workItem from="1709219455127" duration="8526000" />
       <workItem from="1709296788396" duration="6926000" />
+      <workItem from="1709554984148" duration="191000" />
+      <workItem from="1709615710875" duration="170000" />
+      <workItem from="1709640287295" duration="2843000" />
+      <workItem from="1709726578514" duration="1427000" />
+      <workItem from="1709819344518" duration="5000" />
+      <workItem from="1709819360630" duration="125000" />
+      <workItem from="1709819497281" duration="45000" />
+      <workItem from="1709819553421" duration="20000" />
+      <workItem from="1709819584559" duration="8000" />
+      <workItem from="1709819600472" duration="1131000" />
+      <workItem from="1710162243875" duration="1973000" />
+      <workItem from="1710167346549" duration="296000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:javax.validation:validation-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/be_java_hisp_w25_g07$grupo_7_sprint_1.ic" NAME="grupo_7.sprint_1 Coverage Results" MODIFIED="1709303429888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
