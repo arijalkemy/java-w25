@@ -35,10 +35,10 @@ public class TestCaseService implements ITestCaseService {
         if(caseOpt.isEmpty()) throw new NotFoundException("No se ha encontrado un TestCase con ese id.");
 
         TestCase testCase = caseOpt.get();
-        testCase.setTested(caseDto.getTested());
-        testCase.setPassed(caseDto.getPassed());
-        testCase.setDescription(caseDto.getDescription());
-        testCase.setNumberOfTries(caseDto.getNumberOfTries());
+        if(caseDto.getTested() != null) testCase.setTested(caseDto.getTested());
+        if(caseDto.getPassed()!= null) testCase.setPassed(caseDto.getPassed());
+        if(caseDto.getDescription() != null) testCase.setDescription(caseDto.getDescription());
+        if(caseDto.getNumberOfTries() != null) testCase.setNumberOfTries(caseDto.getNumberOfTries());
         testCase.setLastUpdate(LocalDate.now());
         caseRepository.save(testCase);
         return new MessageDto("Se ha actualizado correctamente el TestCase. ID: " + testCase.getId());
