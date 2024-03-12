@@ -10,3 +10,6 @@
 [submodule "7. Implementacion de bases de datos/testers"]
 	path = 7. Implementacion de bases de datos/testers
 	url = https://github.com/samuelvillegasm/testers.git
+[submodule "7. Implementacion de bases de datos/empresa-seguros"]
+	path = 7. Implementacion de bases de datos/empresa-seguros
+	url = https://github.com/samuelvillegasm/empresa-seguros.git
