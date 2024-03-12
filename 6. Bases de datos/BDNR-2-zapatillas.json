@@ -1,0 +1,83 @@
+
+
+
+
+
+[{
+    "marca": "Nike",
+    "modelo": "Jordan",
+    "color": "Rojo",
+    "talla":42,
+    "anno_salida":"1997",
+    "precio":200.0
+},
+{
+    "marca": "Adidas",
+    "modelo": "Originals",
+    "color": "Azul",
+    "talla":42,
+    "anno_salida":"1995",
+    "precio":250.0
+},
+
+{
+    "marca": "Rebook",
+    "modelo": "One",
+    "color": "Blanco",
+    "talla":35,
+    "anno_salida":"2015",
+    "precio":300.0
+},
+{
+    "marca": "Croidon",
+    "modelo": "Clasico",
+    "color": "Negro",
+    "talla":40,
+    "anno_salida":"1980",
+    "precio":100.0
+},
+{
+    "marca": "Nike",
+    "modelo": "Jordan 2",
+    "color": "Negro",
+    "talla":41,
+    "anno_salida":"1998",
+    "precio":300.0
+},
+{
+    "marca": "Nike",
+    "modelo": "Air Max",
+    "color": "Azul",
+    "talla": 42,
+    "anno_salida": "2023",
+    "precio": 150.99
+   },
+   {
+    "marca": "Adidas",
+    "modelo": "Ultraboost",
+    "color": "Negro",
+    "talla": 40,
+    "anno_salida": "2022",
+    "precio": 180.99
+   },
+   {
+    "marca": "Puma",
+    "modelo": "Blaze",
+    "color": "Rojo",
+    "talla": 38,
+    "anno_salida": "2021",
+    "precio": 130.99
+   }
+
+
+]
+
+
+POST /zapatillas_deportivas/_bulk
+{ "index": { } }
+{"marca": "Nike","modelo": "Air Max","color": "Azul","talla": 42,"anno_salida": "2023","precio": 150.99}
+{ "index": { } }
+{"marca": "Adidas","modelo": "Ultraboost","color": "Negro","talla": 40,"anno_salida": "2022","precio": 188.99}
+{ "index": { } }
+{"marca": "Niki","modelo": "Jordan 3","color": "Negro","talla": 45,"anno_salida": "2023","precio": 199.99}
+
