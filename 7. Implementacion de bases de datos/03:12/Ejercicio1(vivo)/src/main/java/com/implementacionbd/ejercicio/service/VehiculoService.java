@@ -10,7 +10,9 @@ import com.implementacionbd.ejercicio.dto.MessageResDTO;
 import com.implementacionbd.ejercicio.dto.PatenteDTO;
 import com.implementacionbd.ejercicio.dto.PatenteMarcaDTO;
 import com.implementacionbd.ejercicio.dto.PerdidaMayorDTO;
+import com.implementacionbd.ejercicio.dto.SiniestroReqDTO;
 import com.implementacionbd.ejercicio.dto.VehiculoReqDTO;
+import com.implementacionbd.ejercicio.models.Siniestro;
 import com.implementacionbd.ejercicio.models.Vehiculo;
 import com.implementacionbd.ejercicio.repository.IVehiculoRepository;
 
@@ -25,6 +27,10 @@ public class VehiculoService implements IVehiculoService {
     private Vehiculo DTOToVehiculo(VehiculoReqDTO vehiculoReqDTO) {
         return new Vehiculo(vehiculoReqDTO.getPatente(), vehiculoReqDTO.getMarca(), vehiculoReqDTO.getAnyoFabricacion(),
                 vehiculoReqDTO.getCantidadRuedas(), vehiculoReqDTO.getModelo());
+    }
+
+    private Siniestro DTOToSiniestro(SiniestroReqDTO siniestroReqDTO) {
+        return new Siniestro(siniestroReqDTO.getFechaSiniestro(), siniestroReqDTO.getPerdidaEconomica());
     }
 
     // 1.- Listar las patentes de todos los vehículos registrados.
@@ -70,6 +76,15 @@ public class VehiculoService implements IVehiculoService {
     public MessageResDTO postVehiculo(VehiculoReqDTO vehiculoReqDTO) {
         vehiculoRepository.save(DTOToVehiculo(vehiculoReqDTO));
         return new MessageResDTO("El Vehículo fue agregada correctamente");
+    }
+
+    // AUX.- Crear siniestro:
+    @Override
+    public MessageResDTO postSiniestro(Long vehiculoId, SiniestroReqDTO siniestroReqDTO) {
+        Vehiculo vehiculo = vehiculoRepository.findById(vehiculoId).orElse(null);
+        vehiculo.getSiniestros().add(DTOToSiniestro(siniestroReqDTO));
+        vehiculoRepository.save(vehiculo);
+        return new MessageResDTO("El siniestro fue agregada correctamente");
     }
 
 }

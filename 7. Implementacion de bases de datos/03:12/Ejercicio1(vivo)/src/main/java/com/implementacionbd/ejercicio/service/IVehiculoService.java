@@ -6,6 +6,7 @@ import com.implementacionbd.ejercicio.dto.MessageResDTO;
 import com.implementacionbd.ejercicio.dto.PatenteDTO;
 import com.implementacionbd.ejercicio.dto.PatenteMarcaDTO;
 import com.implementacionbd.ejercicio.dto.PerdidaMayorDTO;
+import com.implementacionbd.ejercicio.dto.SiniestroReqDTO;
 import com.implementacionbd.ejercicio.dto.VehiculoReqDTO;
 
 public interface IVehiculoService {
@@ -18,5 +19,7 @@ public interface IVehiculoService {
     PerdidaMayorDTO getMatriculaMarcaModeloPerdidaMayorA(int i);
 
     public MessageResDTO postVehiculo(VehiculoReqDTO vehiculoReqDTO);
+
+    public MessageResDTO postSiniestro(Long vehiculoId, SiniestroReqDTO siniestroReqDTO);
 
 }
