@@ -78,4 +78,25 @@ public class PrendaService implements IPrendaService {
         prendaRepository.save(prenda);
         return prendaModelToDTO(prenda);
     }
+
+    @Override
+    public List<PrendaDTO> findPrendaBySize(String size) {
+        List<Prenda> prendas = prendaRepository.findPrendaBySize(size);
+        List<PrendaDTO> prendaDTOs = new ArrayList<>();
+        for (Prenda e : prendas) {
+            prendaDTOs.add(this.prendaModelToDTO(e));
+        }
+        return prendaDTOs;
+    }
+
+    @Override
+    public List<PrendaDTO> findPrendaTipo(String tipo) {
+        List<Prenda> prendas = prendaRepository.findPrendaTipo(tipo);
+        List<PrendaDTO> prendaDTOs = new ArrayList<>();
+        for (Prenda e : prendas) {
+            prendaDTOs.add(this.prendaModelToDTO(e));
+        }
+        return prendaDTOs;
+    }
+
 }

@@ -38,10 +38,22 @@ public class PrendaController {
         return new ResponseEntity<>(prendaDTOs, HttpStatusCode.valueOf(200));
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/code/{id}")
     public ResponseEntity<PrendaDTO> findPrendaById(@PathVariable Long id) {
         PrendaDTO prendaDTO = prendaService.findPrendaById(id);
         return new ResponseEntity<>(prendaDTO, HttpStatusCode.valueOf(200));
+    }
+
+    @GetMapping("/size/{size}")
+    public ResponseEntity<List<PrendaDTO>> findPrendaBySize(@PathVariable String size) {
+        List<PrendaDTO> prendaDTOs = prendaService.findPrendaBySize(size);
+        return new ResponseEntity<>(prendaDTOs, HttpStatusCode.valueOf(200));
+    }
+
+    @GetMapping("/tipo/{tipo}")
+    public ResponseEntity<List<PrendaDTO>> findPrendaTipo(@PathVariable String tipo) {
+        List<PrendaDTO> prendaDTOs = prendaService.findPrendaTipo(tipo);
+        return new ResponseEntity<>(prendaDTOs, HttpStatusCode.valueOf(200));
     }
 
     @DeleteMapping("/{id}")

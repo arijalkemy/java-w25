@@ -86,6 +86,6 @@ public class Prenda {
     }
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "prendas_clientes", joinColumns = @JoinColumn(name = "prenda_id"), inverseJoinColumns = @JoinColumn(name = "clientes_id"))
+    @JoinTable(name = "ventas", joinColumns = @JoinColumn(name = "prenda_id"), inverseJoinColumns = @JoinColumn(name = "clientes_id"))
     private Set<Cliente> clientes = new HashSet<>();
 }

@@ -15,4 +15,9 @@ public interface IPrendaService {
     public MessageDTO deletePrenda(Long id);
 
     public PrendaDTO putPrenda(Long id, PrendaDTO prendaDTO);
+
+    public List<PrendaDTO> findPrendaBySize(String size);
+
+    public List<PrendaDTO> findPrendaTipo(String tipo);
+
 }
