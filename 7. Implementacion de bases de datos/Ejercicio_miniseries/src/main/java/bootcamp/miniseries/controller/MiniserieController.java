@@ -30,8 +30,7 @@ public class MiniserieController {
         return ResponseEntity.ok(miniserieService.findOne(id));
     }
 
-
-    @PostMapping
+    @PostMapping("/new")
     public ResponseEntity<?> createMiniSerie( @RequestBody MiniSerieRequestDTO miniseerie){
         miniserieService.save(miniseerie);
         return ResponseEntity.ok().build();

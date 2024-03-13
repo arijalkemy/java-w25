@@ -13,7 +13,7 @@ import lombok.experimental.FieldDefaults;
 public class MiniSerie {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
     String name;
