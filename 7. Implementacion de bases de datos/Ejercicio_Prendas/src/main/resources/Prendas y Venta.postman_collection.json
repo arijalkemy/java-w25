@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "c6e29cb2-742b-4b6d-9e0a-8800ae71b4c4",
+		"name": "Prendas y Venta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Crear venta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fecha\": \"01/01/2000\",\n    \"total\": 1000.0,\n    \"medio_pago\": \"Mercado Pago\",\n    \"prenda_list\": [\n        {\n            \"nombre\": \"Lacoste Air\",\n            \"tipo\": \"Chomba\",\n            \"marca\": \"Lacoste\",\n            \"color\": \"Verde\",\n            \"cantidad\": 5,\n            \"talle\": \"M\",\n            \"precio_venta\": 100.0\n        },\n        {\n            \"nombre\": \"Adidas New\",\n            \"tipo\": \"Short\",\n            \"marca\": \"Adidas\",\n            \"color\": \"Rojo\",\n            \"cantidad\": 10,\n            \"talle\": \"M\",\n            \"precio_venta\": 100.0\n        }\n     ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sale",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sale"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1. Crear prenda",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Lacoste Air\",\n    \"tipo\": \"Chomba\",\n    \"marca\": \"Lacoste\",\n    \"color\": \"Verde\",\n    \"cantidad\": 5,\n    \"talle\": \"M\",\n    \"precio_venta\": 100.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clothes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clothes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Obtener Prendas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clothes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clothes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Obtener Ventas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/sale",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sale"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Obtener prendas por codigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clothes/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clothes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Obtener prendas por numero",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/sale/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sale",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Modificar prenda",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Lacoste modificada\",\n    \"tipo\": \"Remera\",\n    \"marca\": \"Lacoste\",\n    \"color\": \"Roja\",\n    \"cantidad\": 8,\n    \"talle\": \"M\",\n    \"precio_venta\": 101.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clothes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clothes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Modificar venta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fecha\": \"01/01/2003\",\n    \"total\": 1001.0,\n    \"medio_pago\": \"Mercado Pago modificado\",\n    \"prenda_list\": [\n        {\n            \"nombre\": \"Lacost Air\",\n            \"tipo\": \"Chomba\",\n            \"marca\": \"Lacoste\",\n            \"color\": \"Verde\",\n            \"cantidad\": 5,\n            \"talle\": \"M\",\n            \"precio_venta\": 100.0\n        }\n     ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sale/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sale",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Eliminar prenda",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clothes/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clothes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Eliminar venta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/sale/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sale",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Obtener prendas por talle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clothes/M",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clothes",
+						"M"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Obtener prendas por fecha",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/sale?name=22/05/2022",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sale"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "22/05/2022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Obtener prendas por nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clothes/?name=Lacoste",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clothes",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Lacoste"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Obtener prendas de una venta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/sale/clothes/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sale",
+						"clothes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
