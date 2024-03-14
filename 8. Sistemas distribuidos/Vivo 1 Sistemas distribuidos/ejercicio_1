@@ -1,0 +1,10 @@
+Para cumplir con los requisitos del ejercicio 1 se propone el siguiente SLA
+
+TimeOut: 150ms
+Retries: 2
+
+De esta forma buscamos asegurar el 0.5% de error rate que se nos pide.
+
+Por ser 150ms el P95 sabemos que el 5% de las peticiones superaran el timeout, y por el error de la API de 0.9 tendremos una probabilidad de fallo acumulado del 5.9%
+
+Al realizar un máximo de 3 peticiones (la original y 2 retries) tendremos como error 5.9% * 5.9% * 5.9% = 0.02%
