@@ -4,7 +4,79 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="978aec95-531b-4dc0-b2db-30a1e2653397" name="Changes" comment="" />
+    <list default="true" id="978aec95-531b-4dc0-b2db-30a1e2653397" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/ObtenerDiploma.postman_collection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/ObtenerDiplomaApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/controller/ObtenerDiplomaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/controller/ObtenerDiplomaExceptionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/controller/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/exception/ObtenerDiplomaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/exception/StudentNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/model/ErrorDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/model/StudentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/model/SubjectDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/repository/IStudentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/repository/IStudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/repository/StudentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/repository/StudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/service/IObtenerDiplomaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/service/IStudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/service/ObtenerDiplomaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/main/resources/users.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/test/java/com/meli/obtenerdiploma/ObtenerDiplomaApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/test/java/com/meli/obtenerdiploma/service/ObtenerDiplomaServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests Unitarios/ObtenerDiploma/src/test/java/com/meli/obtenerdiploma/service/StudentServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/ObtenerDiploma.postman_collection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/ObtenerDiplomaApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/controller/ObtenerDiplomaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/controller/ObtenerDiplomaExceptionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/controller/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/exception/ObtenerDiplomaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/exception/StudentNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/model/ErrorDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/model/StudentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/model/SubjectDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/repository/IStudentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/repository/IStudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/repository/StudentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/repository/StudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/service/IObtenerDiplomaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/service/IStudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/service/ObtenerDiplomaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/java/com/meli/obtenerdiploma/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/main/resources/users.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/test/java/com/meli/obtenerdiploma/integrationTests/ObtenerDiplomaIntegrationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/test/java/com/meli/obtenerdiploma/integrationTests/StudentIntegrationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/test/java/com/meli/obtenerdiploma/unitTests/ObtenerDiplomaApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/test/java/com/meli/obtenerdiploma/unitTests/controller/ObtenerDiplomaControllerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/test/java/com/meli/obtenerdiploma/unitTests/controller/StudentControllerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/test/java/com/meli/obtenerdiploma/unitTests/repository/StudentDAOTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/test/java/com/meli/obtenerdiploma/unitTests/repository/StudentRepositoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/test/java/com/meli/obtenerdiploma/unitTests/service/ObtenerDiplomaServiceTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/test/java/com/meli/obtenerdiploma/unitTests/service/StudentServiceTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/test/java/com/meli/obtenerdiploma/unitTests/util/TestUtilsGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/test/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4. Testing/Tests de Integración/ObtenerDiploma/src/test/resources/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,12 +106,16 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2cPwtORUHFUQs2KUAYChGOTzssM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;gutierrez__anderson&quot;,
@@ -50,6 +126,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -60,20 +137,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="java-w25" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -88,10 +151,30 @@
       <workItem from="1708541429816" duration="19000" />
       <workItem from="1708541470657" duration="46000" />
       <workItem from="1708541532748" duration="285000" />
+      <workItem from="1708541836945" duration="619000" />
+      <workItem from="1709308199046" duration="52000" />
+      <workItem from="1709308310709" duration="7000" />
+      <workItem from="1709308395496" duration="22000" />
+      <workItem from="1709308422017" duration="30000" />
+      <workItem from="1709308471435" duration="17000" />
+      <workItem from="1709308501520" duration="28000" />
+      <workItem from="1709308541146" duration="65000" />
+      <workItem from="1709308759464" duration="19000" />
+      <workItem from="1709308784298" duration="11000" />
+      <workItem from="1709309020006" duration="1311000" />
+      <workItem from="1710168787549" duration="45000" />
+      <workItem from="1710433124321" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g12" />
+      <path value="$PROJECT_DIR$/3. Sprint I/be_java_hisp_w25_g12_gutierrez" />
+    </ignored-roots>
   </component>
 </project>
