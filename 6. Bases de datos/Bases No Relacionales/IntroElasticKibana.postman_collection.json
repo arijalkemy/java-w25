@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "e0c90049-0a50-462f-b096-a986192c5a35",
+		"name": "IntroElasticKibana",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32840919"
+	},
+	"item": [
+		{
+			"name": "Listar todos los indices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/_cat/indices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"_cat",
+						"indices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear nuevo indice",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/deportivos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"deportivos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver elementos en 'deportivos' (Max 10 - Default)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": {\n    \"match_all\": {} // match_all\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/deportivos/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"deportivos",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver elementos en 'deportivos' (Max 100)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": {\n    \"match_all\": {} // match_all\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/deportivos/_search?size=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"deportivos",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar varios elementos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"index\":{}}\n{\"marca\": \"Nike\", \"modelo\": \"Air Max\", \"color\": \"Negro\", \"talla\": \"42\", \"precio\": 159.99, \"disponibilidad\": true}\n{\"index\":{}}\n{\"marca\": \"Adidas\", \"modelo\": \"Superstar\", \"color\": \"Blanco\", \"talla\": \"38\", \"precio\": 99.99, \"disponibilidad\": true}\n{\"index\":{}}\n{\"marca\": \"Puma\", \"modelo\": \"Cali\", \"color\": \"Rosa\", \"talla\": \"39\", \"precio\": 89.99, \"disponibilidad\": false}\n{\"index\":{}}\n{\"marca\": \"Converse\", \"modelo\": \"Chuck Taylor\", \"color\": \"Rojo\", \"talla\": \"41\", \"precio\": 79.99, \"disponibilidad\": true}\n{\"index\":{}}\n{\"marca\": \"New Balance\", \"modelo\": \"574\", \"color\": \"Azul\", \"talla\": \"40\", \"precio\": 109.99, \"disponibilidad\": false}\n{\"index\":{}}\n{\"marca\": \"Reebok\", \"modelo\": \"Classic Leather\", \"color\": \"Blanco\", \"talla\": \"37\", \"precio\": 94.99, \"disponibilidad\": true}\n{\"index\":{}}\n{\"marca\": \"Vans\", \"modelo\": \"Old Skool\", \"color\": \"Negro\", \"talla\": \"43\", \"precio\": 69.99, \"disponibilidad\": false}\n{\"index\":{}}\n{\"marca\": \"Fila\", \"modelo\": \"Disruptor\", \"color\": \"Blanco\", \"talla\": \"38\", \"precio\": 129.99, \"disponibilidad\": true}\n{\"index\":{}}\n{\"marca\": \"Asics\", \"modelo\": \"Gel-Kayano\", \"color\": \"Azul\", \"talla\": \"41\", \"precio\": 179.99, \"disponibilidad\": false}\n{\"index\":{}}\n{\"marca\": \"Skechers\", \"modelo\": \"D'Lites\", \"color\": \"Gris\", \"talla\": \"39\", \"precio\": 84.99, \"disponibilidad\": true}\n{\"index\":{}}\n{\"marca\": \"Under Armour\", \"modelo\": \"UA HOVR™ Machina\", \"color\": \"Amarillo\", \"talla\": \"42\", \"precio\": 149.99, \"disponibilidad\": true}\n{\"index\":{}}\n{\"marca\": \"Salomon\", \"modelo\": \"Speedcross\", \"color\": \"Verde\", \"talla\": \"40\", \"precio\": 129.99, \"disponibilidad\": false}\n{\"index\":{}}\n{\"marca\": \"Brooks\", \"modelo\": \"Glycerin\", \"color\": \"Negro\", \"talla\": \"38\", \"precio\": 159.99, \"disponibilidad\": true}\n{\"index\":{}}\n{\"marca\": \"Mizuno\", \"modelo\": \"Wave Rider\", \"color\": \"Azul\", \"talla\": \"41\", \"precio\": 119.99, \"disponibilidad\": false}\n{\"index\":{}}\n{\"marca\": \"Merrell\", \"modelo\": \"Moab\", \"color\": \"Gris\", \"talla\": \"42\", \"precio\": 109.99, \"disponibilidad\": true}\n{\"index\":{}}\n{\"marca\": \"Keen\", \"modelo\": \"Newport\", \"color\": \"Marrón\", \"talla\": \"43\", \"precio\": 119.99, \"disponibilidad\": false}\n{\"index\":{}}\n{\"marca\": \"Columbia\", \"modelo\": \"Redmond\", \"color\": \"Rojo\", \"talla\": \"44\", \"precio\": 89.99, \"disponibilidad\": true}\n{\"index\":{}}\n{\"marca\": \"Timberland\", \"modelo\": \"6-Inch Premium\", \"color\": \"Beige\", \"talla\": \"45\", \"precio\": 199.99, \"disponibilidad\": false}\n{\"index\":{}}\n{\"marca\": \"Dr. Martens\", \"modelo\": \"1460\", \"color\": \"Negro\", \"talla\": \"46\", \"precio\": 169.99, \"disponibilidad\": true}\n{\"index\":{}}\n{\"marca\": \"Birkenstock\", \"modelo\": \"Arizona\", \"color\": \"Blanco\", \"talla\": \"47\", \"precio\": 99.99, \"disponibilidad\": false}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/deportivos/_bulk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"deportivos",
+						"_bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar un elemento (id 1)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"marca\": \"Nike\",\n  \"modelo\": \"Air Max 270\",\n  \"color\": \"Negro\",\n  \"talla\": \"42\",\n  \"precio\": 129.99,\n  \"disponibilidad\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/deportivos/_doc/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"deportivos",
+						"_doc",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar una entrada (id 1)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"marca\": \"Nuevo Nike\",\n    \"modelo\": \"Nuevo Air Max 270\",\n    \"color\": \"Nuevo Negro\",\n    \"talla\": \"Nuevo 42\",\n    \"precio\": 1029.99,\n    \"disponibilidad\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/deportivos/_doc/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"deportivos",
+						"_doc",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar una entrada (id 1)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/deportivos/_doc/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"deportivos",
+						"_doc",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar una entrada que no existe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/deportivos/_doc/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"deportivos",
+						"_doc",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
