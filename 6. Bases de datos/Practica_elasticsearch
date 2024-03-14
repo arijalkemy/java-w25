@@ -1,0 +1,50 @@
+#Forma de ver los indices creados
+get _cat/indices
+
+#Crear un indice con los campos que se precisan
+put sports_sneaker
+{
+  "mappings":{
+    "properties":{
+      "brand":{
+        "type":"text"
+      },
+      "model":{
+        "type":"text"
+      },
+      "price":{
+        "type":"double"
+      },
+      "size":{
+        "type":"double"
+      }
+    }
+  }
+}
+
+#Postear un elemento al indice
+post sports_sneaker/_doc
+{
+  "brand":"Nike",
+  "model":"Air",
+  "price": 120,
+  "size": 42
+}
+
+#Postear mas de un elemento al indice en una sola consulta
+POST sports_sneaker/_bulk
+{ "index":{ "_index": "sports_sneaker"} }
+{"brand":"Topper","model":"Aire","price": 60,"size": 40}
+{ "index":{ "_index": "sports_sneaker"} }
+{"brand":"Adidas","model":"Alitas","price": 500,"size": 44}
+{ "index":{ "_index": "sports_sneaker"} }
+{"brand":"Puma",  "model":"Extremo",  "price": 200,  "size": 41}
+
+#Obtener los valores ingresados en el indice
+get sports_sneaker/_search
+
+#Borrar un elemento del indice. Colocar el 'id' del elemento al final
+DELETE sports_sneaker/_doc/JICSGo4B00HW8ICk-Yjp
+
+#Borrar el indice
+delete sports_sneaker
