@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "8815cb48-bb79-427a-bdef-347ac2352012",
+		"name": "ZapatillasDeportivas ElasticSearch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33066080"
+	},
+	"item": [
+		{
+			"name": "CrearIndice",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mappings\": {\n        \"properties\": {\n            \"nro\": {\n                \"type\": \"integer\"\n            },\n            \"modelo\": {\n                \"type\": \"keyword\"\n            },\n            \"marca\": {\n                \"type\": \"keyword\"\n            },\n            \"precio\": {\n                \"type\": \"double\"\n            },\n            \"talle\": {\n                \"type\": \"double\"\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9200/zapatillas_deportivas"
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarIndices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9200/_cat/indices"
+			},
+			"response": []
+		},
+		{
+			"name": "CrearRegistro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nro\":1,\n    \"modelo\":\"Airmax 98\",\n    \"marca\":\"Nike\",\n    \"precio\":200000,\n    \"talle\":42.5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9200/zapatillas_deportivas/_doc"
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarRegistros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9200/zapatillas_deportivas/_search"
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarRegistro",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9200/zapatillas_deportivas/_doc/jFHiPY4B63IJxQTAKbVK"
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarRegistro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"marca\":\"Adidas\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9200/zapatillas_deportivas/_doc/jFHiPY4B63IJxQTAKbVK"
+			},
+			"response": []
+		},
+		{
+			"name": "BorrrarRegistro",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:9200/zapatillas_deportivas/_doc/ilHPPY4B63IJxQTAl7UB"
+			},
+			"response": []
+		},
+		{
+			"name": "BorrarIndice",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
