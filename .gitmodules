@@ -16,3 +16,6 @@
 [submodule "7. Implementacion de bases de datos/obrasliterarias"]
 	path = 7. Implementacion de bases de datos/obrasliterarias
 	url = https://github.com/samuelvillegasm/obrasliterarias.git
+[submodule "7. Implementacion de bases de datos/showroom"]
+	path = 7. Implementacion de bases de datos/showroom
+	url = https://github.com/samuelvillegasm/showroom.git
