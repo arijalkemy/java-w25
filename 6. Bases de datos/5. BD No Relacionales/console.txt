@@ -1,0 +1,106 @@
+GET /clientes/_search
+{
+  "query": {
+    "match": {
+      "pais": "IT"
+    }
+  }
+}
+
+POST /clientes/_doc
+{
+  "localidad": "Buenos Aires",
+  "numero": "10",
+  "nombre": "Mario",
+  "apellido": "González",
+  "pais": "IT"
+}
+
+GET /clientes/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+GET /clientes/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "from": 750,   // Empezar desde el primer resultado
+  "size": 10   // Recuperar 10 resultados
+}
+
+POST /clientes/_delete_by_query
+{
+  "query": {
+    "term": {
+      "pais.keyword": "IT"
+    }
+  }
+}
+
+#################################################################################################
+
+PUT /zapatillas-deportivas
+
+POST /zapatillas-deportivas/_doc
+{
+  "marca": "Nike",
+  "modelo": "Pegasus",
+  "talle": 39,
+  "precio": 150.5,
+  "origen": "Taiwan"
+}
+
+GET /zapatillas-deportivas/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "size": 100
+}
+
+POST /zapatillas-deportivas/_bulk
+{"index":{}}
+{"marca": "Nike", "modelo": "Air Max 90", "talle": 42, "precio": 150.0, "origen": "Estados Unidos"}
+{"index":{}}
+{"marca": "Puma", "modelo": "RS-X", "talle": 40, "precio": 120.0, "origen": "Alemania"}
+{"index":{}}
+{"marca": "Adidas", "modelo": "Superstar", "talle": 41, "precio": 110.0, "origen": "Alemania"}
+{"index":{}}
+{"marca": "Reebok", "modelo": "Classic Leather", "talle": 43, "precio": 100.0, "origen": "Reino Unido"}
+{"index":{}}
+{"marca": "Nike", "modelo": "Air Force 1", "talle": 44, "precio": 160.0, "origen": "Estados Unidos"}
+{"index":{}}
+{"marca": "Puma", "modelo": "Suede Classic", "talle": 42, "precio": 90.0, "origen": "Alemania"}
+{"index":{}}
+{"marca": "Adidas", "modelo": "Stan Smith", "talle": 39, "precio": 120.0, "origen": "Alemania"}
+{"index":{}}
+{"marca": "Reebok", "modelo": "Club C", "talle": 41, "precio": 95.0, "origen": "Reino Unido"}
+{"index":{}}
+{"marca": "Nike", "modelo": "Air Jordan 1", "talle": 43, "precio": 170.0, "origen": "Estados Unidos"}
+{"index":{}}
+{"marca": "Puma", "modelo": "Clyde", "talle": 40, "precio": 85.0, "origen": "Alemania"}
+{"index":{}}
+{"marca": "Adidas", "modelo": "NMD R1", "talle": 42, "precio": 130.0, "origen": "Alemania"}
+{"index":{}}
+{"marca": "Reebok", "modelo": "Nano X", "talle": 45, "precio": 110.0, "origen": "Reino Unido"}
+{"index":{}}
+{"marca": "Nike", "modelo": "Roshe One", "talle": 44, "precio": 100.0, "origen": "Estados Unidos"}
+{"index":{}}
+{"marca": "Puma", "modelo": "Future Rider", "talle": 41, "precio": 95.0, "origen": "Alemania"}
+{"index":{}}
+{"marca": "Adidas", "modelo": "Ultra Boost", "talle": 40, "precio": 160.0, "origen": "Alemania"}
+{"index":{}}
+{"marca": "Reebok", "modelo": "Workout Plus", "talle": 42, "precio": 90.0, "origen": "Reino Unido"}
+{"index":{}}
+{"marca": "Nike", "modelo": "React Infinity Run", "talle": 43, "precio": 180.0, "origen": "Estados Unidos"}
+{"index":{}}
+{"marca": "Puma", "modelo": "King", "talle": 45, "precio": 100.0, "origen": "Alemania"}
+{"index":{}}
+{"marca": "Adidas", "modelo": "Yeezy Boost 350", "talle": 41, "precio": 220.0, "origen": "Alemania"}
+
+
+DELETE /zapatillas-deportivas/_doc/BB2TGo4B0Lz8NTEjX9o7

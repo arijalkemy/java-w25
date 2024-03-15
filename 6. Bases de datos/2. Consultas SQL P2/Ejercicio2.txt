@@ -1,0 +1,9 @@
+
+a. ¿Cuál es la primary key para la tabla de clientes? Justificar respuesta
+La primary key de la tabla clientes es client_id, no elegimos dni, ya que hay casos en que puede repetirse, entonces creamos client_id, que es una columna autoincremental.
+
+b. ¿Cuál es la primary key para la tabla de planes de internet? Justificar respuesta.
+La primary key de la tabla planes de internet es internet_id, igualmente que hicimos para la tabla clientes, creamos este id autoincremental.
+
+c. ¿Cómo serían las relaciones entre tablas? ¿En qué tabla debería haber foreign key? ¿A qué campo de qué tabla hace referencia dicha foreign key? Justificar respuesta.
+Creamos una tabla intermedia, para romper la relación muchos a muchos, llamada internet_cliente, que contiene como foreing key client_id e internet_id. De esta forma relacionamos la tabla clientes con planes de internet.
