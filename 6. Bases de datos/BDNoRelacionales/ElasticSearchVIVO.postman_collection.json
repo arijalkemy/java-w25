@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "3f6fc79b-3d14-483c-ad46-efbf033683a0",
+		"name": "ElasticSearchVIVO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33060906"
+	},
+	"item": [
+		{
+			"name": "CreateIndex",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mappings\":{\n        \"properties\":{\n            \"brand\":{\n                \"type\": \"text\"\n            },\n            \"model\":{\n                \"type\": \"text\"\n            },\n            \"size\":{\n                \"type\": \"double\"\n            },\n            \"price\":{\n                \"type\": \"double\"\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatos_deportivos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatos_deportivos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create20",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"Adidas\",\"model\":\"Aire 2023\",\"size\":  43,\"price\": 450}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"Adidas\",\"model\":\"Aire 2023\",\"size\":  23,\"price\": 40}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"Adidas\",\"model\":\"Aire 2019\",\"size\":  43,\"price\": 60}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"Adidas\",\"model\":\"Samba\",\"size\":  43,\"price\": 100}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"Adidas\",\"model\":\"VL court 3\",\"size\":  43,\"price\": 132}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"nike\",\"model\":\"Dunk\",\"size\":  43,\"price\": 100}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"nike\",\"model\":\"Dunk\",\"size\":  43,\"price\": 120}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"nike\",\"model\":\"Dunk\",\"size\":  43,\"price\": 300}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"nike\",\"model\":\"Dunk\",\"size\":  43,\"price\": 400}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"nike\",\"model\":\"Dunk\",\"size\":  43,\"price\": 40}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"nike\",\"model\":\"witness\",\"size\":  43,\"price\": 430}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"nike\",\"model\":\"witness\",\"size\":  43,\"price\": 240}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"nike\",\"model\":\"witness\",\"size\":  43,\"price\": 410}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"nike\",\"model\":\"Aire\",\"size\":  43,\"price\": 4}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"nike\",\"model\":\"Aire\",\"size\":  43,\"price\": 30}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"puma\",\"model\":\"Aire\",\"size\":  43,\"price\": 60}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"puma\",\"model\":\"Aire\",\"size\":  43,\"price\": 10}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"puma\",\"model\":\"Aire\",\"size\":  43,\"price\": 20}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"puma\",\"model\":\"Aire\",\"size\":  43,\"price\": 40}\n{\"index\":{ \"_index\": \"deportive_shoes\"} }\n{\"brand\":\"puma\",\"model\":\"Aire\",\"size\":  43,\"price\": 40}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/deportive_shoes/_bulk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"deportive_shoes",
+						"_bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchModel",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\":{\n        \"match\":{\n            \"model\":\"samba\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatos_deportivos/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatos_deportivos",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

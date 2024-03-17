@@ -27,7 +27,6 @@ public class IntegrationTestUserController {
 
     @Test
     void getFollowersCountOk() throws Exception{
-        //simulo que se hace una peticion de seguimiento previo a la prueba
         mockMvc.perform(post("/users/{userId}/follow/{userIdToFollow}", 2,21));
 
         mockMvc.perform(get("/users/{userId}/followers/count", 21))
@@ -103,7 +102,6 @@ public class IntegrationTestUserController {
 
     @Test
     void followAlreadyFollow() throws Exception{
-        //Simulo que el usuario ya sigue al vendedor
         mockMvc.perform(post("/users/{userId}/follow/{userIdToFollow}", 1,21));
 
         mockMvc.perform(post("/users/{userId}/follow/{userIdToFollow}", 1,21))
