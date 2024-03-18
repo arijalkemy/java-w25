@@ -11,5 +11,5 @@ public interface IJoyaService {
     GenericResponseDto create(JoyaDTO joya);
     List<Joya> findAll();
     GenericResponseDto delete(Long id);
-    GenericResponseDto update(Joya joya);
+    GenericResponseDto update(JoyaDTO joyaDTO, Long id);
 }

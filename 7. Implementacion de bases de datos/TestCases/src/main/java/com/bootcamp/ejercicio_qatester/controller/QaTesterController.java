@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter;
 @RequestMapping("/api/testcases")
 public class QaTesterController {
 
-    private ITestCaseService testCaseService;
+    private final ITestCaseService testCaseService;
 
     public QaTesterController(TestCaseServiceImpl testCaseService) {
         this.testCaseService = testCaseService;

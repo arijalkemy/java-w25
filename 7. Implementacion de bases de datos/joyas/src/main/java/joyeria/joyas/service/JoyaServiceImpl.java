@@ -5,10 +5,11 @@ import joyeria.joyas.DTO.Response.JoyaDTO;
 import joyeria.joyas.entity.Joya;
 import joyeria.joyas.exception.NotFoundException;
 import joyeria.joyas.repository.IJoyaRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class JoyaServiceImpl implements IJoyaService{
 
     private final IJoyaRepository repo;
@@ -19,41 +20,55 @@ public class JoyaServiceImpl implements IJoyaService{
 
     @Override
     public GenericResponseDto create(JoyaDTO joya) {
-        Joya joyaGuardada = repo.save(joya);
-
+        Joya nuevaJoya = joyaTranslator(joya);
+        Joya joyaGuardada = repo.save(nuevaJoya);
         return new GenericResponseDto("Joya nueva creada exitosamente con el id " + joyaGuardada.getId());
     }
 
 
     @Override
     public List<Joya> findAll() {
-        return repo.findAll();
+        return repo.findAll().stream().filter(joya -> joya.getVentaONo().equals(true)).toList();
     }
 
     @Override
     public GenericResponseDto delete(Long id) {
-        Optional<Joya> joyaBuscada = repo.findAll().stream().filter(joya -> joya.getId().equals(id)).findFirst();
+        Optional<Joya> joyaBuscada = repo.findById(id);
         if(joyaBuscada.isEmpty()){
             throw new NotFoundException("No se encontró esa joya");
         }
         joyaBuscada.get().setVentaONo(false);
-
-        return new GenericResponseDto("Joya con id "+id+"eliminada dada de baja con éxito.");
+        repo.save(joyaBuscada.get());
+        return new GenericResponseDto("Joya con id "+id+" dada de baja con éxito.");
     }
 
     @Override
-    public GenericResponseDto update(Joya joyaUpdate) {
-        Joya previousJoya = (Joya) repo.findAll().stream().filter(joya -> joya.getId().equals(joyaUpdate.getId()));
-        if(repo.findAll().stream().noneMatch(joya -> joya.getId().equals(joyaUpdate.getId()))){
+    public GenericResponseDto update(JoyaDTO joyaUpdate, Long id) {
+        Optional<Joya> optionalJoyaExistente = repo.findById(id);
+        if (optionalJoyaExistente.isEmpty()) {
             throw new NotFoundException("No se encontró esa joya");
         }
-        previousJoya.setPeso(joyaUpdate.getPeso());
-        previousJoya.setPosee_piedra(joyaUpdate.getPosee_piedra());
-        previousJoya.setNombre(joyaUpdate.getNombre());
-        previousJoya.setParticularidad(joyaUpdate.getParticularidad());
-        previousJoya.setMaterial(joyaUpdate.getMaterial());
-        repo.save(previousJoya);
+        Joya joyaExistente = optionalJoyaExistente.get();
+        joyaExistente.setNombre(joyaUpdate.getNombre());
+        joyaExistente.setMaterial(joyaUpdate.getMaterial());
+        joyaExistente.setPeso(joyaUpdate.getPeso());
+        joyaExistente.setParticularidad(joyaUpdate.getParticularidad());
+        joyaExistente.setPosee_piedra(joyaUpdate.getPosee_piedra());
+        repo.save(joyaExistente);
 
-        return new GenericResponseDto("Joya actualizada exitosamente con datos: "+ previousJoya);
+        return new GenericResponseDto("Joya actualizada exitosamente con datos: " + joyaExistente);
+    }
+
+
+    public Joya joyaTranslator(JoyaDTO joyaDTO){
+        Joya joya = new Joya();
+        joya.setNombre(joyaDTO.getNombre());
+        joya.setMaterial(joyaDTO.getMaterial());
+        joya.setPeso(joyaDTO.getPeso());
+        joya.setParticularidad(joyaDTO.getParticularidad());
+        joya.setPosee_piedra(joyaDTO.getPosee_piedra());
+        joya.setVentaONo(true);
+
+        return joya;
     }
 }
