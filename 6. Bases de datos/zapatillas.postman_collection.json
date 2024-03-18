@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "74e4c99d-7de4-4c68-972c-d55589fe2ecc",
+		"name": "NoSql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear tabla o index",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mappings\":{\n        \"properties\":{\n            \"color\":{\n                \"type\" : \"text\"\n            },\n            \"precio\":{\n                \"type\" : \"text\"\n            },\n            \"marca\":{\n                \"type\" : \"text\"\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"index\": { } }\n{ \"color\": \"Azul\", \"precio\": \"1000\", \"marca\": \"Nike\"}\n{ \"index\": { } }\n{ \"color\": \"Rojo\", \"precio\": \"2000\", \"marca\": \"Nike\"}\n{ \"index\": { } }\n{ \"color\": \"Amarillo\", \"precio\": \"3000\", \"marca\": \"Nike\"}\n{ \"index\": { } }\n{ \"color\": \"Rojo\", \"precio\": \"4000\", \"marca\": \"Nike\"}\n{ \"index\": { } }\n{ \"color\": \"Azul\", \"precio\": \"5000\", \"marca\": \"Nike\"}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_bulk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/zapatillas/_search?size=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"zapatillas",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "2"
+						},
+						{
+							"key": "sort",
+							"value": "color,asc",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
