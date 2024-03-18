@@ -1,0 +1,482 @@
+{
+	"info": {
+		"_postman_id": "33000034-57a6-4c12-bd9f-baa50d92f8a1",
+		"name": "ObrasLiterarias",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32839445"
+	},
+	"item": [
+		{
+			"name": "Crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Cien años de soledad\",\n    \"autor\": \"Gabriel García Márquez\",\n    \"cantidadPaginas\": 432,\n    \"editorial\": \"Editorial Sudamericana\",\n    \"anio\": 1967\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/obras",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"obras"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Cien años de soledad\",\n    \"autor\": \"Gabriel García Márquez\",\n    \"cantidadPaginas\": 432,\n    \"editorial\": \"Editorial Sudamericana\",\n    \"anio\": 1967\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/obras",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"obras"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 12 Mar 2024 20:52:00 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nombre\": \"Cien años de soledad\",\n    \"autor\": \"Gabriel García Márquez\",\n    \"cantidadPaginas\": 432,\n    \"editorial\": \"Editorial Sudamericana\",\n    \"anio\": 1967\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Rayuela\",\n    \"autor\": \"Julio Cortázar\",\n    \"cantidadPaginas\": 656,\n    \"editorial\": \"Editorial Sudamericana\",\n    \"anio\": 1963\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/obras",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"obras"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 12 Mar 2024 20:53:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nombre\": \"Rayuela\",\n    \"autor\": \"Julio Cortázar\",\n    \"cantidadPaginas\": 656,\n    \"editorial\": \"Editorial Sudamericana\",\n    \"anio\": 1963\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"La casa de los espíritus\",\n    \"autor\": \"Isabel Allende\",\n    \"cantidadPaginas\": 400,\n    \"editorial\": \"Editorial Sudamericana\",\n    \"anio\": 1982\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/obras",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"obras"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 12 Mar 2024 20:54:10 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nombre\": \"La casa de los espíritus\",\n    \"autor\": \"Isabel Allende\",\n    \"cantidadPaginas\": 400,\n    \"editorial\": \"Editorial Sudamericana\",\n    \"anio\": 1982\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Ficciones\",\n    \"autor\": \"Jorge Luis Borges\",\n    \"cantidadPaginas\": 224,\n    \"editorial\": \"Editorial Sur\",\n    \"anio\": 1944\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/obras",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"obras"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 12 Mar 2024 20:54:22 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nombre\": \"Ficciones\",\n    \"autor\": \"Jorge Luis Borges\",\n    \"cantidadPaginas\": 224,\n    \"editorial\": \"Editorial Sur\",\n    \"anio\": 1944\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Veinte poemas de amor y una canción desesperada\",\n    \"autor\": \"Pablo Neruda\",\n    \"cantidadPaginas\": 88,\n    \"editorial\": \"Editorial Nascimento\",\n    \"anio\": 1924\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/obras",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"obras"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 12 Mar 2024 20:54:45 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nombre\": \"Veinte poemas de amor y una canción desesperada\",\n    \"autor\": \"Pablo Neruda\",\n    \"cantidadPaginas\": 88,\n    \"editorial\": \"Editorial Nascimento\",\n    \"anio\": 1924\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"La ciudad y los perros\",\n    \"autor\": \"Mario Vargas Llosa\",\n    \"cantidadPaginas\": 384,\n    \"editorial\": \"Seix Barral\",\n    \"anio\": 1963\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/obras",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"obras"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 12 Mar 2024 20:54:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nombre\": \"La ciudad y los perros\",\n    \"autor\": \"Mario Vargas Llosa\",\n    \"cantidadPaginas\": 384,\n    \"editorial\": \"Seix Barral\",\n    \"anio\": 1963\n}"
+				}
+			]
+		},
+		{
+			"name": "Traer todos",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetFecha",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/obras?beforeYear=1944",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"obras"
+							],
+							"query": [
+								{
+									"key": "beforeYear",
+									"value": "1944"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 12 Mar 2024 20:56:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"nombre\": \"Ficciones\",\n        \"autor\": \"Jorge Luis Borges\",\n        \"cantidadPaginas\": 224,\n        \"editorial\": \"Editorial Sur\",\n        \"anio\": 1944\n    },\n    {\n        \"nombre\": \"Veinte poemas de amor y una canción desesperada\",\n        \"autor\": \"Pablo Neruda\",\n        \"cantidadPaginas\": 88,\n        \"editorial\": \"Editorial Nascimento\",\n        \"anio\": 1924\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GetByName",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/obras?keyword=años",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"obras"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "años"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 12 Mar 2024 20:56:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"nombre\": \"Cien años de soledad\",\n        \"autor\": \"Gabriel García Márquez\",\n        \"cantidadPaginas\": 432,\n        \"editorial\": \"Editorial Sudamericana\",\n        \"anio\": 1967\n    }\n]"
+				}
+			]
+		}
+	]
+}
