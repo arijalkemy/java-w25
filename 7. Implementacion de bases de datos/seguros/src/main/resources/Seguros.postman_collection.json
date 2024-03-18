@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "69da5b30-da81-44ee-aca1-69fd61f3553b",
+		"name": "Seguros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32840919"
+	},
+	"item": [
+		{
+			"name": "Insertar vehiculos",
+			"item": [
+				{
+					"name": "Insertar vehiculo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patente\": \"ABC123\",\n    \"marca\": \"Toyota\",\n    \"modelo\": \"Corolla\",\n    \"anio_fabricacion\": 2018,\n    \"cantidad_ruedas\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seguros/auto/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seguros",
+								"auto",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insertar vehiculo Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patente\": \"DEF456\",\n    \"marca\": \"Ford\",\n    \"modelo\": \"Fiesta\",\n    \"anio_fabricacion\": 2016,\n    \"cantidad_ruedas\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seguros/auto/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seguros",
+								"auto",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insertar vehiculo Copy 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patente\": \"GHI789\",\n    \"marca\": \"Honda\",\n    \"modelo\": \"Civic\",\n    \"anio_fabricacion\": 2019,\n    \"cantidad_ruedas\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seguros/auto/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seguros",
+								"auto",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insertar vehiculo Copy 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patente\": \"JKL012\",\n    \"marca\": \"Chevrolet\",\n    \"modelo\": \"Cruze\",\n    \"anio_fabricacion\": 2017,\n    \"cantidad_ruedas\": 4\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seguros/auto/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seguros",
+								"auto",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insertar vehiculo Copy 4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patente\": \"MNO345\",\n    \"marca\": \"Volkswagen\",\n    \"modelo\": \"Golf\",\n    \"anio_fabricacion\": 2020,\n    \"cantidad_ruedas\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seguros/auto/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seguros",
+								"auto",
+								"new"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Insertar Siniestros",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha_de_siniestro\": \"2023-05-15\",\n    \"perdida_economica\": 5000.0,\n    \"vehiculo_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seguros/siniestro/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seguros",
+								"siniestro",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha_de_siniestro\": \"2022-11-20\",\n    \"perdida_economica\": 7000.0,\n    \"vehiculo_id\": 1\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seguros/siniestro/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seguros",
+								"siniestro",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha_de_siniestro\": \"2024-01-10\",\n    \"perdida_economica\": 3000.0,\n    \"vehiculo_id\": 3\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seguros/siniestro/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seguros",
+								"siniestro",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha_de_siniestro\": \"2023-08-28\",\n    \"perdida_economica\": 10000.0,\n    \"vehiculo_id\": 2\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seguros/siniestro/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seguros",
+								"siniestro",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy 4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha_de_siniestro\": \"2022-07-07\",\n    \"perdida_economica\": 20000.0,\n    \"vehiculo_id\": 5\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seguros/siniestro/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seguros",
+								"siniestro",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy 5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha_de_siniestro\": \"2024-02-14\",\n    \"perdida_economica\": 8000.0,\n    \"vehiculo_id\": 3\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seguros/siniestro/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seguros",
+								"siniestro",
+								"new"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Listar vehiculos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/seguros/auto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"seguros",
+						"auto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar siniestros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/seguros/siniestro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"seguros",
+						"siniestro"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
