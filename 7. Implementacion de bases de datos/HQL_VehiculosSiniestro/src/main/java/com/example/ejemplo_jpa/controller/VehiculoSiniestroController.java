@@ -16,7 +16,6 @@ import java.util.Objects;
 @RequestMapping("/")
 public class VehiculoSiniestroController {
     private VehiculoSiniestroService vehiculoSiniestroService;
-
     public VehiculoSiniestroController(VehiculoSiniestroService vehiculoSiniestroService) {
         this.vehiculoSiniestroService = vehiculoSiniestroService;
     }
@@ -43,12 +42,12 @@ public class VehiculoSiniestroController {
         return vehiculoSiniestroService.getAllVehiculosPatentesYMarcasPorAnio(); //o el nombre que le quede
     }
 
-    /*@GetMapping("/get/vehiculos/ruedas/anio")
+    @GetMapping("/get/vehiculos/ruedas/anio")
     public List<String> findVehiculosPlatesPorRuedasYAnioActual() {
         return vehiculoSiniestroService.getAllVehiculosPlatesPorRuedasYAnio(); //o el nombre que le quede
-    }*/
+    }
 
-    /*
+
     @GetMapping("/get/vehiculos/siniestro")
     public List<Vehiculo> findVehiculos() {
         return vehiculoSiniestroService.getAllVehiculosPorSiniestro(); //o el nombre que le quede
@@ -57,6 +56,6 @@ public class VehiculoSiniestroController {
     @GetMapping("/get/vehiculos/siniestro/perdida")
     public List<Vehiculo> findVehiculos() {
         return vehiculoSiniestroService.getAllVehiculosPorPerdida(); //o el nombre que le quede
-    }*/
+    }
 
 }

@@ -1,23 +1,21 @@
 package com.example.ejemplo_jpa.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
+import lombok.Data;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@AllArgsConstructor
-@Getter
-@Setter
+@Data
 @Entity
-@Table(name = "siniestro")
 public class Siniestro {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDate fechaSiniestro;
     private Double perdidaEconomica;
     @ManyToOne
     @JoinColumn(name = "vehiculo_id", referencedColumnName = "id")
     private Vehiculo vehiculo;
+
+    public Siniestro(LocalDate fechaSiniestro, Double perdidaEconomica, Vehiculo vehiculo) {
+    }
 }

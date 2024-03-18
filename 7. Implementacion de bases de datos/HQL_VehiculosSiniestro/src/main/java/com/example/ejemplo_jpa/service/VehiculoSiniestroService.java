@@ -8,6 +8,7 @@ import com.example.ejemplo_jpa.model.Vehiculo;
 import com.example.ejemplo_jpa.repository.ISiniestroRepository;
 import com.example.ejemplo_jpa.repository.IVehiculoRepository;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -16,6 +17,7 @@ import java.util.List;
 @Service
 public class VehiculoSiniestroService {
 
+    @Autowired
     IVehiculoRepository vehiculoRepository;
     ModelMapper mapper = new ModelMapper();
 
@@ -51,7 +53,6 @@ public class VehiculoSiniestroService {
         Vehiculo vehiculo = vehiculoRepository.findById(siniestroDTO.getIdVehiculo()).get();
 
         Siniestro siniestro = new Siniestro(
-                null,
                 siniestroDTO.getFechaSiniestro(),
                 siniestroDTO.getPerdidaEconomica(),
                 vehiculo

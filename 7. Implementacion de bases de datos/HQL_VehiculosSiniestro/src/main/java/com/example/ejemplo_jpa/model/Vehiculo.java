@@ -1,6 +1,8 @@
 package com.example.ejemplo_jpa.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -9,8 +11,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Setter @Getter
+@AllArgsConstructor @NoArgsConstructor
 @Entity
-@Table(name = "vehiculo")
 public class Vehiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,5 +25,5 @@ public class Vehiculo {
     @Column(name = "cantidad_de_ruedas")
     private Integer cantidadDeRuedas;
     @OneToMany(mappedBy = "vehiculo", cascade = CascadeType.PERSIST)
-    Set<Siniestro> siniestros = new HashSet<>();
+    Set<Siniestro> siniestros;
 }
