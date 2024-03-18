@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "22b39986-dfb0-49db-b348-68f2a307f12e",
+		"name": "ObrasLiterarias",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32840919"
+	},
+	"item": [
+		{
+			"name": "CREATE-Bblioteca",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mappings\":{\n        \"properties\":{\n            \"nombre\":{\n                \"type\":\"text\"\n            },\n            \"autor\":{\n                \"type\":\"text\"\n            },\n            \"cantPaginas\":{\n                \"type\":\"integer\"\n            },\n            \"editorial\":{\n                \"type\":\"text\"\n            },\n            \"anio\":{\n                \"type\":\"integer\"\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/biblioteca",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"biblioteca"
+					],
+					"query": [
+						{
+							"key": "mapping",
+							"value": "[object Object]",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-Biblioteca",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/biblioteca",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"biblioteca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk-Obras",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"index\": { } }\n{\"nombre\":\"Don quijote de la manacha\",\"autor\":\"Cervantes\",\"cantPaginas\":500,\"editorial\":\"imprenta\",\"anio\":1492}\n{ \"index\": { } }\n{\"nombre\":\"Elantris\",\"autor\":\"Brandon sanderson\",\"cantPaginas\":600,\"editorial\":\"Nova\",\"anio\":2006}\n{ \"index\": { } }\n{\"nombre\":\"Cronica de una muerte anunciada\",\"autor\":\"Gabriel Garcia Marquez\",\"cantPaginas\":200,\"editorial\":\"Sello rojo\",\"anio\":1995}\n{ \"index\": { } }\n{\"nombre\":\"Cien años de soledad\",\"autor\":\"Gabriel Garcia Marquez\",\"cantPaginas\":1500,\"editorial\":\"Santillana\",\"anio\":1992}\n{ \"index\": { } }\n{\"nombre\":\"La torre oscura\",\"autor\":\"Stephen King\",\"cantPaginas\":300,\"editorial\":\"De bolsillo\",\"anio\":1989}\n{ \"index\": { } }\n{\"nombre\":\"El mesias de Dune\",\"autor\":\"Frank Herbert\",\"cantPaginas\":500,\"editorial\":\"Nova\",\"anio\":1975}\n{ \"index\": { } }\n{\"nombre\":\"Dune\",\"autor\":\"Frank Herbert\",\"cantPaginas\":650,\"editorial\":\"Nova\",\"anio\":1965}\n{ \"index\": { } }\n{\"nombre\":\"Clean code\",\"autor\":\"Robert C. Martin\",\"cantPaginas\":500,\"editorial\":\"Santillana\",\"anio\":2000}\n{ \"index\": { } }\n{\"nombre\":\"Patrones de diseño\",\"autor\":\"GOF\",\"cantPaginas\":500,\"editorial\":\"Santillana\",\"anio\":1995}\n{ \"index\": { } }\n{\"nombre\":\"Cancion de Fuego y Hielo I\",\"autor\":\"RR Martin\",\"cantPaginas\":600,\"editorial\":\"De bolsillo\",\"anio\":1985}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/obras/_bulk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"obras",
+						"_bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/obras",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"obras"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Autor - Cervantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/obras/autor/Cervantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"obras",
+						"autor",
+						"Cervantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Title Contains \"de\"",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/obras/titulo/like/\"de\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"obras",
+						"titulo",
+						"like",
+						"\"de\""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Top 5 Obras con más páginas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/obras/cantPaginas/top5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"obras",
+						"cantPaginas",
+						"top5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Obras published before year",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/obras/year/before/1965",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"obras",
+						"year",
+						"before",
+						"1965"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Obras from editorial",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/obras/editorial/santillana",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"obras",
+						"editorial",
+						"santillana"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
