@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "caad6b16-3038-4977-b2b0-4a9ce9cdc62d",
+		"name": "ElasticPractica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32577007"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9200/animals",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mappings\" : {\n        \"properties\":{\n            \"especie\": {\n                \"type\": \"text\"\n            },\n            \"familia\" :{\n                \"type\":\"text\"\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/animals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"animals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9200/animals/_doc",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"especie\": \"perro\",\n    \"familia\": \"mamifero\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/animals/_doc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"animals",
+						"_doc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9200/animals/_search?size=100",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/animals/_search?size=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"animals",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
