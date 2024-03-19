@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ControllerExceptionHandler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bootcamp-demo-java-app</a> &gt; <a href="index.source.html" class="el_package">com.mercadolibre.bootcamp_demo_java_app.config</a> &gt; <span class="el_source">ControllerExceptionHandler.java</span></div><h1>ControllerExceptionHandler.java</h1><pre class="source lang-java linenums">package com.mercadolibre.bootcamp_demo_java_app.config;
+
+import com.mercadolibre.bootcamp_demo_java_app.exceptions.ApiError;
+import com.mercadolibre.bootcamp_demo_java_app.exceptions.ApiException;
+import com.newrelic.api.agent.NewRelic;
+import javax.servlet.http.HttpServletRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.NoHandlerFoundException;
+
+@ControllerAdvice
+<span class="fc" id="L16">public class ControllerExceptionHandler {</span>
+<span class="fc" id="L17">	private static final Logger LOGGER = LoggerFactory.getLogger(ControllerExceptionHandler.class);</span>
+
+	@ExceptionHandler(NoHandlerFoundException.class)
+	public ResponseEntity&lt;ApiError&gt; noHandlerFoundException(HttpServletRequest req, NoHandlerFoundException ex) {
+<span class="nc" id="L21">		ApiError apiError = new ApiError(&quot;route_not_found&quot;, String.format(&quot;Route %s not found&quot;, req.getRequestURI()), HttpStatus.NOT_FOUND.value());</span>
+<span class="nc" id="L22">		return ResponseEntity.status(apiError.getStatus())</span>
+<span class="nc" id="L23">				.body(apiError);</span>
+	}
+
+	@ExceptionHandler(value = { ApiException.class })
+	protected ResponseEntity&lt;ApiError&gt; handleApiException(ApiException e) {
+<span class="fc" id="L28">		Integer statusCode = e.getStatusCode();</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">		boolean expected = HttpStatus.INTERNAL_SERVER_ERROR.value() &gt; statusCode;</span>
+<span class="fc" id="L30">		NewRelic.noticeError(e, expected);</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">		if (expected) {</span>
+<span class="fc" id="L32">			LOGGER.warn(&quot;Internal Api warn. Status Code: &quot; + statusCode, e);</span>
+		} else {
+<span class="fc" id="L34">			LOGGER.error(&quot;Internal Api error. Status Code: &quot; + statusCode, e);</span>
+		}
+
+<span class="fc" id="L37">		ApiError apiError = new ApiError(e.getCode(), e.getDescription(), statusCode);</span>
+<span class="fc" id="L38">		return ResponseEntity.status(apiError.getStatus())</span>
+<span class="fc" id="L39">				.body(apiError);</span>
+	}
+
+	@ExceptionHandler(value = { Exception.class })
+	protected ResponseEntity&lt;ApiError&gt; handleUnknownException(Exception e) {
+<span class="fc" id="L44">		LOGGER.error(&quot;Internal error&quot;, e);</span>
+<span class="fc" id="L45">		NewRelic.noticeError(e);</span>
+
+<span class="fc" id="L47">		ApiError apiError = new ApiError(&quot;internal_error&quot;, &quot;Internal server error&quot;, HttpStatus.INTERNAL_SERVER_ERROR.value());</span>
+<span class="fc" id="L48">		return ResponseEntity.status(apiError.getStatus())</span>
+<span class="fc" id="L49">				.body(apiError);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
