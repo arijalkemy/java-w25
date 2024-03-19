@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ItemsService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bootcamp-demo-java-app</a> &gt; <a href="index.source.html" class="el_package">com.mercadolibre.bootcamp_demo_java_app.services</a> &gt; <span class="el_source">ItemsService.java</span></div><h1>ItemsService.java</h1><pre class="source lang-java linenums">package com.mercadolibre.bootcamp_demo_java_app.services;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mercadolibre.bootcamp_demo_java_app.api.services.ItemsApiService;
+import com.mercadolibre.bootcamp_demo_java_app.dtos.ItemDTO;
+import com.mercadolibre.restclient.exception.ParseException;
+import com.mercadolibre.restclient.exception.RestException;
+
+@Service
+public class ItemsService {
+<span class="fc" id="L15">	private static final Logger log = LoggerFactory.getLogger(ItemsService.class);</span>
+	private ItemsApiService itemsApiService;
+	
+	@Autowired
+<span class="fc" id="L19">	public ItemsService(ItemsApiService itemsApiService) {</span>
+<span class="fc" id="L20">		this.itemsApiService = itemsApiService;</span>
+<span class="fc" id="L21">	}</span>
+	
+	public Double getItemPrice(String itemId) throws ParseException, RestException {
+<span class="fc" id="L24">		ItemDTO itemInfo = itemsApiService.getItemInfo(itemId);</span>
+<span class="pc bpc" id="L25" title="1 of 2 branches missed.">		if (log.isDebugEnabled()) {</span>
+<span class="fc" id="L26">			log.debug(&quot;Item info lookup: {}&quot;,itemInfo);</span>
+		}
+<span class="fc" id="L28">		return itemInfo.getPrice();</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

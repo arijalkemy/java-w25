@@ -1,0 +1,16 @@
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/exceptions/ApiError.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/dtos/CurrencyEnum.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/api/services/RestClientService.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/api/services/ItemsApiService.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/dtos/ItemDTO.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/config/ExecutorConfig.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/config/ControllerExceptionHandler.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/util/ScopeUtils.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/config/SpringConfig.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/Application.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/controller/PingController.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/exceptions/ApiException.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/services/ItemsService.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/exceptions/InternalServerErrorException.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/controller/ItemPriceController.java
+/Users/ipedrosa/Downloads/2._c._origina-etapa-1-fury-lets-practice/src/main/java/com/mercadolibre/bootcamp_demo_java_app/config/SpringDocConfig.java

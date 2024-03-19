@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ExecutorConfig.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bootcamp-demo-java-app</a> &gt; <a href="index.source.html" class="el_package">com.mercadolibre.bootcamp_demo_java_app.config</a> &gt; <span class="el_source">ExecutorConfig.java</span></div><h1>ExecutorConfig.java</h1><pre class="source lang-java linenums">package com.mercadolibre.bootcamp_demo_java_app.config;
+
+import com.mercadolibre.threading.executor.MeliExecutors;
+import java.util.concurrent.ExecutorService;
+import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
+import org.springframework.aop.interceptor.SimpleAsyncUncaughtExceptionHandler;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.AsyncConfigurer;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.SchedulingConfigurer;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
+import org.springframework.scheduling.config.ScheduledTaskRegistrar;
+
+@Configuration
+@EnableAsync
+@EnableScheduling
+<span class="fc" id="L21">public class ExecutorConfig implements AsyncConfigurer, SchedulingConfigurer {</span>
+
+	public static final String ASYNC_EXECUTOR = &quot;asyncExecutor&quot;;
+
+	@Value(&quot;${async.executor.pool-size:16}&quot;)
+	private int asyncPoolSize;
+
+	@Value(&quot;${async.executor.prefix:async-}&quot;)
+	private String asyncPoolPrefix;
+
+	@Value(&quot;${async.executor.await-termination:60}&quot;)
+	private int asyncPoolAwaitTermination;
+
+	@Value(&quot;${scheduler.executor.pool-size:4}&quot;)
+	private int schedulerPoolSize;
+
+	@Value(&quot;${scheduler.executor.prefix:job-scheduler-}&quot;)
+	private String schedulerPrefix;
+
+	@Override
+	@Bean(name = ASYNC_EXECUTOR, destroyMethod = &quot;shutdown&quot;)
+	public ExecutorService getAsyncExecutor() {
+<span class="fc" id="L43">		ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();</span>
+<span class="fc" id="L44">		executor.setThreadNamePrefix(this.asyncPoolPrefix);</span>
+<span class="fc" id="L45">		executor.setCorePoolSize(this.asyncPoolSize);</span>
+<span class="fc" id="L46">		executor.setMaxPoolSize(this.asyncPoolSize);</span>
+<span class="fc" id="L47">		executor.setAwaitTerminationSeconds(this.asyncPoolAwaitTermination);</span>
+<span class="fc" id="L48">		executor.initialize();</span>
+<span class="fc" id="L49">		return MeliExecutors.trace(executor.getThreadPoolExecutor());</span>
+	}
+
+	@Override
+	public AsyncUncaughtExceptionHandler getAsyncUncaughtExceptionHandler() {
+<span class="nc" id="L54">		return new SimpleAsyncUncaughtExceptionHandler();</span>
+	}
+
+	@Override
+	public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
+<span class="fc" id="L59">		ThreadPoolTaskScheduler scheduler = new ThreadPoolTaskScheduler();</span>
+<span class="fc" id="L60">		scheduler.setPoolSize(this.schedulerPoolSize);</span>
+<span class="fc" id="L61">		scheduler.setThreadNamePrefix(this.schedulerPrefix);</span>
+<span class="fc" id="L62">		scheduler.setWaitForTasksToCompleteOnShutdown(true);</span>
+<span class="fc" id="L63">		scheduler.initialize();</span>
+<span class="fc" id="L64">		taskRegistrar.setScheduler(scheduler);</span>
+<span class="fc" id="L65">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
