@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<java-applications>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.mercadolibre.java_applications.Application",
+            "projectName": "java-applications",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

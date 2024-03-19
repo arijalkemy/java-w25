@@ -1,0 +1,11 @@
+# "test" suffix properties file. Scopes name samples: "test", "web-test", "api-test", etc.
+# Overrides application.yml default properties
+Spring:
+  datasource:
+    url: jdbc:mysql://proxysql.master.meliseginf.com:6612/mydb?useSSL=true&serverTimezone=&characterEncoding=UTF-8
+    username: mramosgarcia
+    password: Isabellateamo526.
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: none
