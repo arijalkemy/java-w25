@@ -1,0 +1,11 @@
+com/mercadolibre/bootcamp_demo_java_app/util/JsonReadUtils.class
+com/mercadolibre/bootcamp_demo_java_app/integration/ItemPriceControllerTest.class
+com/mercadolibre/bootcamp_demo_java_app/integration/ItemsApiServiceTest.class
+com/mercadolibre/bootcamp_demo_java_app/integration/ControllerExceptionHandlerTest.class
+com/mercadolibre/bootcamp_demo_java_app/util/MockitoExtension.class
+com/mercadolibre/bootcamp_demo_java_app/integration/ControllerTest.class
+com/mercadolibre/bootcamp_demo_java_app/integration/PingControllerTest.class
+com/mercadolibre/bootcamp_demo_java_app/util/MockItemUtils.class
+com/mercadolibre/bootcamp_demo_java_app/integration/GenerateDoc.class
+com/mercadolibre/bootcamp_demo_java_app/unit/ScopeUtilTest.class
+com/mercadolibre/bootcamp_demo_java_app/integration/IntegrationTest.class

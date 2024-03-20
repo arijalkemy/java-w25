@@ -16,7 +16,7 @@ public class ObraLiterariaDto {
     //id, el nombre, autor, cantidad de páginas, editorial y el año de su primera publicación.
     String nombre;
     String autor;
-    int cantidadDePaginas;
+    Integer cantidadDePaginas;
     String editorial;
-    int anioPrimerPublicacion;
+    Integer anioPrimerPublicacion;
 }

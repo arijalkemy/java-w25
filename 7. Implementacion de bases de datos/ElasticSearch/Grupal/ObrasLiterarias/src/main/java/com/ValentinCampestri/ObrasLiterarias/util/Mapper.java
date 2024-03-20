@@ -11,4 +11,14 @@ public class Mapper {
                 ,obraLiterariaDto.getEditorial()
                 ,obraLiterariaDto.getAnioPrimerPublicacion());
     }
+
+    public static ObraLiterariaDto entityToDto(ObraLiteraria obraLiteraria){
+        return new ObraLiterariaDto(
+                obraLiteraria.getNombre(),
+                obraLiteraria.getAutor(),
+                obraLiteraria.getCantidadDePaginas(),
+                obraLiteraria.getEditorial(),
+                obraLiteraria.getAnioPrimerPublicacion()
+        );
+    }
 }

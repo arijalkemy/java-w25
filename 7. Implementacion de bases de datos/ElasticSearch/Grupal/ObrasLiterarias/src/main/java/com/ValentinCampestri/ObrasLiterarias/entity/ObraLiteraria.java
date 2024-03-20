@@ -8,7 +8,7 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document(indexName = "ObraLiteraria")
+@Document(indexName = "obra_literaria") // Debe ser minuscula sino rompe todo!!
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,11 +19,11 @@ public class ObraLiteraria {
     String id;
     String nombre;
     String autor;
-    int cantidadDePaginas;
+    Integer cantidadDePaginas;
     String editorial;
-    int anioPrimerPublicacion;
+    Integer anioPrimerPublicacion;
 
-    public ObraLiteraria(String nombre, String autor, int cantidadDePaginas, String editorial, int anioPrimerPublicacion) {
+    public ObraLiteraria(String nombre, String autor, Integer cantidadDePaginas, String editorial, Integer anioPrimerPublicacion) {
         this.nombre = nombre;
         this.autor = autor;
         this.cantidadDePaginas = cantidadDePaginas;
