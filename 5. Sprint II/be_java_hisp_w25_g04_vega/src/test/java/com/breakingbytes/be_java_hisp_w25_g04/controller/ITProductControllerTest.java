@@ -38,10 +38,10 @@ public class ITProductControllerTest {
 
     @BeforeEach
     void init(){
-        writer = new ObjectMapper()
-                .configure(SerializationFeature.WRAP_ROOT_VALUE, false)
-                .registerModule(new JavaTimeModule())//Se carga dependencia de tiempo
-                .writer();
+            writer = new ObjectMapper()
+                    .configure(SerializationFeature.WRAP_ROOT_VALUE, false)
+                    .registerModule(new JavaTimeModule())//Se carga dependencia de tiempo
+                    .writer();
     }
 
     @Test
