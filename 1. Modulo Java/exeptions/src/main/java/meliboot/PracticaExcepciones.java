@@ -11,7 +11,6 @@ public class PracticaExcepciones {
             throw new IllegalArgumentException("No se puede dividir por cero");
         }finally {
             System.out.println("Programa finalizado");
-
         }
     }
 
