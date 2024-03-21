@@ -1,3 +1,9 @@
+# Diagrama de clases
+![fury_III_practica_clases drawio](https://github.com/arijalkemy/java-w25/assets/37525046/9e53304f-1002-44a5-848f-10e8ab6f4b0b)
+
+# Diagrama de flujo
+![fury_III_practica_flujo drawio](https://github.com/arijalkemy/java-w25/assets/37525046/121e86ca-6faf-4277-a552-55ddd3d24a66)
+
 # bootcamp-demo-java-app
 
 # Spring Boot App model for Java 11
