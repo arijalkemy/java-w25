@@ -1,7 +1,7 @@
 package com.example.deportistas.dto.response;
 
 
-import com.example.deportistas.models.Deporte;
+import com.example.deportistas.model.Deporte;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class DeporteDTO {
-
+    String nombre;
     private int nivel;
 
 }
