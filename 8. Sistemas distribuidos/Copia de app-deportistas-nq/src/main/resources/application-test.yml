@@ -1,0 +1,16 @@
+# "test" suffix properties file. Scopes name samples: "test", "web-test", "api-test", etc.
+# Overrides application.yml default properties
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: DB_MYSQL_DESAENV09_NQDEPORDB_NQDEPORDB_ENDPOINT
+    db: nqdepordb
+    username: nqdepordb_RPROD
+    password: DB_MYSQL_DESAENV09_NQDEPORDB_NQDEPORDB_RPROD
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    defer-datasource-initialization: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update

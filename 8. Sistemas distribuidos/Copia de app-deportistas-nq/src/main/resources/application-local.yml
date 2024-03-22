@@ -1,0 +1,16 @@
+# Properties file for local/dev environment
+# You need to configure the environment variable in your IDE, more info in README.md
+# Overrides application.yml default properties
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${host_puerto}/${db}?useSSL=true&serverTimezone=UTC&characterEncoding=UTF-8
+    username: ${user_r}
+    password: ${pass_r}
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    defer-datasource-initialization: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
