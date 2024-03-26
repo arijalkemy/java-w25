@@ -1,0 +1,138 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "new-app-01",
+    "description" : "new-app-01",
+    "contact" : {
+      "name" : "mramosgarcia",
+      "email" : "miguel.ramosgarcia@mercadolibre.com.co"
+    },
+    "version" : "last"
+  },
+  "servers" : [ {
+    "url" : "http://localhost:8080",
+    "description" : "Scope local"
+  } ],
+  "paths" : {
+    "/ping" : {
+      "get" : {
+        "tags" : [ "ping-controller" ],
+        "operationId" : "ping",
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findSports" : {
+      "get" : {
+        "tags" : [ "deportista-controller" ],
+        "operationId" : "findSport",
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/NombreDeporteDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findSportsPersons" : {
+      "get" : {
+        "tags" : [ "deportista-controller" ],
+        "operationId" : "findSportsPersons",
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/PersonaDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findSport/{name}" : {
+      "get" : {
+        "tags" : [ "deportista-controller" ],
+        "operationId" : "findSportByName",
+        "parameters" : [ {
+          "name" : "name",
+          "in" : "path",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/DificultadDeporteDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "NombreDeporteDTO" : {
+        "type" : "object",
+        "properties" : {
+          "nombre" : {
+            "type" : "string"
+          }
+        }
+      },
+      "PersonaDTO" : {
+        "type" : "object",
+        "properties" : {
+          "nombre" : {
+            "type" : "string"
+          },
+          "apellido" : {
+            "type" : "string"
+          },
+          "deporte" : {
+            "$ref" : "#/components/schemas/NombreDeporteDTO"
+          }
+        }
+      },
+      "DificultadDeporteDTO" : {
+        "type" : "object",
+        "properties" : {
+          "nivel" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}
